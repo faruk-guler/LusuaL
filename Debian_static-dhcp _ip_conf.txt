@@ -1,3 +1,6 @@
+>> /etc/network/interfaces
+
+#STATIC:
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 
@@ -17,4 +20,7 @@ iface ens33 inet static
     dns-domain guler.com
 
 
-DHCP:
+#DHCP:
+# The loopback network interface
+  auto lo
+  iface lo inet loopback
