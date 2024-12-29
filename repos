@@ -1,5 +1,5 @@
 #Repos
 
 /var/lib/apt/lists/: Depo meta verilerinin (paket bilgileri)
-/var/cache/apt/archives/: İndirilen .deb paketlerinin önbelleği.
+/var/cache/apt/archives/: İndirilen .deb paketlerinin önbelleği.  >> sudo apt clean
 /etc/apt/sources.list.d/: Ek yazılım kaynaklarını tanımlayan dosyalar.
