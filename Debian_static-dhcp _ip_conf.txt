@@ -15,3 +15,6 @@ iface ens33 inet static
     gateway 192.168.18.2
     dns-nameservers 192.168.18.2 1.1.1.1 8.8.4.4
     dns-domain guler.com
+
+
+DHCP:
