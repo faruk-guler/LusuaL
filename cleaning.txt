@@ -10,3 +10,4 @@ sudo apt autoremove --purge: Artık kullanılmayan paketleri ve konfigürasyon d
 apt-cache search firefox: Belirtilen paketi arar.
 apt-cache show firefox: Belirtilen paket hakkında bilgi gösterir.
 dpkg --get-selections: Yüklü paketlerin listesini gösterir.
+#sudo dpkg --remove firefox Paketleri Kaldırmak İçin dpkg
