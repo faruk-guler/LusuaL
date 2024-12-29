@@ -13,4 +13,4 @@ dpkg --get-selections: Yüklü paketlerin listesini gösterir.
 #sudo dpkg --remove firefox Paketleri Kaldırmak İçin dpkg.
 #sudo dpkg --purge firefox Paketi yapılandırma dosyaları da dahil olmak üzere tamamen kaldırma.
 #sudo apt --purge remove linux-image-<version> Eski Çekirdekleri Kaldırmak İçin. [uname -r]
-# sudo journalctl --vacuum-time=7d Eski log Dosyalarını Kaldırma [7 gün]
+#sudo journalctl --vacuum-time=7d Eski log Dosyalarını Kaldırma [7 gün]
