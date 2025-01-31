@@ -1,5 +1,4 @@
 #https://wiki.debian.org/SourcesList
-
 #Debian 12/Bookworm (stable)
 #Below is an example of a sources.list for Debian 12/Bookworm (stable) released 10th June 2023.
 deb https://deb.debian.org/debian bookworm main non-free-firmware
@@ -10,7 +9,7 @@ deb https://deb.debian.org/debian bookworm-updates main non-free-firmware
 deb-src https://deb.debian.org/debian bookworm-updates main non-free-firmware
 
 
-#Default SourcesList
+#Debian 12/Bookworm (Default SourcesList)
 #deb cdrom:[Debian GNU/Linux 12.7.0 _Bookworm_ - Official amd64 DVD Binary-1 with firmware 20240831-10:40]/ bookworm contrib main non-free-firmware
 deb http://deb.debian.org/debian/ bookworm main non-free-firmware
 deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware
