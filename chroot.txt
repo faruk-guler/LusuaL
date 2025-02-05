@@ -1,4 +1,3 @@
-Linux’ta Chroot Nasıl Kullanılır ve Bozuk Sisteminizi Nasıl Onarırsınız
 https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-baglanma-2npc
 
 mount --bind /proc /mnt/sysimage/proc 
