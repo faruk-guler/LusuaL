@@ -1,3 +1,4 @@
+#LVM Manager
 pvcreate <path to block device>
 vgcreate <name of volume group> <path to block device> <path to block device>             # Create new VG on block device - a PV is automatically created 
 lvcreate -L <sizeXX> -l <100%FREE> -n <name of logical volume> <name of volume group>     # Create new LV with 50 GB size
