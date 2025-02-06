@@ -96,3 +96,4 @@ Command | Copies
 - `/Line`: search within a file
 - `:%s/Line/line/g`: global search and replace
 - 
+Thnx: Shreyas Chavhan https://github.com/shreyaschavhan
