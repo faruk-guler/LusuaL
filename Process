@@ -1,0 +1,8 @@
+ps                    # Show active processes  
+top                   # Show running processes in real-time  
+kill pid              # Kill a process by ID  
+pkill name            # Kill a process by name  
+bg                    # Resume a suspended process in background  
+fg                    # Bring a process to the foreground  
+fg n                  # Bring job 'n' to foreground  
+renice +n [pid]       # Change process priority  
