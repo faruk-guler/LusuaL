@@ -6,3 +6,7 @@ bg                    # Resume a suspended process in background
 fg                    # Bring a process to the foreground  
 fg n                  # Bring job 'n' to foreground  
 renice +n [pid]       # Change process priority  
+ps -ef | grep <process>  
+ps -ef --sort=-%cpu | head -10  
+ps -ef --sort=-%mem | head -10  
+pstree  
