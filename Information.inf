@@ -1,1 +1,55 @@
-
+lsb_release -a
+hostnamectl
+uname -a
+cat /proc/version
+cat /etc/issue
+hostname
+w
+who
+top
+date
+uptime
+last
+ps -all
+ps aux
+sysctl -a
+pstree -a
+vmstat
+mpstat #multi-processor CPU
+iostat #devices I/O
+sudo stress-ng #stres test -diagnostig
+whoami
+ifconfig
+ip a
+netstat -tunap
+cat /proc/cpuinfo
+cat /proc/meminfo
+free -mh
+free -h #ram swap management
+lscpu
+lsmod #kernel modülleri
+vmstat -t /-td / -tD
+lshw -short
+lsusb #USB device lists
+hwinfo --short
+lspci
+df -h -T
+lsblk
+lsblk -p /dev/sda (detailed)
+lsblk -a
+parted -l
+duf
+fdisk -l
+cfdisk #disk partition
+dmidecode -t system
+dmidecode -t bios
+lsof
+du -hc <argüman>
+systemctl list-units --type=service
+journalctl
+dpkg -l
+udevadm monitor #udev events
+neofetch
+aptitude
+top
+htop
