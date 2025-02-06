@@ -1,1 +1,7 @@
-
+#Logs
+/var/log/boot # Boot events
+/var/log/chronyd # NTP events
+/var/log/messages # All events
+/var/log/secure # Security events
+/var/log/cron # Cron events
+/var/log/maillog # SMTP events
