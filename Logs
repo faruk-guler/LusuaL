@@ -5,3 +5,8 @@
 /var/log/secure # Security events
 /var/log/cron # Cron events
 /var/log/maillog # SMTP events
+
+journalctl -xe → Sistem loglarını detaylı gösterir
+journalctl -u nginx → Belirli bir servisin loglarını görüntüleme
+cat /var/log/syslog | grep error → Hata mesajlarını filtreleme
+tail -f /var/log/auth.log → Gerçek zamanlı olarak giriş loglarını izleme
