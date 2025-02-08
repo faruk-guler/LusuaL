@@ -1,6 +1,5 @@
 >> /etc/network/interfaces
 
-# [Debian 12 Bookworm]
 #STATIC [Debian 12 Bookworm]
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
