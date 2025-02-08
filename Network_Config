@@ -1,6 +1,6 @@
->> /etc/network/interfaces [Debian 12 Bookworm]
-
-#STATIC:
+>> /etc/network/interfaces
+# [Debian 12 Bookworm]
+#STATIC [Debian 12 Bookworm]
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 
@@ -20,7 +20,7 @@ iface ens33 inet static
     dns-domain guler.com
 
 
-#DHCP:
+#DHCP [Debian 12 Bookworm]
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 
