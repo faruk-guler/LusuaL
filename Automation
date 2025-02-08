@@ -1,1 +1,3 @@
-Ansible
+#Ansible
+
+ansible all -m ping -u root     #Ping all servers
