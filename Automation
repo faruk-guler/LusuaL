@@ -1,3 +1,5 @@
 #Ansible
 
-ansible all -m ping -u root     #Ping all servers
+ansible --version                   #Ansible version:  
+ansible all -m ping -u root         #Ping all servers
+ansible all -m command -a "uptime"  #Run command a remote server:
