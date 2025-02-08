@@ -7,3 +7,6 @@ lvresize -L <sizeXX> /dev/mapper/<name of volume group>-<name of logical volume>
 resize2fs /dev/mapper/<name of volume group>-<name of logical volume>                     # Resize underlaying file system
 
 #Standart
+
+
+#Fstab Conf.:
