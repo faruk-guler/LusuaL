@@ -1,1 +1,41 @@
+#Archive Manager
+# TAR (Arşivleme)
+tar -cvf dosya.tar /yol/klasoru  # Tar Arşivi Oluştur
+tar -xvf dosya.tar  # Tar Arşivini Çıkart
+tar -tvf dosya.tar  # Tar Arşivi İçeriğini Listele
+tar -cf arsiv.tar dosya1 dosya2  # Dosyaları Arşivle
+tar -xf arsiv.tar  # Arşivi Çıkart
+
+# TAR + GZIP (Sıkıştırılmış Arşivleme)
+tar -czvf dosya.tar.gz /yol/klasoru  # Sıkıştırılmış Arşiv Oluştur
+tar -xzvf dosya.tar.gz  # Sıkıştırılmış Tar Arşivini Çıkart
+tar -czf arsiv.tgz dosya1 dosya2  # Dosyaları Sıkıştırılmış Arşivle
+tar -xzf arsiv.tgz  # Sıkıştırılmış Arşivi Çıkart
+
+# TAR + BZIP2 (Daha İyi Sıkıştırma)
+tar -cjvf dosya.tar.bz2 /yol/klasoru  # Bzip2 ile Sıkıştırılmış Arşiv Oluştur
+tar -xjvf dosya.tar.bz2  # Bzip2 ile Sıkıştırılmış Tar Arşivini Çıkart
+tar -cjf arsiv.tar.bz2 dosya1 dosya2  # Dosyaları Bzip2 ile Arşivle
+tar -xjf arsiv.tar.bz2  # Bzip2 ile Sıkıştırılmış Arşivi Çıkart
+
+# ZIP (Dosya/Dizin Sıkıştırma)
+gzip dosya.txt  # Tek Dosyayı Sıkıştır
+gzip -d dosya.txt.gz  # Sıkıştırılmış Dosyayı Aç
+zcat dosya.txt.gz  # Sıkıştırılmış Dosyanın İçeriğini Görüntüle
+
+# ZIP (Birden Fazla Dosya ve Dizin Sıkıştırma)
+zip -r arsiv.zip dosya1 dosya2  # Zip Arşivi Oluştur (Dizin Dahil)
+unzip arsiv.zip  # Zip Arşivini Çıkart
+unzip -l arsiv.zip  # Zip Arşivi İçeriğini Listele
+
+# 7-ZIP (Daha Güçlü Sıkıştırma)
+7z a arsiv.7z dosya1 dosya2  # 7-Zip Arşivi Oluştur
+7z x arsiv.7z  # 7-Zip Arşivini Çıkart
+7z l arsiv.7z  # 7-Zip Arşivi İçeriğini Listele
+
+# RAR (Arşivleme ve Sıkıştırma)
+rar a arsiv.rar dosya1 dosya2  # RAR Arşivi Oluştur
+rar l arsiv.rar  # RAR Arşivi İçeriğini Listele
+unrar x arsiv.rar  # RAR Arşivini Çıkart
+unrar x arsiv.rar /yol/klasoru  # Belirtilen Dizine Çıkart
 
