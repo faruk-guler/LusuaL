@@ -1,1 +1,11 @@
+#Tam Disk ve Partition Yedeği Almak (Tüm Diskin İmajı)
+dd if=/dev/sda of=/path/to/backup.img bs=64K
+dd if=/dev/sda5 of=/path/to/backup_partition.img bs=64K
+
+#Status=progress
+dd if=/dev/sda of=/path/to/backup.img bs=64K status=progress
+
+#Disk ve Partition İmajını Geri Yüklemek:
+dd if=/path/to/backup.img of=/dev/sda bs=64K
+dd if=/path/to/backup_partition.img of=/dev/sda1 bs=64K
 
