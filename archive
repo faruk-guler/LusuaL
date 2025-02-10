@@ -1,41 +1,40 @@
 #Archive Manager
-# TAR (Arşivleme)
-tar -cvf dosya.tar /yol/klasoru  # Tar Arşivi Oluştur
-tar -xvf dosya.tar  # Tar Arşivini Çıkart
-tar -tvf dosya.tar  # Tar Arşivi İçeriğini Listele
-tar -cf arsiv.tar dosya1 dosya2  # Dosyaları Arşivle
-tar -xf arsiv.tar  # Arşivi Çıkart
+# TAR (Archiving)
+tar -cvf file.tar /path/folder # Create Tar Archive
+tar -xvf file.tar # Extract Tar Archive
+tar -tvf file.tar # List Tar Archive Content
+tar -cf archive.tar file1 file2 # Archive Files
+tar -xf archive.tar # Extract Archive
 
-# TAR + GZIP (Sıkıştırılmış Arşivleme)
-tar -czvf dosya.tar.gz /yol/klasoru  # Sıkıştırılmış Arşiv Oluştur
-tar -xzvf dosya.tar.gz  # Sıkıştırılmış Tar Arşivini Çıkart
-tar -czf arsiv.tgz dosya1 dosya2  # Dosyaları Sıkıştırılmış Arşivle
-tar -xzf arsiv.tgz  # Sıkıştırılmış Arşivi Çıkart
+# TAR + GZIP (Compressed Archiving)
+tar -czvf file.tar.gz /path/folder # Create Compressed Archive
+tar -xzvf file.tar.gz # Extract Compressed Tar Archive
+tar -czf archive.tgz file1 file2 # Archive Files Compressed
+tar -xzf archive.tgz # Extract Compressed Archive
 
-# TAR + BZIP2 (Daha İyi Sıkıştırma)
-tar -cjvf dosya.tar.bz2 /yol/klasoru  # Bzip2 ile Sıkıştırılmış Arşiv Oluştur
-tar -xjvf dosya.tar.bz2  # Bzip2 ile Sıkıştırılmış Tar Arşivini Çıkart
-tar -cjf arsiv.tar.bz2 dosya1 dosya2  # Dosyaları Bzip2 ile Arşivle
-tar -xjf arsiv.tar.bz2  # Bzip2 ile Sıkıştırılmış Arşivi Çıkart
+# TAR + BZIP2 (Better Compression)
+tar -cjvf file.tar.bz2 /path/folder # With Bzip2 Create Compressed Archive
+tar -xjvf file.tar.bz2 # Extract Bzip2 Compressed Tar Archive
+tar -cjf arsiv.tar.bz2 file1 file2 # Archive Files with Bzip2
+tar -xjf arsiv.tar.bz2 # Extract Bzip2 Compressed Archive
 
-# ZIP (Dosya/Dizin Sıkıştırma)
-gzip dosya.txt  # Tek Dosyayı Sıkıştır
-gzip -d dosya.txt.gz  # Sıkıştırılmış Dosyayı Aç
-zcat dosya.txt.gz  # Sıkıştırılmış Dosyanın İçeriğini Görüntüle
+# ZIP (File/Directory Compression)
+gzip file.txt # Compress Single File
+gzip -d file.txt.gz # Uncompress File
+zcat file.txt.gz # View Compressed File Content
 
-# ZIP (Birden Fazla Dosya ve Dizin Sıkıştırma)
-zip -r arsiv.zip dosya1 dosya2  # Zip Arşivi Oluştur (Dizin Dahil)
-unzip arsiv.zip  # Zip Arşivini Çıkart
-unzip -l arsiv.zip  # Zip Arşivi İçeriğini Listele
+# ZIP (Multiple Files and Directories Compression)
+zip -r arsiv.zip file1 file2 # Create Zip Archive (Including Directories)
+unzip arsiv.zip # Extract Zip Archive
+unzip -l arsiv.zip # List Zip Archive Content
 
-# 7-ZIP (Daha Güçlü Sıkıştırma)
-7z a arsiv.7z dosya1 dosya2  # 7-Zip Arşivi Oluştur
-7z x arsiv.7z  # 7-Zip Arşivini Çıkart
-7z l arsiv.7z  # 7-Zip Arşivi İçeriğini Listele
+# 7-ZIP (Stronger Compression)
+7z a archive.7z file1 file2 # Create 7-Zip Archive
+7z x archive.7z # Extract 7-Zip Archive
+7z l archive.7z # List 7-Zip Archive Content
 
-# RAR (Arşivleme ve Sıkıştırma)
-rar a arsiv.rar dosya1 dosya2  # RAR Arşivi Oluştur
-rar l arsiv.rar  # RAR Arşivi İçeriğini Listele
-unrar x arsiv.rar  # RAR Arşivini Çıkart
-unrar x arsiv.rar /yol/klasoru  # Belirtilen Dizine Çıkart
-
+# RAR (Archiving and Compression)
+rar a archive.rar file1 file2 # Create RAR Archive
+rar l archive.rar # List RAR Archive Content
+unrar x archive.rar # Extract RAR Archive
+unrar x archive.rar /path/folder # Extract to Specified Directory
