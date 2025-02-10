@@ -20,8 +20,14 @@ fdisk -l /path/to/backup.img
 crontab -e
 >> 0 2 * * * dd if=/dev/sda of=/path/to/backup-$(date +\%F).img bs=64K status=progress [Her gün saat 2:00 disk ve partition yedeği]
 0 2 * * * rsync -av --progress /path/to/source_folder/ /path/to/backup_folder/ [Her gün saat 2:00 klassör yedeği]
+0 2 * * * tar -czvf /path/to/backup/backup-$(date +\%F).tar.gz /path/to/directory/ 
 
 #rsync ve tar ile Klasör Yedekleme:
 rsync -av --progress /path/to/source_folder/ /path/to/backup_folder/
 tar -czvf /path/to/backup.tar.gz /path/to/source_folder/
 tar -czvf /path/to/backup-$(date +\%F).tar.gz /path/to/source_folder/
+
+#Uzak Yedekleme (SSH kullanarak):
+rsync -av --delete /source/directory/ /path/to/backup/directory/
+rsync -av --ignore-existing /source/directory/ /path/to/backup/directory/ [Sadece Değişenleri yedekle]
+rsync -avz --delete /source/directory/ user@remote_host:/path/to/backup/directory/ [SSH Remote backup]
