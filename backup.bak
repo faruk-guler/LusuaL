@@ -1,11 +1,27 @@
-#Tam Disk ve Partition Yedeği Almak (Tüm Diskin İmajı)
+#Tam Disk ve Partition Yedeği Alma:
 dd if=/dev/sda of=/path/to/backup.img bs=64K
 dd if=/dev/sda5 of=/path/to/backup_partition.img bs=64K
 
-#Status=progress
+#Status=progress:
 dd if=/dev/sda of=/path/to/backup.img bs=64K status=progress
 
 #Disk ve Partition İmajını Geri Yüklemek:
 dd if=/path/to/backup.img of=/dev/sda bs=64K
 dd if=/path/to/backup_partition.img of=/dev/sda1 bs=64K
 
+#MD5 Checksum Hesaplama:
+md5sum /path/to/backup.img
+md5sum -c /path/to/backup.img.md5
+
+#Disk İmajının İçeriğini Görüntüleme:
+fdisk -l /path/to/backup.img
+
+#Cron ile Zamanlanmış Yedekleme:
+crontab -e
+>> 0 2 * * * dd if=/dev/sda of=/path/to/backup-$(date +\%F).img bs=64K status=progress [Her gün saat 2:00 disk ve partition yedeği]
+0 2 * * * rsync -av --progress /path/to/source_folder/ /path/to/backup_folder/ [Her gün saat 2:00 klassör yedeği]
+
+#rsync ve tar ile Klasör Yedekleme:
+rsync -av --progress /path/to/source_folder/ /path/to/backup_folder/
+tar -czvf /path/to/backup.tar.gz /path/to/source_folder/
+tar -czvf /path/to/backup-$(date +\%F).tar.gz /path/to/source_folder/
