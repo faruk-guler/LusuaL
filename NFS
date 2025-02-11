@@ -1,1 +1,42 @@
-#
+#NFS
+
+#Erişim ve Yetki Seçenekleri
+rw → Okuma ve yazma izni verir.
+ro → Sadece okuma izni verir.
+no_root_squash → İstemcideki root, sunucuda da root olur.
+root_squash → İstemcideki root, sunucuda anonim olur (güvenli).
+no_all_squash → Kullanıcı kimlikleri değişmeden kullanılır.
+all_squash → Tüm istemci kullanıcıları anonim olur.
+anonuid=UID → Anonim kullanıcıya özel bir UID atar.
+anongid=GID → Anonim kullanıcıya özel bir GID atar.
+
+#Performans ve Güvenlik Seçenekleri
+sync → Verileri önce diske yazar, sonra yanıt verir.
+async → Verileri önce belleğe yazar, sonra diske kaydeder.
+wdelay → Yazma işlemlerini gruplandırarak hızlandırır.
+no_wdelay → Her yazma işlemini hemen gerçekleştirir.
+subtree_check → Paylaşılan alt dizinlerin izinlerini kontrol eder.
+no_subtree_check → İzin kontrolünü devre dışı bırakır (hızlı ama güvenlik riski olabilir).
+crossmnt → Bağlantılı dosya sistemlerine erişimi sağlar.
+fsid=NUM → NFSv4 için dosya sistemine özel bir kimlik atar.
+secure → 1024’ten küçük portlardan gelen bağlantılara izin verir.
+insecure → 1024’ten büyük portlardan gelen bağlantılara da izin verir.
+
+#NFS Protokol ve Sürüm Seçenekleri
+vers=2/3/4 → Kullanılacak NFS sürümünü belirler.
+proto={tcp, udp} → Kullanılacak protokolü belirler.
+port=N → Belirli bir NFS portunu kullanır.
+
+#Blok Boyutu ve Önbellekleme Seçenekleri
+rsize=N → Okuma blok boyutunu belirler (varsayılan 1048576).
+wsize=N → Yazma blok boyutunu belirler (varsayılan 1048576).
+lookupcache={all, none, pos, negative} → Dosya isimlendirme önbelleğini yönetir:
+all → Tüm önbellekleme etkin.
+none → Ön belleğe alma tamamen devre dışı.
+pos → Yalnızca mevcut dosyalar için önbellek.
+negative → Bulunamayan dosyalar için önbellek.
+acregmin=N → Dosya değişikliklerini istemcide en az N saniye önbellekte tutar.
+acregmax=N → Dosya değişikliklerini istemcide en fazla N saniye önbellekte tutar.
+acdirmin=N → Dizin değişikliklerini istemcide en az N saniye önbellekte tutar.
+acdirmax=N → Dizin değişikliklerini istemcide en fazla N saniye önbellekte tutar.
+actimeo=N → Hem dosya hem de dizin önbellek sürelerini belirler.
