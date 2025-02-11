@@ -1,42 +1,42 @@
 #NFS
 
-#Erişim ve Yetki Seçenekleri
-rw → Okuma ve yazma izni verir.
-ro → Sadece okuma izni verir.
-no_root_squash → İstemcideki root, sunucuda da root olur.
-root_squash → İstemcideki root, sunucuda anonim olur (güvenli).
-no_all_squash → Kullanıcı kimlikleri değişmeden kullanılır.
-all_squash → Tüm istemci kullanıcıları anonim olur.
-anonuid=UID → Anonim kullanıcıya özel bir UID atar.
-anongid=GID → Anonim kullanıcıya özel bir GID atar.
+#Access and Permission Options
+rw → Allows reading and writing.
+ro → Allows reading only.
+no_root_squash → Root on the client becomes root on the server.
+root_squash → Root on the client becomes anonymous on the server (secure).
+no_all_squash → User IDs are used unchanged.
+all_squash → All client users become anonymous.
+anonuid=UID → Assigns a unique UID to the anonymous user.
+anongid=GID → Assigns a unique GID to the anonymous user.
 
-#Performans ve Güvenlik Seçenekleri
-sync → Verileri önce diske yazar, sonra yanıt verir.
-async → Verileri önce belleğe yazar, sonra diske kaydeder.
-wdelay → Yazma işlemlerini gruplandırarak hızlandırır.
-no_wdelay → Her yazma işlemini hemen gerçekleştirir.
-subtree_check → Paylaşılan alt dizinlerin izinlerini kontrol eder.
-no_subtree_check → İzin kontrolünü devre dışı bırakır (hızlı ama güvenlik riski olabilir).
-crossmnt → Bağlantılı dosya sistemlerine erişimi sağlar.
-fsid=NUM → NFSv4 için dosya sistemine özel bir kimlik atar.
-secure → 1024’ten küçük portlardan gelen bağlantılara izin verir.
-insecure → 1024’ten büyük portlardan gelen bağlantılara da izin verir.
+#Performance and Security Options
+sync → Writes data to disk first, then responds.
+async → Writes data to memory first, then saves to disk.
+wdelay → Speeds up write operations by grouping them.
+no_wdelay → Performs each write operation immediately.
+subtree_check → Checks the permissions of shared subdirectories.
+no_subtree_check → Disables permission checking (fast but can be a security risk).
+crossmnt → Allows access to mounted file systems.
+fsid=NUM → Assigns a unique ID to the file system for NFSv4.
+secure → Allows connections from ports smaller than 1024.
+insecure → Also allows connections from ports larger than 1024.
 
-#NFS Protokol ve Sürüm Seçenekleri
-vers=2/3/4 → Kullanılacak NFS sürümünü belirler.
-proto={tcp, udp} → Kullanılacak protokolü belirler.
-port=N → Belirli bir NFS portunu kullanır.
+#NFS Protocol and Version Options
+vers=2/3/4 → Specifies the NFS version to use.
+proto={tcp, udp} → Specifies the protocol to use.
+port=N → Uses a specific NFS port.
 
-#Blok Boyutu ve Önbellekleme Seçenekleri
-rsize=N → Okuma blok boyutunu belirler (varsayılan 1048576).
-wsize=N → Yazma blok boyutunu belirler (varsayılan 1048576).
-lookupcache={all, none, pos, negative} → Dosya isimlendirme önbelleğini yönetir:
-all → Tüm önbellekleme etkin.
-none → Ön belleğe alma tamamen devre dışı.
-pos → Yalnızca mevcut dosyalar için önbellek.
-negative → Bulunamayan dosyalar için önbellek.
-acregmin=N → Dosya değişikliklerini istemcide en az N saniye önbellekte tutar.
-acregmax=N → Dosya değişikliklerini istemcide en fazla N saniye önbellekte tutar.
-acdirmin=N → Dizin değişikliklerini istemcide en az N saniye önbellekte tutar.
-acdirmax=N → Dizin değişikliklerini istemcide en fazla N saniye önbellekte tutar.
-actimeo=N → Hem dosya hem de dizin önbellek sürelerini belirler.
+#Block Size and Caching Options
+rsize=N → Specifies the read block size (default 1048576).
+wsize=N → Specifies the write block size (default 1048576).
+lookupcache={all, none, pos, negative} → Manages the file naming cache:
+all → Enable all caching.
+none → Disable caching completely.
+pos → Cache only existing files.
+negative → Cache files that cannot be found.
+acregmin=N → Cache file changes on the client for at least N seconds.
+acregmax=N → Cache file changes on the client for at most N seconds.
+acdirmin=N → Cache directory changes on the client for at least N seconds.
+acdirmax=N → Cache directory changes on the client for at most N seconds.
+actimeo=N → Sets both file and directory cache times.
