@@ -1,1 +1,2 @@
-
+cat /etc/shadow
+cat /etc/passwd
