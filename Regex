@@ -1,1 +1,68 @@
+#Regex:
+Regex stands for Regular Expression. It's used for locating or replacing files or strings of text. It is used all the time. 
+These can be used in Linux itself and programming languages.
 
+; Symbolism
+; ------------------
+()          (captures groups)
+[]          (set)
+{}          (quantifier)
+?           (optional, matches 0 or 1 character)
+*           (matches 0 or more characters)
+.           (match any character)
++           (match one or more character)
+\           (escape character)
+!           (false, is not)
+^           (starts with)
+$           (ends with)
+|           (or statement, eg: (jesse|dan|jenkins) )
+
+; Basic Primer
+; ------------------
+\w          (word)
+\W          (non-word)
+\s          (whitespace)
+\S          (non-whitespace)
+\d          (digit)
+\D          (non-digit)
+[ab]        (character set)
+[^ab]       (negated set)
+[a-m]       (range)
+(hello)     (group)
+(hello)+    (group, more than once)
+
+; Groups
+; ------------------
+(hi)        (gets all "hi" occurances)
+(^hi)       (gets all text starting with "hi")
+(es$)       (gets all text ending with "es")
+(hi)\1      (gets the first occurance of "hi")
+
+; Flags
+; ------------------
+/i          (case insensitive)
+/g          (global)
+/m          (multiline)
+
+; Escaped Characters
+; ------------------
+; Since characters such as ".", "+", etc are actual Regex pattern makers, if you
+; need to check your content for the literal item you must escape them.
+\.          (matches . character)
+\+          (matches + character)
+\?          (matches ? character)
+\*          (matches * character)
+\^          (matches ^ character)
+\$          (matches $ character)
+\[          (matches [ character)
+\(          (matches ( character)
+
+\t          (matches tab character)
+\n          (matches newline)
+\r          (matches return carriage)
+\0          (matches NULL character)
+\\          (matches \ character)
+\/          (matches / character)
+
+#Regex Examples
+Put Examples here, like phones, names, etc..
