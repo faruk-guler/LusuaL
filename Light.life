@@ -3,3 +3,7 @@ root@server-vm:~# nano ~/.bashrc
 #PS1='\[\e[0;32m\]\u@\h:\W\$\[\e[0m\] ' #green
 
 source ~/.bashrc #apply
+
+#login page conf.
+apt install neofetch
+echo neofetch >> ~/.bash_profile
