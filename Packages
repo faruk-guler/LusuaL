@@ -1,3 +1,4 @@
+#apt
 apt update                   # Refreshes repository index
 apt search wget              # Search for a package
 apt show wget                # List information about the wget package
@@ -7,3 +8,12 @@ apt install wget=1.2.3       # Install a specific version of the wget package
 apt remove wget              # Removes the wget package
 apt upgrade                  # Upgrades all upgradable packages
 ...........................
+
+##Installation:
+dpkg -i pkg.deb – install a package (Debian)
+rpm -Uvh pkg.rpm – install a package (RPM)
+
+##Install from source:
+./configure
+make
+make install
