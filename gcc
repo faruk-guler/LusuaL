@@ -1,6 +1,8 @@
 ######################################
-# GCC (GNU Compiler Collection)      #
+GCC (GNU Compiler Collection)
+GCC (build-essential) on Debian
 ######################################
+
 sudo apt update
 sudo apt install build-essential -y [More advanced compiler]
 #sudo apt install gcc -y  [GNU Compiler Collection https://gcc.gnu.org] #optional and other versions
