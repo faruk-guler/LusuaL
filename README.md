@@ -7,5 +7,5 @@
 - Description: For Linux system administrators
 - Contributions: For contribution, send PR.
 - Contact: www.farukguler.com
-- Last Updated: 2025
 - License: CC-BY-4.0
+- Last Updated: 2025
