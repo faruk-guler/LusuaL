@@ -31,25 +31,37 @@ g++ --version
 make --version
 and more
 
-#Hello World Example:
-// hello.c begin
+#Go Calender Example:
+// go.c begin
 #include <stdio.h>
 int main() {
     printf("Debian 12 ile Merhaba Dünya!\n");
     return 0;
 }
-// hello.c end
+// go.c end
 
-#Compile a Hello World!: [from GCC]
-nano hello.c
-gcc hello.c -o hello_tool
-chmod +x hello_tool
-./hello_tool
+#Compile a Calender App: [from GCC]
+nano go.c
+gcc go.c -o calender_tool
+chmod +x calender_tool
+./calender_tool
 
 #Compile from source code:
 ./configure
 make
 sudo make install
+
+---------------------------------
+Go Calendar App 1.0
+Author: Faruk Güler
+   Şubat 2025
+Pzt Sal Çar Per Cum Cmt Paz
+                   1  2
+ 3  4  5  6  7  8  9
+10 11 12 13 14 15 16
+17 18 19 20 21 22 23
+24 25 26 27 28
+---------------------------------
 
 #Docs:
 https://gcc.gnu.org
