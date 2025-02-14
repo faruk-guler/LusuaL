@@ -21,8 +21,8 @@ dpkg-dev → Debian package development tools
 
 #Installation:
 sudo apt update
-sudo apt install build-essential -y [More advanced compiler]
-#sudo apt install gcc -y  [GNU Compiler Collection https://gcc.gnu.org] #optional and other versions
+sudo apt install build-essential
+#sudo apt install gcc -y  [GCC GNU Compiler Collection] #optional and other versions install
 gcc --version
 g++ --version
 make --version
@@ -49,3 +49,8 @@ chmod +x hello_tool
 ./configure
 make
 sudo make install
+
+#Docs:
+https://gcc.gnu.org
+https://packages.debian.org/sid/build-essential
+
