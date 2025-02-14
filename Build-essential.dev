@@ -25,6 +25,7 @@ sudo apt install build-essential -y [More advanced compiler]
 gcc --version
 g++ --version
 make --version
+and more
 
 #Hello World:
 // hello.c
