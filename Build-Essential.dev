@@ -33,12 +33,10 @@ and more
 #Hello World Example:
 // hello.c begin
 #include <stdio.h>
-
 int main() {
-    printf("Hello, world!\n");
+    printf("Debian 12 ile Merhaba Dünya!\n");
     return 0;
 }
-
 // hello.c end
 
 #Compile a Hello World!: [from GCC]
@@ -55,4 +53,4 @@ sudo make install
 #Docs:
 https://gcc.gnu.org
 https://packages.debian.org/sid/build-essential
-
+https://www.debian.org/doc/manuals/debian-handbook/
