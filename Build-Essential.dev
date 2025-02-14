@@ -1,6 +1,8 @@
 ######################################
 Name: Build-essential
 POC: Debian 12
+Build type: Basic
+
 ######################################
 
 Build-essential is a metapackage containing essential build tools for Linux distributions such as Debian and Ubuntu.
