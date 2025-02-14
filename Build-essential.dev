@@ -10,13 +10,15 @@ It provides the most basic tools needed to compile C and C++ programs. It usuall
 C, C++, Objective-C, Fortran, Ada, Go and more..
 
 #The build-essential package includes:
+#cat /usr/share/doc/build-essential/list
+
 gcc → GNU compiler for C language
 g++ → GNU compiler for C++ language
 make → Tool to automate build processes
 libc6-dev → C libraries and header files
 dpkg-dev → Debian package development tools
 
-
+#Isntallation:
 sudo apt update
 sudo apt install build-essential -y [More advanced compiler]
 #sudo apt install gcc -y  [GNU Compiler Collection https://gcc.gnu.org] #optional and other versions
@@ -24,12 +26,21 @@ gcc --version
 g++ --version
 make --version
 
-#Compile GCC:
-nano color_terminal.c
-gcc -o cterminal color_terminal.c
-./cterminal
+#Hello World:
+// hello.c
+#include <stdio.h>
+int main() {
+    printf("Hello, world!\n");
+    return 0;
+}
 
-# Compile from source code:
+#Compile a Hello World!: [from GCC]
+nano hello.c
+gcc hello.c -o hello_tool
+chmod +x hello_tool 
+./hello_tool
+
+#Compile from source code:
 ./configure
 make
 sudo make install
