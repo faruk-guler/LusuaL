@@ -1,7 +1,7 @@
 ######################################
-build-essential on Debian
+Build-essential
 - https://gcc.gnu.org/
-- more
+- https://packages.debian.org/source/buster/build-essential
 ######################################
 
 Build-essential is a metapackage containing essential build tools for Linux distributions such as Debian and Ubuntu.
