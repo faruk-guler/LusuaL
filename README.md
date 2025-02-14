@@ -8,8 +8,8 @@ _     _                     ____ _                _       _               _
 |_____|_|_| |_|\__,_/_/\_\  \____|_| |_|\___|\__,_|\__|___/_| |_|\___|\___|\__|
 -------------------------------------------------------------------------------
 
-# Author: Faruk Guler
-# POC: Debian 12 (Bookworm)
+- Author: Faruk Guler
+- POC: Debian 12 (Bookworm)
 # Repository: https://github.com/faruk-guler/
 # Description: For Linux system administrators
 # Contributions: For contribution, send PR.
