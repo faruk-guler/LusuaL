@@ -35,7 +35,7 @@ and more
 // go.c begin
 #include <stdio.h>
 int main() {
-    printf("Debian 12 ile Merhaba Dünya!\n");
+    printf("Merhaba Dünya!\n");
     return 0;
 }
 // go.c end
