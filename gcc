@@ -3,6 +3,14 @@ GCC (GNU Compiler Collection)
 GCC (build-essential) on Debian
 ######################################
 
+#The build-essential package includes:
+gcc → GNU compiler for C language
+g++ → GNU compiler for C++ language
+make → Tool to automate build processes
+libc6-dev → C libraries and header files
+dpkg-dev → Debian package development tools
+
+
 sudo apt update
 sudo apt install build-essential -y [More advanced compiler]
 #sudo apt install gcc -y  [GNU Compiler Collection https://gcc.gnu.org] #optional and other versions
