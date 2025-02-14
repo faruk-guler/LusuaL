@@ -1,4 +1,4 @@
-<img src="https://cdn.britannica.com/99/124299-050-4B4D509F/Linus-Torvalds-2012.jpg" alt="alt text" width="220" height="400">
+<img src="https://cdn.britannica.com/99/124299-050-4B4D509F/Linus-Torvalds-2012.jpg" alt="alt text" width="220" height="450">
 
 
 _     _                     ____ _                _       _               _   
