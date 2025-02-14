@@ -1,7 +1,6 @@
 ######################################
-Build-essential
-- https://gcc.gnu.org/
-- https://packages.debian.org/source/buster/build-essential
+Name: Build-essential
+POC: Debian 12
 ######################################
 
 Build-essential is a metapackage containing essential build tools for Linux distributions such as Debian and Ubuntu.
@@ -18,7 +17,7 @@ make → Tool to automate build processes
 libc6-dev → C libraries and header files
 dpkg-dev → Debian package development tools
 
-#Isntallation:
+#Installation:
 sudo apt update
 sudo apt install build-essential -y [More advanced compiler]
 #sudo apt install gcc -y  [GNU Compiler Collection https://gcc.gnu.org] #optional and other versions
@@ -27,13 +26,15 @@ g++ --version
 make --version
 and more
 
-#Hello World:
-// hello.c
+#Hello World Example:
+// hello.c begin
 #include <stdio.h>
 int main() {
     printf("Hello, world!\n");
     return 0;
 }
+
+// hello.c end
 
 #Compile a Hello World!: [from GCC]
 nano hello.c
@@ -45,5 +46,3 @@ chmod +x hello_tool
 ./configure
 make
 sudo make install
-
-
