@@ -1,5 +1,5 @@
 ######################################
-Name: Build-essential Docs
+Name: Build-essential Docs.
 POC: Debian 12
 Build type: Basic
 Author: Faruk Guler
@@ -32,7 +32,6 @@ sudo apt install build-essential
 gcc --version
 g++ --version
 make --version
-and more
 
 #Go Calendar App Example:
 // go.c begin
