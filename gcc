@@ -3,7 +3,7 @@
 ######################################
 sudo apt update
 sudo apt install build-essential -y [More advanced compiler]
-#sudo apt install gcc -y  [GNU Compiler Collection] #optional
+#sudo apt install gcc -y  [GNU Compiler Collection https://gcc.gnu.org] #optional
 
 #Compile
 nano color_terminal.c
