@@ -31,20 +31,19 @@ g++ --version
 make --version
 and more
 
-#Go Calender Example:
+#Go Calendar App Example:
 // go.c begin
 #include <stdio.h>
 int main() {
     printf("Merhaba Dünya!\n");
     return 0;
 }
-// go.c end
 
-#Compile a Calender App: [from GCC]
+#Compile a Calendar App: [from GCC]
 nano go.c
-gcc go.c -o calender_tool
-chmod +x calender_tool
-./calender_tool
+gcc go.c -o calendar_tool
+chmod +x calendar_tool
+./calendar_tool
 
 #Compile from source code:
 ./configure
@@ -52,8 +51,10 @@ make
 sudo make install
 
 ---------------------------------
-Go Calendar App 1.0
+Go Calendar App
 Author: Faruk Güler
+Version. 1.0
+---------------------------------
    Şubat 2025
 Pzt Sal Çar Per Cum Cmt Paz
                    1  2
