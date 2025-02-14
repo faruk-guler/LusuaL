@@ -23,7 +23,10 @@ dpkg-dev → Debian package development tools
 #Installation:
 sudo apt update
 sudo apt install build-essential
+
 #sudo apt install gcc -y  [GCC GNU Compiler Collection] #optional and other versions install
+#sudo apt install g++ -y
+# and more
 
 ## Verify Versions
 gcc --version
