@@ -7,7 +7,7 @@ build-essential on Debian
 Build-essential is a metapackage containing essential build tools for Linux distributions such as Debian and Ubuntu.
 It provides the most basic tools needed to compile C and C++ programs.
 "build-essential" supports the following languages:
-C, C++, Objective-C, Fortran, Ada, Go and more
+C, C++, Objective-C, Fortran, Ada, Go and more..
 
 #The build-essential package includes:
 gcc → GNU compiler for C language
