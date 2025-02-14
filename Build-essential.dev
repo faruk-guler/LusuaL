@@ -1,10 +1,10 @@
 ######################################
 build-essential on Debian
 - https://gcc.gnu.org/
-
+- more
 ######################################
 
-build-essential is a metapackage containing essential build tools for Linux distributions such as Debian and Ubuntu.
+Build-essential is a metapackage containing essential build tools for Linux distributions such as Debian and Ubuntu.
 It provides the most basic tools needed to compile C and C++ programs.
 "build-essential" supports the following languages:
 C, C++, Objective-C, Fortran, Ada, Go and more
