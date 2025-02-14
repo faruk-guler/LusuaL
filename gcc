@@ -1,5 +1,9 @@
+######################################
+# GCC (GNU Compiler Collection)      #
+######################################
 sudo apt update
 sudo apt install gcc -y
+sudo apt install build-essential -y
 
 nano color_terminal.c
 gcc -o cterminal color_terminal.c
