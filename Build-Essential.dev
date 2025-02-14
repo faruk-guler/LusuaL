@@ -44,6 +44,7 @@ int main() {
 #Compile a Hello World!: [from GCC]
 nano hello.c
 gcc hello.c -o hello_tool
+chmod +x hello_tool
 ./hello_tool
 
 #Compile from source code:
