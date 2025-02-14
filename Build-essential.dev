@@ -24,13 +24,12 @@ gcc --version
 g++ --version
 make --version
 
-#Compile
-
+#Compile GCC:
 nano color_terminal.c
 gcc -o cterminal color_terminal.c
 ./cterminal
 
->>> From source code:
+# Compile from source code:
 ./configure
 make
 sudo make install
