@@ -1,5 +1,4 @@
 <img src="https://cdn.britannica.com/99/124299-050-4B4D509F/Linus-Torvalds-2012.jpg" alt="alt text" width="250" height="400">
-
 - Author: Faruk Guler
 - POC: Debian 12 (Bookworm)
 - Repository: https://github.com/faruk-guler/
