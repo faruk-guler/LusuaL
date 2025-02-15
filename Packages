@@ -1,4 +1,10 @@
-#apt
+- The Repository/Repo:
+
+- Building from Source Code:
+
+- Local installation File:
+
+#The Repository/Repo:
 apt update                   # Refreshes repository index
 apt search wget              # Search for a package
 apt show wget                # List information about the wget package
@@ -9,11 +15,11 @@ apt remove wget              # Removes the wget package
 apt upgrade                  # Upgrades all upgradable packages
 ...........................
 
-##Installation:
+##Local installation File:
 dpkg -i pkg.deb – install a package (Debian)
 rpm -Uvh pkg.rpm – install a package (RPM)
 
-##Install from source:
+##Building from Source Code:
 ./configure
 make
 make install
