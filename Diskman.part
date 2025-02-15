@@ -9,4 +9,4 @@ resize2fs /dev/mapper/<name of volume group>-<name of logical volume>           
 #Standart
 
 
-#Fstab Conf.:
+#Fstab
