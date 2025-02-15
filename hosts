@@ -1,5 +1,3 @@
-#Hostname and Hosts Conf.
--------------------------|
 /etc/hosts
 /etc/hostname
 /etc/resolv.conf
