@@ -1,5 +1,7 @@
+###############################################################################################
 The Linux file system structure may vary depending on the distribution and system configuration.
 However, the hierarchy below generally reflects the standard structure of the Linux file system.
+
 
 /: Known as the root directory. The entire file system starts at this point.
 /bin: This directory contains the basic system programs that users use to manage the system. For example, commands such as ls, cp, rm are located in this directory.
