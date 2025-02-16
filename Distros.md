@@ -5,6 +5,3 @@
 *Linux dağıtım zaman çizelgesi (Kaynak: [Wikipedia](https://en.wikipedia.org/wiki/List_of_Linux_distributions))*
 
 ---
-
-## Popüler Genel Amaçlı Dağıtımlar
-...
