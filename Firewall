@@ -1,1 +1,60 @@
-#test
+############################################
+# UFW (Uncomplicated Firewall Overview)
+############################################
+#apt install ufw
+ufw version
+ufw status verbose
+
+ufw status numbered #[The first added rule is valid first]
+ufw insert 1 allow from 192.168.1.200 to any port 443 #[Define primacy rule]
+
+#Default UFW Policies
+ufw default deny incoming #[Block incoming rules]
+ufw default allow outgoing #[Allow outgoing rules]
+
+#[UFW Management]
+ufw enable
+ufw disable
+
+ufw deny 21 #[Spesific Services Ports]
+ufw deny ftp
+ufw allow 22
+ufw allow ssh
+
+ufw app list #[Service based]
+ufw allow “LDAPS”
+cat /etc/services
+
+#Rate Limiting
+ufw limit ssh/tcp comment 'Limit of 6 connection per minute'
+
+ufw allow 8080 comment 'ISS Delete on Friday' #[Add Comment]
+ufw allow 3000:3100/tcp #[Port Range/Protocol]
+
+ufw delete allow 22 #[Delete Rule]
+ufw delete allow 22/TCP
+
+ufw allow from 10.5.25.85 #[Spesific ip All Allow]
+ufw delete allow from 10.5.25.85 #[Delete Rule]
+ufw deny from 10.5.10./24 #[Subnets Deny/Allow]
+ufw deny in on eth0 from 10.5.10.10 #[Network Interface Deny/Allow]
+
+ufw default allow forward #[Allow gateway Forwarding]
+
+#UFW Configuration:
+/etc/ufw/before.rules
+/etc/default/ufw
+
+ufw logging on #[UFW Logging On/Off]
+/var/log/messages
+/var/log/syslog
+
+systemctl enable ufw #[Service Management]
+systemctl disable ufw
+systemctl restart ufw
+
+#ufw reset #[Factory Reset and Backup]
+
+############################################
+# Firewalld
+############################################
