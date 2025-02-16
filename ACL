@@ -1,3 +1,5 @@
+#Access Control Lists (ACLs)
+
 setfacl -m u:priya:rw <file> #assiging the a new user 'priya' with read/write permission on the file. -m (modifying) -u (user)
 setfacl -m mask:r <file> #setting mask on file
 setfacl -d -m u:priya:rw <dir> #setting ACL for directory
