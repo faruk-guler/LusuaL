@@ -1,1 +1,5 @@
-
+setfacl -m u:priya:rw <file> #assiging the a new user 'priya' with read/write permission on the file. -m (modifying) -u (user)
+setfacl -m mask:r <file> #setting mask on file
+setfacl -d -m u:priya:rw <dir> #setting ACL for directory
+getfacl -R <dir> > permissions.acl #BackUp ACL's in file having all info related ownership/dir inside the dir,subdir,files
+setfacl --restore=permissions.acl #Restore the Permissions/Ownership
