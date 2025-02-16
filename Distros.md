@@ -1,5 +1,5 @@
-# Linux Distribution Timeline
+# Linux Dağıtımları Zaman Çizelgesi
 
-Here is the timeline of Linux distributions:
+İşte Linux dağıtımlarının zaman çizelgesi:
 
-![Linux Distribution Timeline](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Linux_Distribution_Timeline.svg/1200px-Linux_Distribution_Timeline.svg.png)
+![Linux Dağıtımları Zaman Çizelgesi](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Linux_Distribution_Timeline.svg/1200px-Linux_Distribution_Timeline.svg.png)
