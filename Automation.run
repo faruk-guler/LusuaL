@@ -1,5 +1,134 @@
-#Ansible
+---
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
 
-ansible --version                   #Ansible version:  
-ansible all -m ping -u root         #Ping all servers
-ansible all -m command -a "uptime"  #Run command a remote server:
+    - name: Baixando binario do minikube
+      ansible.builtin.get_url:
+        url: https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+        dest: /tmp/
+
+    - name: Install minikube .deb package
+      ansible.builtin.apt:
+        deb: /tmp/minikube_latest_amd64.deb
+
+    - name: Baixando binario do kubectl
+      ansible.builtin.get_url:
+        url: https://dl.k8s.io/release/v1.23.0/bin/linux/amd64/kubectl
+        dest: /tmp/
+     
+    - name: Instalando binario do kubectl
+      shell: install -o root -g root -m 0755 /tmp/kubectl /usr/local/bin/kubectl
+
+    - name: Adiciona uma chave de assinatura apt para o Docker
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Adiciona repositorio apt para versao estavel
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+        state: present
+
+    - name: Instala o Docker e mais alguns pacotes
+      apt:
+        name: "{{ packages }}"
+        state: present
+        update_cache: yes
+      vars:
+        packages:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io 
+        - conntrack
+        - apt-transport-https
+        - python3
+        - python3-pip
+      
+
+    - name: Start Docker, if not started
+      ansible.builtin.service:
+        name: docker
+        state: started
+    
+    - name: Instala o helm
+      snap:
+        name: helm
+        classic: yes
+
+    - name: install pre-requisites
+      pip:
+        name:
+          - openshift
+          - pyyaml
+          - kubernetes
+     
+    - name: Desativando swap
+      shell: swapoff -a
+
+    - name: Inicializando minikube
+      shell: minikube start --driver=none --kubernetes-version v1.22.12
+
+## Ansible playbook that prepares a Linux machine for a web server
+---
+- name: Prepare Linux machine for web server
+  hosts: homelab
+  become: true
+  vars:
+    packages:
+      - nginx
+      - ufw
+      - fail2ban
+      - python3-pip
+    firewall_ports:
+      - 80/tcp
+      - 443/tcp
+  tasks:
+    - name: Install packages
+      apt:
+        name: "{{ packages }}"
+        state: present
+    - name: Enable firewall ports
+      ufw:
+        rule: allow
+        port: "{{ firewall_ports }}"
+    - name: Configure fail2ban
+      copy:
+        src: files/fail2ban/jail.local
+        dest: /etc/fail2ban/
+        mode: '0644'
+      notify:
+        - restart fail2ban
+    - name: Copy nginx config
+      copy:
+        src: files/nginx/nginx.conf
+        dest: /etc/nginx/nginx.conf
+        mode: '0644'
+      notify:
+        - restart nginx
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
+    - name: restart fail2ban
+      service:
+        name: fail2ban
+        state: restarted
+
+## Example playbook that copies a file from the local machine to a remote host:
+---
+- name: Copy file to remote host
+  hosts: homelab
+  become: true
+  tasks:
+    - name: Copy file
+      copy:
+        src: /path/to/local/file
+        dest: /path/to/remote/file
+        mode: 0644
+
+
+    
