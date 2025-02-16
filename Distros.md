@@ -1,1 +1,1 @@
-![Linux Dağıtımları Zaman Çizelgesi](https://en.wikipedia.org/wiki/List_of_Linux_distributions#/media/File:Linux_Distribution_Timeline.svg)
+![Linux Dağıtımları Zaman Çizelgesi] https://en.wikipedia.org/wiki/List_of_Linux_distributions#/media/File:Linux_Distribution_Timeline.svg
