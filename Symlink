@@ -1,1 +1,9 @@
-
+# ln -s <path-to-target> <path-to-link>
+$ ln -s ~/Documents ./docs  
+$ ls -alh
+total 8.0K
+drwxrwxr-x  2 anurag anurag 4.0K Mar 26 00:34 ./
+drwxrwxr-x 24 anurag anurag 4.0K Mar 26 00:33 ../
+lrwxrwxrwx  1 anurag anurag   23 Mar 26 00:34 docs -> /home/anurag/Documents/
+$ python docs/hello.py
+Hello!
