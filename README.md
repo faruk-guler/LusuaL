@@ -3,8 +3,8 @@
 
 - Author: Faruk Guler
 - POC: Debian 12 (Bookworm)
-- Repository: https://github.com/faruk-guler/
 - Description: For Linux system administrators
+- Repository: https://github.com/faruk-guler/
 - Contributions: For contribution, send PR.
 - Contact: www.farukguler.com
 - License: CC-BY-4.0
