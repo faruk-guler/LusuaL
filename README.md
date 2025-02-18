@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/faruk-guler/Debian-Love/refs/heads/main/Linus-Torvalds-2012.jpg" alt="alt text" width="200" height="300">
+<img src="https://farukguler.com/assets/img/Linus-Torvalds-2012.jpg" alt="alt text" width="200" height="300">
 🅻🅸🅽🆄🆇 🅲🅷🅴🅰🆃🆂🅷🅴🅴🆃
 
 - Author: Faruk Guler
