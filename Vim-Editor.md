@@ -11,8 +11,6 @@
 - `vi` : Starting Vi
 
 ```
-~
-~
 ~                         VIM - Vi Improved
 ~
 ~                          version 8.0.707
@@ -29,8 +27,6 @@
 ~                   Running in Vi compatible mode
 ~          type  :set nocp<Enter>        for Vim defaults
 ~          type  :help cp-default<Enter> for info on this
-~
-~
 ```
 
 ## 🚀 **Basic Cursor Movement (Normal/Visual Mode)**
