@@ -1,13 +1,6 @@
 # Vim Essentials: A Comprehensive Cheat Sheet
 
 > Unlock the power of Vim with these essential commands and tips!
-
-## 𝐕𝐢𝐦 (𝐕𝐢 𝐈𝐦𝐩𝐫𝐨𝐯𝐞𝐝) 𝐂𝐡𝐞𝐚𝐭𝐬𝐡𝐞𝐞𝐭
-
-- Why to learn Vi?
-  - Vi is almost always available. Absolute necessary and good to know for pentesting.
-  - Vi is lightweight and fast.
-
 - `vi` : Starting Vi
 
 ```
