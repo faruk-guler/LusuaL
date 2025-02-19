@@ -2,7 +2,36 @@
 
 > Unlock the power of Vim with these essential commands and tips!
 
----
+## 𝐕𝐢𝐦 (𝐕𝐢 𝐈𝐦𝐩𝐫𝐨𝐯𝐞𝐝) 𝐂𝐡𝐞𝐚𝐭𝐬𝐡𝐞𝐞𝐭
+
+- Why to learn Vi?
+  - Vi is almost always available. Absolute necessary and good to know for pentesting.
+  - Vi is lightweight and fast.
+
+- `vi` : Starting Vi
+
+```
+~
+~
+~                         VIM - Vi Improved
+~
+~                          version 8.0.707
+~                     by Bram Moolenaar et al.
+~            Vim is open source and freely distributable
+~
+~                     Sponsor Vim development!
+~          type  :help sponsor<Enter>    for information
+~
+~          type  :q<Enter>               to exit
+~          type  :help<Enter>  or  <F1>  for on-line help
+~          type  :help version8<Enter>   for version info
+~
+~                   Running in Vi compatible mode
+~          type  :set nocp<Enter>        for Vim defaults
+~          type  :help cp-default<Enter> for info on this
+~
+~
+```
 
 ## 🚀 **Basic Cursor Movement (Normal/Visual Mode)**
 
