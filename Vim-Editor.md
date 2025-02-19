@@ -20,7 +20,7 @@
 ~                   Running in Vi compatible mode
 ~          type  :set nocp<Enter>        for Vim defaults
 ~          type  :help cp-default<Enter> for info on this
-
+```
 
 ## 🚀 **Basic Cursor Movement (Normal/Visual Mode)**
 
