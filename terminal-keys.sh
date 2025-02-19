@@ -1,4 +1,4 @@
-# bash terminal keyboard shortcuts
+# Bash terminal keyboard shortcuts
 
 # Ctrl + C to kill process
 # Ctrl + Z to stop process
