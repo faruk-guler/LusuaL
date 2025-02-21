@@ -1,4 +1,0 @@
-BOOT:
-Kernels.
-/boot/grub/menu.lst — Grub configuration file
-/etc/default/grub — Grub configuration file
