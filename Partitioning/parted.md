@@ -1,13 +1,11 @@
 ## parted:             
 -----
 
-```sh
 ## GNU Parted 3.5
 ## Using /dev/sda
 ## Welcome to GNU Parted! Type 'help' to view a list of commands.
 ## (parted)
 
-```
 -----
 
 
