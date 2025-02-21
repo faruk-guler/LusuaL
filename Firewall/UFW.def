@@ -54,7 +54,3 @@ systemctl disable ufw
 systemctl restart ufw
 
 #ufw reset #[Factory Reset and Backup]
-
-############################################
-# Firewalld
-############################################
