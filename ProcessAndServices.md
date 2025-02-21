@@ -75,7 +75,7 @@ cd /var/spool/cron/crontabs
 # See logs
 less /var/spool/mail/<user>
 ```
-
+```bash
 ps                    # Show active processes  
 top                   # Show running processes in real-time  
 kill pid              # Kill a process by ID  
@@ -99,3 +99,4 @@ pkill process-name      # Send signal to a process with its name
 bg                      # Resumes suspended jobs without bringing them to the foreground
 fg                      # Brings the most recent job to the foreground
 fg n                    # Brings job n to the foreground
+```
