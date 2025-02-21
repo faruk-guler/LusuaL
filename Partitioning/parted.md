@@ -66,3 +66,6 @@ sudo parted /dev/sda --script 'mklabel gpt mkpart primary ext4 1MiB 5GiB print q
 #Kayıp Bölüm Kurtarma:
 (parted) rescue START END  # Belirtilen aralıkta kayıp bölüm arar.
 ```
+
+-----
+------
