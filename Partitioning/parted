@@ -8,3 +8,12 @@ quit
 #rm 1    # 1 numaralı bölümü siler
 #resizepart 1 100GB    # 1 numaralı bölümü 100 GB yapar
 
+
+#sudo mkfs.ext4 /dev/sda5
+(parted) mklabel gpt       # GPT bölümlendirme tablosu oluştur
+(parted) mkpart primary ext4 0% 50%  # İlk bölümü oluştur
+(parted) mkpart primary ext4 50% 100% # İkinci bölümü oluştur
+(parted) quit              # Parted'i kapat
+
+
+
