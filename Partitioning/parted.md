@@ -12,17 +12,16 @@ sudo parted /dev/sdd
 print
 quit
 ```
+#Disk Tablosu Oluşturma (MBR/GPT)
+(parted) mklabel gpt    # GPT için
+(parted) mklabel msdos  # MBR için
+
+Bölüm Oluşturma
+
 
 ```sh
 #Disk Yedekleme - Taşıma:
 sudo dd if=/dev/sda of=/path/to/backup.img bs=4M
-```
-```sh
-#xxx
-mklabel gpt        # GPT bölümleme tablosu oluştur > 2 TB'a kadar olan diskler için.
-mklabel msdos      # MBR (MSDOS) bölümleme tablosu oluştur > 9.4 zettabytes (ZB) kadar olan diskler için.
-mkpart primary ext4 0% 50%      # İlk bölümü oluştur (0% - 50%)
-mkpart logical ext4 50% 100%    # İkinci bölümü oluştur (50% - 100%)
 ```
 
 ```sh
@@ -34,7 +33,7 @@ sudo parted /dev/sda
 (parted) quit
 ```
 ```sh
-#GPT Disk Bölümlendirme: (Daha yeni Sistemler İçin)
+#GPT Disk Bölümlendirme: (Daha yeni Sistemler İçin) [ex4/fat32...]
 sudo parted /dev/sda
 (parted) mklabel gpt           # Yeni GPT bölümlendirme tablosu oluştur
 (parted) mkpart primary ext4 0% 50%    # İlk bölüm
@@ -42,7 +41,7 @@ sudo parted /dev/sda
 (parted) print                  # Bölüm yapısını kontrol et
 (parted) quit                   # çık
 
-#MBR Bölümlendirme: (Eski Sistemler İçin)
+#MBR Bölümlendirme: (Eski Sistemler İçin) [ex4/fat32...]
 sudo parted /dev/sdb
 (parted) mklabel msdos          # MBR bölümleme tablosu oluştur
 (parted) mkpart primary ext4 0% 25%    # İlk bölüm (0% - 25%)
