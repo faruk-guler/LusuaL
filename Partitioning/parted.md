@@ -12,11 +12,15 @@ sudo parted /dev/sdd
 print
 quit
 ```
+```sh
 #Disk Tablosu Oluşturma (MBR/GPT)
 (parted) mklabel gpt    # GPT için
 (parted) mklabel msdos  # MBR için
-
-Bölüm Oluşturma
+```
+```sh
+#Dosya Sistemi Oluşturma: [ex4/fat32...]
+sudo mkfs.ext4 /dev/sda3
+```
 
 
 ```sh
@@ -52,11 +56,16 @@ sudo parted /dev/sdb
 ```sh
 #Bölüm İşaretleme: (Flag)
 (parted) set 1 boot on
+(parted) set 1 esp on  # EFI Sistemi olarak işaretler.
+```
+```sh
+#Bölüm Boyutunu Değiştirme:
+(parted) resizepart 1 2000MiB  # 1. bölümün bitişini 2000MB yapar.
 ```
 
 ```sh
 #Hizalama: (Alignment)          #Bölümleri SSD veya modern disklerde performans için hizalamak önemlidir:
-(parted) align-check optimal [PARTITION-NUMBER]
+(parted) rescue START END
 ```
 ```sh
 #Betikleme: (Scripting)        #Komutları doğrudan terminalden çalıştırma:
@@ -64,5 +73,41 @@ sudo parted /dev/sda --script 'mklabel gpt mkpart primary ext4 1MiB 5GiB print q
 ```
 ```sh
 #Kayıp Bölüm Kurtarma:
-(parted) rescue START END  # Belirtilen aralıkta kayıp bölüm arar.
+(parted) rescue 0% 100%  # Tüm diskte tarama yapar.
 ```
+
+
+#Yeni Bir Disk Bölümleme:
+
+Diski GPT olarak formatla:
+sudo parted /dev/sdb --script 'mklabel gpt'
+
+500MB'lık EFI bölümü oluştur:
+sudo parted /dev/sdb --script 'mkpart primary fat32 1MiB 500MiB set 1 esp on'
+
+Kalan alana ext4 bölümü oluştur:
+sudo parted /dev/sdb --script 'mkpart primary ext4 500MiB 100%'
+
+#Varolan Bölümü Genişletme:
+Bölümü bağlıysa kaldır:
+sudo umount /dev/sda2
+
+Bölüm boyutunu 20GB yap:
+sudo parted /dev/sda resizepart 2 20GiB
+
+Dosya sistemini genişlet:
+sudo resize2fs /dev/sda2  # ext4 için
+
+##Boot Edilebilir USB Oluşturma:
+1- USB sürücünüzü MBR formatında bölümleyin.
+2- FAT32 dosya sistemi ile boot edilebilir bir bölüm oluşturun.
+3- ISO dosyasını, dd komutuyla USB sürücüsüne yazın.
+
+USB Diski MBR yap:
+sudo parted /dev/sdc --script 'mklabel msdos'
+
+Bootable FAT32 bölüm oluştur:
+sudo parted /dev/sdc --script 'mkpart primary fat32 1MiB 4GiB set 1 boot on'
+
+ISO'yu yaz:
+sudo dd if=ubuntu.iso of=/dev/sdc1 bs=4M status=progress
