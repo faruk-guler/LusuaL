@@ -17,12 +17,13 @@ quit
 #Disk Yedekleme - Taşıma:
 sudo dd if=/dev/sda of=/path/to/backup.img bs=4M
 ```
-
+```sh
 #xxx
 mklabel gpt        # GPT bölümleme tablosu oluştur > 2 TB'a kadar olan diskler için.
 mklabel msdos      # MBR (MSDOS) bölümleme tablosu oluştur > 9.4 zettabytes (ZB) kadar olan diskler için.
 mkpart primary ext4 0% 50%      # İlk bölümü oluştur (0% - 50%)
 mkpart logical ext4 50% 100%    # İkinci bölümü oluştur (50% - 100%)
+```
 
 ```sh
 Bölüm Silme ve Yeniden Boyutlandırma:
@@ -49,16 +50,20 @@ sudo parted /dev/sdb
 (parted) print                  # Bölüm yapısını kontrol et
 (parted) quit                   # çık
 ```
-
+```sh
 #Bölüm İşaretleme: (Flag)
 (parted) set 1 boot on
+```
 
+```sh
 #Hizalama: (Alignment)          #Bölümleri SSD veya modern disklerde performans için hizalamak önemlidir:
 (parted) align-check optimal [PARTITION-NUMBER]
-
+```
+```sh
 #Betikleme: (Scripting)        #Komutları doğrudan terminalden çalıştırma:
 sudo parted /dev/sda --script 'mklabel gpt mkpart primary ext4 1MiB 5GiB print quit'
-
+```
+```sh
 #Kayıp Bölüm Kurtarma:
 (parted) rescue START END  # Belirtilen aralıkta kayıp bölüm arar.
-
+```
