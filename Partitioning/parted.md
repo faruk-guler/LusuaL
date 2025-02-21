@@ -22,7 +22,6 @@ quit
 sudo mkfs.ext4 /dev/sda3
 ```
 
-
 ```sh
 #Disk Yedekleme - Taşıma:
 sudo dd if=/dev/sda of=/path/to/backup.img bs=4M
@@ -87,7 +86,7 @@ sudo parted /dev/sdb --script 'mkpart primary fat32 1MiB 500MiB set 1 esp on'
 
 Kalan alana ext4 bölümü oluştur:
 sudo parted /dev/sdb --script 'mkpart primary ext4 500MiB 100%'
-
+```
 ```sh
 #Varolan Bölümü Genişletme:
 Bölümü bağlıysa kaldır:
