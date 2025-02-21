@@ -76,7 +76,7 @@ sudo parted /dev/sda --script 'mklabel gpt mkpart primary ext4 1MiB 5GiB print q
 (parted) rescue 0% 100%  # Tüm diskte tarama yapar.
 ```
 
-
+```sh
 #Yeni Bir Disk Bölümleme:
 
 Diski GPT olarak formatla:
@@ -88,6 +88,7 @@ sudo parted /dev/sdb --script 'mkpart primary fat32 1MiB 500MiB set 1 esp on'
 Kalan alana ext4 bölümü oluştur:
 sudo parted /dev/sdb --script 'mkpart primary ext4 500MiB 100%'
 
+```sh
 #Varolan Bölümü Genişletme:
 Bölümü bağlıysa kaldır:
 sudo umount /dev/sda2
@@ -97,17 +98,19 @@ sudo parted /dev/sda resizepart 2 20GiB
 
 Dosya sistemini genişlet:
 sudo resize2fs /dev/sda2  # ext4 için
-
+```
+```sh
 ##Boot Edilebilir USB Oluşturmak:
 1- USB sürücünüzü MBR formatında bölümleyin.
 2- FAT32 dosya sistemi ile boot edilebilir bir bölüm oluşturun.
 3- ISO dosyasını, dd komutuyla USB sürücüsüne yazın.
 
-USB Diski MBR yap:
+>>USB Diski MBR yap:
 sudo parted /dev/sdc --script 'mklabel msdos'
 
-Bootable FAT32 bölüm oluştur:
+>>Bootable FAT32 bölüm oluştur:
 sudo parted /dev/sdc --script 'mkpart primary fat32 1MiB 4GiB set 1 boot on'
 
-ISO'yu yaz:
+>>ISO'yu yaz:
 sudo dd if=ubuntu.iso of=/dev/sdc1 bs=4M status=progress
+```
