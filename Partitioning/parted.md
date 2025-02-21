@@ -65,7 +65,7 @@ sudo parted /dev/sdb
 
 ```sh
 #Hizalama: (Alignment)          #Bölümleri SSD veya modern disklerde performans için hizalamak önemlidir:
-(parted) rescue START END
+(parted) align-check optimal 1
 ```
 ```sh
 #Betikleme: (Scripting)        #Komutları doğrudan terminalden çalıştırma:
