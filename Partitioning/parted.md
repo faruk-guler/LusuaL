@@ -68,8 +68,8 @@ sudo parted /dev/sdb
 
 ```sh
 #Bölüm İşaretleme: (Flag)
-(parted) set 1 boot on
-(parted) set 1 esp on  # EFI Sistemi olarak işaretler.
+(parted) set 1 boot on  # 1 numaralı bölümü önyükleme bölümü olarak işaretler.
+(parted) set 1 esp on   # 1 numaralı bölümü EFI sistem bölümü (ESP) olarak işaretler
 ```
 
 ```sh
