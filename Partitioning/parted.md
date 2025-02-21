@@ -7,11 +7,13 @@ sudo apt install parted      # Debian/Ubuntu
 sudo dnf install parted      # Fedora/centos
 sudo pacman -S parted        # Arch/Manjaro
 ```
+
 ```sh
 sudo parted /dev/sdd
 print
 quit
 ```
+
 ```sh
 #Disk Tablosu Oluşturma (MBR/GPT)
 (parted) mklabel gpt    # GPT için
@@ -35,6 +37,7 @@ sudo parted /dev/sda
 (parted) resizepart 1 120GB      # 1 numaralı bölümü 120GB'a çıkar
 (parted) quit
 ```
+
 ```sh
 #GPT Disk Bölümlendirme: (Daha yeni Sistemler İçin) [ex4/fat32...]
 sudo parted /dev/sda
@@ -52,11 +55,13 @@ sudo parted /dev/sdb
 (parted) print                  # Bölüm yapısını kontrol et
 (parted) quit                   # çık
 ```
+
 ```sh
 #Bölüm İşaretleme: (Flag)
 (parted) set 1 boot on
 (parted) set 1 esp on  # EFI Sistemi olarak işaretler.
 ```
+
 ```sh
 #Bölüm Boyutunu Değiştirme:
 (parted) resizepart 1 2000MiB  # 1. bölümün bitişini 2000MB yapar.
@@ -66,10 +71,12 @@ sudo parted /dev/sdb
 #Hizalama: (Alignment)          #Bölümleri SSD veya modern disklerde performans için hizalamak önemlidir:
 (parted) align-check optimal 1
 ```
+
 ```sh
 #Betikleme: (Scripting)        #Komutları doğrudan terminalden çalıştırma:
 sudo parted /dev/sda --script 'mklabel gpt mkpart primary ext4 1MiB 5GiB print quit'
 ```
+
 ```sh
 #Kayıp Bölüm Kurtarma:
 (parted) rescue 0% 100%  # Tüm diskte tarama yapar.
@@ -87,6 +94,7 @@ sudo parted /dev/sdb --script 'mkpart primary fat32 1MiB 500MiB set 1 esp on'
 Kalan alana ext4 bölümü oluştur:
 sudo parted /dev/sdb --script 'mkpart primary ext4 500MiB 100%'
 ```
+
 ```sh
 #Varolan Bölümü Genişletme:
 Bölümü bağlıysa kaldır:
@@ -98,6 +106,7 @@ sudo parted /dev/sda resizepart 2 20GiB
 Dosya sistemini genişlet:
 sudo resize2fs /dev/sda2  # ext4 için
 ```
+
 ```sh
 ##Boot Edilebilir USB Oluşturmak:
 1- USB sürücünüzü MBR formatında bölümleyin.
