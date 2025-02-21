@@ -43,7 +43,7 @@ sudo parted /dev/sdb
 (parted) mkpart primary ext4 25% 50%   # İkinci bölüm (25% - 50%)
 (parted) print                  # Bölüm yapısını kontrol et
 (parted) quit                   # çık
-```sh
+```
 
 #Bölüm İşaretleme: (Flag)
 (parted) set 1 boot on
