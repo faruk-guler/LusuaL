@@ -2,7 +2,7 @@
 #parted:             #
 ######################
 
-sudo parted /dev/sda
+sudo parted /dev/sdd
 print
 quit
 
