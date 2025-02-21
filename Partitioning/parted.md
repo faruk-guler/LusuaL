@@ -4,7 +4,7 @@
 
 ```sh
 sudo apt install parted      # Debian/Ubuntu
-sudo dnf install parted      # Fedora
+sudo dnf install parted      # Fedora/centos
 sudo pacman -S parted        # Arch/Manjaro
 ```
 ```sh
