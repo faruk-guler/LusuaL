@@ -1,1 +1,13 @@
-
+### Shell Variables ###
+$?					# returns the exit status of the last program that ran 
+$!					# pid of last forked process 
+	true; echo $?			# will print 0 to STDOUT
+	false; echo $?			# will print 1 to STDOUT
+$0, $1, $2, $3...			# positional parameters
+${10} ... ${N}				# positional parameters beyond 9
+$* - $1 $2 $3 ... ${N}			# 
+$@ - $1 $2 $3 ... ${N}			# 
+"$*" - "$1c$2c$3c...c${N}"		# 
+"$@" - "$1" "$2" "$3" ... "${N}"	# 
+$#					# total number of parameters
+http://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables
