@@ -98,7 +98,7 @@ sudo parted /dev/sda resizepart 2 20GiB
 Dosya sistemini genişlet:
 sudo resize2fs /dev/sda2  # ext4 için
 
-##Boot Edilebilir USB Oluşturma:
+##Boot Edilebilir USB Oluşturmak:
 1- USB sürücünüzü MBR formatında bölümleyin.
 2- FAT32 dosya sistemi ile boot edilebilir bir bölüm oluşturun.
 3- ISO dosyasını, dd komutuyla USB sürücüsüne yazın.
