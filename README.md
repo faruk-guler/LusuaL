@@ -2,7 +2,7 @@
 🅻🅸🅽🆄🆇 🅲🅷🅴🅰🆃🆂🅷🅴🅴🆃
 
 - Author: Faruk Guler
-- POC: Debian 12 (Bookworm) - Rocky Linux 9
+- POC: Debian 12 (Bookworm) - AlmaLinux 9
 - Description: For Linux system administrators
 - Repository: https://github.com/faruk-guler/
 - Contributions: For contribution, send PR.
