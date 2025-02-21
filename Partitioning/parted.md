@@ -2,17 +2,21 @@
 #parted:             #
 ######################
 
+```sh
 sudo apt install parted      # Debian/Ubuntu
 sudo dnf install parted      # Fedora
 sudo pacman -S parted        # Arch/Manjaro
-
-
+```
+```sh
 sudo parted /dev/sdd
 print
 quit
+```
 
+```sh
 #Disk Yedekleme - Taşıma:
 sudo dd if=/dev/sda of=/path/to/backup.img bs=4M
+```
 
 #xxx
 mklabel gpt        # GPT bölümleme tablosu oluştur > 2 TB'a kadar olan diskler için.
@@ -27,7 +31,8 @@ sudo parted /dev/sda
 (parted) rm 2                    # 2 numaralı bölümü sil
 (parted) resizepart 1 120GB      # 1 numaralı bölümü 120GB'a çıkar
 (parted) quit
-
+```
+```sh
 #GPT Disk Bölümlendirme: (Daha yeni Sistemler İçin)
 sudo parted /dev/sda
 (parted) mklabel gpt           # Yeni GPT bölümlendirme tablosu oluştur
