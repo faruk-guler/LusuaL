@@ -1,1 +1,10 @@
-
+SYSTEM RUNLEVELS:
+runlevel — Output previous and current runlevel
+    0 — Shuts down the system
+    1 — Administrative single-user mode
+    2 — Same as 3 but without networking / multiuser with X server
+    3 — Text mode state (ctrl+alt+F1) / User defined
+    4 — User defined
+    5 — X-window mode (ctrl+alt+F7) / User defined
+    6 — Reboots
+    S — Single user mode
