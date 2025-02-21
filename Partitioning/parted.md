@@ -124,12 +124,12 @@ sudo resize2fs /dev/sda2  # ext4 için
 2- FAT32 dosya sistemi ile boot edilebilir bir bölüm oluşturun.
 3- ISO dosyasını, dd komutuyla USB sürücüsüne yazın.
 
->>USB Diski MBR yap:
+>> USB Diski MBR yap:
 sudo parted /dev/sdc --script 'mklabel msdos'
 
->>Bootable FAT32 bölüm oluştur:
+>> Bootable FAT32 bölüm oluştur:
 sudo parted /dev/sdc --script 'mkpart primary fat32 1MiB 4GiB set 1 boot on'
 
->>ISO'yu yaz:
+>> ISO'yu yaz:
 sudo dd if=ubuntu.iso of=/dev/sdc1 bs=4M status=progress
 ```
