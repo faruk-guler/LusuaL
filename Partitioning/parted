@@ -19,7 +19,7 @@ mklabel msdos      # MBR (MSDOS) bölümleme tablosu oluştur > 9.4 zettabytes (
 mkpart primary ext4 0% 50%      # İlk bölümü oluştur (0% - 50%)
 mkpart logical ext4 50% 100%    # İkinci bölümü oluştur (50% - 100%)
 
----
+```sh
 Bölüm Silme ve Yeniden Boyutlandırma:
 sudo parted /dev/sda
 (parted) print                  # Bölüm yapısını kontrol et
@@ -42,7 +42,7 @@ sudo parted /dev/sdb
 (parted) mkpart primary ext4 25% 50%   # İkinci bölüm (25% - 50%)
 (parted) print                  # Bölüm yapısını kontrol et
 (parted) quit                   # çık
----
+```sh
 
 #Bölüm İşaretleme: (Flag)
 (parted) set 1 boot on
