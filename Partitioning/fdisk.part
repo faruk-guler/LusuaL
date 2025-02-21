@@ -7,3 +7,4 @@ lvresize -L <sizeXX> /dev/mapper/<name of volume group>-<name of logical volume>
 #mkfs.ext4 /dev/mapper/<name of volume group>-<name of logical volume>                    # Create a ext4 file system on the new LV
 resize2fs /dev/mapper/<name of volume group>-<name of logical volume>                     # Resize underlaying file system
 
+
