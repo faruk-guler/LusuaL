@@ -2,6 +2,11 @@
 #parted:             #
 ######################
 
+sudo apt install parted      # Debian/Ubuntu
+sudo dnf install parted      # Fedora
+sudo pacman -S parted        # Arch/Manjaro
+
+
 sudo parted /dev/sdd
 print
 quit
@@ -39,5 +44,15 @@ sudo parted /dev/sdb
 (parted) quit                   # çık
 ---
 
+#Bölüm İşaretleme: (Flag)
+(parted) set 1 boot on
 
+#Hizalama: (Alignment)          #Bölümleri SSD veya modern disklerde performans için hizalamak önemlidir:
+(parted) align-check optimal [PARTITION-NUMBER]
+
+# Betikleme: (Scripting)        #Komutları doğrudan terminalden çalıştırma:
+sudo parted /dev/sda --script 'mklabel gpt mkpart primary ext4 1MiB 5GiB print quit'
+
+#Kayıp Bölüm Kurtarma:
+(parted) rescue START END  # Belirtilen aralıkta kayıp bölüm arar.
 
