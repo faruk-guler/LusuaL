@@ -4,6 +4,11 @@ sudo parted /dev/sda
 print
 quit
 
+mklabel gpt        # GPT bölümleme tablosu oluştur > 2 TB'a kadar olan diskler için.
+mklabel msdos      # MBR (MSDOS) bölümleme tablosu oluştur > 9.4 zettabytes (ZB) kadar olan diskler için.
+
+
+
 
 #rm 1    # 1 numaralı bölümü siler
 #resizepart 1 100GB    # 1 numaralı bölümü 100 GB yapar
