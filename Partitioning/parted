@@ -2,6 +2,8 @@
 
 sudo parted /dev/sda
 print
+quit
+
 
 #rm 1    # 1 numaralı bölümü siler
 #resizepart 1 100GB    # 1 numaralı bölümü 100 GB yapar
