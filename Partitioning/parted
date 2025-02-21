@@ -3,3 +3,5 @@
 sudo parted /dev/sda
 print
 
+#rm 1    # 1 numaralı bölümü siler
+
