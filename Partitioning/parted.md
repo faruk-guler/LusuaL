@@ -40,7 +40,7 @@ sudo dd if=/dev/sda of=/path/to/backup.img bs=4M
 ```
 
 ```sh
-Bölüm Silme ve Yeniden Boyutlandırma:
+#Bölüm Silme ve Yeniden Boyutlandırma:
 sudo parted /dev/sda
 (parted) print                  # Bölüm yapısını kontrol et
 (parted) rm 2                    # 2 numaralı bölümü sil
@@ -93,27 +93,28 @@ sudo parted /dev/sda --script 'mklabel gpt mkpart primary ext4 1MiB 5GiB print q
 ```
 
 ```sh
-#Yeni Bir Disk Bölümleme:
+##Yeni Bir Disk Bölümleme:
 
-Diski GPT olarak formatla:
+>> Diski GPT olarak formatla:
 sudo parted /dev/sdb --script 'mklabel gpt'
 
-500MB'lık EFI bölümü oluştur:
+>> 500MB'lık EFI bölümü oluştur:
 sudo parted /dev/sdb --script 'mkpart primary fat32 1MiB 500MiB set 1 esp on'
 
-Kalan alana ext4 bölümü oluştur:
+>> Kalan alana ext4 bölümü oluştur:
 sudo parted /dev/sdb --script 'mkpart primary ext4 500MiB 100%'
 ```
 
 ```sh
 #Varolan Bölümü Genişletme:
-Bölümü bağlıysa kaldır:
+
+>> Bölümü bağlıysa kaldır:
 sudo umount /dev/sda2
 
-Bölüm boyutunu 20GB yap:
+>> Bölüm boyutunu 20GB yap:
 sudo parted /dev/sda resizepart 2 20GiB
 
-Dosya sistemini genişlet:
+>> Dosya sistemini genişlet:
 sudo resize2fs /dev/sda2  # ext4 için
 ```
 
