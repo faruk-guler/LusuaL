@@ -1,4 +1,6 @@
-#parted:
+######################
+#parted:             #
+######################
 
 sudo parted /dev/sda
 print
