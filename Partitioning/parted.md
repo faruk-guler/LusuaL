@@ -14,6 +14,7 @@ quit
 #Disk Yedekleme - Taşıma:
 sudo dd if=/dev/sda of=/path/to/backup.img bs=4M
 
+#xxx
 mklabel gpt        # GPT bölümleme tablosu oluştur > 2 TB'a kadar olan diskler için.
 mklabel msdos      # MBR (MSDOS) bölümleme tablosu oluştur > 9.4 zettabytes (ZB) kadar olan diskler için.
 mkpart primary ext4 0% 50%      # İlk bölümü oluştur (0% - 50%)
