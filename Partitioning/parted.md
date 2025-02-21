@@ -8,6 +8,7 @@ Welcome to GNU Parted! Type 'help' to view a list of commands.
 (parted)
 
 ```
+-----
 
 
 ```sh
