@@ -6,6 +6,8 @@ quit
 
 mklabel gpt        # GPT bölümleme tablosu oluştur > 2 TB'a kadar olan diskler için.
 mklabel msdos      # MBR (MSDOS) bölümleme tablosu oluştur > 9.4 zettabytes (ZB) kadar olan diskler için.
+mkpart primary ext4 0% 50%      # İlk bölümü oluştur (0% - 50%)
+mkpart logical ext4 50% 100%    # İkinci bölümü oluştur (50% - 100%)
 
 
 
