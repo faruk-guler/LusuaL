@@ -51,7 +51,7 @@ sudo parted /dev/sdb
 #Hizalama: (Alignment)          #Bölümleri SSD veya modern disklerde performans için hizalamak önemlidir:
 (parted) align-check optimal [PARTITION-NUMBER]
 
-# Betikleme: (Scripting)        #Komutları doğrudan terminalden çalıştırma:
+#Betikleme: (Scripting)        #Komutları doğrudan terminalden çalıştırma:
 sudo parted /dev/sda --script 'mklabel gpt mkpart primary ext4 1MiB 5GiB print quit'
 
 #Kayıp Bölüm Kurtarma:
