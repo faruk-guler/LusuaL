@@ -25,7 +25,7 @@ quit
 ```
 
 ```sh
-#Disk Tablosu Oluşturma (MBR/GPT)
+#Disk Tablosu Oluşturma [MBR/GPT]
 (parted) mklabel gpt    # GPT için
 (parted) mklabel msdos  # MBR için
 ```
