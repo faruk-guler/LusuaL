@@ -19,7 +19,7 @@ openssl genrsa -out faruk.key 2048               #Private key oluştur.
 openssl rsa -in faruk.key -check                 #Private key kontrol et.
 openssl req -new -key faruk.key -out guler.csr   #CSR oluştur.
 openssl req -text -noout -verify -in guler.csr   #CSR içeriğini doğrula.
-openssl x509 -req -days 365 -in guler.csr -signkey faruk.key -out sertifika.crt -sha256 #Self-Signed Sertifika oluştur. [.crt .pem .key .pfx]
+openssl x509 -req -days 365 -in guler.csr -signkey faruk.key -out sertifika.crt #Self-Signed Sertifika oluştur. [.crt .pem .key .pfx]
 openssl x509 -in sertifika.crt -text -noout      #Sertifikayı Doğrula
 ----------------AND-----------------------
 
