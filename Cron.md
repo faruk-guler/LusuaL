@@ -127,10 +127,9 @@ If none of the files exists, all users are allowed.
 Logs and Results
 
 Execution of cronjobs is logged in /var/log/cron. Results are sent to the users mail /var/spool/mail/username
-
+```
 
 #### **Cronjob @ Format**
-```
 
 There's also a couple of useful shortcuts! And one that lets you run each time the system reboots!
 
