@@ -2,6 +2,7 @@
 ***Since you signed the certificate yourself without using a (CA), this certificate is not considered trusted by browsers or clients from a security perspective.
 However, it is suitable for development and testing environments.
 
+SSL Generation:
 ----------------BEGIN---------------------
 openssl genrsa -out faruk.key 2048              #Private key oluştur.
 openssl rsa -in faruk.key -check                #Özel anahtarı kontrol et.
@@ -18,18 +19,6 @@ openssl x509 -in sertifika.crt -text -noout     #Sertifikayı Doğrula
 /etc/httpd/conf.d/
 https://www.sslshopper.com/ssl-checker.html >SSL Checker
 
-SSL Generation:
-	openssl req -out CSR.csr -sha256 -new -newkey rsa:4096 -nodes -keyout privateKey.key  Generate a new private key and Certificate Signing Request
-	openssl req -x509 -nodes -sha256 -days 365 -newkey rsa:4096 -keyout privateKey.key -out certificate.crt  Generate a self-signed certificate
-	openssl req -out CSR.csr -sha256 -key privateKey.key -new  Generate a certificate signing request (CSR) for an existing private key
-	penssl x509 -x509toreq -sha256 -in certificate.crt -out CSR.csr -signkey privateKey.key  Generate a certificate signing request based on an existing certificate
-	penssl rsa -in privateKey.pem -out new  PrivateKey.pem Remove a passphrase from a private key
-
-SSL Checking:
-	openssl req -text -noout -verify -in CSR.csr  Check a Certificate Signing Request (CSR)
-	openssl rsa -in privateKey.key -check  Check a private key
-	openssl x509 -in certificate.crt -text -noout  Check a certificate
-	openssl pkcs12 -info -in keyStore.p12  Check a PKCS#12 file (.pfx or .p12)
 
 Wildcard vs. SAN Certificate:
   Domain Validated vs. Business Validated
