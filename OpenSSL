@@ -6,13 +6,13 @@ https://slproweb.com/products/Win32OpenSSL.html [Windows]
 openssl version
 
 ##Certificates:
-✅ Self Signed SSL Certificate (Kendinden İmzalı SSL Sertifikası)
-✅ SSL certificates from trusted CA (Güvenilir CA'dan SSL Sertifikası)
+✅1 Self Signed SSL Certificate (Kendinden İmzalı SSL Sertifikası)
+✅2 SSL certificates from trusted CA (Güvenilir CA'dan SSL Sertifikası)
 
 ***Since you signed the certificate yourself without using a (CA), this certificate is not considered trusted by browsers or clients from a security perspective.
 However, it is suitable for development and testing environments.
 
-✅Self Signed Certificate Generation:
+✅1 Self Signed Certificate Generation:
 ----------------BEGIN---------------------
 openssl genrsa -out faruk.key 2048               #Private key oluştur.
 openssl rsa -in faruk.key -check                 #Private key kontrol et.
@@ -33,3 +33,13 @@ https://www.digicert.com/easy-csr/openssl.htm [General CSR Creation Guidelines]
 
 🧶OpenSSL' ile Sertifika Formatlarını dönüştürmek:
 https://farukguler.com/posts/what-is-openssl-and-how-is-it-used-interview-with-olaf/
+
+✅2 SSL certificates from trusted CA (Güvenilir CA'dan SSL Sertifikası)
+Genel Sertifika Otoriteleri, güvenli bağlantılar sağlayan imzalayan kuruluşlardır.
+
+-GoDaddy
+-Let's Encrypt
+-VeriSign (Symantec)
+-DigiCert
+-GlobalSign
+-Comodo (Sectigo)
