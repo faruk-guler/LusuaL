@@ -91,8 +91,6 @@ $ sudo crontab -e
 
 **Note:** Make sure any script you want to run has executable permissions set!
 
-#### **Cronjob Format**
-
 ```shell
 # Crontab
 # https://crontab.guru/
