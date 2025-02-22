@@ -2,6 +2,7 @@
 sudo apt install openssl
 sudo yum install openssl
 https://slproweb.com/products/Win32OpenSSL.html [Windows]
+openssl version
 
 ##Creating a Self-Signed certificate:
 ***Since you signed the certificate yourself without using a (CA), this certificate is not considered trusted by browsers or clients from a security perspective.
@@ -13,7 +14,7 @@ openssl genrsa -out faruk.key 2048               #Private key oluştur.
 openssl rsa -in faruk.key -check                 #Private key kontrol et.
 openssl req -new -key faruk.key -out guler.csr   #CSR oluştur.
 openssl req -text -noout -verify -in guler.csr   #CSR içeriğini doğrula.
-openssl x509 -req -days 365 -in guler.csr -signkey faruk.key -out sertifika.crt -sha256 #Self-Signed Sertifika oluştur [.crt .pem .key .pfx]
+openssl x509 -req -days 365 -in guler.csr -signkey faruk.key -out sertifika.crt -sha256 #Self-Signed Sertifika oluştur. [.crt .pem .key .pfx]
 openssl x509 -in sertifika.crt -text -noout      #Sertifikayı Doğrula
 
 Extra:
@@ -21,6 +22,7 @@ openssl rsa -in faruk.key -pubout -out faruk.pub #Public key oluştur. [Opsionel
 openssl x509 -x509toreq -sha256 -in sertifika.crt -out yeni.csr -signkey faruk.key #Varolan Sertifikadan CSR Oluştur
 openssl pkcs12 -export -out mycert.p12 -inkey faruk.key -in sertifika.crt #Sertifikayı Başka Formatlara çevir. [*.p12 .pfx ...]
 openssl pkcs12 -info -in keyStore.p12  #PKCS#12 içeriğini incele [*.p12 .pfx ...]
+openssl s_client -connect farukguler.com:443 2>/dev/null | openssl x509 -noout -dates #Sertifika geçerlilik göster.
 
 ----------------AND---------------------
 
