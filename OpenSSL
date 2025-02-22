@@ -12,7 +12,7 @@ openssl version
 ***Since you signed the certificate yourself without using a (CA), this certificate is not considered trusted by browsers or clients from a security perspective.
 However, it is suitable for development and testing environments.
 
-Self Signed Certificate Generation:
+✅Self Signed Certificate Generation:
 ----------------BEGIN---------------------
 openssl genrsa -out faruk.key 2048               #Private key oluştur.
 openssl rsa -in faruk.key -check                 #Private key kontrol et.
@@ -27,6 +27,7 @@ openssl x509 -x509toreq -sha256 -in sertifika.crt -out yeni.csr -signkey faruk.k
 openssl pkcs12 -export -out mycert.p12 -inkey faruk.key -in sertifika.crt #Sertifikayı Başka Formatlara çevir. [*.p12 .pfx ...]
 openssl pkcs12 -info -in keyStore.p12  #PKCS#12 içeriğini incele [*.p12 .pfx ...]
 openssl s_client -connect farukguler.com:443 2>/dev/null | openssl x509 -noout -dates #Sertifika geçerlilik göster.
-
+https://www.digicert.com/kb/csr-creation.htm [General CSR Creation Guidelines]
+https://www.digicert.com/easy-csr/openssl.htm [General CSR Creation Guidelines]
 ----------------AND---------------------
 
