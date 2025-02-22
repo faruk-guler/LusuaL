@@ -1,5 +1,5 @@
 
-# OpenSSL 3.0.15 3 Sep 2024 (Library: OpenSSL 3.0.15 3 Sep 2024) #
+## OpenSSL 3.0.15 3 Sep 2024 (Library: OpenSSL 3.0.15 3 Sep 2024) ##
 sudo apt install openssl
 sudo yum install openssl
 https://slproweb.com/products/Win32OpenSSL.html [Windows]
@@ -22,7 +22,7 @@ openssl x509 -req -days 365 -in guler.csr -signkey faruk.key -out sertifika.crt 
 openssl x509 -in sertifika.crt -text -noout      #Sertifikayı Doğrula
 ----------------AND-----------------------
 
-Extra:
+Extras:
 openssl rsa -in faruk.key -pubout -out faruk.pub #Public key oluştur. [Opsionel]
 openssl x509 -x509toreq -sha256 -in sertifika.crt -out yeni.csr -signkey faruk.key #Varolan Sertifikadan CSR Oluştur
 openssl pkcs12 -export -out mycert.p12 -inkey faruk.key -in sertifika.crt #Sertifikayı Başka Formatlara çevir. [*.p12 .pfx ...]
@@ -31,4 +31,5 @@ openssl s_client -connect farukguler.com:443 2>/dev/null | openssl x509 -noout -
 https://www.digicert.com/kb/csr-creation.htm [General CSR Creation Guidelines]
 https://www.digicert.com/easy-csr/openssl.htm [General CSR Creation Guidelines]
 
-
+🧶OpenSSL' ile Sertifika Formatlarını dönüştürmek:
+https://farukguler.com/posts/what-is-openssl-and-how-is-it-used-interview-with-olaf/
