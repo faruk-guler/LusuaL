@@ -91,27 +91,51 @@ $ sudo crontab -e
 
 **Note:** Make sure any script you want to run has executable permissions set!
 
-
-
 #### **Cronjob Format**
 
-Cronjob listings follow this format. They run when the system clock hits the number listed.
+# https://crontab.guru/
 
-Eg. 0 * * * * sets an hourly task that runs at the start of every hour
+/var/spool/cron/username user specific
+/etc/crontab system wide crontab
+The format of the files is (user specific crontabs do not have the column user-name):
 
-![crontab](assets/crontab-layout.png)
+Example of job definition:
+.---------------- minute (0 - 59 | */5 [every 5 minutes])
+|  .------------- hour (0 - 23)
+|  |  .---------- day of month (1 - 31)
+|  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+|  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+|  |  |  |  |
+*  *  *  *  * user-name  command to be executed
+Command	Description
+rpm -q cronie	Check if package is installed
+systemctl status crond.service	Check if service is running
+crontab -l	List current users crontab
+crontab -e	Edit current users crontab
+crontab -e -u username	Edit specific users crontab
+crontab -r	Remove current users crontab
+Script folders
 
-**Run every 15 minutes**
+Scripts in one of the following directories will be executed at the intervall specified by the directory's name:
 
-`*/15 * * * * <command>`
+/etc/cron.hourly
+/etc/cron.daily
+/etc/cron.weekly
+/etc/cron.monthly
+Allow / Deny usage
 
-**Run every on 5, 10, and 15 minutes each hour**
+Add user names one per line to the following files:
 
-`5,10,15 * * * * <command>`
+/etc/cron.allow Whitelist
+/etc/cron.deny Blacklist
+If none of the files exists, all users are allowed.
 
-**Run a job once a year on 1 Jan**
+Logs and Results
 
-`* * 1 1 * <command>`
+Execution of cronjobs is logged in /var/log/cron. Results are sent to the users mail /var/spool/mail/username
+
+
+
 
 
 
