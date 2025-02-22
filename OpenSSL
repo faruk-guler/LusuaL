@@ -4,12 +4,18 @@ However, it is suitable for development and testing environments.
 
 SSL Generation:
 ----------------BEGIN---------------------
-openssl genrsa -out faruk.key 2048              #Private key oluştur.
-openssl rsa -in faruk.key -check                #Özel anahtarı kontrol et.
-openssl req -new -key faruk.key -out guler.csr  #CSR oluştur.
-openssl req -text -noout -verify -in guler.csr  #CSR içeriğini doğrula.
-openssl x509 -req -days 365 -in guler.csr -signkey faruk.key -out sertifika.crt -sha256 # Self-Signed Sertifikayı oluştur:
-openssl x509 -in sertifika.crt -text -noout     #Sertifikayı Doğrula
+openssl genrsa -out faruk.key 2048               #Private key oluştur.
+openssl rsa -in faruk.key -check                 #Private key kontrol et.
+openssl req -new -key faruk.key -out guler.csr   #CSR oluştur.
+openssl req -text -noout -verify -in guler.csr   #CSR içeriğini doğrula.
+openssl x509 -req -days 365 -in guler.csr -signkey faruk.key -out sertifika.crt -sha256 #Self-Signed Sertifika oluştur [.crt .pem .key .pfx]
+openssl x509 -in sertifika.crt -text -noout      #Sertifikayı Doğrula
+
+Ek:
+openssl rsa -in faruk.key -pubout -out faruk.pub #Public key oluştur. [Opsionel]
+openssl x509 -x509toreq -sha256 -in sertifika.crt -out yeni.csr -signkey faruk.key #Varolan Sertifikadan CSR Oluştur
+openssl pkcs12 -export -out mycert.p12 -inkey faruk.key -in sertifika.crt #Sertifikayı Başka Formatlara çevir. [*.p12 .pfx ...]
+openssl pkcs12 -info -in keyStore.p12  #PKCS#12 içeriğini incele [*.p12 .pfx ...]
 
 ----------------AND---------------------
 
