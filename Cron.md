@@ -93,20 +93,13 @@ $ sudo crontab -e
 
 #### **Cronjob Format**
 
-# https://crontab.guru/
-
 /var/spool/cron/username user specific
 /etc/crontab system wide crontab
 The format of the files is (user specific crontabs do not have the column user-name):
 
 Example of job definition:
-.---------------- minute (0 - 59 | */5 [every 5 minutes])
-|  .------------- hour (0 - 23)
-|  |  .---------- day of month (1 - 31)
-|  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
-|  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
-|  |  |  |  |
-*  *  *  *  * user-name  command to be executed
+#https://crontab.guru/
+
 Command	Description
 rpm -q cronie	Check if package is installed
 systemctl status crond.service	Check if service is running
@@ -133,11 +126,6 @@ If none of the files exists, all users are allowed.
 Logs and Results
 
 Execution of cronjobs is logged in /var/log/cron. Results are sent to the users mail /var/spool/mail/username
-
-
-
-
-
 
 #### **Cronjob @ Format**
 
