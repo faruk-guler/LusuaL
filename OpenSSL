@@ -1,3 +1,8 @@
+
+sudo apt install openssl
+sudo yum install openssl
+https://slproweb.com/products/Win32OpenSSL.html [Windows]
+
 ##Creating a Self-Signed certificate:
 ***Since you signed the certificate yourself without using a (CA), this certificate is not considered trusted by browsers or clients from a security perspective.
 However, it is suitable for development and testing environments.
@@ -11,7 +16,7 @@ openssl req -text -noout -verify -in guler.csr   #CSR içeriğini doğrula.
 openssl x509 -req -days 365 -in guler.csr -signkey faruk.key -out sertifika.crt -sha256 #Self-Signed Sertifika oluştur [.crt .pem .key .pfx]
 openssl x509 -in sertifika.crt -text -noout      #Sertifikayı Doğrula
 
-Ek:
+Extra:
 openssl rsa -in faruk.key -pubout -out faruk.pub #Public key oluştur. [Opsionel]
 openssl x509 -x509toreq -sha256 -in sertifika.crt -out yeni.csr -signkey faruk.key #Varolan Sertifikadan CSR Oluştur
 openssl pkcs12 -export -out mycert.p12 -inkey faruk.key -in sertifika.crt #Sertifikayı Başka Formatlara çevir. [*.p12 .pfx ...]
@@ -19,23 +24,3 @@ openssl pkcs12 -info -in keyStore.p12  #PKCS#12 içeriğini incele [*.p12 .pfx .
 
 ----------------AND---------------------
 
-
-### SSL ###
-/etc/ssl/
-/etc/httpd/conf.d/
-https://www.sslshopper.com/ssl-checker.html >SSL Checker
-
-
-Wildcard vs. SAN Certificate:
-  Domain Validated vs. Business Validated
-  openssl s_client -connect google.com:443 < /dev/null 2>/dev/null |
-  openssl x509 -text -in
-  /dev/stdin
-  ssl-cert-check -s -p
-  openssl x509 -enddate -noout -in file.pem
-  openssl req -out host.csr -sha256 -new -newkey rsa:4096 -nodes -keyout host.key
-  openssl req -text -noout -verify -in CSR.csr
-  echo | openssl s_client -connect google.com:443 2>/dev/null |
-  openssl x509 -noout -dates
-  openssl s_client -connect redhat.com:443 | less
-  https://www.geocerts.com/ssl_checker
