@@ -20,6 +20,7 @@ openssl req -new -key faruk.key -out guler.csr   #CSR oluştur.
 openssl req -text -noout -verify -in guler.csr   #CSR içeriğini doğrula.
 openssl x509 -req -days 365 -in guler.csr -signkey faruk.key -out sertifika.crt -sha256 #Self-Signed Sertifika oluştur. [.crt .pem .key .pfx]
 openssl x509 -in sertifika.crt -text -noout      #Sertifikayı Doğrula
+----------------AND-----------------------
 
 Extra:
 openssl rsa -in faruk.key -pubout -out faruk.pub #Public key oluştur. [Opsionel]
@@ -29,5 +30,5 @@ openssl pkcs12 -info -in keyStore.p12  #PKCS#12 içeriğini incele [*.p12 .pfx .
 openssl s_client -connect farukguler.com:443 2>/dev/null | openssl x509 -noout -dates #Sertifika geçerlilik göster.
 https://www.digicert.com/kb/csr-creation.htm [General CSR Creation Guidelines]
 https://www.digicert.com/easy-csr/openssl.htm [General CSR Creation Guidelines]
-----------------AND---------------------
+
 
