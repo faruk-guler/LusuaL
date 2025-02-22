@@ -98,7 +98,7 @@ $ sudo crontab -e
 The format of the files is (user specific crontabs do not have the column user-name):
 
 Example of job definition:
-#https://crontab.guru/
+# https://crontab.guru
 
 Command	Description
 rpm -q cronie	Check if package is installed
