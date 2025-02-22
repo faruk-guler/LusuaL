@@ -2,14 +2,13 @@
 ***Since you signed the certificate yourself without using a (CA), this certificate is not considered trusted by browsers or clients from a security perspective.
 However, it is suitable for development and testing environments.
 
----shell
+
 openssl genrsa -out faruk.key 2048              #Private key oluştur.
 openssl rsa -in faruk.key -check                #Özel anahtarı kontrol et.
 openssl req -new -key faruk.key -out guler.csr  #CSR oluştur.
 openssl req -text -noout -verify -in guler.csr  #CSR içeriğini doğrula.
 openssl x509 -req -days 365 -in guler.csr -signkey faruk.key -out sertifika.crt -sha256 # Self-Signed Sertifikayı oluştur:
 openssl x509 -in sertifika.crt -text -noout     #Sertifikayı Doğrula
----
 
 ### SSL ###
 /etc/ssl/
