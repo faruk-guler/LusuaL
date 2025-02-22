@@ -18,16 +18,6 @@ Cron is a way of automating tasks to run every hour/day/month, or even on reboot
 
 ###  Check if Cron is Active
 
-On Ubuntu
-
-```shell
-$ service cron status
-
-# Might need to restart it
-$ service cron stop
-$ service cron start
-```
-
 On General Linux
 
 ```shell
