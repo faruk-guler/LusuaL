@@ -12,8 +12,6 @@ Cron is a way of automating tasks to run every hour/day/month, or even on reboot
 >
 > **Cron job or cron schedule:** Cron job or cron schedule is a specific set of execution instructions specifying day, time and command to execute. crontab can have multiple execution statements.
 >
-> Source: <http://www.adminschoice.com/crontab-quick-reference>
-
 
 
 ## Check Cron
