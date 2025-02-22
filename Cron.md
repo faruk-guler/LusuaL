@@ -1,8 +1,5 @@
 # Cron Tutorial
 
-Author: methylDragon  
-Cron!    
-
 ------
 
 ## Introduction
