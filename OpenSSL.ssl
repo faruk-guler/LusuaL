@@ -34,7 +34,7 @@ https://www.digicert.com/kb/csr-creation.htm [General CSR Creation Guidelines]
 https://www.digicert.com/easy-csr/openssl.htm [General CSR Creation Guidelines]
 
 🧶OpenSSL' ile Sertifika Formatlarını dönüştürmek:
-https://farukguler.com/posts/what-is-openssl-and-how-is-it-used-interview-with-olaf/
+> https://farukguler.com/posts/what-is-openssl-and-how-is-it-used-interview-with-olaf/
 
 ✅-2 SSL certificates from trusted CA (Güvenilir CA'dan SSL Sertifikası)
 Genel Sertifika Otoriteleri, güvenli bağlantılar sağlayan imzalayan kuruluşlardır.
@@ -45,3 +45,6 @@ Genel Sertifika Otoriteleri, güvenli bağlantılar sağlayan imzalayan kuruluş
 -DigiCert
 -GlobalSign
 -Comodo (Sectigo)
+
+#Daha fazlası için:
+> https://farukguler.com/posts/what-is-openssl-and-how-is-it-used-interview-with-olaf/
