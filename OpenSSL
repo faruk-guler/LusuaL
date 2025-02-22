@@ -10,10 +10,10 @@ openssl version
 ✅1 Self Signed SSL Certificate (Kendinden İmzalı SSL Sertifikası)
 ✅2 SSL certificates from trusted CA (Güvenilir CA'dan SSL Sertifikası)
 
+✅1 Self Signed Certificate Generation:
 ***Since you signed the certificate yourself without using a (CA), this certificate is not considered trusted by browsers or clients from a security perspective.
 However, it is suitable for development and testing environments.
 
-✅1 Self Signed Certificate Generation:
 ----------------BEGIN---------------------
 openssl genrsa -out faruk.key 2048               #Private key oluştur.
 openssl rsa -in faruk.key -check                 #Private key kontrol et.
