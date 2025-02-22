@@ -4,7 +4,10 @@ sudo yum install openssl
 https://slproweb.com/products/Win32OpenSSL.html [Windows]
 openssl version
 
-##Creating a Self-Signed certificate:
+##Certificates:
+✅ Self Signed SSL Certificate (Kendinden İmzalı SSL Sertifikası)
+✅ SSL certificates from trusted CA (Güvenilir CA'dan SSL Sertifikası)
+
 ***Since you signed the certificate yourself without using a (CA), this certificate is not considered trusted by browsers or clients from a security perspective.
 However, it is suitable for development and testing environments.
 
