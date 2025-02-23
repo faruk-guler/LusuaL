@@ -6,13 +6,14 @@ Bu izole ortam, genellikle chroot jail (chroot hapishanesi) olarak adlandırıl�
 #Requirements
 -LiveCD and LiveUSB
 -Shell
--
 
+------------------------
 lsblk -p
 sda      
 ├─sda1    (EFI Boot Partition)
 ├─sda2    (Linux root "/")
 └─sda3    (Swap)
+----------------------------
 
 #Gerekli Bölümleri Mount Edin (Opsiyonel):
 sudo mount /dev/sda2 /mnt          # kök dosya sisteminiz /dev/sda2 üzerindeyse
@@ -28,15 +29,22 @@ sudo mount --bind /sys /mnt/sys
 sudo mount --bind /run /mnt/run  # Özellikle systemd kullanıyorsanız
 
 #Chroot Ortamına Geçin:
-sudo chroot /mnt /bin/bash
-sudo chroot /mnt /bin/sh # farklı bir shell ile
-sudo chroot /mnt/sysimage # farklı bir dizine
+sudo chroot /mnt /bin/bash # bash ile
+sudo chroot /mnt /bin/sh   # farklı bir shell ile
+sudo chroot /mnt/sysimage  # farklı bir dizine geçin
 exit
 
-#-Bozuk GRUB'ı Onarma:
+#-/boot Dizini Onarma:
+mkdir -p /boot
+mkdir -p /boot/efi  # EFI sistem kullanıyorsanız
+
+#-Bozuk Bootloader (GRUB) Onarma:
 grub-install /dev/sda   # Örnek: grub-install /dev/sda
 grub-install --recheck /dev/sda
 update-grub             # GRUB yapılandırmasını güncelle
+
+#-Fstab Düzenleme:
+nano /etc/fstab
 
 #-Paket Yönetimi:
 apt update
@@ -44,10 +52,8 @@ apt install --reinstall paket-adı  # Bozuk bir paketi yeniden yükle
 apt upgrade                        # Sistem güncellemesi
 
 #-Parola Sıfırlama:
+passwd root
 passwd faruk  # Root and other users
-
-#-Dosya Düzenleme
-nano /etc/fstab
 
 #-Ağ Bağlantısı yapma:
 cp /etc/resolv.conf /mnt/etc/resolv.conf # Chroot içinde ağ gerekiyorsa
@@ -59,6 +65,7 @@ sudo umount /mnt/dev
 sudo umount /mnt/proc
 sudo umount /mnt/sys
 sudo umount /mnt/run     # Eğer bağladıysanız
+reboot
 
 #Extra:
 https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-baglanma-2npc
