@@ -63,6 +63,11 @@ passwd faruk  # Root and other users
 apt get-update
 apt-get install --reinstall linux-image-$(uname -r)
 
+#-- Sistemd Servislerini Onarma:
+apt install --reinstall systemd   # Debian/Ubuntu
+dnf reinstall systemd             # CentOS/RHEL
+systemctl daemon-reexec           # Sistemd'yi yeniden başlatın:
+
 #-- Saati senkronize edin:
 hwclock --systohc
 
@@ -88,6 +93,7 @@ https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-bagl
 ------------------------------------------------------------------
 # >>> Önemli Notlar:
 -Chroot çıkmadan önce tüm bölümleri ayırdığınızdan emin olun:
+- Alternatif Shell: Chroot'ta /bin/bash çalışmazsa /bin/sh veya /bin/dash kullanın.
 -Disk Bölümünü Doğru Seçtiğinizden Emin Olun.
 -Root (/) ve varsa ayrı /boot bölümlerini yanlış bağlamayın.
 -İşlem öncesinde diskteki verilerin yedeğini alın.
