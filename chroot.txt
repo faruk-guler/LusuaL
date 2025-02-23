@@ -34,31 +34,31 @@ sudo chroot /mnt /bin/sh   # farklı bir shell ile
 sudo chroot /mnt/sysimage  # farklı bir dizine geçin
 exit
 
-#-/boot Dizini Onarma:
-mkdir -p /boot
+# -/boot Dizini Onarma:
+mkdir -p /boot      #Eğer /boot Dizini Eksikse
 mkdir -p /boot/efi  # EFI sistem kullanıyorsanız
 
-#-Bozuk Bootloader (GRUB) Onarma:
+# -Bozuk Bootloader (GRUB) Onarma:
 grub-install /dev/sda   # Örnek: grub-install /dev/sda
 grub-install --recheck /dev/sda
 update-grub             # GRUB yapılandırmasını güncelle
 
-#-Fstab Düzenleme:
+# -Fstab Düzenleme:
 nano /etc/fstab
 
-#-Paket Yönetimi:
+# -Paket Yönetimi:
 apt update
 apt install --reinstall paket-adı  # Bozuk bir paketi yeniden yükle
 apt upgrade                        # Sistem güncellemesi
 
-#-Parola Sıfırlama:
+# -Parola Sıfırlama:
 passwd root
 passwd faruk  # Root and other users
 
-#-Ağ Bağlantısı yapma:
+# -Ağ Bağlantısı yapma:
 cp /etc/resolv.conf /mnt/etc/resolv.conf # Chroot içinde ağ gerekiyorsa
 
-#Chroottan Çıkış ve Unmount işlemi:
+# >>> Chroottan Çıkış ve Unmount işlemi:
 exit
 sudo umount /mnt
 sudo umount /mnt/dev
@@ -67,11 +67,10 @@ sudo umount /mnt/sys
 sudo umount /mnt/run     # Eğer bağladıysanız
 reboot
 
-#Extra:
+#Extras:
 https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-baglanma-2npc
 
 ------------------------------------------------------------------
-
 # >>> Önemli Notlar:
 -Chroot çıkmadan önce tüm bölümleri ayırdığınızdan emin olun:
 -Disk Bölümünü Doğru Seçtiğinizden Emin Olun.
@@ -82,4 +81,3 @@ https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-bagl
 -UEFI kullanıyorsanız ve GRUB menüsü görünmüyorsa, BIOS'ta "Secure Boot" ayarını kapatın.
 -İşlem sonu Kernel’in mevcut olup olmadığını kontrol edin, yoksa yeniden yükleyin: [ls /boot/vmlinuz*]
 -
-
