@@ -6,6 +6,7 @@ Bu izole ortam, genellikle chroot jail (chroot hapishanesi) olarak adlandırıl�
 #Requirements
 -LiveCD/USB and SystemRescueCD
 -Shell
+-Root user
 
 ---------------------------
 test@debian:~$  lsblk -p
