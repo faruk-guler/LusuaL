@@ -8,7 +8,7 @@ Bu izole ortam, genellikle chroot jail (chroot hapishanesi) olarak adlandırıl�
 -Shell
 
 ------------------------
-lsblk -p
+test@debian:~$  lsblk -p
 sda      
 ├─sda1    (EFI Boot Partition)
 ├─sda2    (Linux root "/")
@@ -71,7 +71,6 @@ ln -sf /usr/share/zoneinfo/Europe/Istanbul /etc/localtime
 
 #-- Ağ Bağlantısı yapma:
 cp /etc/resolv.conf /mnt/etc/resolv.conf # Chroot içinde ağ gerekiyorsa
-
 
 
 # >>> Chroottan Çıkış ve Unmount işlemi:
