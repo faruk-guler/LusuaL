@@ -19,13 +19,14 @@ sudo mount --bind /sys /mnt/sys
 sudo mount --bind /run /mnt/run  # Özellikle systemd kullanıyorsanız
 
 #Chroot Ortamına Geçin:
-sudo chroot /mnt/sysimage
 sudo chroot /mnt /bin/bash
 sudo chroot /mnt /bin/sh # farklı bir shell ile
+sudo chroot /mnt/sysimage # farklı bir dizine
 exit
 
 #-Bozuk GRUB'ı Onarma:
-grub-install /dev/sdX   # Örnek: grub-install /dev/sda
+grub-install /dev/sda   # Örnek: grub-install /dev/sda
+grub-install --recheck /dev/sda
 update-grub             # GRUB yapılandırmasını güncelle
 
 #-Paket Yönetimi:
