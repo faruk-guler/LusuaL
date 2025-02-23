@@ -2,6 +2,11 @@
 Chrootbir sürecin ve alt süreçlerinin dosya sistemi kök dizinini değiştiren bir Unix/Linux sistem çağrısıdır.
 Bu komut, bir programı veya kullanıcıyı belirli bir dizin altında "izole edilmiş" bir ortamda çalıştırmanıza olanak tanır.Bu izole ortam, genellikle chroot jail (chroot hapishanesi) olarak adlandırılır.
 
+#Requirements
+-LiveCD and LiveUSB
+-Shell
+-
+
 #Gerekli Bölümleri Mount Edin (Opsiyonel):
 sudo mount /dev/sdXY /mnt  # sda1, nvme0n1p2
 sudo mount /dev/sdXZ /mnt/boot  # /boot için
