@@ -14,7 +14,9 @@ sudo mount --bind /sys /mnt/sys
 sudo mount --bind /run /mnt/run  # Özellikle systemd kullanıyorsanız
 
 #Chroot Ortamına Geçin:
+sudo chroot /mnt/sysimage
 sudo chroot /mnt /bin/bash
+sudo chroot /mnt /bin/sh # farklı bir shell ile
 exit
 
 #-Bozuk GRUB'ı Onarma:
@@ -26,31 +28,22 @@ apt update
 apt install --reinstall paket-adı  # Bozuk bir paketi yeniden yükle
 apt upgrade                        # Sistem güncellemesi
 
-#Şifre Sıfırlama:
+#-Parola Sıfırlama:
 passwd faruk  # Root and other users
 
-#Dosya Düzenleme
+#-Dosya Düzenleme
 nano /etc/fstab
 
-#
+#-Ağ Bağlantısı yapma:
+cp /etc/resolv.conf /mnt/etc/resolv.conf # Chroot içinde ağ gerekiyorsa
 
-
-
-mount --bind /proc /mnt/sysimage/proc 
-mount --bind /dev /mnt/sysimage/dev 
-mount --bind /sys /mnt/sysimage/sys 
-chroot /mnt/sysimage
-
-
-
-
-cd /mnt/ubuntu
-mount --bind /proc proc/
-mount --bind /dev dev/
-mount --bind /sys sys/
-
-chroot /mnt/sysimage
-
+#Chroottan Çıkış ve Unmount işlemi:
+exit
+sudo umount /mnt
+sudo umount /mnt/dev
+sudo umount /mnt/proc
+sudo umount /mnt/sys
+sudo umount /mnt/run     # Eğer bağladıysanız
 
 #Extra:
 https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-baglanma-2npc
