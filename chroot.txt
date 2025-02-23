@@ -55,6 +55,11 @@ apt upgrade                        # Sistem güncellemesi
 sudo dpkg --configure -a
 sudo apt-get install -f
 
+#-- Eksik Dosyaları Canlı Ortamdan Kopyalama:
+sudo ldd /bin/bash         # Eksik  dosyaları espit et:
+cp -L /bin/bash /mnt/bin/  # /bin/bash Silinmişse
+cp -r /etc/apt /mnt/etc/   # apt dizini silinmişse
+
 #-- Parola Sıfırlama:
 passwd root
 passwd faruk  # Root and other users
