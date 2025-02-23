@@ -46,14 +46,22 @@ update-grub             # GRUB yapılandırmasını güncelle
 #-- Fstab Düzenleme:
 nano /etc/fstab
 
-#-- Paket Yönetimi:
+#-- Paketleri Yeniden Yükleyin veya Kurtarın:
 apt update
 apt install --reinstall paket-adı  # Bozuk bir paketi yeniden yükle
 apt upgrade                        # Sistem güncellemesi
 
+#-- Bozuk Paketleri Düzelt:
+sudo dpkg --configure -a
+sudo apt-get install -f
+
 #-- Parola Sıfırlama:
 passwd root
 passwd faruk  # Root and other users
+
+#-- Kernel Dosyalarını Güncelleyin veya Düzenleyin:
+apt get-update
+apt-get install --reinstall linux-image-$(uname -r)
 
 #-- Ağ Bağlantısı yapma:
 cp /etc/resolv.conf /mnt/etc/resolv.conf # Chroot içinde ağ gerekiyorsa
