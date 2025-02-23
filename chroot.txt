@@ -4,7 +4,7 @@ Bir programı veya kullanıcıyı belirli bir dizin "izole edilmiş" bir ortamda
 Bu izole ortam, genellikle chroot jail (chroot hapishanesi) olarak adlandırılır.
 
 #Requirements
--LiveCD and LiveUSB
+-LiveCD/USB and SystemRescueCD
 -Shell
 
 ------------------------
@@ -69,3 +69,13 @@ reboot
 
 #Extra:
 https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-baglanma-2npc
+
+------------------------------------------------------------------
+
+>>>Önemli Notlar:
+-Disk Adresleri: Yukarıdaki /dev/sdX örneklerini kendi disk bölümlerinizle değiştirin ve emin olun
+-Yedekleme: İşlem öncesinde diskteki verilerin yedeğini alın.
+-UEFI/BIOS: Sisteminizin UEFI mi yoksa BIOS mu kullandığını bilmeniz kritiktir.
+-Kernel Sürümü: linux-image-generic yerine sisteminize uygun kernel sürümünü yükleyin (örneğin, linux-image-5.15.0-76-generic).
+
+
