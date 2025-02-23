@@ -35,7 +35,7 @@ sudo chroot /mnt/sysimage  # farklı bir dizine geçin
 exit
 
 #-- /boot Dizini Onarma:
-mkdir -p /boot      #Eğer /boot Dizini Eksikse
+mkdir -p /boot      #Eğer /boot Dizini Silindiyse/Eksikse
 mkdir -p /boot/efi  # EFI sistem kullanıyorsanız
 
 #-- Bozuk Bootloader (GRUB) Onarma:
@@ -46,7 +46,7 @@ update-grub             # GRUB yapılandırmasını güncelle
 #-- Fstab Düzenleme:
 nano /etc/fstab
 
-#-- Paketleri Yeniden Yükleyin veya Kurtarın:
+#-- Paketleri Onarma:
 apt update
 apt install --reinstall paket-adı  # Bozuk bir paketi yeniden yükle
 apt upgrade                        # Sistem güncellemesi
@@ -63,8 +63,16 @@ passwd faruk  # Root and other users
 apt get-update
 apt-get install --reinstall linux-image-$(uname -r)
 
+#-- Saati senkronize edin:
+hwclock --systohc
+
+#-- Zaman dilimini ayarla:
+ln -sf /usr/share/zoneinfo/Europe/Istanbul /etc/localtime
+
 #-- Ağ Bağlantısı yapma:
 cp /etc/resolv.conf /mnt/etc/resolv.conf # Chroot içinde ağ gerekiyorsa
+
+
 
 # >>> Chroottan Çıkış ve Unmount işlemi:
 exit
@@ -88,4 +96,4 @@ https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-bagl
 -Sisteminize uygun kernel sürümünü yükleyin (örneğin, linux-image-5.15.0-76-generic).
 -UEFI kullanıyorsanız ve GRUB menüsü görünmüyorsa, BIOS'ta "Secure Boot" ayarını kapatın.
 -İşlem sonu Kernel’in mevcut olup olmadığını kontrol edin, yoksa yeniden yükleyin: [ls /boot/vmlinuz*]
--
+-Alternatif Araçlar: systemd-nspawn, arch-chroot
