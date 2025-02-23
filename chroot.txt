@@ -8,10 +8,18 @@ Bu izole ortam, genellikle chroot jail (chroot hapishanesi) olarak adlandırıl�
 -Shell
 -
 
+lsblk -p
+sda      
+├─sda1    (EFI Boot Partition)
+├─sda2    (Linux root "/")
+└─sda3    (Swap)
+
 #Gerekli Bölümleri Mount Edin (Opsiyonel):
-sudo mount /dev/sdXY /mnt  # sda1, nvme0n1p2
-sudo mount /dev/sdXZ /mnt/boot  # /boot için
-sudo mount /dev/sdXA /mnt/home   # /home için
+sudo mount /dev/sda2 /mnt          # kök dosya sisteminiz /dev/sda2 üzerindeyse
+sudo mount /dev/sda1 /mnt/boot     # Ayrı bir /boot Bölümünüz Varsa
+sudo mount /dev/sda1 /mnt/boot/efi # EFI sistem kullanıyorsanız
+sudo mount /dev/sdXZ /mnt/boot     # /boot için
+sudo mount /dev/sdXA /mnt/home     # /home için
 
 #Sistem Dizinlerini Mount Edin (Bind Mounts):
 sudo mount --bind /dev /mnt/dev
