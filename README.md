@@ -3,7 +3,7 @@
 
 - Author: Faruk Guler
 - POC: Debian 12 (Bookworm) - AlmaLinux 9
-- Description: For Linux system administrators
+- Description: Usual for Linux System Administrators
 - Repository: https://github.com/faruk-guler/
 - Contributions: For contribution, send PR.
 - Contact: www.farukguler.com
