@@ -1,4 +1,4 @@
-##Chroot (Change Root)
+##Chroot (Change Root).
 Chrootbir sürecin ve alt süreçlerinin dosya sistemi kök dizinini değiştiren bir Unix/Linux sistem çağrısıdır.
 Bir programı veya kullanıcıyı belirli bir dizin "izole edilmiş" bir ortamda çalıştırmanıza olanak tanır.
 Bu izole ortam, genellikle chroot jail (chroot hapishanesi) olarak adlandırılır.
