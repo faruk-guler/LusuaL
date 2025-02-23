@@ -7,7 +7,7 @@ Bu izole ortam, genellikle chroot jail (chroot hapishanesi) olarak adlandırıl�
 -LiveCD/USB and SystemRescueCD
 -Shell
 
-------------------------
+---------------------------
 test@debian:~$  lsblk -p
 sda      
 ├─sda1    (EFI Boot Partition)
