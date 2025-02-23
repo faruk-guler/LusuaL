@@ -1,8 +1,8 @@
-##
-#Chroot (Change Root), bir sürecin ve alt süreçlerinin dosya sistemi kök dizinini değiştiren bir Unix/Linux sistem çağrısıdır.
+##Chroot (Change Root)
+Chrootbir sürecin ve alt süreçlerinin dosya sistemi kök dizinini değiştiren bir Unix/Linux sistem çağrısıdır.
 Bu komut, bir programı veya kullanıcıyı belirli bir dizin altında "izole edilmiş" bir ortamda çalıştırmanıza olanak tanır.Bu izole ortam, genellikle chroot jail (chroot hapishanesi) olarak adlandırılır.
 
-https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-baglanma-2npc
+
 
 mount --bind /proc /mnt/sysimage/proc 
 mount --bind /dev /mnt/sysimage/dev 
@@ -18,3 +18,7 @@ mount --bind /dev dev/
 mount --bind /sys sys/
 
 chroot /mnt/sysimage
+
+
+#Extra:
+https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-baglanma-2npc
