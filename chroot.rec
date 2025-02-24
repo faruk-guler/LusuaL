@@ -98,7 +98,7 @@ https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-bagl
 ------------------------------------------------------------------
 # >>> Important Notes:
 -Chroot çıkmadan önce tüm bölümleri ayırdığınızdan emin olun:
-- Alternatif Shell: Chroot'ta /bin/bash çalışmazsa /bin/sh veya /bin/dash kullanın.
+-Alternatif Shell: Chroot'ta /bin/bash çalışmazsa /bin/sh veya /bin/dash kullanın.
 -Disk Bölümünü Doğru Seçtiğinizden Emin Olun.
 -Root (/) ve varsa ayrı /boot bölümlerini yanlış bağlamayın.
 -İşlem öncesinde diskteki verilerin yedeğini alın.
