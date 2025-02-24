@@ -22,4 +22,4 @@ sudo file debian-12.9.0-amd64-netinst.iso   # Verify
 sudo umount /dev/sdb # otomatik mount edilmişse kaldırın.
 sudo dd if=/home/faruk/linux.iso of=/dev/sdb bs=4M status=progress oflag=sync conv=fdatasync #Yazın
 sudo sync            # Verify
-sudo eject /dev/sdb  # Removesafely.
+sudo eject /dev/sdb  # Remove safely.
