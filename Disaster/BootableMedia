@@ -14,6 +14,9 @@ sudo parted /dev/sdc --script 'mkpart primary fat32 1MiB 4GiB set 1 boot on'
 sudo parted /dev/sdb --script 'mklabel gpt'
 sudo parted /dev/sdb --script 'mkpart primary fat32 1MiB 500MiB set 1 esp on'
 
+#Get Media file:
+wget https://gemmei.ftp.acc.umu.se/debian-cd/current/amd64/iso-cd/debian-12.9.0-amd64-netinst.iso
+
 #FLash! Bootable USB:
 sudo umount /dev/sdb # otomatik mount edilmişse kaldırın.
 sudo dd if=/home/faruk/linux.iso of=/dev/sdb bs=4M status=progress oflag=sync #Yazın
