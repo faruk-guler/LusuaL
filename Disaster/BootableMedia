@@ -19,6 +19,6 @@ wget https://gemmei.ftp.acc.umu.se/debian-cd/current/amd64/iso-cd/debian-12.9.0-
 
 #FLash! Bootable USB:
 sudo umount /dev/sdb # otomatik mount edilmişse kaldırın.
-sudo dd if=/home/faruk/linux.iso of=/dev/sdb bs=4M status=progress oflag=sync #Yazın
+sudo dd if=/home/faruk/linux.iso of=/dev/sdb bs=4M status=progress oflag=sync conv=fdatasync #Yazın
 sudo sync            #Verify
 sudo eject /dev/sdb  #Güvenle kaldır.
