@@ -3,7 +3,7 @@ Chrootbir sürecin ve alt süreçlerinin dosya sistemi kök dizinini değiştire
 Bir programı veya kullanıcıyı belirli bir dizin "izole edilmiş" bir ortamda çalıştırmanıza olanak tanır.
 Bu izole ortam, genellikle chroot jail (chroot hapishanesi) olarak adlandırılır.
 
-#Requirements
+#Keep it:
 -LiveCD/USB and SystemRescueCD or iso
 -Shell
 -Root user
