@@ -1,1 +1,10 @@
----
+sudo fdisk -l
+lsblk -p
+
+NAME   MAJ:MIN SIZE MOUNTPOINT
+sda      8:0    50G ...
+└─sda1   8:1    50G /
+sdb      8:16   16G ...         #  USB Driver
+
+#ISO'yu USB'ye Yazın:
+sudo dd if=/home/faruk/linux.iso of=/dev/sdb bs=4M status=progress oflag=sync
