@@ -10,7 +10,7 @@ Socket	  .socket	Ağ veya IPC soketlerini tanımlar. Bağlantı geldiğinde ilgi
 Target	  .target	Hedef grupları (run level benzeri). Örn: multi-user.target.
 Device	  .device	Donanım cihazlarını (USB, disk) sisteme tanıtır.
 Mount	    .mount	Dosya sistemi mount işlemlerini yönetir (ör: /home bağlama).
-Automount	.automount	Otomatik mount işlemleri için (bağlantı noktasına erişimde tetiklenir).
+Automount	.automount Otomatik mount işlemleri için (bağlantı noktasına erişimde tetiklenir).
 Swap	    .swap	Swap alanını yönetir (takas dosyası/partition).
 Timer	    .timer	Zamanlanmış görevler (cron benzeri).
 Path	    .path	Dosya/dizin değişikliklerini izler ve bir servisi tetikler.
