@@ -1,3 +1,5 @@
+> First, reboot the system. On the first entry of the grub menu, press ‘e’ on the keyboard to access the GRUB editor.
+
 BOOT:
 Kernels.
 /boot/grub/menu.lst — Grub configuration file
