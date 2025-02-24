@@ -1,4 +1,6 @@
-# Create a Bootable Media
+# Create a Bootable Media Docs
+--------------------------------
+
 sudo fdisk -l
 lsblk -p
 
