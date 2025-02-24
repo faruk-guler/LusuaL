@@ -8,3 +8,5 @@ runlevel — Output previous and current runlevel
     5 — X-window mode (ctrl+alt+F7) / User defined
     6 — Reboots
     S — Single user mode
+
+>> Example: init 6
