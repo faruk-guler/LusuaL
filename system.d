@@ -4,13 +4,13 @@ SysV init'in yerini alarak daha hızlı başlangıç süreleri, paralel servis b
 Ayrıca log yönetimi (journald), zamanlanmış görevler (timer birimleri) ve kullanıcı oturum yönetimi gibi ek özelliklerle genişletilmiş bir araç setidir.
 
 --------------------------------------
-|Unit Türü	| Uzantı  | Açıklama |
+Unit Tür |  Uzantı     | Açıklama |
 Service	    .service	Servisleri yönetir (ör: NGINX, MySQL).
 Socket	    .socket	Ağ veya IPC soketlerini tanımlar. Bağlantı geldiğinde ilgili servisi başlatır.
 Target	    .target	Hedef grupları (run level benzeri). Örn: multi-user.target.
 Device	    .device	Donanım cihazlarını (USB, disk) sisteme tanıtır.
-Mount	  .mount	Dosya sistemi mount işlemlerini yönetir (ör: /home bağlama).
-Automount	.automount Otomatik mount işlemleri için (bağlantı noktasına erişimde tetiklenir).
+Mount	    .mount	Dosya sistemi mount işlemlerini yönetir (ör: /home bağlama).
+Automount   .automount Otomatik mount işlemleri için (bağlantı noktasına erişimde tetiklenir).
 Swap	    .swap	Swap alanını yönetir (takas dosyası/partition).
 Timer	    .timer	Zamanlanmış görevler (cron benzeri).
 Path	    .path	Dosya/dizin değişikliklerini izler ve bir servisi tetikler.
