@@ -7,8 +7,8 @@ sda      8:0    50G ...
 sdb      8:16   16G ...         #  USB Driver
 
 #Boot Dizini ve EFI Bölümleri:
-sudo parted /dev/sdc --script 'mklabel msdos'
-sudo parted /dev/sdc --script 'mkpart primary fat32 1MiB 4GiB set 1 boot on'
+sudo parted /dev/sdb--script 'mklabel msdos'
+sudo parted /dev/sdb --script 'mkpart primary fat32 1MiB 4GiB set 1 boot on'
 
 #UEFI ve GPT:
 sudo parted /dev/sdb --script 'mklabel gpt'
