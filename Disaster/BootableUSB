@@ -17,4 +17,5 @@ sudo parted /dev/sdb --script 'mkpart primary fat32 1MiB 500MiB set 1 esp on'
 #FLash! Bootable USB:
 sudo umount /dev/sdb # otomatik mount edilmişse kaldırın.
 sudo dd if=/home/faruk/linux.iso of=/dev/sdb bs=4M status=progress oflag=sync #Yazın
+sudo sync            #Verify
 sudo eject /dev/sdb  #Güvenle kaldır.
