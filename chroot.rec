@@ -6,7 +6,8 @@ This isolated environment is often called a chroot jail.
 #Keep it:
 -LiveCD/USB and SystemRescueCD or iso file
 -Shell
--Root user
+-Root permission privilege
+-Matching the environment architecture
 
 ---------------------------
 test@debian:~$  lsblk -p
