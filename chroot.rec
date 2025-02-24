@@ -4,7 +4,7 @@ Bir programı veya kullanıcıyı belirli bir dizin "izole edilmiş" bir ortamda
 Bu izole ortam, genellikle chroot jail (chroot hapishanesi) olarak adlandırılır.
 
 #Keep it:
--LiveCD/USB and SystemRescueCD or iso
+-LiveCD/USB and SystemRescueCD or iso file
 -Shell
 -Root user
 
