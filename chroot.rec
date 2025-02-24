@@ -8,6 +8,7 @@ This isolated environment is often called a chroot jail.
 -Shell
 -Root permission privilege
 -Matching the environment architecture
+-Required kernel modules
 
 ---------------------------
 test@debian:~$  lsblk -p
