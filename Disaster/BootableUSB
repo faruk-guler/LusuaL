@@ -1,0 +1,20 @@
+sudo fdisk -l
+lsblk -p
+
+NAME   MAJ:MIN SIZE MOUNTPOINT
+sda      8:0    50G ...
+└─sda1   8:1    50G /
+sdb      8:16   16G ...         #  USB Driver
+
+
+#Boot Dizini ve EFI Bölümleri:
+sudo parted /dev/sdc --script 'mklabel msdos'
+sudo parted /dev/sdc --script 'mkpart primary fat32 1MiB 4GiB set 1 boot on'
+
+#UEFI ve GPT:
+sudo parted /dev/sdb --script 'mklabel gpt'
+sudo parted /dev/sdb --script 'mkpart primary fat32 1MiB 500MiB set 1 esp on'
+
+#ISO'yu USB'ye Yazın:
+sudo dd if=/home/faruk/linux.iso of=/dev/sdb bs=4M status=progress oflag=sync
+sudo eject /dev/sdb
