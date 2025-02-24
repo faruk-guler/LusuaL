@@ -46,6 +46,9 @@ grub-install /dev/sda   # Örnek: grub-install /dev/sda
 grub-install --recheck /dev/sda
 update-grub             # GRUB yapılandırmasını güncelle
 
+#-- Recreates the GRUB configuration file (grub.cfg)
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 #-- Fstab Repair:
 nano /etc/fstab
 
