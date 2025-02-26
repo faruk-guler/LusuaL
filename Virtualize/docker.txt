@@ -1,0 +1,286 @@
+-----------------------------------------
+Installing Docker
+-----------------------------------------
+#Install docker on Ubuntu 20.04
+sudo apt install docker.io
+
+#Start and enable the service
+sudo systemctl enable --now docker
+
+#Add your user account to the docker group
+sudo usermod -aG docker ${USER}
+
+#Reload shell to use docker group privileges, or just reboot
+su - ${USER} 
+
+
+-----------------------------------------
+Running Docker Containers
+-----------------------------------------
+#Officical website of docker hub, pull command downloads/runs these containers
+https://hub.docker.com/
+
+#Pull down and run a test container named busybox with interactive (i) terminal (t) of sh (exit to end)
+docker run -it busybox /bin/sh
+
+#Check running containers (also docker container ls)
+docker ps
+
+#View a list of all docker containers (also docker container ls -a)
+docker ps -a
+
+#Pull down latest nginx container but not run it automatically
+docker pull nginx
+
+#Pull down version 1.10.3 of nginx
+docker pull nginx:1.10.3
+
+#Run docker image as a dameon in the background, detached
+docker run -d <image>
+
+#To bring docker container to forground
+docker attach <container name> OR <Container ID>
+
+#Run docker image as a dameon and always keep running
+docker run -d --restart=always <image>
+
+#Run docker as a dameon and name container
+docker run --name <name> -d <image>
+
+#Run docker as a dameon mapping local host port to container port
+docker run -p <host port>:<container port> -d <image>
+
+#Running with limited resources
+docker run --cpus=.5 <image>
+docker run --memory=100m <image>
+
+
+-----------------------------------------
+Managing Docker Containers/Images
+-----------------------------------------
+#Rename a docker container
+docker rename <old name> <new name>
+
+#Stop a docker container gracefully by name or id, can find from docker ps
+docker stop <container name> OR <container id>
+
+#Kill (sigterm) a docker container by name or id, can find from docker ps
+docker kill <container name> OR <container id>
+
+#Remove a docker container
+docker rm <container name>
+
+#Kill and remove a docker container, one command
+docker rm -f <container name>
+
+#To view additional details about a container, in JSON format
+docker inspect <container name>
+
+#To view additional statistics about a container
+docker stats <container name>
+
+#To view stdout logs of container when detached
+docker logs <container name>
+
+#To view history and file sizes
+docker history <container name>
+
+#Execute a command like cat to view output of docker container
+docker exec <container name> cat /etc/hosts
+
+#View a list of the docker images we have
+docker images
+
+#To remove image, first make sure no containers are running of it
+docker rmi <image>
+
+-----------------------------------------
+Shared data directories
+-----------------------------------------
+#Map a host directory (/var/mysql) to a directory in the container for persistance
+docker run -v /var/mysql:/var/lib/mysql mysql
+
+#Add persistent volume to /var/lib/docker/volumes named mydata
+docker volume create mydata
+
+#Run docker container using volume, if does not exist will create volume (volume mount)
+docker run -v mydata:/var/lib/mysql mysql
+
+#Run docker container using differnet dir location, use abs path (bind mount)
+docker run -v /data/mysql:/var/lib/mysql mysql
+
+#Newer way to do same command
+docker run --mount type=bind,source=/data/mysql,target=/var/lib/mysql mysql
+
+
+-----------------------------------------
+Exporting, importing, and saving
+-----------------------------------------
+#Export docker image to tar file
+docker save <image> -o <name>.tar
+
+#Export docker container filesystem to tar file
+docker export <container> -o <name>.tar
+
+#Example: Dumping mysql and saving it locally
+docker exec <CONTAINER> /usr/bin/mysqldump -u root --password=<password> <DATABASE> > backup.sql
+
+#Example: Restoring mysql database from dump
+cat backup.sql | docker exec -i <CONTAINER> /usr/bin/mysql -u root --password=<password> <DATABASE>
+
+
+-----------------------------------------
+Networking with Docker Containers
+-----------------------------------------
+#To list docker networks
+docker network ls
+
+#Change network from bridge to none
+docker run <image> --network=none
+
+#Change network from bridge to host
+docker run <image> --network=host
+
+#Create a new bridge (internal) network for docker
+docker network create --driver bridge --subnet 172.18.0.0/24 custom-isolated-network
+
+
+-----------------------------------------
+Building Docker Images
+-----------------------------------------
+#Create a DockerFile to configure settings
+vi DockerFile
+  FROM Ubuntu #Will use latest Ubuntu, Ubuntu:18:04 if specific version is desired
+  CMD["echo","Test image running Apache2"]
+  RUN apt update #Tells container to run command starting up
+  RUN apt install apache2 -y #Use -y because it will not be interactive
+  COPY index.html /var/www/html/index.html #takes index.html in folder and copies to container location
+  WORKDIR /var/www/html #when attaching, starts user here
+  EXPOSE 80 #Opens port 80 on the container
+  VOLUME ["/var/www/html/test"] #creates an empty directory on container
+  ENTRYPOINT ["/usr/sbin/apache2ctl"] #Similar to CMD, following CMD command passes in arguements
+  CMD ["-DFOREGROUND"] #need to run apache in foreground to keep container running, passing into ENTRYPOINT command
+
+#Build Docker image from DockerFile, period for current directory
+docker build -t <image name> .
+
+#Build Docker image from DockerFile, using version tag
+docker build -t <image name>:<version number> .
+
+#Run new Docker container from image
+docker run <image>
+
+
+-----------------------------------------
+Working with Docker Hub Repository
+-----------------------------------------
+#Login to your dockerhub account
+docker login
+
+#Build Docker image from DockerFile, using naming dockerhub convention
+docker build -t <username>/<image name> .
+
+#Push image to Docker Hub
+docker push <username>/<image>
+
+#Use commit changes to container, similar to git protocol
+docker commit -m '<insert message>' <container> <username>/<image>:<version>
+
+#View commit history of image
+docker image history <imageID>
+
+
+-----------------------------------------
+Working with Local Private Repository
+-----------------------------------------
+#Private Registry
+docker login private-registry.io
+docker run private-registry.io/apps/internal-app
+
+#Deploy Private Registry
+docker run -d -p 5000:5000 --name registry registry:2
+docker image tag my-image localhost:5000/my-image
+docker push localhost:5000/my-image
+docker pull localhost:5000/my-image
+docker pull 192.168.56.100:5000/my-image
+
+-----------------------------------------
+Docker Compose
+-----------------------------------------
+#Install docker compose on Ubuntu
+sudo apt install docker-compose
+
+#Example of docker compose file
+vi docker-compose.yaml
+
+version: '3.3'
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     ports:
+       - "8000:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+       WORDPRESS_DB_NAME: wordpress
+volumes:
+    db_data: {}
+
+
+#Run docker compose configuration, must be in directory of yaml file
+docker-compose up -d
+
+#Bring docker-compose configuration down, must be in directory of yaml file
+docker-compose down
+
+
+-----------------------------------------
+Docker Swarm
+-----------------------------------------
+#Infrastructure of computers to use for docker swarm
+-controller/manager = 192.168.1.100
+-node1 = 192.168.1.101
+-node2 = 192.168.1.102
+
+
+#On the controller/manager computer initialize the swarm to allow others to join
+#Will produce a token for other nodes to join
+docker swarm init --advertise-addr 192.168.1.100
+
+#On node1 run the command from the output of the swarm init to join swarm
+docker swarm join --token <token> 192.168.1.100:2377
+
+#On node2 run the same command from the output of the swarm init to join swarm
+docker swarm join --token <token> 192.168.1.100:2377
+
+#To view list of computers on the swam, run the following on the manager
+docker node ls
+
+#To create docker multiple containers through out swarm, run the following on the manager
+docker service create --replicas <number> --name <name> <image>
+
+#To view swarm of containers, run the following on the manager
+docker service ps <service name>
+
+#To add more replicas, run the following on the manager
+docker service scale <service name>=<number>
+
+#To remove the containers, run the following on the manager
+docker service rm <service name>
+
+
