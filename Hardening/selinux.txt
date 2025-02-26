@@ -1,0 +1,55 @@
+#List processes including SELinux context
+ps -auZ
+
+#List files/folders including SELinux context
+ls -Z
+
+#List sockets with SELinux contexts
+ss -Z
+
+#Determine current SELinux mode
+getenforce
+
+#Display SeLinux status
+sestatus
+
+#Temporarily disable SELinux, until reboot
+setenforce 0
+
+#To enable SELinux
+setenforce 1
+
+#SELinux configuration file
+/etc/selinux/config
+
+#To view a list of SELinux booleans
+getsebool -a
+
+#To view all SELinux booleans, current and default values
+semanage boolean --list
+
+#To temporarily set a SELinux boolean on or off until reboot
+setsebool httpd_enable_cgi on
+
+#To persistently set a SELinux boolean
+setsebool -P httpd_enable_cgi on
+
+#To list file context definitions
+semanage fcontext -l
+
+#To list port label assignments
+semanage port -l
+
+#To add custom port 555 to be used with httpd
+semanage port -a -t http_port_t -p tcp 555
+
+#To remove custom port
+semanage port -d -t http_port_t -p tcp 555
+
+#Restore files to default SELinux context
+restorecon -vR /filepath
+
+#Temporarily change context
+chcon -R /filepath
+
+

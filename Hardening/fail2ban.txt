@@ -1,0 +1,31 @@
+#Install fail2ban on Ubuntu
+sudo apt install fail2ban
+
+#View fail2ban log
+cat /var/log/fail2ban.log
+
+#Using fail2ban client to check status
+fail2ban-clinet status
+
+#Using fail2ban client to check status of just sshd jail
+fail2ban-clinet status sshd
+
+#Configure jails, first copy jail.conf to jail.local
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+
+#Edit jail.local, uncomment jails you want
+sudo nano /etc/fail2ban/jail.local
+
+#Restart fail2ban service
+systemctl restart fail2ban
+
+
+#Example jail.local settings
+[DEFAULT]
+bantime = 300 #bans for 5 minutes
+sender = fail2ban@example.com #specifies sender if mail to be send
+destmail = user@domain.com #send to user email notifications
+action = %(action_)s #only logs, does not send email. %(action_mwl)s is used to log and mail
+ignoreip = 192.168.1.2 #Don't ban this computer
+[sshd]
+enabled=true
