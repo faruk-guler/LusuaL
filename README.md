@@ -3,7 +3,8 @@
 
 
 - Author: Faruk Guler
-- Description: Usual for Linux System Administrators Handbook
+- Name: Lusual Handbook 
+- Description: Usual for Linux System Administrators
 - POC: Debian 12 (Bookworm) - AlmaLinux 9
 - Repository: https://github.com/faruk-guler/
 - Contributions: For contribution, send PR.
