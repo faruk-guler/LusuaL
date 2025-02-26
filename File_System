@@ -21,3 +21,4 @@ Linux file system structure may vary depending on the distribution, the followin
 /lost+found: Recovered files. This directory holds the bits of files that are damaged or have been interrupted due to an interruption.
 /usr: This directory has a separate hierarchy containing secondary programs, libraries, and documentation. For example, applications installed by users and secondary programs that come with the system can be found in this directory.
 /var: This directory contains variable data. For example, log files, databases, email, and other variable data can be found in this directory.
+
