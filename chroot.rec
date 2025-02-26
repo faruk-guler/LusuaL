@@ -1,4 +1,4 @@
-##Chroot (Change Root)
+##Chroot Jail (Change Root)
 Chroot is a Unix/Linux system call that changes the file system root directory of a process and its child processes.
 It allows you to run a program or user in an "isolated" environment of a specific directory.
 This isolated environment is often called a chroot jail.
