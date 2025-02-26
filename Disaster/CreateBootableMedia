@@ -27,5 +27,5 @@ sudo dd if=/home/faruk/linux.iso of=/dev/sdb bs=4M status=progress oflag=sync co
 sudo sync            # Verify
 sudo eject /dev/sdb  # Remove safely.
 
-#See:
+#Extras:
 https://github.com/faruk-guler/LinusuaL/blob/main/Partitioning/parted.md
