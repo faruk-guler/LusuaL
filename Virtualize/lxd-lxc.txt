@@ -1,0 +1,136 @@
+#Installing LXD/LXC on ubuntu
+apt install lxd lxd-client
+
+#Intialize LXD for configuration, use defaults by just pressing enter multiple times
+#If you want containers to run on ZFS, first install zfsutils-linux before init
+lxd init 
+
+#Show a list of containers
+lxc list
+
+#Create a new ubuntu 18.04 container, container name optional
+lxc launch ubuntu:18.04 <container name>
+
+#Create a new CentOS 8 container from the image store
+lxc launch images:centos/8 <container name>
+
+#Open bash shell in container
+lxc exec <container name> -- /bin/bash
+
+#To stop running container
+lxc stop <container name>
+
+#To delete container, must be stopped
+lxc rm <container name>
+
+#To start a stoppped container
+lxc start <container name>
+
+#Lauch local file editor of a file on a container
+lxc file edit <container name>/filepath/filename
+
+#Push a local file to container
+lxc file push <filename> <container name>/filepath
+
+#Create snapshot of container
+lxc snapshot <container name> <snapshot name>
+
+#To view details about container
+lxc info <container name>
+
+#To restore container from previous snapshot
+lxc restore <container name> <snapshot name>
+
+#To delete a snapshot
+lxc delect <container>/<snapshot name>
+
+#To create a new container from other container's snapshot
+lxc copy <old container name>/<snapshot> <new container name>
+ 
+-------------------------------------------------------
+#Show network profiles
+lxc profile list
+
+#See details of profile
+lxc profile show <profile name>
+
+#Copy default network profile to new profile	
+lxc profile copy default <new profile>
+
+#Edit profile using editor
+lxc profile edit <profile name>
+
+#Create container that uses a specific profile
+lxc launch -p <profile name> ubuntu:18.04 <container name>
+
+#Example of macvlan interface
+  eth1:
+    name: eth1
+    nictype: macvlan
+    parent: eno1
+    type: nic
+
+-------------------------------------------------------
+#List of remote locations to download images from
+lxc remote list
+
+#List downloaded container images
+lxc image list
+
+#To delete locally saved images
+lxc image delete <image name>
+
+
+#Working with lightweight alpine container
+  - lxc launch images:alpine/3.5 alpine-matt #gets from remote location
+  - lxc exec alpine-matt --ash #does not have /bin/bash, very light linux
+
+
+#Troubleshooting issues
+  - Missing parent lxdbr0 error
+    - sudo dpkg-reconfigure -p medium lxd
+
+-------------------------------------------------------
+#Setup remote port listening for secondary server
+lxc config set core.https_address "[::]:8443"
+
+#Setup password for lxc connections
+lxc config set core.trust_password <password>
+
+#Connect to remote lxc server
+lxc remote add <label> <ip address>:8443
+	
+#List running containers on remote server
+lxc list <label>
+
+#List images on remote server
+lxc image list second
+
+-------------------------------------------------------
+#Publish snapshot to a useable image
+lxc publish <container>/<snapshot> --alias <new image name>
+
+#Export a container, outputs to a .tar.gz file
+lxc image export <image> <filepath>
+
+#Import a container on a new host server
+lxc image import <tar file> --alias <image name>
+
+
+-------------------------------------------------------
+
+#Forwarding of traffic can be used to direct host network traffic to container
+#Check to see if forwarding is turned on, should come back as 1 not 0 for forwarding
+systemctl net.ipv4.ip_forward
+
+#Using IPTABLES to forward host tcp port 80 to container with ip 10.10.10.120
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp -m tcp --dport 80 -j DNAT --to 10.10.10.120:80
+
+
+-------------------------------------------------------
+
+#Change security to run docker within lxc/lxd containers
+lxc config set <container> security.nesting true
+
+#Change security to allow lxc/lxd containers to mount nfs/smb shares
+lxc config set <container> security.privileged true
