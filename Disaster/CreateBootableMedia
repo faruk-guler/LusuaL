@@ -26,3 +26,6 @@ sudo umount /dev/sdb # otomatik mount edilmişse kaldırın.
 sudo dd if=/home/faruk/linux.iso of=/dev/sdb bs=4M status=progress oflag=sync conv=fdatasync # Flash!!
 sudo sync            # Verify
 sudo eject /dev/sdb  # Remove safely.
+
+#See:
+https://github.com/faruk-guler/LinusuaL/blob/main/Partitioning/parted.md
