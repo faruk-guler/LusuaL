@@ -1,45 +1,149 @@
-cat /etc/shadow
-cat /etc/passwd
+List all users on your machine:
+more /etc/passwd
+awk -F ':' '{print $ 1}' /etc/passwd
 
-# check the logged in user
-whoami
+To display the entire User count:
+cat /etc/passwd | wc -l
 
-# change user
-su [userName]
+Creating a user account:
+adduser username
 
-# add user [-m = create home directory, -c = comment, -s = shell] ** default user creation **
-sudo useradd -m -c "Nom complet" -s /bin/bash [userName]
+Deleting a user account:
+#userdel username
 
-# change user password (if don't do this the user can't login)
-sudo passwd [userName]
+Switching a user account:
+su username
 
-# add group 
-sudo groupadd [groupName]
+Changing a user's password:
+passwd username
 
-# add user to group
-sudo usermod -a -G [groupName] [userName]
+Changing a user's group membership:
+usermod -g new_group username
 
-# check user group
-groups [userName]
+***This command provides a new group name in which you want the specified user to join the group.
 
-# force user to change password at next login
-sudo chage -d 0 [userName]
+Changing a user's home directory:
+usermod -d /new/home/directory username
 
-# replace primary group of user
-sudo usermod -g [groupName] [userName]
+***This command allows you to change the home directory of the specified user.
 
-# delete user account
-sudo userdel -r [userName]
+View user information and settings:
+id username
 
-# delete groups
-sudo groupdel [groupName]
+Terminate all active sessions for a user:
+pkill -KILL -u username
 
-# remove user from group
-sudo deluser -d [userName] [groupName]
+Resetting a user's password:
+passwd -d username
 
-# lock and unlock user account
-sudo passwd -l [userName]
-sudo passwd -u [userName]
+***Deletes the specified user's password and requires a new password the next time the user logs on.
 
-# check user information (user id, group id, etc.)
-id [userName]
+Set a user's account expiration date:
+chage -E "2027-xx-xx" username
+
+Show "wheel" group users
+getent group wheel
+
+To grant root privileges to the user:
+usermod -aG wheel username
+
+Requiring a user's password:
+chage -d 0 username
+
+To create a group:
+sudo groupadd grupadi
+
+To delete a group:
+sudo groupdel grupadi
+
+List all groups in the system:
+cat /etc/group
+
+List a user's groups:
+groups username
+
+View details of a specific group:
+getent group grupadi
+
+To change a group name:
+sudo groupmod -n yeni_grup_adi eski_grup_adi
+
+Listing Group Members:
+members grupadi
+
+Change a user's name or group:
+usermod -l new_username old_username
+
+Changing the user's UID:
+usermod -u 1001 username
+
+Changing the user's group:
+usermod -g developers username
+
+Change a user's password lifetime:
+chage -M 90 username
+
+View user's account activity and recent login information:
+last username
+
+Set user sign-in restrictions:
+chage username
+
+Set user's password policies:
+passwd -d -u username
+
+Temporarily disable user's account:
+usermod -L username
+
+Reactivate the user's account:
+usermod -U username
+
+Changing the user's group:
+usermod -g groupname username
+
+***This command changes the home group of the specified user.
+
+Change a user's additional groups:
+usermod -aG groupname username
+
+Adding user "user1" to the "testgroup" group:
+sudo gpasswd -a user1 testgroup
+
+To remove user "user1" from group "testgroup":
+sudo gpasswd -d user1 testgroup
+
+Locking the user's account:
+usermod -L username
+
+Opening the user's account:
+usermod -U username
+
+Show message on user's next session:
+echo "message" > /etc/issue
+
+Showing messages to all users throughout the system:
+wall "message"
+
+List logged in users
+w
+
+Bulk adding users:
+newusers home/path/users.txt
+
+***user.txt columns content:
+Kullanıcı adı
+Parola
+Kullanıcı ID'si (UID)
+Grup ID'si (GID)
+Ev dizini
+Kabuk (Shell)
+
+***user.txt columns content:
+test1:Sifre:1001:1001:/home/test1:/bin/bash
+test2:Sifre:1002:1002:/home/test2:/bin/bash
+test3:Sifre:1003:1003:/home/test3:/bin/bash
+test4:Sifre:1004:1004:/home/test4:/bin/bash
+test5:Sifre:1005:1005:/home/test5:/bin/bash
+
+View the last date users signed in:
+lastlog
