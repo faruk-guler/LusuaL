@@ -3,7 +3,7 @@
 🅻🅸🅽🆄🆇 🅷🅰🅽🅳-🅱🅾🅾🅺
 - Author: Faruk Guler
 - Name: LusuaL Handbook 
-- Description: Usual Hanbokk for Linux System Administrators
+- Description: Usual Handbook for Linux System Administrators
 - POC: Debian 12 (Bookworm) - AlmaLinux 9
 - Repository: https://github.com/faruk-guler/
 - Contributions: For contribution, send PR.
