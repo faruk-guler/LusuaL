@@ -1,6 +1,6 @@
 <img src="https://farukguler.com/assets/img/Linus-Torvalds-2012.jpg" alt="alt text" width="200" height="300">
 
-🅻🆄🆂🆄🅰🅻-🅷🅰🅽🅳🅱🅾🅾🅺
+🅻🆄🆂🆄🅰🅻 - 🅷🅰🅽🅳🅱🅾🅾🅺
 - Author: Faruk Guler
 - Name: LusuaL Handbook 
 - Description: Usual Handbook for Linux System Administrators
