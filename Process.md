@@ -1,4 +1,4 @@
-# 👹 Deamons / Services / Process.
+# 👹 Deamons / Services / Process
 
 ```bash
 # SERVICES / DAEMONS ----------------------------------------------
