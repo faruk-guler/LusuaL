@@ -1,4 +1,4 @@
-#Archive Manager
+#Archive Manager.
 # TAR (Archiving)
 tar -cvf file.tar /path/folder # Create Tar Archive
 tar -xvf file.tar # Extract Tar Archive
