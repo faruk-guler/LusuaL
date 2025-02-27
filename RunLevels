@@ -1,7 +1,7 @@
 Runlevel'ler Nedir?
 Runlevel'ler, sistemin çalışma düzeylerini tanımlar. Her runlevel, belirli bir işletim sistemi konfigürasyonunu ve sistemin hangi servislerinin aktif olacağını belirler. 
 Linux'un tarihsel olarak geleneksel runlevel kavramları, genellikle /etc/inittab dosyasına bağlıdır. 
-Ancak modern dağıtımlarda (özellikle systemd kullananlarda) runlevel yerine hedefler (targets) kullanılır. 
+Ancak modern dağıtımlarda (özellikle systemd kullananlarda) runlevel yerine hedefler (targets) kullanılır..
 Yine de, runlevel'ler birçok sistemde geriye dönük uyumluluk açısından hala mevcuttur.
 
 SYSTEM RUNLEVELS:
