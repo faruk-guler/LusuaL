@@ -1,4 +1,4 @@
-<img src="https://farukguler.com/assets/img/gnu-linux_wallpaper.png" alt="alt text" width="280" height="250">
+<img src="https://farukguler.com/assets/img/gnu-linux_wallpaper.png" alt="alt text" width="300" height="250">
 
 🅻🆄🆂🆄🅰🅻 - 🅷🅰🅽🅳🅱🅾🅾🅺
 - Author: Faruk Guler
