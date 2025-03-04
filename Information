@@ -4,7 +4,7 @@ uname -a
 cat /proc/version
 cat /etc/issue
 hostname
-w.
+w
 who
 top
 date
