@@ -566,7 +566,6 @@ nano .gitignore
 nano .gitignore
   *.exe
 
-#Github has .gitignore templates to help at https://github.com/github/gitignore
 ```
 <hr>
 
