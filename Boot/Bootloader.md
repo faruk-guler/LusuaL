@@ -1,4 +1,4 @@
-Boot Process: Bootloader
+## Boot Process Bootloader
 
 The bootloader's main responsibilities are:
 
