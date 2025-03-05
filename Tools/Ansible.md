@@ -90,3 +90,142 @@ ansible-playbook playbook.yml --list-tasks - lista as tarefas do playbook
 ansible-playbook playbook.yml --syntax-check - executa uma verifcacao da sintaxe do YML para do playbook
 ansible-playbook --tags=cps playbooks/systems/priority.yml -i inventory.yml
 ```
+### Installation Guide
+
+Installation Guide
+	https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-via-apt-ubuntu
+
+
+
+nano /etc/ansible/ansible.cfg
+
+nano /etc/ansible/hosts.cfg    ##need to setup ssh keys for each host, localhost below will not use ssh connection
+	[localcomputer]
+	localhost ansilbe_connection=local
+	[webservers]
+	192.168.2.10
+	192.168.2.11
+	[dnsservers]
+	192.168.2.12
+
+ansible all -m shell -a "uname"
+ansible webservers -m shell -a "uname"
+ansible all -m shell -a "cat /etc/passwd"
+ansible webservers -m apt -a "update_cache=yes"      ##will probably not work because of privileges, need to escalate
+ansible webservers -m apt -a "update_cache=yes" --become    ##sudo apt update
+ansible webservers -m apt -a "upgrade=yes" --become    ##sudo apt upgrade
+ansible webservers -m apt -a "name=nginx state=latest" --become    ## -a for argument
+ansible webservers -m apt_repository -a "repo=ppa:neovim-ppa/stable state=present" --become    ##add repository
+
+ansible all -m alternatives -a "name=vi path=/usr/bin/nvim priority=60". --become      ##causes vi command to run nvim
+ansible all -m group -a "name=admin state=present"    ## create new group
+ansible all -m user -a "name=matthew shell=/bin/bash groups=admin append=yes" --become      ## create new user
+ansible dbservers -m apt_key -a "keyserver=hkp://keyserver.ubuntu.com:80 id=0C49F3730359A14518585931BC711F9BA15703C6 state=present" --become
+ansible dbservers -m apt_repostory -a "repo='deb http://rep.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse' state=present" --become
+
+ansible dbservers -m app -a "name=mondodb-org state=present" --become
+ansible dbservers -m service -a "name=mongod state=start" --become
+ansible dbservers -m service -a "name=mongod state=stopped" --become
+ansible dbservers -m service -a "name=mongod state=restarted" --become
+ansible dbservers -m service -a "name=mongod state=reloaded" --become
+ansible dbservers -m service -a "name=mongod enabled=yes" --become
+ansible dbservers -m service -a "name=mongod enabled=no" --become
+
+ansible webservers -m shell -a "du -h"    ##run shell command
+ansible webservers -m command -a "du -h"    ##runs like shell command but will sanitize redirects and pipes
+
+#Handlers
+Talks that run if a dependent task runs, Called by notify
+
+#PLAYBOOK (starts with ---, save as a yaml file)
+ansible-playbook filename.yaml    ##Call a playbook
+ansible-playbook --syntax-check filename.yaml    ##Check a playbook for errors
+Ansilbe-playbook filename.yaml --extra-vars "home=/home/vagrant pictures_folder=/home/vagrant/pix"    ##add variables through CLI
+
+-----------------------------------------------------------------------------------------------
+--- #Setting up the application
+- hosts: local
+    become: yes
+    remote_user: matthew
+    tasks:
+        - name: "install nginx"
+
+- hosts: webservers
+    become: yes
+    vars:
+        pictures_folder: "/home/vargrant/pix"
+    vars_files:
+        - ./variables.yaml    #brings in variables from file
+    vars_prompt:
+        - name: "username"
+            prompt: "Enter the username"
+            private: no
+        - name: "password"
+            prompt: "Enter the password"
+            private: yes
+ handlers:
+        - name: "restart the nginx server"
+            service:
+                  name: nginx
+                  state: restart 
+        - name: "restart the apache2 server"
+            service:
+                  name: apache2
+                  state: restart 
+ tasks:
+        - name: "install nginx"
+            apt:
+                name: nginx
+                state: present
+        - name: "start nginx"
+            service:
+                name: nginx
+                state: started
+            notify:
+                  - "restart the nginx server"    #must be same name as handler, will only run if "start nginx" task runs
+        - name "create a file in home directory"
+            file:
+                path:    "{{ home }}/awesome.txt. #uses home variable from above
+                state: touch
+        - name: "create the picture folder"
+            file:
+                path: "{{ pictures_folder }}" #used variable for path
+                state: directory
+
+- hosts: dbservers
+    become: yes
+    gathering_facts: no    #speeds things up, but does not display results
+
+- hosts: devmachines
+    become: true
+    tasks:
+        - name: "install git"
+            apt: 
+                name: git
+                state: present
+        - name: "install vim"
+            apt: 
+                name: vim
+                state: present
+        - name: "setup code folder"
+            file: 
+                path: /code
+                state: directory
+        - name: "add developers group"
+            group: 
+                name: developers
+                state: present
+-----------------------------------------------------------------------------------------------
+
+--- #File named variables.yaml for variables
+
+home: "/home/vagrant"
+matt_home_dir: "/home/matthew"
+
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
