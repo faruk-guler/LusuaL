@@ -4,7 +4,7 @@
 - `vi` : Starting Vi
 
 ```
-~                         VIM - Vi Improved
+~                         VIM - (Vi Improved)
 ~
 ~                          version 8.0.707
 ~                     by Bram Moolenaar et al.
