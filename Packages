@@ -1,8 +1,8 @@
+--------------------------------
 - The Repository/Repo:
-
 - Building from Source Code:
-
 - Local installation File:
+--------------------------------
 
 #The Repository/Repo:
 apt update                   # Refreshes repository index
@@ -13,7 +13,6 @@ apt install wget             # Install the latest version of the wget package
 apt install wget=1.2.3       # Install a specific version of the wget package
 apt remove wget              # Removes the wget package
 apt upgrade                  # Upgrades all upgradable packages
-...........................
 
 ##Local installation File:
 dpkg -i pkg.deb – install a package (Debian)
