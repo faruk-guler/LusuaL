@@ -20,4 +20,6 @@ Snapshot    .snapshot	Sistemin anlık durumunu kaydeder (geri yükleme için).
 Link	    .link	Network interface'lerini yapılandırır (ör: MAC adresi atama).
 Netdev	    .netdev	Sanal ağ cihazları oluşturur (ör: bridge, VLAN).
 Network	    .network	Ağ yapılandırmasını tanımlar (IP, DNS, routing).
+
+
 ```
