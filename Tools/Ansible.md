@@ -90,6 +90,7 @@ ansible-playbook playbook.yml --list-tasks - lista as tarefas do playbook
 ansible-playbook playbook.yml --syntax-check - executa uma verifcacao da sintaxe do YML para do playbook
 ansible-playbook --tags=cps playbooks/systems/priority.yml -i inventory.yml
 ```
+```sh
 ### Installation Guide
 
 Installation Guide
@@ -229,4 +230,5 @@ matt_home_dir: "/home/matthew"
 
 
 -----------------------------------------------------------------------------------------------
+
 ```
