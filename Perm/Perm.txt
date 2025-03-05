@@ -1,4 +1,4 @@
-#File Permissions.
+#File Permissions
 #	Permission	rwx	Binary
 7	read, write and execute	rwx	111
 6	read and write	rw-	110
