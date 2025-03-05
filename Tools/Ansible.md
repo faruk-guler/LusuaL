@@ -141,10 +141,13 @@ Talks that run if a dependent task runs, Called by notify
 #PLAYBOOK (starts with ---, save as a yaml file)
 ansible-playbook filename.yaml    ##Call a playbook
 ansible-playbook --syntax-check filename.yaml    ##Check a playbook for errors
-Ansilbe-playbook filename.yaml --extra-vars "home=/home/vagrant pictures_folder=/home/vagrant/pix"    ##add variables through CLI
+Ansilbe-playbook filename.yaml --extra-vars "home=/home/vagrant pictures_folder=/home/vagrant/pix"
 
------------------------------------------------------------------------------------------------
---- #Setting up the application
+##add variables through CLI
+
+--------------------------------------
+
+#Setting up the application
 - hosts: local
     become: yes
     remote_user: matthew
