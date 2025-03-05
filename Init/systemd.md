@@ -4,7 +4,6 @@ SysV init'in yerini alarak daha hızlı başlangıç süreleri, paralel servis b
 Ayrıca log yönetimi (journald), zamanlanmış görevler (timer birimleri) ve kullanıcı oturum yönetimi gibi ek özelliklerle genişletilmiş bir araç setidir.
 
 ```sh
---------------------------------------
 Unit Tür |  Uzantı     | Açıklama |
 Service	    .service	Servisleri yönetir (ör: NGINX, MySQL).
 Socket	    .socket	Ağ veya IPC soketlerini tanımlar. Bağlantı geldiğinde ilgili servisi başlatır.
@@ -21,5 +20,4 @@ Snapshot    .snapshot	Sistemin anlık durumunu kaydeder (geri yükleme için).
 Link	    .link	Network interface'lerini yapılandırır (ör: MAC adresi atama).
 Netdev	    .netdev	Sanal ağ cihazları oluşturur (ör: bridge, VLAN).
 Network	    .network	Ağ yapılandırmasını tanımlar (IP, DNS, routing).
-.............
 ```
