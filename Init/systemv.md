@@ -10,6 +10,7 @@ The pros of using this implementation of init, is that it's relatively easy to s
 
 When using Sys V, the state of the machine is defined by runlevels which are set from 0 to 6. These different modes will vary depending on the distribution, but most of the time will look like the following:
 
+```sh
 0: Shutdown
 1: Single User Mode
 2: Multiuser mode without networking
@@ -17,5 +18,6 @@ When using Sys V, the state of the machine is defined by runlevels which are set
 4: Unused
 5: Multiuser mode with networking and GUI
 6: Reboot
+```
 
 When your system starts up, it looks to see what runlevel you are in and executes scripts located inside that runlevel configuration. The scripts are located in /etc/rc.d/rc[runlevel number].d/ or /etc/init.d. Scripts that start with S(start) or K(kill) will run on startup and shutdown, respectively. The numbers next to these characters are the sequence they run in.
