@@ -16,7 +16,7 @@ An inode (index node) is an entry in this table and there is one for every file.
 Basically inodes store everything about the file, except the filename and the file itself
 
 
-#When are inodes created?
+# When are inodes created?
 
 When a filesystem is created, space for inodes is allocated as well. 
 There are algorithms that take place to determine how much inode space you need depending on the volume of the disk and more. 
