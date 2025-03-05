@@ -1,17 +1,11 @@
 # Boot Process: Kernel
 
-Now that the bootloader has passed on the necessary parameters, let's dive into how the kernel gets started:
+So now that our bootloader has passed on the necessary parameters, let's see how it get's started:
 
 ## Initrd vs Initramfs
 
-There is a bit of a chicken and egg problem when it comes to kernel bootup. The kernel manages the system's hardware, but not all drivers are available to the kernel during the boot process. So, we depend on a temporary root filesystem that contains only the essential modules the kernel needs to access the rest of the hardware.
-
-In older versions of Linux, this task was handled by the **initrd** (initial ram disk). The kernel would mount the initrd, load the necessary bootup drivers, and once everything was ready, it would replace the initrd with the actual root filesystem.
-
-These days, we use **initramfs**, which is a temporary root filesystem built into the kernel itself. This approach eliminates the need to locate an initrd file and allows the kernel to load all the necessary drivers for the real root filesystem.
+There is a bit of a chicken and egg problem when we talk about the kernel bootup. The kernel manages our systems hardware, however not all drivers are available to the kernel during bootup. So we depend on a temporary root filesystem that contains just the essential modules that the kernel needs to get to the rest of the hardware. In older versions of Linux, this job was given to the initrd (initial ram disk). The kernel would mount the initrd, get the necessary bootup drivers, then when it was done loading everything it needed, it would replace the initrd with the actual root filesystem. These days, we have something called the initramfs, this is a temporary root filesystem that is built into the kernel itself to load all the necessary drivers for the real root filesystem, so no more locating the initrd file.
 
 ## Mounting the Root Filesystem
 
-At this point, the kernel has all the modules it needs to create a root device and mount the root partition. However, before proceeding, the root partition is mounted in **read-only mode** to allow **fsck** (filesystem consistency check) to run and verify the system's integrity. Afterward, the root filesystem is remounted in **read-write mode**.
-
-Finally, the kernel locates the **init program** (typically `/sbin/init`) and executes it to begin the user-space initialization process.
+Now the kernel has all the modules it needs to create a root device and mount the root partition. Before you go any further though, the root partition is actually mounted in read-only mode first so that fsck can run safely and check for system integrity. Afterwards it remounts the root filesystem in read-write mode. Then the kernel locates the init program and executes it.
