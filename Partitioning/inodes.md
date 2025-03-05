@@ -32,15 +32,16 @@ Inodes are identified by numbers, when a file gets created it is assigned an ino
 However, you may sometimes notice when you create a new file, it gets an inode number that is lower than others, this is because once inodes are deleted, they can be reused by other files. 
 To view inode numbers run ls -li:
 
----sh
+```sh
 pete@icebox:~$ ls -li
 140 drwxr-xr-x 2 pete pete 6 Jan 20 20:13 Desktop
 141 drwxr-xr-x 2 pete pete 6 Jan 20 20:01 Documents
 ---
 The first field in this command lists the inode number.
 You can also see detailed information about a file with stat, it tells you information about the inode as well.
----
----sh
+```
+
+```sh
 pete@icebox:~$ stat ~/Desktop/
   File: ‘/home/pete/Desktop/’
   Size: 6               Blocks: 0          IO Block: 4096   directory
@@ -51,7 +52,7 @@ Access: 2016-01-20 20:13:50.647435982 -0800
 Modify: 2016-01-20 20:13:06.191675843 -0800
 Change: 2016-01-20 20:13:06.191675843 -0800
  Birth: -
----
+```
 
 How do inodes locate files?
 We know our data is out there on the disk somewhere, unfortunately it probably wasn't stored sequentially, so we have to use inodes. 
