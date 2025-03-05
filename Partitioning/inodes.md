@@ -54,7 +54,7 @@ Change: 2016-01-20 20:13:06.191675843 -0800
  Birth: -
 ```
 
-How do inodes locate files?
+# How do inodes locate files?
 We know our data is out there on the disk somewhere, unfortunately it probably wasn't stored sequentially, so we have to use inodes. 
 Inodes point to the actual data blocks of your files. In a typical filesystem (not all work the same), each inode contains 15 pointers, the first 12 pointers point directly to the data blocks. 
 The 13th pointer, points to a block containing pointers to more blocks, the 14th pointer points to another nested block of pointers, and the 15th pointer points yet again to another block of pointers! 
