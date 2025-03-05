@@ -1,4 +1,4 @@
-# Boot Process: Kernel
+# Boot Process Kernel
 
 So now that our bootloader has passed on the necessary parameters, let's see how it get's started:
 
