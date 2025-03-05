@@ -1,4 +1,4 @@
-Boot Process Overview
+## Boot Process Overview
 
 Now that we've gotten a pretty good grasp at some of the important components of Linux, let's piece them altogether by learning about how the system boots. When you turn on your machine, it does some neat things like show you the logo screen, run through some different messages and then at the end you're prompted with a login window. Well, there is actually a ton of stuff happening between when you push the power button to when you login and we'll discuss those in this course.
 
