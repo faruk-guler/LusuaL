@@ -4,7 +4,7 @@ It allows you to run a program or user in an "isolated" environment of a specifi
 This isolated environment is often called a chroot jail.
 
 #Keep it:
--LiveCD/USB and SystemRescueCD or iso file
+-LiveCD/USB and SystemRescueCD or iso files
 -Shell
 -Root permission privilege
 -Matching the environment architecture
