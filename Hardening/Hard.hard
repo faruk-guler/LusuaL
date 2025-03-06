@@ -1,3 +1,5 @@
+# Strong Password Manager:
+>> Setting password policies for users "libpam-pwquality" package
 sudo apt install libpam-pwquality
 sudo gedit /etc/security/pwquality.conf
 
@@ -5,3 +7,15 @@ sudo gedit /etc/security/pwquality.conf
 -minclass: Number of character types in the password (uppercase, lowercase, digit, special character).
 -maxrepeat: Limit the number of times the same character can be repeated in the password.
 -diftok: Determines the minimum number of characters that differ between the old and new password.
+
+# Managing Locked Accounts:
+>> User makes a login attempt above the threshold, cause this account to be locked for a certain period of time.
+sudo nano /etc/pam.d/common-auth
+auth required pam_tally2.so onerr=fail deny=3 unlock_time=600 even_deny_root audit [add below # here are the per-package modules (the “Primary” block)]
+
+# Using the ecryptfs System:
+>> It is an encryption layer supported by the Linux kernel. It is used to encrypt certain directories.
+
+sudo apt install ecryptfs-utils
+sudo mkdir /mysecrets
+sudo mount -t ecryptfs /secrets /secrets
