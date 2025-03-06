@@ -19,14 +19,3 @@ Jan 27 07:41:32 icebox anacron[4650]: Job `cron.weekly' started
 
 Here we can see that at Jan 27 07:41:32 our cron service ran the cron.weekly job. You can view all the event messages that syslog collects with in the /var/log/syslog file.
 
-## Exercise
-
-Look at your /var/log/syslog file and see what else is happening on your machine.
-
-## Quiz Question
-
-What is the daemon that manages log on newer Linux systems?
-
-## Quiz Answer
-
-rsyslogd
