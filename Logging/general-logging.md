@@ -16,14 +16,3 @@ This logs everything except auth messages, it's extremely useful for debugging e
 
 These two logs should be more than enough when troubleshooting issues with your system, However, if you just want to view a specific log component, there are also separate logs for those as well.
 
-## Exercise
-
-Look at your /var/log/messages and /var/log/syslog files and see what the differences are.
-
-## Quiz Question
-
-What log file logs everything except auth messages?
-
-## Quiz Answer
-
-syslog
