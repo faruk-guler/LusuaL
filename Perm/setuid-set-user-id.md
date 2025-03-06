@@ -42,14 +42,3 @@ Just like regular permissions there are two ways to modify SUID permissions.
 
 As you can see the SUID is denoted by a 4 and pre-pended to the permission set. You may see the SUID denoted as a capital <b>S</b> this means that it still does the same thing, but it does not have execute permissions.
 
-## Exercise
-
-Look at the permission for /etc/passwd in detail, do you notice anything else? Files with SUID enabled are also easily distinguishable.
-
-## Quiz Question
-
-What number represents the SUID?
-
-## Quiz Answer
-
-4
