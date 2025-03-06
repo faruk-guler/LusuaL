@@ -65,12 +65,6 @@ will match dAg, dBg and dCg but not dag, dbg and dcg
 
 And those are some basic regular expressions.
 
-## Exercise
-
-Try to combine regular expressions with grep and search through some files.
-
-<pre>
-grep [regular expression here] [file]
 
 ## Quiz Question
 
