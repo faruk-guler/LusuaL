@@ -34,15 +34,3 @@ Sometimes in older systems you may see hard drives being referred to with an hd 
 <li>/dev/hda - First hard disk</li>
 <li>/dev/hdd2 - Second partition on 4th hard disk</li>
 </ul> 
-
-## Exercise
-
-Write to the pseudo devices and see what happens, be careful not to write your disks to those devices!
-
-## Quiz Question
-
-What would commonly be the device name for the first partition on the second SCSI disk?
-
-## Quiz Answer
-
-sdb1
