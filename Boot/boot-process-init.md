@@ -19,15 +19,3 @@ This is the init you'll find on older Ubuntu installations. Upstart uses the ide
 This is the new standard for init, it is goal oriented. Basically you have a goal that you want to achieve and systemd tries to satisfy the goal's dependencies to complete the goal. 
 
 We have an entire course on Init systems where we will dive into each of these systems in more detail.
-
-## Exercise
-
-No exercises for this lesson.
-
-## Quiz Question
-
-What is the newest standard for init?
-
-## Quiz Answer
-
-systemd
