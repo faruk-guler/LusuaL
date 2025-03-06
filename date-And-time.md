@@ -54,7 +54,7 @@ sudo timedatectl set-ntp true  # For NTP Enabled
 sudo timedatectl set-ntp false # For NTP Disabled
 ```
 
-##### ----------------------------------------
+##### time synchronization services
 ```sh
 Basic Synchronization: Systemd-timesyncd
 Flexible and Powerful: Chrony
