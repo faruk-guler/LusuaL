@@ -20,14 +20,3 @@ Or just use the reboot command:
 
 <pre>$ sudo reboot</pre>
 
-## Exercise
-
-What do you think is happening with init when you shutdown your machine?
-
-## Quiz Question
-
-What is the command to poweroff your system in 4 minutes?
-
-## Quiz Answer
-
-sudo shutdown -h +4
