@@ -36,14 +36,4 @@ The way that Upstart works is that:
 <li>Upstart continues to do this until it completes all the necessary jobs</li>
 </ol>
 
-## Exercise
 
-If you are running Upstart, see if you can make sense of the job configurations in /etc/init.
-
-## Quiz Question
-
-What is the init implementation that is used by Ubuntu?
-
-## Quiz Answer
-
-upstart
