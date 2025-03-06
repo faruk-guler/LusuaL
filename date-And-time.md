@@ -16,7 +16,7 @@ timedatectl list-timezones
 timedatectl list-timezones | grep -i istanbul
 timedatectl set-timezone Europe/Istanbul
 
-##### Manuel:
+# Manuel:
 sudo date -s "2025-03-06 09:50:00"
 sudo timedatectl set-time '2025-03-06 14:30:00'
 
