@@ -21,15 +21,3 @@ My pretty file is very pretty.
 
 will find the pretty words in the text file.
 </pre>
-
-## Exercise
-
-Play with the search key, open a text file in vim with: vim [textfile] and start searching!
-
-## Quiz Question
-
-What key is used to search in vim?
-
-## Quiz Answer
-
-/
