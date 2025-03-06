@@ -13,15 +13,3 @@ Great user interface, great for beginners and less bloated than Ubuntu. In this 
 
 <b>Uses</b>
 Great for desktop and laptop.
-
-## Exercise
-
-If you're interested in having Linux Mint as your operating system, head over to the installation section and give it a try: <a href='http://linuxmint.com/'>http://linuxmint.com/</a>
-
-## Quiz Questions
-
-What is Linux Mint based off of?
-
-## Quiz Answer
-
-Ubuntu
