@@ -1,10 +1,17 @@
 ## Quota management:
 sudo apt install quota
+
+
+# Enabling Quota Support in the File System:
 sudo nano /etc/fstab
 
 # fstab file
-#
 >> /dev/sdX    /home    ext4    defaults,usrquota,grpquota    0    2
+# -------
+# -------
+
+usrquota: Enables user quota support.
+grpquota: Enables group quota support.
 
 
 # Create the necessary files for Quota:
