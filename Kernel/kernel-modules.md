@@ -40,14 +40,3 @@ You can also make sure a module does not load on bootup by adding a configuratio
 blacklist peanut_butter
 </pre>
 
-## Exercise
-
-Unload your bluetooth module with modprobe and see what happens. How will you fix this?
-
-## Quiz Question
-
-What command is used to unload a module?
-
-## Quiz Answer
-
-modprobe -r
