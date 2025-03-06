@@ -16,15 +16,3 @@ Debian may not get the latest updates, but it's extremely stable. If you want a 
 <b>Uses</b>
 Debian is an overall great operating system for any platform.
 
-
-## Exercise
-
-If you're interested in having Debian as your operating system, head over to the installation section and give it a try: <a href='https://www.debian.org/'>https://www.debian.org/</a>
-
-## Quiz Question
-
-What kind of release does Testing and Unstable have? 
-
-## Quiz Answer
-
-Rolling
