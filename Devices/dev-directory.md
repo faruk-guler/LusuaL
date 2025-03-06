@@ -11,15 +11,3 @@ Some of these devices you've already used and interacted with such as /dev/null.
 In the old days, if you wanted to add a device to your system, you'd add the device file in /dev and then probably forget about it. Well repeat that a couple of times and you can see where there was a problem. The /dev directory would get cluttered with static device files of devices that you've long since upgraded, stopped using, etc. Devices are also assigned device files in the order that the kernel finds them. So if everytime you rebooted your system, the devices could have different device files depending on when they were discovered.
 
 Thankfully we no longer use that method, now we have something that we use to dynamically add and remove devices that are currently being used on the system and we'll be discussing this in the coming lessons.
-
-## Exercise
-
-Check out the contents of the /dev directory, do you recognize any familiar devices? 
-
-## Quiz Question
-
-Where are device files stored on the system?
-
-## Quiz Answer
-
-/dev
