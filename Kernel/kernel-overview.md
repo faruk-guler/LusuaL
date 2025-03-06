@@ -12,14 +12,4 @@ And the level that you are familiar with is the user space, the user space inclu
 
 In this course, we'll be focusing on the kernel and learning its intricacies.
 
-## Exercise
 
-No exercises for this lesson.
-
-## Quiz Question
-
-What level of the operating system manages devices?
-
-## Quiz Answer
-
-kernel
