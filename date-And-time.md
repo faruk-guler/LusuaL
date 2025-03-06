@@ -60,5 +60,7 @@ Flexible and Powerful: Chrony
 Detailed and Advanced: Ntpd
 ```
 [CentOS 8 NTP Server and Clients Best Configuration](https://farukguler.com/posts/centos8-ntp-server-and-clients-best-configuration/)
+
 [Best Client NTP Services Configuration](https://farukguler.com/posts/best-client-ntp-services-configuration/)
+
 [NTP Settings Automated](https://farukguler.com/posts/ntp-settings-automated/)
