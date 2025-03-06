@@ -17,15 +17,3 @@ dev               events_poll_msecs  queue     sda2       stat
 device            ext_range          range     sda5       subsystem
 </pre>
 
-
-## Exercise
-
-Check out the contents of the /sys directory and see what files are located in there.
-
-## Quiz Question
-
-What directory is used to view detailed information on devices? 
-
-## Quiz Answer
-
-/sys
