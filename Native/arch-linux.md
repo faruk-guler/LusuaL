@@ -14,14 +14,4 @@ If you want a lightweight operating system and really want to understand Linux u
 <b>Uses</b>
 Great for desktop and laptop. If you also have a small device such as a Raspberry Pi and need to stick a lightweight OS on it, you can’t go wrong with Arch.
 
-## Exercise
 
-If you're interested in having Arch as your operating system, head over to the installation section and give it a try: <a href='https://www.archlinux.org/'>https://www.archlinux.org/</a>
-
-## Quiz Questions
-
-What package manager does Arch Linux use?
-
-## Quiz Answer
-
-Pacman
