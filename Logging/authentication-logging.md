@@ -14,14 +14,3 @@ Sample snippet:
 Jan 31 10:37:50 icebox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
 </pre>
 
-## Exercise
-
-Do some failed logins and then a successful one, look at your /var/log/auth.log and see what happened.
-
-## Quiz Question
-
-What log is used for user authentication?
-
-## Quiz Answer
-
-auth.log
