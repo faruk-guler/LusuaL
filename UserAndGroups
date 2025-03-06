@@ -1,4 +1,4 @@
---------------------------
+----------------    ----------                ----------
 /etc/passwd         User information          Everyone
 /etc/shadow         Passwords                 root
 /etc/group          Groups                    Everyone
@@ -8,7 +8,7 @@
 /etc/sudoers        sudo permissions          root (with visudo)
 /etc/nsswitch.conf  User information source   root
 /etc/pam.d/         PAM Auth. modules         root
---------------------------
+----------------    ----------                ----------
 
 List all users on your machine:
 more /etc/passwd
