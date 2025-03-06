@@ -2,11 +2,12 @@
 Proper time management in Linux systems is essential for consistency of system logs, correct operation of scheduled tasks, and network synchronization.
 Keeping the hardware clock and system clock in sync, configuring time zone settings correctly, and synchronizing with NTP tools increases system reliability and performance.
 
-# Key Concepts.
-Hardware Clock (RTC): Clock stored in BIOS/UEFI (powered by CMOS battery).
-System Clock: Clock obtained from hardware clock and managed by kernel when operating system starts.
-Timezone: Regional setting that determines local time (e.g. Europe/Istanbul for Turkey).
-NTP (Network Time Protocol): Protocol that provides time synchronization over the Internet.
+# Key Concepts
+
+- **Hardware Clock (RTC):** Clock stored in BIOS/UEFI (powered by CMOS battery).
+- **System Clock:** Clock obtained from hardware clock and managed by kernel when operating system starts.
+- **Timezone:** Regional setting that determines local time (e.g. Europe/Istanbul for Turkey).
+- **NTP (Network Time Protocol):** Protocol that provides time synchronization over the Internet.
 
 ##### View System Time and Date:
 
