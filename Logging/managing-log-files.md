@@ -8,14 +8,3 @@ The logrotate utility does log management for us. It has a configuration file th
 
 There are other logrotating tools you can use to manage your logs, but logrotate is the most common one. 
 
-## Exercise
-
-Look at your logrotate configuration file and see how it manages some of your logs. 
-
-## Quiz Question
-
-What utility is used to manage logs?
-
-## Quiz Answer
-
-logrotate
