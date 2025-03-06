@@ -34,11 +34,13 @@ sudo hwclock --hctosys [Hardware time to > System]
 ```
 
 ## Synchronization with NTP: [systemd-timesyncd, chrony, ntp]
+```sh
 timedatectl status
 timedatectl set-ntp on [NTP on]
+```
 
-```sh
 # Using systemd-timesyncd [Default Already]
+```sh
 sudo apt update
 sudo apt install systemd-timesyncd
 systemctl status systemd-timesyncd
@@ -52,10 +54,11 @@ sudo timedatectl set-ntp false # For NTP Disabled
 ```
 
 ##### ----------------------------------------
+```sh
 Basic Synchronization: Systemd-timesyncd
 Flexible and Powerful: Chrony
 Detailed and Advanced: Ntpd
-
+```
 https://farukguler.com/posts/centos8-ntp-server-and-clients-best-configuration/
 https://farukguler.com/posts/best-client-ntp-services-configuration/
 https://farukguler.com/posts/ntp-settings-automated/
