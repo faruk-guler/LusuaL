@@ -20,14 +20,3 @@ $ sudo chmod 1755 mydir</pre>
 
 The numerical representation for the sticky bit is <b>1</b>
 
-## Exercise
-
-What other files and directories do you think have a sticky bit enabled? 
-
-## Quiz Question
-
-What symbol represents the sticky bit?
-
-## Quiz Answer
-
-t
