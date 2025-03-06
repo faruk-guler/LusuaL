@@ -21,11 +21,3 @@ Additional reading:
 <li><a href='https://en.wikipedia.org/wiki/Ken_Thompson'>Ken Thompson</a></li>
 <li><a href='https://stallman.org/'>Richard Stallman</a></li>
 <li><a href='https://en.wikipedia.org/wiki/Linus_Torvalds'>Linus Torvalds</a></li>
-
-## Quiz Question
-
-Who developed the Linux kernel? 
-
-## Quiz Answer
-
-Linus Torvalds
