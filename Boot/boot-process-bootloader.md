@@ -22,15 +22,3 @@ So we know that the bootloader's main goal is to load up the kernel, but where d
 <li>quiet - This is added so that you don't see display messages that are going on in the background during boot.</li>
 <li>splash - This lets the splash screen be shown.</li>
 </ul>
-
-## Exercise
-
-If you have GRUB as your bootloader, go into the GRUB menu with 'e' and take a look at the settings.
-
-## Quiz Question
-
-What kernel parameter makes it so you don't see bootup messages?
-
-## Quiz Answer
-
-quiet
