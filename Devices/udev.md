@@ -15,15 +15,3 @@ Luckily, we really don't need to do this anymore because of udev. The udev syste
 You can also view the udev database and sysfs using the <b>udevadm</b> command. This tool is very useful, but sometimes can get very convoluted, a simple command to view information for a device would be:
 
 <pre>$ udevadm info --query=all --name=/dev/sda</pre>
-
-## Exercise
-
-Run the udevadm command given and check out the input.
-
-## Quiz Question
-
-What dynamically adds and removes devices? 
-
-## Quiz Answer
-
-udev
