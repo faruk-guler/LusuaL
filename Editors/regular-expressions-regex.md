@@ -66,10 +66,3 @@ will match dAg, dBg and dCg but not dag, dbg and dcg
 And those are some basic regular expressions.
 
 
-## Quiz Question
-
-What regular expression would you use to match a single character?
-
-## Quiz Answer
-
-.
