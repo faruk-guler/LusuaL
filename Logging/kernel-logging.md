@@ -8,14 +8,3 @@ On boot-time your system logs information about the kernel ring buffer. This sho
 <b>/var/log/kern.log</b>
 Another log you can use to view kernel information is the /var/log/kern.log file, this logs the kernel information and events on your system, it also logs dmesg output.
 
-## Exercise
-
-Look at your dmesg and kern logs, what differences do you notice?
-
-## Quiz Question
-
-What command can be used to view kernel bootup messages?
-
-## Quiz Answer
-
-dmesg
