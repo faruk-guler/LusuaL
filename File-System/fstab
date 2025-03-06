@@ -1,4 +1,4 @@
-# Quota management:
+## Quota management:
 sudo apt install quota
 sudo nano /etc/fstab
 
@@ -17,6 +17,6 @@ quota -u faruk #Show user quota
 repquota -a    #Show all  users quota
 repquota /home #Show /home dir quota
 
-sudo quotaonn -v /home # open quota system
+sudo quotaon -v /home # open quota system
 sudo quotaoff -v /home # close the quota system
 
