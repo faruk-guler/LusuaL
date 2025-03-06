@@ -12,14 +12,3 @@ You can actually view the system calls that a process makes with the strace comm
 
 <pre>$ strace ls</pre>
 
-## Exercise
-
-No exercises for this lesson.
-
-## Quiz Question
-
-What is used to switch from user mode to kernel mode?
-
-## Quiz Answer
-
-system call
