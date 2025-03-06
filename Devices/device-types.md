@@ -53,15 +53,3 @@ Socket devices facilitate communication between processes, similar to pipe devic
 Devices are characterized using two numbers, <b>major device number</b> and <b>minor device number</b>. You can see these numbers in the above ls example, they are separated by a comma. For example, let's say a device had the device numbers: <b>8, 0</b>:
 
 The major device number represents the device driver that is used, in this case 8, which is often the major number for sd block devices. The minor number tells the kernel which unique device it is in this driver class, in this case 0 is used to represent the first device (a).
-
-## Exercise
-
-Look at your /dev directory and find out what types of devices you can see.
-
-## Quiz Question
-
-What is the symbol for character devices in the ls -l command?
-
-## Quiz Answer
-
-c
