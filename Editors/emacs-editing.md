@@ -22,15 +22,3 @@ To cut (kill) or paste (yank) in Emacs you'll need to be able to select text fir
 C-w : cut
 C-y : yank
 </pre>
-
-## Exercise
-
-Play around with text navigation.
-
-## Quiz Question
-
-How do you move to the end of the buffer?
-
-## Quiz Answer
-
-M->
