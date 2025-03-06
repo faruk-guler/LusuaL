@@ -34,14 +34,3 @@ The main object that systemd works with are known as units. Systemd doesn't just
 
 For example, let's say we boot into our default.target, well this target groups together the networking.service unit, crond.service unit, etc, so once we activate a single unit, everything below that unit gets activated as well.
 
-## Exercise
-
-No exercises for this lesson.
-
-## Quiz Question
-
-What unit is used to group together other units?
-
-## Quiz Answer
-
-target
