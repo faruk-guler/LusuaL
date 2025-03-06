@@ -1,1 +1,15 @@
-## 
+# Quota management:
+sudo apt install quota
+sudo nano /etc/fstab
+
+#
+>> /dev/sdX    /home    ext4    defaults,usrquota,grpquota    0    2
+
+
+#
+
+sudo edquota -u faruk
+quota -u faruk #Show user quota
+repquota -a    #Show all  users quota
+repquota /home #Show /home dir quota
+
