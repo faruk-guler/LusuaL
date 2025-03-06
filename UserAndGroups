@@ -2,6 +2,7 @@
 /etc/passwd
 /etc/shadow
 /etc/group
+/etc/gshadow
 -------------------------
 
 List all users on your machine:
