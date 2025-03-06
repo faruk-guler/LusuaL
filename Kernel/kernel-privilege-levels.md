@@ -12,14 +12,3 @@ These different modes are called privilege levels (aptly named for the levels of
 
 The answer is with system calls, system calls allow us to perform a privileged instruction in kernel mode and then switch back to user mode.
 
-## Exercise
-
-No exercises for this lesson.
-
-## Quiz Question
-
-What ring number has the highest privileges?
-
-## Quiz Answer
-
-0
