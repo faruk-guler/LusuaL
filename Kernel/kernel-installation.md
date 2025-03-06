@@ -23,17 +23,3 @@ Alternatively, if you just want the updated kernel version, just use dist-upgrad
 
 There are many different kernel versions, some are used as LTS (long term support), some are the latest and greatest, the compatibility may be very different between kernel versions so you may want to try out different kernels.
 
-## Exercise
-
-<ol>
-<li>Find out what kernel version you have.</li>
-<li>Research the different versions of kernels available</li>
-</ol>
-
-## Quiz Question
-
-How do you see the kernel version of your system?
-
-## Quiz Answer
-
-uname -r
