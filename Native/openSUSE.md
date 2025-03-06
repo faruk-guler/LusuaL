@@ -14,14 +14,4 @@ openSUSE is a great choice for a new Linux user. It offers an easy to use graphi
 <b>Uses</b>
 openSUSE Leap is fully capable of being used on a desktop PC and laptop.
 
-## Exercise
 
-If you're interested in having openSUSE as your operating system, head over to the download page and give it a try: <a href='https://software.opensuse.org/'>software.opensuse.org</a>
-
-## Quiz Questions
-
-What is the name of openSUSE's Administration/Installation Tool?
-
-## Quiz Answer
-
-yast
