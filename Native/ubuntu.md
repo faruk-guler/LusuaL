@@ -13,16 +13,3 @@ Ubuntu is a great choice for a beginner who wants to get into Linux. Ubuntu offe
 
 <b>Uses</b>
 Great for any platform, desktop, laptop and server.
-
-## Exercise
-
-If you're interested in having Ubuntu as your operating system, head over to the installation section and give it a try: 
-<a href='http://www.ubuntu.com/'>http://www.ubuntu.com/</a>
-
-## Quiz Questions
-
-What operating system is Ubuntu based off of?
-
-## Quiz Answer
-
-Debian
