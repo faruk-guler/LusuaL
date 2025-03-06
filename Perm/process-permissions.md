@@ -22,20 +22,3 @@ Since you ran passwd, it will start the process off using your real UID, and it 
 
 Most of the time the real UID and the effective UID are the same, but in such cases as the passwd command they will change.
 
-## Exercise
-
-We haven't discussed processes yet, we can still take a look at this change happening in real time: 
-
-<ol>
-<li>Open one terminal window, and run the command: <b>watch -n 1 "ps aux | grep passwd"</b>. This will watch for the passwd process.</li>
-<li>Open a second terminal window and run: <b>passwd</b></li>
-<li>Look at the first terminal window, you'll see a process come up for passwd. The first column in the process table is the effective user ID, lo and behold it's the root user!</li>
-</ol>
-
-## Quiz Question
-
-What UID decides what access to grant?
-
-## Quiz Answer
-
-effective
