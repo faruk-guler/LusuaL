@@ -1,13 +1,18 @@
------File---------  -----Info--------       -----Perm------
-/etc/passwd         User information          Everyone
-/etc/shadow         Passwords                 root
-/etc/group          Groups                    Everyone
-/etc/gshadow        Group passwords           root
-/etc/login.defs     User defaults             root
+-----File---------      -----Info--------       -----Perm------
+/etc/passwd             User information          Everyone
+/etc/shadow             Passwords                 root
+/etc/group              Groups                    Everyone
+/etc/gshadow            Group passwords           root
+/etc/login.defs         User defaults             root
 /etc/security/limits.conf  Source limits      root
-/etc/sudoers        sudo permissions          root (with visudo)
-/etc/nsswitch.conf  User information source   root
-/etc/pam.d/         PAM Auth. modules         root
+/etc/sudoers            sudo permissions          root (with visudo)
+/etc/nsswitch.conf      User information source   root
+/etc/pam.d/             PAM Auth. modules         root
+/etc/default/useradd    useradd default settings
+/etc/security/limits.conf
+/etc/skel/           
+/etc/subuid
+/etc/subgid
 ------------------------------------------------------------------
 
 List all users on your machine:
