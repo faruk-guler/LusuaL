@@ -21,14 +21,3 @@ If you add a colon and groupname after the user you can set both the user and gr
 
 <pre>$ sudo chown patty:whales myfile</pre> 
 
-## Exercise
-
-Modify the group and user of some test files. Afterwards take a look at the permissions with ls -l.
-
-## Quiz Question
-
-What command do you use to change user ownership?
-
-## Quiz Answer
-
-chown
