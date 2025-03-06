@@ -1,6 +1,7 @@
 ## Quota management:
 sudo apt install quota
-
+quota --version
+sudo systemctl status quota
 
 # Enabling Quota Support in the File System:
 sudo nano /etc/fstab
