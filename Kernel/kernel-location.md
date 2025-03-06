@@ -14,15 +14,3 @@ You will see multiple files for different kernel versions:
 </ul>
 
 If your /boot directory runs out of space, you can always delete old versions of these files or just use a package manager, but be careful when doing maintenance in this directory and don't accidentally delete the kernel you are using.
-
-## Exercise
-
-Go into your boot directory and see what files are in there. 
-
-## Quiz Question
-
-What is the kernel image called in /boot?
-
-## Quiz Answer
-
-vmlinuz
