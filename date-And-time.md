@@ -17,8 +17,10 @@ timedatectl list-timezones | grep -i istanbul
 timedatectl set-timezone Europe/Istanbul
 
 # Manuel:
+```sh
 sudo date -s "2025-03-06 09:50:00"
 sudo timedatectl set-time '2025-03-06 14:30:00'
+```
 
 ```sh
 # Hardware Clock (RTC)
