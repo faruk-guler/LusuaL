@@ -12,18 +12,3 @@ In the above example, we are stating that we want the default permissions of new
 
 When you run the umask command it will give that default set of permissions on any new file you make. However, if you want it to persist you'll have to modify your startup file (.profile), but we'll discuss that in a later lesson.
 
-## Exercise
-
-<ol>
-<li>Create a new file, then note it's permissions.</li>
-<li>Modify the umask and then create another new file.</li>
-<li>Check the permissions once more on the new file, what do you expect to see?</li>
-<ol>
-
-## Quiz Question
-
-What command is used to change default file permissions?
-
-## Quiz Answer
-
-umask
