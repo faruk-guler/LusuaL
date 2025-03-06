@@ -23,15 +23,3 @@ Each character represent a different permission:
 </ul>
 
 So in the above example, we see that the user pete has read, write and execute permissions on the file. The group penguins has read and execute permissions. And finally, the other users (everyone else) has read and execute permissions. 
-
-## Exercise
-
-Use the ls -l command on multiple files and recite their permissions, user and group. 
-
-## Quiz Question
-
-What permission bit is used for executable? 
-
-## Quiz Answer
-
-x
