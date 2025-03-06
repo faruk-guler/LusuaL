@@ -51,15 +51,3 @@ Now, let's get into some commands you can use with systemd units:
 <pre>$ sudo systemctl disable networking.service</pre>
 
 Again, you have yet to see how much depth systemd gets into, so read up on it if you want to learn more.
-
-## Exercise
-
-View the unit statuses and start and stop a few services. What do you observe?
-
-## Quiz Question
-
-What is the command to start a service named peanut.service?
-
-## Quiz Answer
-
-sudo systemctl start peanut.service
