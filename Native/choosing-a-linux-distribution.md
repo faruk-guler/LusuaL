@@ -16,13 +16,3 @@ So the first step we’ll need to take is to install Linux on your machine. You 
 
 There are many Linux distributions to choose from, we’ll just go over the most popular options. 
 
-
-## Exercise
-
-No exercises for this lesson.
-
-## Quiz Question
-
-No questions, skip ahead!
-
-## Quiz Answer
