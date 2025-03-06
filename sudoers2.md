@@ -1,3 +1,4 @@
+```sh
 # sudoers file.
 #
 # This file MUST be edited with the 'visudo' command as root.
@@ -6,6 +7,7 @@
 #
 # See the sudoers man page for the details on how to write a sudoers file.
 #
+```
 
 # /etc/sudoers
 
