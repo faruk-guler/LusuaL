@@ -1,4 +1,5 @@
 #Logs
+/var/log/     # General log dir
 /var/log/boot # Boot events
 /var/log/chronyd # NTP events
 /var/log/messages # All events
