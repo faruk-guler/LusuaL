@@ -4,8 +4,8 @@ Keeping the hardware clock and system clock in sync, configuring time zone setti
 
 # Key Concepts
 
-- **Hardware Clock (RTC):** Clock stored in BIOS/UEFI (powered by CMOS battery).
 - **System Clock:** Clock obtained from hardware clock and managed by kernel when operating system starts.
+- **Hardware Clock (RTC):** Clock stored in BIOS/UEFI (powered by CMOS battery).
 - **Timezone:** Regional setting that determines local time (e.g. Europe/Istanbul for Turkey).
 - **NTP (Network Time Protocol):** Protocol that provides time synchronization over the Internet.
 
