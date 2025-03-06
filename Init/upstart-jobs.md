@@ -39,14 +39,3 @@ We won't get into the details of how to write an Upstart job configuration, howe
 
 <pre>$ sudo initctl emit some_event</pre>
 
-## Exercise
-
-Observe your list of Upstart jobs, now change the job state with one of the commands we learned today. What do you notice afterwards?
-
-## Quiz Question
-
-How would I manually restart an Upstart job called peanuts?
-
-## Quiz Answer
-
-sudo initctl restart peanuts
