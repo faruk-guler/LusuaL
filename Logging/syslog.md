@@ -29,15 +29,3 @@ logger -s Hello
 </pre>
 
 Now look inside your /var/log/syslog and you should see this entry in your logs!
-
-## Exercise
-
-Look at your /etc/rsyslog.d configuration file and see what else is being logged via the system logger.
-
-## Quiz Question
-
-What command can you use to manually log a message?
-
-## Quiz Answer
-
-logger
