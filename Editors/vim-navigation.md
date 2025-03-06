@@ -10,15 +10,3 @@ Now you may notice, the mouse is nowhere is use here. To navigate a text documen
 <li>k or the down arrow - will move you down one line</li>
 <li>l or the right arrow - will move you right one character</li>
 </ul>
-
-## Exercise
-
-No exercises for this lesson.
-
-## Quiz Question
-
-What letter is used to move down?
-
-## Quiz Answer
-
-k
