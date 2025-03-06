@@ -1,3 +1,6 @@
+-----------------------------<
+-----------------------------<
+
 # Strong Password Manager:
 >> Setting password policies for users "libpam-pwquality" package
 sudo apt install libpam-pwquality
@@ -17,5 +20,14 @@ auth required pam_tally2.so onerr=fail deny=3 unlock_time=600 even_deny_root aud
 >> It is an encryption layer supported by the Linux kernel. It is used to encrypt certain directories.
 
 sudo apt install ecryptfs-utils
-sudo mkdir /mysecrets
+sudo mkdir /secrets
 sudo mount -t ecryptfs /secrets /secrets
+sudo umount -l /secrets
+
+# OpenSSL file encryption:
+
+# Firewall ports management:
+
+# SSH-keygen:
+
+# and more
