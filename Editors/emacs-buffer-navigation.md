@@ -27,15 +27,3 @@ This allows you see multiple buffers on one screen. To move between these buffer
 <pre>C-x 1</pre>
 
 If you ever used a terminal multiplexer like screen and tmux, the buffer commands will feel very familiar.
-
-## Exercise
-
-Play around with buffers.
-
-## Quiz Question
-
-How do you kill a buffer?
-
-## Quiz Answer
-
-C-x k
