@@ -23,15 +23,3 @@ When the kernel is loaded, it immediately initializes devices and memory. The ma
 Remember the init process is the first process that gets started, init starts and stops essential service process on the system. There are three major implementations of init in Linux distributions. We will go over them briefly and then dive into them in another course.
 
 There it is, the (very) simple explanation of the Linux boot process. We will go into more detail about these stages in the next lessons.
-
-## Exercise
-
-Reboot your system and see if you can spot each step as your machine boots up. 
-
-## Quiz Question
-
-What is the last stage in the Linux boot process?
-
-## Quiz Answer
-
-init
