@@ -18,6 +18,7 @@ timedatectl status
 timedatectl list-timezones
 timedatectl list-timezones | grep -i istanbul
 timedatectl set-timezone Europe/Istanbul
+dpkg-reconfigure tzdata
 ```
 # Manuel:
 ```sh
