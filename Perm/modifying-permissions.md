@@ -42,15 +42,3 @@ Wait a minute, 7 and 5 weren't listed above, where are we getting these numbers?
 5 = 4 +1, and all other users have read and execute permissions
 
 One thing to note: it's not a great idea to be changing permissions nilly willy, you could potentially expose a sensitive file for everyone to modify, however many times you legitimately want to change permissions, just take precaution when using the chmod command.
-
-## Exercise
-
-Change some basic text file permissions and see the bits changing as you do an ls -l.
-
-## Quiz Question
-
-What number represents the read permission when using numerical format?
-
-## Quiz Answer
-
-4
