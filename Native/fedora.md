@@ -14,14 +14,3 @@ If you want to use a Red Hat based operating system, this is a user friendly ver
 <b>Uses</b>
 Fedora is great if you want a Red Hat based operating system without the price tag. Recommended for desktop and laptop.
 
-## Exercise
-
-If you're interested in having Fedora as your operating system, head over to the installation section and give it a try: <a href='https://getfedora.org/'>https://getfedora.org/</a>
-
-## Quiz Questions
-
-What is RHEL branched off of?
-
-## Quiz Answer
-
-Fedora
