@@ -1,15 +1,15 @@
 # AlmaLinux
 
-**AlmaLinux**, Red Hat Enterprise Linux (RHEL) tabanlı, açık kaynaklı ve ücretsiz bir Linux dağıtımıdır. **CentOS**'un yerine geçmiştir ve RHEL ile uyumludur. 
+**AlmaLinux** is an open-source, free Linux distribution based on Red Hat Enterprise Linux (RHEL). It was developed as a replacement for **CentOS** and is fully compatible with RHEL.
 
-## Ana Özellikler:
-- **Kararlılık**: RHEL ile uyumlu, güvenli ve kararlı bir sistem.
-- **Açık Kaynak**: Ücretsiz ve açık kaynaklıdır.
-- **Paket Yönetimi**: **RPM** paketleri ve **DNF** ile yazılım yönetimi.
-- **Destek**: Uzun vadeli destek (LTS) sağlar.
+## Key Features:
+- **Stability**: A secure and stable system compatible with RHEL.
+- **Open Source**: Free and open-source.
+- **Package Management**: Uses **RPM** packages and **DNF** for software management.
+- **Support**: Provides long-term support (LTS).
 
-## Kullanım Alanları:
-- **Sunucular**: Kurumsal ve uzun süreli destek gereksinimi olan sistemler.
-- **Geliştiriciler**: RHEL uyumlu bir ortam isteyenler için ideal.
+## Use Cases:
+- **Servers**: Ideal for enterprise environments with long-term support needs.
+- **Developers**: Perfect for those who want an environment compatible with RHEL.
 
-**AlmaLinux**, **CentOS** kullanıcıları için mükemmel bir alternatiftir ve RHEL benzeri bir deneyim sunar.
+**AlmaLinux** is a great alternative for **CentOS** users and offers a RHEL-like experience.
