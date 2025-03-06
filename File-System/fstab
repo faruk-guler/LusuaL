@@ -2,12 +2,16 @@
 sudo apt install quota
 sudo nano /etc/fstab
 
+# fstab file
 #
 >> /dev/sdX    /home    ext4    defaults,usrquota,grpquota    0    2
 
 
-#
+# Create the necessary files for Quota:
+sudo quotacheck -cum /home
+sudo quotacheck -ugm /home
 
+# 
 sudo edquota -u faruk
 quota -u faruk #Show user quota
 repquota -a    #Show all  users quota
