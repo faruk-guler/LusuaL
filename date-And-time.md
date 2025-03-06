@@ -9,13 +9,15 @@ Timezone: Regional setting that determines local time (e.g. Europe/Istanbul for 
 NTP (Network Time Protocol): Protocol that provides time synchronization over the Internet.
 
 ##### View System Time and Date:
+
+```sh
 date
 timedatectl
 timedatectl status
 timedatectl list-timezones
 timedatectl list-timezones | grep -i istanbul
 timedatectl set-timezone Europe/Istanbul
-
+```
 # Manuel:
 ```sh
 sudo date -s "2025-03-06 09:50:00"
