@@ -21,15 +21,3 @@ C-x C-f
 </pre>
 
 This will prompt you to type a filename to open. If you do not have a file that already exists, it will create a new file. You can load up a directory as well.
-
-## Exercise
-
-Play around with opening files and saving files.
-
-## Quiz Question
-
-What command is used to open a file?
-
-## Quiz Answer
-
-C-x C-f
