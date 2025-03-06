@@ -14,14 +14,3 @@ If you’re just getting started with Linux and want to take a more difficult pa
 <b>Uses</b>
 Great for desktop and laptop.
 
-## Exercise
-
-If you're interested in having Gentoo as your operating system, head over to the installation section and give it a try: <a href='https://www.gentoo.org/'>https://www.gentoo.org/</a>
-
-## Quiz Questions
-
-What package management system does Gentoo use?
-
-## Quiz Answer
-
-Portage
