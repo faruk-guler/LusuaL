@@ -35,14 +35,4 @@ We see when we switch to runlevel 0 or shutdown mode, our machine will try to ru
 
 One thing to note, System V is slowly getting replaced, maybe not today, or even years from now. However, you may see runlevels come up in other init implementations, this is primarily to support those services that are only started or stopped using System V init scripts. 
 
-## Exercise
 
-If you are running System V, change the default runlevel of your machine to something else and see what happens.
-
-## Quiz Question
-
-What runlevel is usually used for shutdown?
-
-## Quiz Answer
-
-0
