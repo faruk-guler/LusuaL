@@ -1,4 +1,4 @@
-<img src="https://farukguler.com/assets/img/handbook.jpg" alt="alt text" width="360" height="380">
+<img src="https://farukguler.com/assets/img/handbook.jpg" alt="alt text" width="260" height="300">
 
 🅻🆄🆂🆄🅰🅻 - 🅷🅰🅽🅳🅱🅾🅾🅺
 - Name: LusuaL Handbook
