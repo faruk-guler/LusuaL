@@ -1,4 +1,4 @@
-<img src="https://farukguler.com/assets/img/handbook.jpg" alt="alt text" width="320" height="350">
+<img src="https://farukguler.com/assets/img/handbook.jpg" alt="alt text" width="330" height="350">
 
 🅻🆄🆂🆄🅰🅻 - 🅷🅰🅽🅳🅱🅾🅾🅺
 - Author: Faruk Guler
