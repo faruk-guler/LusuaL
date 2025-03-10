@@ -3,7 +3,7 @@
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
-<p>Örneğin; 🗑 <code>cls</code> (Clear Screen) komutu, özellikle Windows işletim sistemi kullanıcılarının komut istemcisinde (Command Prompt) terminal ekranını temizlemek için kullanılan bir komuttur. Bu komut, terminal penceresindeki tüm önceki çıktıları temizler ve size yeni bir boş ekran sunar.</p>
+<p>🗑 <code>cls</code> (Clear Screen) komutu, özellikle Windows işletim sistemi kullanıcılarının komut istemcisinde (Command Prompt) terminal ekranını temizlemek için kullanılan bir komuttur. Bu komut, terminal penceresindeki tüm önceki çıktıları temizler ve size yeni bir boş ekran sunar.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
