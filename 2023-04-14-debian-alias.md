@@ -13,4 +13,3 @@
 <!-- wp:preformatted -->
 <pre class="wp-block-preformatted"><strong>#To affect the current user's Bash shell:</strong><br>sudo nano .bashrc<br><br><strong>#To affect all users' Bash shells:</strong><br>sudo nano /etc/bash.bashrc<br><br><strong>#To influence a specific group of users:</strong><br>sudo nano /etc/profile<br><br><strong>#Add the following line to the end of the file.<br>#In this way, by running the cls command, you will actually be referring to the clear command.</strong><br>alias cls='clear'<br><br><strong>#For changes to take effect:</strong><br>source ~/.bashrc<br>source /etc/bash.bashrc<br><br>#On Debian-based systems such as Debian or Ubuntu, general system settings are made in /etc/bash.bashrc or /etc/profile files, while on Red Hat-based systems (e.g. Fedora, CentOS) general system settings are made in /etc/bash.bashrc or /etc/profile.d/. files are used<br><br><strong>#Saygılarımla</strong> www.farukguler.com</pre>
 <!-- /wp:preformatted -->
-
