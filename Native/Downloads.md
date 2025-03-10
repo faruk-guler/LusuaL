@@ -29,4 +29,5 @@
 -
 # Verify:
 sudo file ubuntu-22.04-server-cloudimg-amd64.img
+
 sha256sum ubuntu-22.04-server-cloudimg-amd64.img
