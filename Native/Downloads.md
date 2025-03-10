@@ -27,5 +27,5 @@
 - **[Gentoo Linux İndirme](https://www.gentoo.org/downloads/)**
 - **[Slackware Linux İndirme](http://www.slackware.com/getslack/)**
 -
-# Verfiy:
+# Verify:
 sudo file ubuntu-22.04-server-cloudimg-amd64.img
