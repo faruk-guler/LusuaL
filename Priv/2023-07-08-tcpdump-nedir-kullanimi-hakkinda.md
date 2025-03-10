@@ -1,12 +1,3 @@
----
-layout: post
-title: Tcpdump Nedir? - What is Tcpdump?
-date: 2023-07-08 15:18
-tags: [Linux OS]
-author: theguler
-comments: true
-categories: [Linux / Unix]
----
 <!-- wp:image {"id":7555,"sizeSlug":"large","linkDestination":"none"} -->
 <figure class="wp-block-image size-large"><img src="https://farukguler.com/assets/post_images/tcpdump-logo.jpg?w=450" alt="" class="wp-image-7555" /></figure>
 <!-- /wp:image -->
