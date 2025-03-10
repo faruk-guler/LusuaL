@@ -26,7 +26,6 @@
 - **[Void Linux](https://voidlinux.org/download/)**
 - **[Gentoo Linux](https://www.gentoo.org/downloads/)**
 - **[Slackware Linux](http://www.slackware.com/getslack/)**
--
 # Verify:
 - sudo file ubuntu-22.04-server-cloudimg-amd64.img
 - sha256sum ubuntu-22.04-server-cloudimg-amd64.img
