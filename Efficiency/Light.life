@@ -5,5 +5,5 @@ nano ~/.bashrc
 source ~/.bashrc #apply
 
 #Login Message (Neofetch)
-apt install neofetch
+apt install screenfetch
 echo neofetch >> ~/.bash_profile
