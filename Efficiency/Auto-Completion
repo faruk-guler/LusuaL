@@ -1,0 +1,2 @@
+apt install bash-completion
+echo "source /etc/bash_completion" >> ~/.bashrc
