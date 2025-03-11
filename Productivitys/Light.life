@@ -1,0 +1,9 @@
+#Bash Prompt colorize:
+nano ~/.bashrc
+#PS1='\[\e[0;31m\]\u@\h:\W\$\[\e[0m\] ' #red
+#PS1='\[\e[0;32m\]\u@\h:\W\$\[\e[0m\] ' #green
+source ~/.bashrc #apply
+
+#Login Login Message: (Screenfetch)
+apt install screenfetch
+echo neofetch >> ~/.bash_profile
