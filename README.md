@@ -1,7 +1,7 @@
 <img src="https://farukguler.com/assets/img/handbook.jpg" alt="alt text" width="280" height="300">
 
 🅻🆄🆂🆄🅰🅻 - 🅷🅰🅽🅳🅱🅾🅾🅺
-- Name: LusuaL Handbook
+- Name: LusuaL Linux Handbook
 - Author: Faruk Guler
 - Description: Handbook for Linux System Administrators
 - POC: Debian 12 (Bookworm) - AlmaLinux 9
