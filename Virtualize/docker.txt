@@ -283,5 +283,7 @@ docker service scale <service name>=<number>
 #To remove the containers, run the following on the manager
 docker service rm <service name>
 
+##
+https://dockerlabs.collabnix.com/docker/cheatsheet/
 
 
