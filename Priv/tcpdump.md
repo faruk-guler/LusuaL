@@ -3,7 +3,7 @@
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
-<p><strong>Tcpdump,</strong> ağ trafiğini izlemek, analiz etmek ve yakalamak için kullanılan bir komut satırı tabanlı bir araçtır. İlk olarak UNIX ve UNIX benzeri işletim sistemlerinde kullanılan Tcpdump, ağ paketlerini yakalayarak, ağ trafiğini analiz etmenizi sağlar. Bu, ağ sorunlarını teşhis etmek, ağ güvenliğini denetlemek veya ağa giren veya çıkan verileri incelemek gibi birçok amaç için kullanılabilir.</p>
+<p><strong>Tcpdump,</strong> ağ trafiğini izlemek, analiz etmekk ve yakalamak için kullanılan bir komut satırı tabanlı bir araçtır. İlk olarak UNIX ve UNIX benzeri işletim sistemlerinde kullanılan Tcpdump, ağ paketlerini yakalayarak, ağ trafiğini analiz etmenizi sağlar. Bu, ağ sorunlarını teşhis etmek, ağ güvenliğini denetlemek veya ağa giren veya çıkan verileri incelemek gibi birçok amaç için kullanılabilir.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
