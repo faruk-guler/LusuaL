@@ -24,6 +24,8 @@ sudo mkdir /secrets
 sudo mount -t ecryptfs /secrets /secrets
 sudo umount -l /secrets
 
+#File Sİze Limitations:
+
 # OpenSSL file encryption:
 
 # Firewall ports management:
