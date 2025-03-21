@@ -25,12 +25,50 @@ sudo mkdir /secrets
 sudo mount -t ecryptfs /secrets /secrets
 sudo umount -l /secrets
 
-#File Sİze Limitations:
+# Enforcing Stronger Passwords:
+
+# Monitor User Activities on Linux:
+
+# Monitor Linux Logs Regularly:
+
+# Backup Files in Linux Using rsync:
+
+# NIC Bonding Combine:
+
+# Keeping /boot Dir as Read-Only in Linux:
+
+# Install a Intrusion Detection and Prevention: (IDS) and (IPS)
+
+# Keep Your System Up-to-Date:
+
+# Managing Cron Job Permissions:
+
+# Checking Accounts for Empty Passwords:
+
+# Display SSH Banner Before Login:
+
+# Disable USB Storage Detection:
+
+# Disabling IPv6 Protocol:
+
+# File Size Limitations:
+
+# Restricting Users from Using Old Passwords:
+
+# Enabling and Configuring Firewalls:
 
 # OpenSSL file encryption:
+
+# Setting a GRUB Password:
+
+# Different Partitions for Higher Data Security:
+
+# Remove Unwanted Services:
+
+# Check Listening Network Ports:
 
 # Firewall ports management:
 
 # SSH-keygen:
 
-# and more
+# And more.
