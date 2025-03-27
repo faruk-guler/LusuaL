@@ -1,4 +1,4 @@
-# Linux/Unix Shell (Kabuklar)
+# Linux/Unix Shell (Kabuk)
 
 ## Giriş
 Shell, kullanıcı ile işletim sistemi çekirdeği (kernel) arasında köprü kuran komut yorumlayıcısıdır. Bu belge, tüm önemli kabuk türlerini ve özelliklerini kapsar.
