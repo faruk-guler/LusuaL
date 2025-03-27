@@ -1,4 +1,3 @@
-# Shell Yapılandırma Dosyaları
 
 ## Shell Yapılandırma Dosyaları
 
