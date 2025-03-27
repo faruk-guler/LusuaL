@@ -22,3 +22,8 @@
 |-------|---------------|----------------|----------------|
 | `~/.config/fish/config.fish` | Tüm yapılandırma | Her shell başlangıcında | ❌ |
 | `/etc/fish/config.fish` | Global ayarlar | Tüm kullanıcılarda | ✔️ |
+
+### 1.4 **Diğer Shell'ler**
+- **sh (Bourne Shell)**: Temel kabuk, betikler için ideal.
+- **ksh (Korn Shell)**: Yüksek performanslı betikleme.
+- **dash**: Hafif versiyon (`/bin/sh` genellikle dash'e bağlı).
