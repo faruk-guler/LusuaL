@@ -1,4 +1,4 @@
-## symlinks
+## Links
 Let's use a previous example of inode information:
 
 ```sh
