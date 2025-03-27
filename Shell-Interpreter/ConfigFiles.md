@@ -26,3 +26,34 @@
 - **sh (Bourne Shell)**: Temel kabuk, betikler için ideal.
 - **ksh (Korn Shell)**: Yüksek performanslı betikleme.
 - **dash**: Hafif versiyon (`/bin/sh` genellikle dash'e bağlı).
+
+
+# Linux Shell'leri ve Yapılandırma Rehberi
+
+## 🐚 Popüler Linux Shell'leri
+
+### 1. **Bash (Bourne-Again Shell)**
+- **Özellikler**: Linux'un varsayılan kabuğu, `sh` uyumlu, geniş eklenti desteği.
+- **Yapılandırma Dosyaları**:
+  - `~/.bashrc` (Terminal ayarları)
+  - `~/.bash_profile` (Login shell ayarları)
+  - `~/.bash_aliases` (Özel kısayollar)
+
+### 2. **Zsh (Z Shell)**
+- **Özellikler**: Gelişmiş otomatik tamamlama, tema desteği (Oh My Zsh), macOS'ta varsayılan.
+- **Yapılandırma Dosyaları**:
+  - `~/.zshrc` (Ana yapılandırma)
+  - `~/.zprofile` (Login ayarları)
+
+### 3. **Fish (Friendly Interactive Shell)**
+- **Özellikler**: Kullanıcı dostu arayüz, renkli syntax, script uyumluluğu düşük.
+- **Yapılandırma Dosyaları**:
+  - `~/.config/fish/config.fish`
+  - `~/.config/fish/functions/` (Özel fonksiyonlar)
+
+### 4. **Diğer Shell'ler**
+- **sh (Bourne Shell)**: Temel kabuk, betikler için ideal.
+- **ksh (Korn Shell)**: Yüksek performanslı betikleme.
+- **dash**: Hafif versiyon (`/bin/sh` genellikle dash'e bağlı).
+
+---
