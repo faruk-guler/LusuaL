@@ -52,7 +52,7 @@ sudo umount -l /secrets
 
 # Disabling IPv6 Protocol:
 
-# File Size Limitations:
+# Linux Disk Quotas on Users and Filesystems:
 
 # Restricting Users from Using Old Passwords:
 
