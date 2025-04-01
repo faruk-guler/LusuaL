@@ -66,6 +66,8 @@ sudo umount -l /secrets
 
 # Remove Unwanted Services:
 
+# BIOS Protection:
+
 # Check Listening Network Ports:
 
 # Firewall ports management:
