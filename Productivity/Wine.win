@@ -1,1 +1,7 @@
 # Please use only Open Source!!
+
+Wine is a free and open source compatibility layer for running Windows applications on Linux and other Unix-like operating systems.
+It is not an emulator, meaning it does not emulate Windows. Instead, it translates Windows API calls directly into Linux system calls.
+It can run .exe and .msi files directly.
+It supports DirectX, .NET Framework, and other Windows libraries.
+Many popular Windows programs such as Steam, Photoshop, and Microsoft Office can be run with Wine.
