@@ -1,1 +1,11 @@
+Debsums, Debian tabanlı sistemlerde yüklü olan paketlerin bütünlük kontrolünü sağlayan bir araçtır.
+Paketlerin içindeki dosyaların değişip değişmediğini tespit ederek güvenlik ve sistem bütünlüğünü koruma açısından kritik bir rol oynar.
+
 sudo debsums -a
+sudo debsums paket_adı
+sudo debsums -s paket_adı
+sudo debsums -e
+debsums -c
+debsums neofetch
+sudo apt-get install --reinstall paket_adı
+debsums -g
