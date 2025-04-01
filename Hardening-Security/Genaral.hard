@@ -58,6 +58,8 @@ sudo umount -l /secrets
 
 # Enabling and Configuring Firewalls:
 
+# Verify accounts with "0" UID:
+
 # OpenSSL file encryption:
 
 # Setting a GRUB Password:
