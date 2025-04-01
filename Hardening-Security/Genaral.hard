@@ -68,6 +68,8 @@ sudo umount -l /secrets
 
 # Remove Unwanted Services:
 
+# Disabling Control Alt Delete:
+
 #Turn off IPv6:
 
 # BIOS Protection:
