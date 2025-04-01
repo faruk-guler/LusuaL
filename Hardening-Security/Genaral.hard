@@ -66,6 +66,8 @@ sudo umount -l /secrets
 
 # Remove Unwanted Services:
 
+#Turn off IPv6:
+
 # BIOS Protection:
 
 # Check Listening Network Ports:
