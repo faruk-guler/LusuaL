@@ -1,6 +1,6 @@
 # The Sticky Bit
 
-## Lesson Contentv
+## Lesson Content
 
 One last special permission bit I want to talk about is the sticky bit. 
 
