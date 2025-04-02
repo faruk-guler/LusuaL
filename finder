@@ -1,4 +1,4 @@
-#Seek and Find
+# Seeker and Finder
 find /hedef/dizin -name "dosya_adı"
 find /home -iname "example"
 find /var/log -name "*.log"
