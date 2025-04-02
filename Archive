@@ -15,7 +15,6 @@ sudo apt install tar gzip bzip2 xz-utils zip unzip rar unrar p7zip-full p7zip-ra
 .rar
 .7z
 
-
 .tar
 tar -cvf [file.tar] [files/directories] # create
 tar -xvf [file.tar] # extract
