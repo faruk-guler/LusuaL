@@ -1,4 +1,4 @@
-# How to Check Swap Space
+# How to Check Swap Spaces
 
 There are several ways to check swap space in Linux.
 
