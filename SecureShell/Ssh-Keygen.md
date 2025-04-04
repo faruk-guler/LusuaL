@@ -67,7 +67,7 @@
 		```sh
 		$ rm ~/.ssh/id_rsa ~/.ssh/id_rsa.pub
 		```
-        Attention!!!!!!! after the keys are deleted, access will not be possible again.
+        # Attention!!!!!!! after the keys are deleted, access will not be possible again.
     
 	_Note3: you don't need to refresh anything to enable and use the new key._
 
