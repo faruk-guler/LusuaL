@@ -3,6 +3,7 @@
 ## 📌 Komutun Temel Yapısı
 ```bash
 renice [-n] <priority> [-p|--pid] <pid>... [-u|--user] <user>... [-g|--pgrp] <group>...
+```
 
 ## Süreç Öncelik Ayarları
 renice -n 5 -p 1234               # PID 1234'ün nice değerini 5 yap
@@ -26,3 +27,16 @@ ps -eo pid,%cpu --sort=-%cpu | head -n 5 | awk 'NR>1 {print $1}' | xargs renice 
 ## Zamanlanmış Optimizasyon
 # Gece yarısı öncelikleri otomatik düşür
 echo "pgrep -f batch_job | xargs renice -n 15" | at 00:00
+
+## Süreç Listeleme:
+# Öncelik sırasına göre süreçleri listele
+ps -eo pid,ni,cmd --sort=ni
+
+# Detaylı süreç bilgisi
+ps -eo pid,user,ni,pri,pcpu,pmem,cmd --sort=-pcpu | head -n 10
+
+## Gerçek Zamanlı İzleme:
+watch -n 1 'ps -eo pid,ni,cmd | head -n 15'  # Anlık izleme
+htop  # Grafiksel arayüzde NI sütununu göster
+
+## 
