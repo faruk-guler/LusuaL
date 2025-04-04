@@ -63,6 +63,7 @@
 		_Note: `~` is the name of the current user. If root, it will be `/root`.
 
 	6. Now delete the generated keys: (after you saved a copy of them in your computer)
+ 7.  Attention!!!!!!! after the keys are deleted, access will not be possible again.
 
 		```sh
 		$ rm ~/.ssh/id_rsa ~/.ssh/id_rsa.pub
