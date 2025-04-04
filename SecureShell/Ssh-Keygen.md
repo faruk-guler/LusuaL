@@ -71,7 +71,7 @@
     
 	_Note: you don't need to refresh anything to enable and use the new key._
 
-	_Note2: you can use any name instead of `id_rsa`._
+	_Note: you can use any name instead of `id_rsa`._
 
 --------------------------------------------------------------------------------
 # How to convert a private SSH key into PPK
