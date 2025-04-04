@@ -7,3 +7,22 @@ renice [-n] <priority> [-p|--pid] <pid>... [-u|--user] <user>... [-g|--pgrp] <gr
 ## Süreç Öncelik Ayarları
 renice -n 5 -p 1234               # PID 1234'ün nice değerini 5 yap
 sudo renice -n -10 -p $(pgrep nginx)  # Nginx süreçlerine yüksek öncelik
+
+## Kullanıcı ve Grup Yönetimi:
+sudo renice -n 15 -u apache       # Apache kullanıcısının tüm süreçleri
+sudo renice -n -5 -g docker       # Docker grubuna öncelik ver
+
+## Dinamik Öncelik Değişiklikleri
+renice -n +2 -p 5678              # Mevcut değeri 2 artır
+renice -n -3 -p 9012              # Mevcut değeri 3 azalt (root gerektirir)
+
+## Toplu İşlemler:
+# Tüm Python süreçlerini düşük öncelikli yap
+pgrep -f python | xargs renice -n 19
+
+# CPU kullanımı yüksek süreçleri arka plana al
+ps -eo pid,%cpu --sort=-%cpu | head -n 5 | awk 'NR>1 {print $1}' | xargs renice -n 19
+
+## Zamanlanmış Optimizasyon
+# Gece yarısı öncelikleri otomatik düşür
+echo "pgrep -f batch_job | xargs renice -n 15" | at 00:00
