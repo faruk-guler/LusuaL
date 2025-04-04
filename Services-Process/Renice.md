@@ -1,4 +1,4 @@
-# Linux Süreç Öncelik Yönetimi: `renice` Komple Kılavuzu
+# Linux Süreç Öncelik Yönetimi: `renice`
 
 ## Komut Tanımı ve Önem
 
