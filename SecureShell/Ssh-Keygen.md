@@ -69,9 +69,9 @@
 		```
         _Note: Attention!!!!!!! after the keys are deleted, access will not be possible again.
     
-	_Note: you don't need to refresh anything to enable and use the new key._
+	_Note3: you don't need to refresh anything to enable and use the new key._
 
-	_Note2: you can use any name instead of `id_rsa`._
+	_Note3: you can use any name instead of `id_rsa`._
 
 --------------------------------------------------------------------------------
 # How to convert a private SSH key into PPK
