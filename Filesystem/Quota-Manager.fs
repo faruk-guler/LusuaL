@@ -1,5 +1,5 @@
 ## Quota management:
-sudo apt install quota
+sudo apt install quota quotatool
 quota --version
 sudo systemctl status quota
 
