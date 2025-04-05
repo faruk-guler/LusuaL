@@ -11,7 +11,7 @@ pete@icebox:~$ ls -li
 You may have noticed that we've been glossing over the third field in the ls command, that field is the link count.
 The link count is the total number of hard links a file has, well that doesn't mean anything to you right now. So let's discuss links first.
 
-## Soft Link (Symlink)
+## SoftLink (Symlink)
 In the Windows operating system, there are things known as shortcuts, shortcuts are just aliases to other files.
 If you do something to the ori-ginal file, you could potentially break the shortcut. 
 In Linux, the equivalent of shortcuts are symbolic links (or soft links or symlinks). Symlinks allow us to link to another file by its filename.
