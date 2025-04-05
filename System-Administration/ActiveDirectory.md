@@ -1,10 +1,6 @@
 
-<!-- wp:image {"lightbox":{"enabled":true},"id":9880,"width":"421px","height":"auto","sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://farukguler.com/assets/post_images/debian_dragon-1.jpg?w=1024" alt="" class="wp-image-9880" style="width:421px;height:auto" /></figure>
-<!-- /wp:image -->
-
 <!-- wp:paragraph -->
-<p><strong>🔥🔑Directory Services <strong>Join</strong></strong> / <strong>Authentication:</strong></p>
+<p><strong>🔥🔑Active Directory Services <strong>Join</strong></strong> / <strong>Authentication:</strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:preformatted -->
