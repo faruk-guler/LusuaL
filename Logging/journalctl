@@ -1,1 +1,5 @@
-#
+The journalctl command displays logs starting from the last time the server started.
+The journalctl output gives a screen output starting from the first record as if the less command was written, 
+and you can search with the keyword you will use with the keyboard keys and the / and ? sign.
+
+When you type journalctl and press the tab key twice, the filtering options are displayed.
