@@ -35,8 +35,8 @@ fstab dosyası, her satırda bir dosya sistemi tanımı içeren düz metin yapı
 # <dosya sistemi>        <montaj noktası>   <tür>    <seçenekler>             <dump>  <pass>
 UUID=6a60524d-...        /                  ext4     defaults                 1       1
 UUID=8e4b6d38-...        /home              ext4     defaults,noatime         0       2
-/dev/sda5                swap                swap     defaults                 0       0
-tmpfs                    /tmp                tmpfs    size=2G,mode=1777        0       0
+/dev/sda5                swap                swap     defaults                0       0
+tmpfs                    /tmp                tmpfs    size=2G,mode=1777       0       0
 //192.168.1.100/veri     /mnt/paylaşım      cifs     credentials=/etc/cifs    0       0
 ```
 
