@@ -122,6 +122,7 @@ sudo blkid
 ```
 
 **Avantajları**: Disk sıralamasından bağımsızdır, her dosya sistemi için benzersizdir.
+**Avantajları**: Disklerin takılma sırası değiştikçe /dev/sdb gibi cihaz isimler değişebilir. Ancak UUID, her dosya sistemine özgüdür ve değişmez, bu sayede disk her zaman doğru tanımlanır.
 
 **Dezavantajları**: Okunması ve yazılması daha zordur, yazım hataları yapılabilir.
 
