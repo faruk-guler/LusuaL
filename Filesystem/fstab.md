@@ -24,6 +24,7 @@ Bu kapsamlı rehber, fstab dosyasının yapısını, kullanımını ve yapıland
 fstab dosyası, her satırda bir dosya sistemi tanımı içeren düz metin yapısında bir dosyadır. Her tanım, aralarında boşluk veya sekme karakteri bulunan altı alandan oluşur:
 
 ```
+<file system>      <dir>             <type>  <options>      <dump>   <pass>
 <dosya sistemi>   <montaj noktası>   <tür>   <seçenekler>   <dump>   <pass>
 ```
 
