@@ -19,3 +19,4 @@
   ```sh
   Report: /var/log/tiger
   ```
+# OpenSCAP:
