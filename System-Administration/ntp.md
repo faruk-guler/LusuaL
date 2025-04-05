@@ -2,7 +2,7 @@
 <h2 class="wp-block-heading"><strong>Centos 8 NTP Server + Clients Best Configuration (All Network Clients)</strong></h2>
 <!-- /wp:heading -->
 
-([https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg](https://farukguler.com/assets/post_images/sync-time-linux-servers-chrony-1.jpeg))
+([[https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg](https://farukguler.com/assets/post_images/sync-time-linux-servers-chrony-1.jpeg)](https://farukguler.com/assets/post_images/sync-time-linux-servers-chrony-1.jpeg))
 
 
 <!-- wp:paragraph -->
