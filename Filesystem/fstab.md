@@ -1,4 +1,4 @@
-# Debian Sistemlerinde /etc/fstab Dosyası: Kapsamlı Rehber ve Cheatsheet
+# Debian Dist. /etc/fstab Cheatsheet -farukguler.com
 
 ## İçindekiler
 - [Giriş](#giriş)
