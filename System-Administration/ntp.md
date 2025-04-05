@@ -97,5 +97,6 @@ ntpq -p
 ---
 
 ## Kaynaklar
-- 
+- https://farukguler.com/posts/best-client-ntp-services-configuration/
+- https://farukguler.com/posts/centos8-ntp-server-and-clients-best-configuration/
 
