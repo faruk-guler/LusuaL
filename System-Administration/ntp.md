@@ -7,7 +7,7 @@
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
-<p>Bu makalede Domain ortamınızda çalışan tüm cihazların <strong>Tarih &amp; Saat senkronizasyonu</strong>nu standart bir duruma getirebilmeniz için gerekli olan merkezi yönetebildiginiz bir <strong>Centos 8</strong> <strong>NTP server</strong> kurulumunu yapacağız.<br><strong>"2</strong>" adet <strong>"Windows Domain Controller ve Ubuntu 20.04"  </strong>zaman senkronizasyonu sağlamak için kullanılan araçlardan<strong> "NTP Chrony" </strong>servisine yönlendireceğiz. <br>Centos 8 üzerine özellikle Chrony servisi kurulacaktır. bu servis daha az Memory kullanır ve gerektiği zaman CPU kullanıp güç tasarrufu sağlar.<br>Yerel ağınızda son derece hassas saat senkronizasyonu sağlayan donanımsal zaman damgasını destekler.<strong> *** "NTP servisi default UDP/123 olarak çalışır"</strong></p>
+<p>Bu makalede Domain ortamınızda çalışan tüm cihazların <strong>Tarih &amp; Saat senkronizasyonu</strong>nu standart bir duruma getirebilmeniz için gerekli olan merkezi yönetebildiginiz bir <strong>Centos 8</strong> <strong>NTP server</strong> kurulumunu yapacağız.<br><strong>"2</strong>" adet <strong>"Windows Domain Controller ve Centos 8"  </strong>zaman senkronizasyonu sağlamak için kullanılan araçlardan<strong> "NTP Chrony" </strong>servisine yönlendireceğiz. <br>Centos 8 üzerine özellikle Chrony servisi kurulacaktır. bu servis daha az Memory kullanır ve gerektiği zaman CPU kullanıp güç tasarrufu sağlar.<br>Yerel ağınızda son derece hassas saat senkronizasyonu sağlayan donanımsal zaman damgasını destekler.<strong> *** "NTP servisi default UDP/123 olarak çalışır"</strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
