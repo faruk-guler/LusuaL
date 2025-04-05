@@ -15,6 +15,7 @@
 - sudo apt update
 - sudo apt install tiger
 - tiger
+- 
   ```sh
-- Report: /var/log/tiger
+  Report: /var/log/tiger
   ```
