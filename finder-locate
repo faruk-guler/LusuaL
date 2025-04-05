@@ -38,3 +38,6 @@ sudo apt install mlocate
 updatedb
 locate vars.sh
 
+# whereis Tool:
+
+# which Tool:
