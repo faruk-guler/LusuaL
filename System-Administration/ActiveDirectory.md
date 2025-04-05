@@ -1,6 +1,6 @@
 
 <!-- wp:paragraph -->
-<p><strong>🔥🔑🔥Active Directory Services <strong>Join</strong></strong> / <strong>Authentication:</strong></p>
+<p><strong>🔑🔥Active Directory Services <strong>Join</strong></strong> / <strong>Authentication:</strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:preformatted -->
