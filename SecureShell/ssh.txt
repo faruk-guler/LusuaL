@@ -1,5 +1,5 @@
 #####################################
->> /etc/ssh/sshd_config
+>> /etc/ssh/sshd_config.
 #####################################
 
 # Debian 12 (Bookworm)
