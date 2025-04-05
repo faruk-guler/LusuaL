@@ -2,7 +2,7 @@
 <h2 class="wp-block-heading"><strong>Centos 8 NTP Server + Clients Best Configuration (All Network Clients)</strong></h2>
 <!-- /wp:heading -->
 
-![Sunucu Diyagramı](https://farukguler.com/assets/post_images/sync-time-linux-servers-chrony-1.jpeg)
+![Sunucu Diyagramı](https://farukguler.com/assets/post_images/sync-time-linux-servers-chrony-1.jpeg){: width="300px"}
 
 
 <!-- wp:paragraph -->
