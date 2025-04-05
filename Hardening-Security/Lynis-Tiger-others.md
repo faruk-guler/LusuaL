@@ -3,7 +3,9 @@
 - sudo apt install lynis
 - lynis
 - lynis show version
-- sudo lynis audit system
+- lynis audit system
+- lynis --forensics
+- lynis --pentest
 
 ```sh
  Green: Indicates everything is working fine or disabled.
