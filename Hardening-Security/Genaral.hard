@@ -78,8 +78,8 @@ sudo umount -l /secrets
 
 # Firewall ports management:
 
-# SSH-keygen:
+# SSH Security Policies:
 
------------------
+-------------------------
 
 # And more...............
