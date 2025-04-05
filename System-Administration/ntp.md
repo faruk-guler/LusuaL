@@ -1,5 +1,5 @@
 <!-- wp:heading -->
-<h2 class="wp-block-heading"><strong>NTP Server and Clinet Yapılandırması:</strong></h2>
+<h2 class="wp-block-heading"><strong>Centos 8 NTP Server + Clients Best Configuration (All Network Clients)</strong></h2>
 <!-- /wp:heading -->
 
 <!-- wp:image {"id":4522,"width":"474px","height":"auto","sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
