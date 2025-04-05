@@ -3,7 +3,7 @@
 - sudo apt install lynis
 - lynis
 - lynis show version
-- sudo lynis audit system -Q
+- sudo lynis audit system
 
 # Tiger:
 - sudo apt update
