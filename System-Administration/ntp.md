@@ -2,7 +2,7 @@
 <h2 class="wp-block-heading"><strong>Centos 8 NTP Server + Clients Best Configuration (All Network Clients)</strong></h2>
 <!-- /wp:heading -->
 
-class="wp-block-image size-large is-resized"><img src="https://farukguler.com/assets/post_images/sync-time-linux-servers-chrony-1.jpeg?w=1024" alt="" class="wp-image-4522" style="width:474px;height:374"
+<img src="[https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg](https://farukguler.com/assets/post_images/sync-time-linux-servers-chrony-1.jpeg)" alt="Kubernetes Logosu" width="200">
 
 <!-- wp:paragraph -->
 <p>Bu makalede Domain ortamınızda çalışan tüm cihazların <strong>Tarih &amp; Saat senkronizasyonu</strong>nu standart bir duruma getirebilmeniz için gerekli olan merkezi yönetebildiginiz bir <strong>Centos 8</strong> <strong>NTP server</strong> kurulumunu yapacağız.<br><strong>"2</strong>" adet <strong>"Windows Domain Controller ve Ubuntu 20.04"  </strong>zaman senkronizasyonu sağlamak için kullanılan araçlardan<strong> "NTP Chrony" </strong>servisine yönlendireceğiz. <br>Centos 8 üzerine özellikle Chrony servisi kurulacaktır. bu servis daha az Memory kullanır ve gerektiği zaman CPU kullanıp güç tasarrufu sağlar.<br>Yerel ağınızda son derece hassas saat senkronizasyonu sağlayan donanımsal zaman damgasını destekler.<strong> *** "NTP servisi default UDP/123 olarak çalışır"</strong></p>
