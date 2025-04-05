@@ -1,6 +1,6 @@
 # NTP Kurulumu ve Yapılandırması
 
-Bu doküman, CentOS ve Debian tabanlı sistemlerde NTP (Network Time Protocol) sunucusunun kurulum ve yapılandırma adımlarını içermektedir.
+RHELL/CentOS ve Debian tabanlı sistemlerde NTP (Network Time Protocol)
 
 ---
 
