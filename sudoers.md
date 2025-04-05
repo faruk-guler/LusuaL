@@ -1,5 +1,5 @@
 ```sh
-# sudoers file..
+# sudoers file.
 #
 # This file MUST be edited with the 'visudo' command as root.
 # Failure to use 'visudo' may result in syntax or file permission errors
