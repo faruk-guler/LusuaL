@@ -1,5 +1,5 @@
 <!-- wp:image {"id":4522,"width":"474px","height":"auto","sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://farukguler.com/assets/post_images/sync-time-linux-servers-chrony-1.jpeg?w=1024" alt="" class="wp-image-4522" style="width:574px;height:auto" /></figure>
+<figure class="wp-block-image size-large is-resized"><img src="https://farukguler.com/assets/post_images/sync-time-linux-servers-chrony-1.jpeg?w=1024" alt="" class="wp-image-4522" style="width:474px;height:auto" /></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
