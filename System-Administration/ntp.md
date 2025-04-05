@@ -97,5 +97,5 @@ ntpq -p
 ---
 
 ## Kaynaklar
-- [RootUsers: Linux NTP Kullanımı](https://www.rootusers.com/how-to-synchronize-time-in-linux-with-ntp-peers/)
+- 
 
