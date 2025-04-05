@@ -1,4 +1,4 @@
-# Debian Dist. /etc/fstab Cheatsheet -farukguler.com
+# Debian /etc/fstab Cheatsheet -farukguler.com
 
 ## İçindekiler
 - [Giriş](#giriş)
