@@ -314,7 +314,7 @@ w32tm /query /peers</pre>
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"id":5535,"sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://farukguler.com/assets/post_images/time-is.png?w=1024" alt="" class="wp-image-5535" /></figure>
+<figure class="wp-block-image size-large is-resized"><img src="https://farukguler.com/assets/post_images/time-is.png?w=512" alt="" class="wp-image-5535" /></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
