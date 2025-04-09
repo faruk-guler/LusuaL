@@ -1,4 +1,4 @@
-# Renice Komutu - Linux/Unix İşlem Önceliğini Değiştirme.
+# Renice Komutu - Linux/Unix İşlem Önceliği
 
 `renice`, Linux ve Unix tabanlı sistemlerde çalışan bir işlemin **nice değerini** değiştirerek işlem önceliğini ayarlamak için kullanılan bir komuttur. Bu, bir işlemin CPU zamanını ne kadar kullanacağını belirler.
 
