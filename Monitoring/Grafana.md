@@ -1,4 +1,4 @@
-# Grafana Cheatsheet
+# Grafana Cheatsheet.
 
 - [Dashboards](#dashboards)
 - [Tutorials](#tutorials)
