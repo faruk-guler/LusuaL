@@ -9,5 +9,3 @@
 - Contributions: For contribution, send PR.
 - Contact: www.farukguler.com
 - License: CC-BY-4.0
-- Edition: 1.2
-- Last Updated: 2025
