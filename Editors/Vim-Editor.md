@@ -1,7 +1,7 @@
 # Vim Essentials: A Comprehensive Cheat Sheet
 
 > Unlock the power of Vim with these essential commands and tips!
-- `vi` : Starting Vi
+- `vi` : Starting Vi.
 
 ```
 ~                         VIM - (Vi Improved)
