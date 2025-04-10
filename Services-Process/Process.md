@@ -1,4 +1,4 @@
-# Deamons / Services / Process
+## Deamons / Services / Process
 Process: Any running program. Each process has a PID number. User interaction is possible. (firefox).
 Daemon: A special process that runs continuously in the background, without user interaction. Their names usually end with "d" (sshd, httpd).
 Service: A structured system component that manages daemons. It can be started and stopped with the "systemctl" command.
