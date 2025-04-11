@@ -3,7 +3,7 @@
 🅻🆄🆂🆄🅰🅻 - 🅷🅰🅽🅳🅱🅾🅾🅺
 - Name: LusuaL
 - Author: Faruk Guler
-- Description: Handbook for Linux Users
+- Description: Handbook for Linux Users > Notice: The general structure is built on the Mentality of ​​open source.
 - POC: Debian 12 (Bookworm) - AlmaLinux 9
 - Repository: https://github.com/faruk-guler/
 - Contributions: For contribution, send PR.
