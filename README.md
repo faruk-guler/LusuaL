@@ -9,4 +9,4 @@
 - Contributions: For contribution, send PR.
 - Contact: www.farukguler.com
 - License: CC-BY-4.0
-## Notice: Fundamentally, the majority of the structure is built on an open source mentality.
+## Notice: Essentially, vast majority of structure is based on open source mentality.
