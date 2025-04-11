@@ -9,4 +9,4 @@
 - Contributions: For contribution, send PR.
 - Contact: www.farukguler.com
 - License: CC-BY-4.0
-Notice: The general structure is built on the Mentality of ​​open source.
+## Notice: The general structure is built on the Mentality of ​​open source.
