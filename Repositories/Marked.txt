@@ -1,11 +1,12 @@
 #Debian based:
 sudo apt-mark showhold
+dpkg --get-selections | grep hold
+
 sudo apt-mark hold firefox
 sudo apt-mark unhold firefox
 
 #Or:
 vi /etc/apt/preferences
-
 Package: firefox
 Pin: release *
 Pin-Priority: -1
