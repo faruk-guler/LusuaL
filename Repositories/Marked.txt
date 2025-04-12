@@ -1,7 +1,7 @@
 #Debian based:
+sudo apt-mark showhold
 sudo apt-mark hold firefox
 sudo apt-mark unhold firefox
-sudo apt-mark showhold
 
 #Or:
 vi /etc/apt/preferences
