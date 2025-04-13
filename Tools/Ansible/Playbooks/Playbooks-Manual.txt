@@ -1,1 +1,2 @@
-#
+touch nginx-deploy.yml
+ansible-playbook nginx-deploy.yml
