@@ -1,4 +1,4 @@
-# SSH Timeout:15 Minute
+# No SSH private_key_file, SSH Timeout:15 Minute
 ```
 sudo visudo
 Defaults:root timestamp_timeout=15
