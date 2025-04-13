@@ -20,6 +20,6 @@ ansible all -m apt -a "name=neofetch state=present"
 ansible all -m file -a "path=/tmp/myfile.txt mode=0644"
 
 # > [User Modules] user add/remove
-ansible all -m user -a "name=faruk state=present"
-#ansible all -m user -a "name=faruk state=absent"
+ansible all -m user -a "name=faruk state=present" --become
+#ansible all -m user -a "name=faruk state=absent" --become
 
