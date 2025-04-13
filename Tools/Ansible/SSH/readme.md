@@ -1,5 +1,4 @@
-# No SSH private_key_file
-#SSH Timeout:15 Minute
+# SSH Timeout:15 Minute
 ## No SSH private_key_file
 ```
 sudo visudo
