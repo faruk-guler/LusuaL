@@ -2,12 +2,12 @@
 ```
 ssh-keygen -t ed25519 -f /root/.ssh/ansible.key
 ```
-# Fix SSH Key Permissions
+#SSH Key Perm.
 ```
 chmod 600 ~/.ssh/ansible.key
 ```
 
-# Copy SSH Key
+# Copy SSH Key to Hosts
 ```
 ssh-copy-id -i /root/.ssh/ansible.key.pub root@192.168.44.14
 ```
