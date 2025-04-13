@@ -11,3 +11,7 @@ chmod 600 ~/.ssh/ansible.key
 ```
 ssh-copy-id -i ~/.ssh/ansible.key 192.168.200.50
 ```
+# Test SSH Key
+```
+ansible all -m ping --key-file ~/.ssh/ansible.key
+```
