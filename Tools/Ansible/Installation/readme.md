@@ -18,9 +18,6 @@ ansible --version
 ```
 # Ansible Conf.
 ```
-cd /root/.ansible/
-
-> or:
 cd /etc/ansible/hosts
 cd /etc/ansible/ansible.cfg
 ansible-inventory --graph
