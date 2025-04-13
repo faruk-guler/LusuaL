@@ -13,5 +13,5 @@ ssh-copy-id -i ~/.ssh/ansible.key.pub 192.168.44.145
 ```
 # Test SSH Key
 ```
-ansible all -m ping --key-file ~/.ssh/ansible.key.pub
+ansible all -m ping --key-file ~/.ssh/ansible.key
 ```
