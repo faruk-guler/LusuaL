@@ -1,0 +1,2 @@
+ansible all -m shell -a "ip a | grep 192."
+ansible all -m shell -a "apt update"
