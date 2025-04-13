@@ -1,4 +1,4 @@
-#Modules Shell:
+# [Shell] Modules:
 ansible all -m shell -a "ip a | grep 192." [all servers in hosts file]
 ansible worker2 -m shell -a "ip a | grep 192." [worker2 server in hosts file]
 
