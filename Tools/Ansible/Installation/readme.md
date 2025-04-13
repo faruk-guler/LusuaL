@@ -18,6 +18,7 @@ ansible --version
 ```
 # Ansible Conf.
 ```
-/etc/ansible/hosts
-/etc/ansible/ansible.cfg
+cd /etc/ansible/hosts
+cd /root/.ansible/
+cd /etc/ansible/ansible.cfg
 ```
