@@ -1,0 +1,17 @@
+# Create SSH Key
+```
+ssh-keygen -t ed25519 -f /root/.ssh/ansible.key
+```
+# Fix SSH Key Permissions
+```
+chmod 600 ~/.ssh/ansible.key
+```
+
+# Copy SSH Key
+```
+ssh-copy-id -i /root/.ssh/ansible.key.pub root@192.168.44.14
+```
+# Test SSH Key
+```
+ansible all -m ping --key-file ~/.ssh/ansible.key
+```

@@ -1,9 +1,0 @@
-#Modules Shell:
-ansible all -m shell -a "ip a | grep 192." [all all servers in hosts file]
-ansible all -m shell -a "apt update" [all all servers in hosts file]
-ansible worker2 -m shell -a "ip a | grep 192." [worker2 server in hosts file]
-
-#Other Modules:
-https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
-
-
