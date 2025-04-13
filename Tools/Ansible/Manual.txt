@@ -1,24 +1,23 @@
-Ansible Manual:
+Ansible Manual > Imperative
 ----------------------------------------
-# [Shell] Modules:
+# [Shell] Modules Example:
 
-ansible all -m shell -a "ip a | grep 192.168."
-ansible worker2 -m shell -a "ip a | grep 192." [only worker2 node in hosts file]
+ansible all -m shell -a "ip a | grep 192.168." [check ip adress all nodes]
+ansible worker2 -m shell -a "ip a | grep 192.168." [only worker2 node]
 ansible all -m shell -a "apt update"
 
-
-# [Apt Modules] install/remove neofetch 
+# [Apt Modules Example:] install/remove neofetch 
 ansible all -m apt -a "name=neofetch state=present"
 #ansible all -m apt -a "name=neofetch state=absent"
 
 
-# [File Modules]
+# [File Modules Example:]
 ansible all -m file -a "path=/tmp/myfile.txt mode=0644"
 
-# [User Modules] user add/remove
+# [User Modules Example:] user add/remove
 ansible all -m user -a "name=faruk state=present" --become
 #ansible all -m user -a "name=faruk state=absent" --become
 
-## Other Modules:
+## Other Modules Example:
 https://github.com/faruk-guler/LusuaL/tree/main/Tools/Ansible/Modules
 https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
