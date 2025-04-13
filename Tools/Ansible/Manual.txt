@@ -1,4 +1,37 @@
-## [Shell] Modules:
+#Ansbible Modules:
+
+1. System Modules
+user: Manage user creation/removal.
+group: Manage group creation/removal.
+file: Manage file and directory permissions.
+service: Start/stop services.
+shell: Execute shell commands.
+
+2. Package Modules
+apt: Manage packages on Debian/Ubuntu.
+yum: Manage packages on RHEL/CentOS.
+dnf: Manage packages on Fedora/RHEL 8+.
+
+3. Network Modules
+firewalld: Manage firewall settings.
+ufw: Manage Uncomplicated Firewall (UFW).
+
+4. Database Modules
+mysql_db: Manage MySQL databases.
+postgresql_db: Manage PostgreSQL databases.
+
+5. Cloud Modules
+ec2: Manage AWS EC2 instances.
+azure_rm_virtualmachine: Manage Azure virtual machines.
+
+6. Other
+git: Work with Git repositories.
+copy: Copy files.
+template: Manage template files (Jinja2).
+......etc
+
+----------------------------------------
+# [Shell] Modules:
 
 # > ip a
 ansible all -m shell -a "ip a | grep 192."
@@ -6,10 +39,6 @@ ansible worker2 -m shell -a "ip a | grep 192." [only worker2 node in hosts file]
 
 # > apt update
 ansible all -m shell -a "apt update"
-
-
-## Other Modules:
-https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
 
 # > [Apt Modules] install/remove neofetch 
 ansible all -m apt -a "name=neofetch state=present"
@@ -22,4 +51,7 @@ ansible all -m file -a "path=/tmp/myfile.txt mode=0644"
 # > [User Modules] user add/remove
 ansible all -m user -a "name=faruk state=present" --become
 #ansible all -m user -a "name=faruk state=absent" --become
+
+## Other Modules:
+https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
 
