@@ -9,7 +9,7 @@ chmod 600 ~/.ssh/ansible.key
 
 # Copy SSH Key
 ```
-ssh-copy-id -i ~/.ssh/ansible.key.pub 192.168.44.145
+ssh-copy-id -i /root/.ssh/ansible.key.pub root@192.168.44.14
 ```
 # Test SSH Key
 ```
