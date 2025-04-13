@@ -1,2 +1,3 @@
-ansible all -m shell -a "ip a | grep 192."
-ansible all -m shell -a "apt update"
+ansible all -m shell -a "ip a | grep 192." [all all servers in hosts file]
+ansible all -m shell -a "apt update" [all all servers in hosts file]
+ansible worker2 -m shell -a "ip a | grep 192." [worker2 server in hosts file]
