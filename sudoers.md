@@ -15,11 +15,12 @@ Configuration file for sudo.
 
     man sudoers
 
-## visudo
+## visudo edit and verify
 
 Edit `/etc/sudoers` safely:
 
     sudo visudo
+    sudo visudo -c
 
 Never use `sudo vi /etc/sudoers`. TODO why.
 
