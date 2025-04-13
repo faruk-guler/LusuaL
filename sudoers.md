@@ -15,7 +15,7 @@ Configuration file for sudo.
 
     man sudoers
 
-## visudo edit and verify
+## visudo Edit and Verify
 
 Edit `/etc/sudoers` safely:
 
