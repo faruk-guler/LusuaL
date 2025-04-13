@@ -22,5 +22,8 @@ ansible --version
 cd /etc/ansible/hosts
 cd /etc/ansible/ansible.cfg
 cd /etc/ansible/playbooks
+```
+# Check Conf.
+```
 ansible-inventory --graph
 ```
