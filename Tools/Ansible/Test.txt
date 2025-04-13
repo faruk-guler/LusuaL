@@ -10,7 +10,8 @@ ansible all -m shell -a "apt update"
 ## Other Modules:
 https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
 
-# > install neofetch
+# > install/remove neofetch [Apt Modules]
 ansible all -m apt -a "name=neofetch state=present"
+ansible all -m apt -a "name=neofetch state=absent"
 
 
