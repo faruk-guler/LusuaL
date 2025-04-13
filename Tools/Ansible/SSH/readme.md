@@ -1,3 +1,9 @@
+# SSH Timeout:15 Minute
+```
+sudo visudo
+Defaults:root timestamp_timeout=15
+```
+
 # Edit Hosts File
 ```
 sudo nano /etc/ansible/hosts
