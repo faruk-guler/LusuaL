@@ -1,6 +1,6 @@
 
 ---
-# Table of Contentsd
+# Table of Contents
 * [How to create and setup an SSH key](#how-to-create-and-setup-an-ssh-key)
 * [How to convert a private SSH key into PPK](#how-to-convert-a-private-ssh-key-into-ppk)
 * [Since Freebsd 13](#since-freebsd-13)
