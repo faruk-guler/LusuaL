@@ -3,6 +3,7 @@
 ```
 sudo visudo
 Defaults:root timestamp_timeout=15
+sudo visudo -c
 ```
 
 # Edit Hosts File
