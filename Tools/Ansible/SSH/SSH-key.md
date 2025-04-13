@@ -1,6 +1,5 @@
 # Create SSH Key
 ```
-ssh-keygen -t ed25519 -C "ansible.key"
 ssh-keygen -t ed25519 -f /root/.ssh/ansible.key
 ```
 # Fix SSH Key Permissions
