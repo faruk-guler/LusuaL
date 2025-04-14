@@ -1,6 +1,7 @@
 Ansible Manual > Imperative
 ----------------------------------------
 ansible all -a "df -h" -u root
+ansible -m command -a "df -h" web-servers
 
 
 # [Shell] Modules Example:
