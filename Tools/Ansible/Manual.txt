@@ -6,9 +6,10 @@ ansible all -m shell -a "ip a | grep 192.168."
 ansible worker2 -m shell -a "ip a | grep 192.168." [only worker2 node]
 ansible all -m shell -a "apt update"
 ansible all -m shell -a "df -h /"
+ansible web-servers -m shell -a "df -h /" [only web-servers group in host file]
 
 # [Command] Modules Example:
-ansible -m command -a "df -h"
+ansible all -m command -a "df -h /dev/sda"
 
 # [Apt Modules Example:] install/remove neofetch tool
 ansible all -m apt -a "name=neofetch state=present"
