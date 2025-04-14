@@ -1,15 +1,14 @@
 Ansible Manual > Imperative
 ----------------------------------------
-ansible all -a "df -h" -u root
-ansible -m command -a "df -h" web-servers
-
 
 # [Shell] Modules Example:
-
 ansible all -m shell -a "ip a | grep 192.168."
 ansible worker2 -m shell -a "ip a | grep 192.168." [only worker2 node]
 ansible all -m shell -a "apt update"
 ansible all -m shell -a "df -h /"
+
+# [Command] Modules Example:
+ansible -m command -a "df -h"
 
 # [Apt Modules Example:] install/remove neofetch tool
 ansible all -m apt -a "name=neofetch state=present"
