@@ -24,4 +24,5 @@ ansible all -m user -a "name=faruk state=present" --become
 
 ## Other Modules Example:
 https://github.com/faruk-guler/LusuaL/tree/main/Tools/Ansible/Modules
+https://docs.ansible.com/ansible/latest/module_plugin_guide/index.html
 https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
