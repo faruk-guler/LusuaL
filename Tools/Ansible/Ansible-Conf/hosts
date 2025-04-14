@@ -5,3 +5,6 @@ worker2 ansible_host=192.168.44.147
 
 [DCs]
 anatolia ansible_host=192.168.44.130
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
