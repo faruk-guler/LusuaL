@@ -1,5 +1,5 @@
-#Ansible Manual > Imperative
-------------------------------
+#Ansible Manual -Imperativing
+------------------------------>
 
 # [Shell] Modules Example:
 ansible all -m shell -a "ip a | grep 192.168."
