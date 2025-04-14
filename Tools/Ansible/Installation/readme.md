@@ -19,8 +19,8 @@ ansible --version
 ```
 # Ansible Conf.
 ```
-cd /etc/ansible/hosts.ini
-cd /etc/ansible/ansible.cfg
+/etc/ansible/hosts.ini
+/etc/ansible/ansible.cfg
 cd /etc/ansible/playbooks
 ```
 # Check Conf.
