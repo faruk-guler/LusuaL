@@ -1,4 +1,4 @@
-# Ansible Install On Debian:
+# Ansible Install On Debian/RHELL:
 
 # Update Repos
 ```
@@ -10,6 +10,13 @@ sudo apt install software-properties-common
 ```
 # Install Ansible
 ```
+RHELL:
+# Enable EPEL repository
+sudo yum install -y epel-release
+# Install Ansible
+sudo yum install -y ansible
+
+Debian:
 sudo apt search ansible
 sudo apt install ansible-core
 #sudo apt install ansible
