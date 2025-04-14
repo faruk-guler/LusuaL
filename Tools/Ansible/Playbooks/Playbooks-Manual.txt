@@ -4,4 +4,4 @@ https://galaxy.ansible.com/ui/
 
 #Apply:
 ansible-playbook nginx-deploy.yml [Default hostfile]
-aansible-playbook -i debians.yml nginx-deploy.yml
+aansible-playbook -i debians.ini nginx-deploy.yml
