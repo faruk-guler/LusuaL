@@ -1,4 +1,4 @@
-[Kubernetes].
+[Kubernetes]
 master  ansible_host=192.168.44.145
 worker1 ansible_host=192.168.44.146
 worker2 ansible_host=192.168.44.147
