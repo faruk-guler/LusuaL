@@ -27,9 +27,9 @@ ansible all -m user -a "name=faruk state=present" --become
 ## Ansible Manual: Other Windows Hosts
 ---------------------------------------
 
-# [win_shell Modules:] for Windows Hosts
+# [win_shell Modules:]
 ansible all -m win_shell -a "ipconfig /all"
-ansible all -m win_shell -a "systeminfo.exe"
+ansible all -m win_shell -a "systeminfo.exe" [get sysinfo]
 
 ## Other Modules Example:
 https://github.com/faruk-guler/LusuaL/tree/main/Tools/Ansible/Modules
