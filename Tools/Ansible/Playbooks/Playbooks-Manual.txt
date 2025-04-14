@@ -3,5 +3,5 @@ It is a ready-made playbook and role repository for Ansible.
 https://galaxy.ansible.com/ui/
 
 #Apply:
-ansible-playbook -i nginx-deploy.yml
-ansible-playbook -i hosts nginx-deploy.yml
+ansible-playbook -i nginx-deploy.yml [Default hostfile]
+ansible-playbook vms -i nginx-deploy.yml
