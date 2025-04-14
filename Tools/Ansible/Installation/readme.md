@@ -26,4 +26,5 @@ cd /etc/ansible/playbooks
 # Check Conf.
 ```
 ansible-inventory --graph
+ansible all -m ping
 ```
