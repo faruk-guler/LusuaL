@@ -1,5 +1,8 @@
 Ansible Manual > Imperative
 ----------------------------------------
+ansible all -a "df -h" -u root
+
+
 # [Shell] Modules Example:
 
 ansible all -m shell -a "ip a | grep 192.168."
