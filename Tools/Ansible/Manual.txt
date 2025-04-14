@@ -1,3 +1,4 @@
+---------------------------------------
 ## Ansible Manual: Default Linux Hosts
 ---------------------------------------
 
@@ -22,7 +23,7 @@ ansible all -m file -a "path=/tmp/myfile.txt mode=0644"
 ansible all -m user -a "name=faruk state=present" --become
 #ansible all -m user -a "name=faruk state=absent" --become
 
-
+---------------------------------------
 ## Ansible Manual: Other Windows Hosts
 ---------------------------------------
 
