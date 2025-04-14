@@ -1,0 +1,16 @@
+---
+- name: DmesgError Bilgisini Al
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: versiyon bilgisini al
+      command: dmesg -T
+      register: dmesg_output
+      changed_when: false  # Komut çalıştığında herhangi bir değişiklik olmadı
+      ignore_errors: true   # Hata olması durumunda dikkate alma
+
+    - name: Versiyon bilgisini görüntüle
+      debug:
+        msg: "{{ dmesg_output.stdout }}"
+      when: dmesg_output.rc == 0  # Komut başarıyla çalıştıysa

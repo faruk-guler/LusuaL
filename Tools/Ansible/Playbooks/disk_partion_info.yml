@@ -1,0 +1,17 @@
+---
+- name: Disk Bilgisini Al
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: versiyon bilgisini al
+      command: lsblk
+      register: diskpartion_output
+      changed_when: false  # Komut çalıştığında herhangi bir değişiklik olmadı
+      ignore_errors: true   # Hata olması durumunda dikkate alma
+
+    - name: Versiyon bilgisini görüntüle
+      debug:
+        msg: "{{ diskpartion_output.stdout }}"
+      when: diskpartion_output.rc == 0  # Komut başarıyla çalıştıysa
+

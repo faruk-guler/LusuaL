@@ -1,0 +1,16 @@
+---
+- name: Syslog Bilgisini Al
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Syslog Bilgisini Al Task
+      command: sudo tail -n 10 /var/log/syslog
+      register: syslog_output
+      changed_when: false  # Komut çalıştığında herhangi bir değişiklik olmadı
+      ignore_errors: true   # Hata olması durumunda dikkate alma
+
+    - name: Syslog Bilgisini görüntüle
+      debug:
+        msg: "{{ syslog_output.stdout }}"
+      when: syslog_output.rc == 0  # Komut başarıyla çalıştıysa

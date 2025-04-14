@@ -1,0 +1,14 @@
+---
+- name: Dosya Silme
+  hosts: all
+  become: yes
+  vars_prompt:
+    - name: delete_file
+      prompt: "Silinecek dosyanın yolunu girin"
+      private: no
+
+  tasks:
+    - name: Belirtilen dosyayı sil
+      file:
+        path: "{{ delete_file }}"
+        state: absent

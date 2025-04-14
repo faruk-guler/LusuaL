@@ -1,0 +1,14 @@
+---
+- name: Check DNS Configuration on Ubuntu Servers
+  hosts: server2  # Ansible inventory dosyasındaki ilgili host grubunun adını b>
+  become: yes  # Gerekirse sudo yetkileriyle komutları çalıştır
+
+  tasks:
+    - name: Get DNS Configuration from /etc/resolv.conf
+      shell: cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
+      register: dns_servers
+      changed_when: false  # Değişiklik kontrolünü devre dışı bırak, çünkü komu>
+
+    - name: Display DNS Servers
+      debug:
+        msg: "DNS Servers on {{ inventory_hostname }}: {{ dns_servers.stdout_lines }}"

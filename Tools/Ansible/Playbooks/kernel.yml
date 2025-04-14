@@ -1,0 +1,16 @@
+---
+- name: Versiyon Bilgisini Al
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: versiyon bilgisini al
+      command: hostnamectl
+      register: kernel_output
+      changed_when: false  # Komut çalıştığında herhangi bir değişiklik olmadı
+      ignore_errors: true   # Hata olması durumunda dikkate alma
+
+    - name: Versiyon bilgisini görüntüle
+      debug:
+        msg: "{{ kernel_output.stdout }}"
+      when: kernel_output.rc == 0  # Komut başarıyla çalıştıysa

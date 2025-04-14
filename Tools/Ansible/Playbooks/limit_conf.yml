@@ -1,0 +1,16 @@
+---
+- name: Dosya Açma Sınırını Ayarla ve Kontrol Et
+  hosts: all
+  become: yes
+  tasks:
+    - name: Dosya Açma Sınırını Kontrol Et
+      command: bash -c "ulimit -a"
+      register: ulimit_output
+
+    - name: Dosya Açma Sınırı Bilgilerini İşle
+      set_fact:
+        ulimit_lines: "{{ ulimit_output.stdout_lines }}"
+
+    - name: İstenen Sütunları Görüntüle
+      debug:
+        msg: "{{ ulimit_lines }}"

@@ -1,0 +1,23 @@
+---
+- name: Kullanıcı Oluşturma Playbook'u
+  hosts: all
+  become: yes  # Yönetici yetkileriyle çalış
+  vars_prompt:
+    - name: user_name
+      prompt: "Kullanıcı adını girin"
+      private: no
+    - name: user_group
+      prompt: " Kullanıcı grubunu girin"
+      private: no
+    - name: password
+      prompt: " Kullanıcı şifresi girin"
+      private: no
+  tasks:
+    - name: Kullanıcı oluştur
+      user:
+        name: "{{user_name}}"  # Oluşturulacak kullanıcının adı
+        password: "{{password}}"  # Kullanıcının şifresi
+        state: present  # Kullanıcı mevcut değilse oluştur, zaten varsa geç
+        shell: /bin/bash  # Kullanıcının varsayılan kabuğu
+        groups: "{{user_group}}"  # Kullanıcının dahil olacağı gruplar (örneğin sudo)
+

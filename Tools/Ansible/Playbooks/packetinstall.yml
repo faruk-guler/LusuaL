@@ -1,0 +1,23 @@
+---
+- name: Install package on remote hosts
+  hosts: all
+  become: yes  # Sudo yetkisi gerektiren işlemler için
+
+  vars_prompt:
+    - name: package_name
+      prompt: "Enter the name of the package to install"
+      private: no  # Paket adını girmek için kullanıcıya sor
+
+  tasks:
+    - name: Update package cache (Debian/Ubuntu)
+      apt:
+        update_cache: yes
+      when: ansible_pkg_mgr == 'apt'
+
+    - name: Install package
+      package:
+        name: "{{ package_name }}"
+        state: present
+      vars:
+        ansible_python_interpreter: /usr/bin/python3
+

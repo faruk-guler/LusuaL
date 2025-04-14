@@ -1,0 +1,61 @@
+---
+- name: Otomatik Güncellemeler Politikası
+  hosts: all
+  become: yes
+  tasks:
+    - name: Debian tabanlı sistemlere otomatik güncellemeler paketini yükle
+      apt:
+        name: unattended-upgrades
+        state: present
+      when: ansible_os_family == "Debian"
+
+    - name: Debian tabanlı sistemler için otomatik güncellemeleri yapılandır
+      copy:
+        dest: /etc/apt/apt.conf.d/20auto-upgrades
+        content: |
+          APT::Periodic::Update-Package-Lists "1";
+          APT::Periodic::Download-Upgradeable-Packages "1";
+          APT::Periodic::AutocleanInterval "7";
+          APT::Periodic::Unattended-Upgrade "1";
+      when: ansible_os_family == "Debian"
+
+    - name: Red Hat tabanlı sistemlere yum-cron paketini yükle
+      yum:
+        name: yum-cron
+        state: present
+      when: ansible_os_family == "RedHat"
+
+    - name: yum-cron'un etkinleştirildiğinden ve çalıştığından emin ol
+      systemd:
+        name: yum-cron
+        enabled: yes
+        state: started
+      when: ansible_os_family == "RedHat"
+
+    - name: Red Hat tabanlı sistemler için otomatik güncellemeleri yapılandır
+      lineinfile:
+        path: /etc/yum/yum-cron.conf
+        regexp: '^apply_updates ='
+        line: 'apply_updates = yes'
+      when: ansible_os_family == "RedHat"
+
+    - name: dnf-automatic paketinin yüklü olduğundan emin ol (daha yeni Red Hat tabanlı sistemler için)
+      yum:
+        name: dnf-automatic
+        state: present
+      when: ansible_distribution_major_version|int >= 8 and ansible_os_family == "RedHat"
+
+    - name: dnf-automatic için otomatik güncellemeleri yapılandır
+      lineinfile:
+        path: /etc/dnf/automatic.conf
+        regexp: '^apply_updates ='
+        line: 'apply_updates = yes'
+      when: ansible_distribution_major_version|int >= 8 and ansible_os_family == "RedHat"
+
+    - name: dnf-automatic.timer'ın etkinleştirildiğinden ve çalıştığından emin ol
+      systemd:
+        name: dnf-automatic.timer
+        enabled: yes
+        state: started
+      when: ansible_distribution_major_version|int >= 8 and ansible_os_family == "RedHat"
+

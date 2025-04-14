@@ -1,0 +1,21 @@
+---
+- name: Last Change File
+  hosts: all
+  become: yes
+
+  vars_prompt:
+    - name: file_path
+      prompt: "Dosya yolunu giriniz"
+      private: no
+
+  tasks:
+    - name: last change file
+      command: "stat {{file_path}}"
+      register: file_path_output
+      changed_when: false  # Komut çalıştığında herhangi bir değişiklik olmadı
+      ignore_errors: true   # Hata olması durumunda dikkate alma
+
+    - name: Last Change File
+      debug:
+        msg: "{{ file_path_output.stdout }}"
+      when: file_path_output.rc == 0  # Komut başarıyla çalıştıysa

@@ -1,0 +1,17 @@
+---
+- name: Dosya Kopyalama
+  hosts: all
+  become: yes
+  vars_prompt:
+    - name: src_file
+      prompt: "Kopyalanacak dosyanın yolunu girin"
+      private: no
+    - name: dest_file
+      prompt: " dosyanın yolunu girin"
+      private: no
+  tasks:
+    - name: Dosya Kopyala
+      copy:
+        src: "{{src_file}}"
+        dest: "{{dest_file}}"
+        remote_src: yes

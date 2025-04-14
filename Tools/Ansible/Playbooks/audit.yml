@@ -1,0 +1,16 @@
+---
+- name: audit Bilgisini Al
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: audit Bilgisini Al Task
+      command: tail -n 10 /var/log/audit/audit.log
+      register: audit_output
+      changed_when: false  # Komut çalıştığında herhangi bir değişiklik olmadı
+      ignore_errors: true   # Hata olması durumunda dikkate alma
+
+    - name: audit Bilgisini görüntüle
+      debug:
+        msg: "{{ audit_output.stdout }}"
+      when: audit_output.rc == 0  # Komut başarıyla çalıştıysa

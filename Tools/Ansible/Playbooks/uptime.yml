@@ -1,0 +1,13 @@
+- name: Check Uptime on Ubuntu Servers
+  hosts: server2  # Burada ubuntu_servers, inventory dosyanızdaki ilgili host g>
+  become: yes  # Gerekirse sudo yetkileriyle komutları çalıştır
+
+  tasks:
+    - name: Get Uptime
+      command: uptime
+      register: uptime_output
+      changed_when: false  # Değişiklik kontrolü devre dışı bırakıldı, çünkü ko>
+
+    - name: Display Uptime
+      debug:
+        msg: "Uptime on {{ inventory_hostname }} is {{ uptime_output.stdout }}"

@@ -1,0 +1,39 @@
+---
+- name: LVM Bilgisini Al
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: VG bilgilerini al
+      command: vgdisplay
+      register: diskpartition_output1
+      changed_when: false  # Komut çalıştığında herhangi bir değişiklik olmadı
+      ignore_errors: true   # Hata olması durumunda dikkate alma
+
+    - name: LV bilgilerini al
+      command: lvdisplay
+      register: diskpartition_output2
+      changed_when: false  # Komut çalıştığında herhangi bir değişiklik olmadı
+      ignore_errors: true   # Hata olması durumunda dikkate alma
+
+    - name: PV bilgilerini al
+      command: pvdisplay
+      register: diskpartition_output3
+      changed_when: false  # Komut çalıştığında herhangi bir değişiklik olmadı
+      ignore_errors: true   # Hata olması durumunda dikkate alma
+
+    - name: VG bilgilerini görüntüle
+      debug:
+        msg: "{{ diskpartition_output1.stdout }}"
+      when: diskpartition_output1.rc == 0  # Komut başarıyla çalıştıysa
+
+    - name: LV bilgilerini görüntüle
+      debug:
+        msg: "{{ diskpartition_output2.stdout }}"
+      when: diskpartition_output2.rc == 0  # Komut başarıyla çalıştıysa
+
+    - name: PV bilgilerini görüntüle
+      debug:
+        msg: "{{ diskpartition_output3.stdout }}"
+      when: diskpartition_output3.rc == 0  # Komut başarıyla çalıştıysa
+

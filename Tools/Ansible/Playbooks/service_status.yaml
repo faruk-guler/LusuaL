@@ -1,0 +1,14 @@
+---
+- name: Servis Durumu
+  hosts: all
+  become: yes
+  vars_prompt:
+    - name: service_name
+      prompt: "Lütfen kontrol etmek istediğiniz servis adını girin:"
+
+  tasks:
+    - name: Servis Durumunu Kontrol Et
+      systemd:
+        name: "{{ service_name }}"
+        state: status
+      register: service_status

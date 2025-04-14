@@ -1,0 +1,18 @@
+---
+- name: Kullanıcı Silme
+  hosts: all
+  become: yes  # Yönetici yetkileriyle çalış
+  vars_prompt:
+    - name: user_name
+      prompt: "Kullanıcı adını girin"
+      private: no
+  tasks:
+    - name: Kullanıcıyı sil
+      user:
+        name: "{{user_name}}"  # Silinecek kullanıcının adı
+        state: absent  # Kullanıcı mevcutsa sil
+
+    - name: Kullanıcının ev dizinini sil
+      file:
+        path: /home/"{{user_name}}"  # Silinecek kullanıcının ev dizini
+        state: absent  # Dizin mevcutsa sil

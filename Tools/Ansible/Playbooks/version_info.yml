@@ -1,0 +1,22 @@
+---
+- name: Versiyon Bilgisini Al
+  hosts: all
+  gather_facts: yes
+
+  vars_prompt:
+    - name: package_name
+      prompt: "enter the name of the package for info version"
+      private: no
+
+  tasks:
+    - name: versiyon bilgisini al
+      command: "{{package_name}} --version"
+      register: package_version_output
+      changed_when: false  # Komut çalıştığında herhangi bir değişiklik olmadı
+      ignore_errors: true   # Hata olması durumunda dikkate alma
+
+    - name: Versiyon bilgisini görüntüle
+      debug:
+        msg: "{{ package_version_output.stdout }}"
+      when: package_version_output.rc == 0  # Komut başarıyla çalıştıysa
+
