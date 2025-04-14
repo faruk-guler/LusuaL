@@ -3,8 +3,18 @@ master  ansible_host=192.168.44.145
 worker1 ansible_host=192.168.44.146
 worker2 ansible_host=192.168.44.147
 
-[DCs]
+[Wins]
 anatolia ansible_host=192.168.44.130
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
+
+[Wins:vars]
+ansible_user=Administrator@guler.com
+ansible_password=Sistem72
+ansible_connection=winrm
+ansible_winrm_transport=ntlm
+ansible_winrm_server_cert_validation=ignore
+ansible_become=false
+ansible_winrm_scheme=http
+ansible_port=5985
