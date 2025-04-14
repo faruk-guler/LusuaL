@@ -22,6 +22,11 @@ ansible all -m file -a "path=/tmp/myfile.txt mode=0644"
 ansible all -m user -a "name=faruk state=present" --become
 #ansible all -m user -a "name=faruk state=absent" --become
 
+
+# [win_shell Modules:] for windows hosts
+ansible all -m win_shell -a "ipconfig /all"
+ansible all -m win_shell -a "systeminfo.exe"
+
 ## Other Modules Example:
 https://github.com/faruk-guler/LusuaL/tree/main/Tools/Ansible/Modules
 https://docs.ansible.com/ansible/latest/module_plugin_guide/index.html
