@@ -1,5 +1,5 @@
-# Ansible Manual:
------------------------------------------
+## Ansible Manual: Default Linux Hosts
+---------------------------------------
 
 # [Shell] Modules Example:
 ansible all -m shell -a "ip a | grep 192.168."
@@ -22,7 +22,10 @@ ansible all -m file -a "path=/tmp/myfile.txt mode=0644"
 ansible all -m user -a "name=faruk state=present" --become
 #ansible all -m user -a "name=faruk state=absent" --become
 
-----------------------------------------------
+
+## Ansible Manual: Other Windows Hosts
+---------------------------------------
+
 # [win_shell Modules:] for Windows Hosts
 ansible all -m win_shell -a "ipconfig /all"
 ansible all -m win_shell -a "systeminfo.exe"
