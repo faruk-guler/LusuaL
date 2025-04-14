@@ -21,7 +21,7 @@ Ansible lets you perform configuration management, task automation, security/com
 - **Managed Nodes**: Servers managed with Ansible (Linux, Windows, network devices, etc.)
 - **Inventory**: List of managed machines
 - **Playbook**: YAML files that define automation tasks
-- **Modules**: Predefined tasks (e.g. `apt`, `yum`, `copy`, `file`, `service`, `template`)
+- **Modules**: Predefined tasks (e.g. `apt`, `yum`, `copy`, `file`, `service`, `template` etc.,)
 
 ## Technical Details
 - Ansible only needs **SSH** connectivity to establish connectivity to the managed nodes (uses **WinRM** for Windows)
