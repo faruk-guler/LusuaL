@@ -3,6 +3,7 @@
 # Update Repos
 ```
 sudo apt update
+sudo yum update
 ```
 # Install Ansible
 ```
