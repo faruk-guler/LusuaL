@@ -11,6 +11,7 @@ sudo apt install software-properties-common
 # Install Ansible
 ```
 sudo apt search ansible
+sudo apt install ansible
 sudo apt install ansible-core
 ```
 # Check Version
