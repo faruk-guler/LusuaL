@@ -22,8 +22,9 @@ postgresql_db: Manage PostgreSQL databases.
 ec2: Manage AWS EC2 instances.
 azure_rm_virtualmachine: Manage Azure virtual machines.
 
-6. Other
+-6. Other
 git: Work with Git repositories.
 copy: Copy files.
 template: Manage template files (Jinja2).
+
 ....etc
