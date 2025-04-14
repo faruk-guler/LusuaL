@@ -11,7 +11,7 @@ ansible_python_interpreter=/usr/bin/python3
 
 [Wins:vars]
 ansible_user=Administrator@guler.com
-ansible_password=12
+ansible_password=Pass1234
 ansible_connection=winrm
 ansible_winrm_transport=ntlm
 ansible_winrm_server_cert_validation=ignore
