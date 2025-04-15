@@ -7,10 +7,10 @@ worker2 ansible_host=192.168.44.147
 anatolia ansible_host=192.168.44.130
 
 [webservers]
-173.82.115.165
+lms-server1 ansible_host=173.82.115.165
 
 [database_servers]
-173.82.220.239
+postgres-srv1 ansible_host=173.82.220.239
 
 [datacenter:children]
 webservers
