@@ -4,6 +4,7 @@ Ansible Vault ?
 
 Ansible Vault encrypts sensitive data during configuration management.
 (Confidential information such as API keys, passwords, private keys, username/password) provides secure storage and management.
+Ansible Vault uses the AES-256 (Advanced Encryption Standard 256-bit) encryption algorithm.
 
 -Database passwords
 -SSH keys
