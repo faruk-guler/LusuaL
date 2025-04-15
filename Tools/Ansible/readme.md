@@ -29,7 +29,7 @@ Ansible lets you perform configuration management, task automation, security/com
 - **Minimal dependencies**: Only requires Python and a few support libraries
 - **Declarative language**: Uses YAML for playbooks
 - **Idempotent**: Ensures no unintended changes when rerunning playbooks
-- ***Run once. Only checks the current status when run and corrects it if necessary. Does not monitor the status in the background like Kubernetes.
+- **Run once. Only checks the current status when run and corrects it if necessary. Does not monitor the status in the background like Kubernetes.
 
 <p align="center">
   <a href="#">Learn more in our Ansible tutorial</a>
