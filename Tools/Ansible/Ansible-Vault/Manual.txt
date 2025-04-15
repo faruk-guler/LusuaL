@@ -17,6 +17,7 @@ ansible-vault create secret.yml  # Create new encrypted file
 #Other Actions:
 ansible-vault view secret.yml  # View encrypted file
 ansible-vault edit secret.yml  # Edit the encrypted file
+ansible-vault rekey secrets.yml # Change Ansible Vault Password
 ansible-vault decrypt secret.yml  # Remove encryption
 
 #Working with Encrypted Files:
