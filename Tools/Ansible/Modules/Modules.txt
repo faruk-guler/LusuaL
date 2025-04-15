@@ -1,3 +1,10 @@
+-------------------
+## Modules
+-------------------
+
+ansible-doc -l [List Modules]
+ansible-doc dnf [information Modules]
+
 -1 System Modules:
 user: Manage user creation/removal.
 group: Manage group creation/removal.
