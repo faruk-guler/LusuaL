@@ -3,7 +3,7 @@
 -------------------
 
 ansible-doc -l [List Modules]
-ansible-doc dnf [information Modules]
+ansible-doc apt [information Modules]
 
 -1 System Modules:
 user: Manage user creation/removal.
