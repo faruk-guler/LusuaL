@@ -1,5 +1,5 @@
 # (authorized_keys) -farukguler.com
----------------------
+------------------------------------
 
 # Create SSH Key
 ```
