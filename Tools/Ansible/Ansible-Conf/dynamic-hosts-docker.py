@@ -7,7 +7,7 @@ containers = subprocess.check_output(['docker', 'ps', '--format', '{{.Names}}'])
 
 inventory = {
     "docker-containers": {
-        "hosts": containers,
+        "docker-hosts": containers,
         "vars": {}
     }
 }
