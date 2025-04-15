@@ -6,7 +6,7 @@ import json, subprocess
 containers = subprocess.check_output(['docker', 'ps', '--format', '{{.Names}}']).decode().splitlines()
 
 inventory = {
-    "all": {
+    "docker-containers": {
         "hosts": containers,
         "vars": {}
     }
