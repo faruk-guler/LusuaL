@@ -1,1 +1,15 @@
-#
+# Docker Dynamic-Inventory-Script
+# docker_inventory.py
+#!/usr/bin/env python3
+import json, subprocess
+
+containers = subprocess.check_output(['docker', 'ps', '--format', '{{.Names}}']).decode().splitlines()
+
+inventory = {
+    "all": {
+        "hosts": containers,
+        "vars": {}
+    }
+}
+
+print(json.dumps(inventory))
