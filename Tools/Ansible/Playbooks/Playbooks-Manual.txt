@@ -5,4 +5,4 @@ ansible-galaxy search mysql
 
 #Playbook Apply:
 ansible-playbook nginx-deploy.yml [Default hostfile]
-ansible-playbook -i debians.host nginx-deploy.yml [Custom hostfile]
+ansible-playbook -i debians-hosts.ini nginx-deploy.yml [Custom hostfile]
