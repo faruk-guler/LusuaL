@@ -1,1 +1,21 @@
-#
+#File Encryption:
+ansible-vault encrypt existing.yml  # Encrypt existing file
+ansible-vault create secret.yml  # Create new encrypted file
+
+#Other Actions:
+ansible-vault view secret.yml  # View encrypted file
+ansible-vault edit secret.yml  # Edit the encrypted file
+ansible-vault decrypt secret.yml  # Remove encryption
+
+#Working with Encrypted Files:
+ansible-playbook playbook.yml --ask-vault-pass  # Run with password
+ansible-playbook playbook.yml --vault-password-file=password.txt  # Run with password file
+
+#Security Warnings:
+-Add the file where you store the vault password to .gitignore. This way, this file will not be included in source control systems such as git.
+
+-Make file permissions "600"
+-Use different vault passwords for production environments
+
+
+
