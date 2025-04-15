@@ -6,8 +6,15 @@ worker2 ansible_host=192.168.44.147
 [Wins]
 anatolia ansible_host=192.168.44.130
 
-[all:vars]
-ansible_python_interpreter=/usr/bin/python3
+[webservers]
+173.82.115.165
+
+[database_servers]
+173.82.220.239
+
+[datacenter:children]
+webservers
+database_servers
 
 [Wins:vars]
 ansible_user=Administrator@guler.com
@@ -18,3 +25,6 @@ ansible_winrm_server_cert_validation=ignore
 ansible_become=false
 ansible_winrm_scheme=http
 ansible_port=5985
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
