@@ -1,5 +1,5 @@
 # Docker Dynamic-Inventory-Script -It automatically retrieves Docker container names and converts them into inventory.
-# Docker-Dynamic.py
+# dynamic-hosts-docker.py
 #!/usr/bin/env python3
 import json, subprocess
 
