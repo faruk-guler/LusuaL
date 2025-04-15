@@ -1,7 +1,7 @@
 # What is Ansible? -farukguler.com
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Ansible_Logo.png" alt="Ansible Logo" width="200"/>
+  <img src="https://blog.noblinkyblinky.com/wp-content/uploads/2020/05/highres_467012712.png" alt="Ansible Logo" width="200"/>
 </p>
 
 Ansible lets you perform configuration management, task automation, security/compliance tasks, orchestration, cloud provisioning, and application deployment easily and in an automated fashion. In simple terms, Ansible follows a master-slave architecture — you have an **Ansible control node**, where you will trigger and manage your jobs (playbooks), and **managed nodes**, the machines you want to run the playbooks on (inventory). 
