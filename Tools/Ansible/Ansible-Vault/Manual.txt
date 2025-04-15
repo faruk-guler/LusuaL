@@ -1,3 +1,15 @@
+####################
+Ansible Vault ?
+####################
+
+Ansible Vault is an encryption tool that enables secure storage and management of sensitive data (confidential information such as passwords, API keys, private keys, username/password) during configuration management with Ansible.
+
+-Database passwords
+-SSH keys
+-API tokens
+-LDAP credentials
+-Cloud provider access credentials (AWS, Azure, etc.)
+
 #File Encryption:
 ansible-vault encrypt existing.yml  # Encrypt existing file
 ansible-vault create secret.yml  # Create new encrypted file
