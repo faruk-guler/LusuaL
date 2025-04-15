@@ -31,3 +31,6 @@ Ansible lets you perform configuration management, task automation, security/com
 - **Idempotent**: Ensures no unintended changes when rerunning playbooks
 - **Run once**: Only checks the current status when run and corrects it if necessary. Does not monitor the status in the background like Kubernetes.
 
+<p align="center">
+  
+</p>
