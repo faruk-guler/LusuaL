@@ -2,7 +2,8 @@
 Ansible Vault ?
 ####################
 
-Ansible Vault is an encryption tool that enables secure storage and management of sensitive data (confidential information such as passwords, API keys, private keys, username/password) during configuration management with Ansible.
+Ansible Vault encrypts sensitive data during configuration management.
+(Confidential information such as API keys, passwords, private keys, username/password) provides secure storage and management.
 
 -Database passwords
 -SSH keys
