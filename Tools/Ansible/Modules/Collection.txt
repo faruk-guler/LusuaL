@@ -6,5 +6,7 @@ ansible-galaxy collection list
 ansible-galaxy collection install community.windows
 ansible-galaxy collection install community.windows --upgrade
 
+cd ~/.ansible/collections/ansible_collections/
+
 #Docs:
 https://galaxy.ansible.com/ui/
