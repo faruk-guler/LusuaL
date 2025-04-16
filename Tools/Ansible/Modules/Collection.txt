@@ -1,6 +1,18 @@
 #######################
 ## Collection
 #######################
+Ansible Collection is a structure that brings together and packages modules, roles, playbook examples, plugins, and other content in Ansible. This makes complex structures easier to manage and reusable.
+
+ansible-galaxy list # List locally installed content
+ansible-galaxy install # Role/collection setup
+ansible-galaxy init # Create new role skeleton
+ansible-galaxy collection init # Create new collection skeleton
+ansible-galaxy role remove # Remove role
+ansible-galaxy collection list # List installed collections
+ansible-galaxy collection build # Collection packaging
+ansible-galaxy collection publish # Upload collection to Galaxy
+
+
 
 ansible-galaxy collection list
 ansible-galaxy collection install community.windows
@@ -10,3 +22,4 @@ cd ~/.ansible/collections/ansible_collections/
 
 #Docs:
 https://galaxy.ansible.com/ui/
+https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
