@@ -49,3 +49,6 @@ win_service: Starts, stops, or restarts services
 win_user: Creates and edits user accounts
 win_package: Installs MSI or EXE packages
 .etc
+
+# Docs:
+https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
