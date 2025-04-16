@@ -24,12 +24,12 @@ openssl x509 -in sertifika.crt -text -noout      #Sertifikayı Doğrula
 ----------------AND-----------------------
 
 Extras:
-openssl req -x509 -newkey rsa:2048 -sha256 -days 365 -keyout private.key -out certificate.crt [Hızlı Self Signed sertifika oluştur]
+openssl req -x509 -newkey rsa:2048 -sha256 -days 365 -keyout private.key -out certificate.crt # Hızlı Self Signed sertifika oluştur.
 openssl rsa -in faruk.key -pubout -out faruk.pub #Public key oluştur. [Opsionel]
-openssl x509 -x509toreq -sha256 -in sertifika.crt -out yeni.csr -signkey faruk.key #Varolan Sertifikadan CSR Oluştur
+openssl x509 -x509toreq -sha256 -in sertifika.crt -out yeni.csr -signkey faruk.key # Varolan Sertifikadan CSR Oluştur
 openssl pkcs12 -export -out mycert.p12 -inkey faruk.key -in sertifika.crt #Sertifikayı Başka Formatlara çevir. [*.p12 .pfx ...]
 openssl pkcs12 -info -in keyStore.p12  #PKCS#12 içeriğini incele [*.p12 .pfx ...]
-openssl s_client -connect farukguler.com:443 2>/dev/null | openssl x509 -noout -dates #Sertifika geçerlilik göster.
+openssl s_client -connect farukguler.com:443 2>/dev/null | openssl x509 -noout -dates # Sertifika geçerlilik göster.
 https://www.digicert.com/kb/csr-creation.htm [General CSR Creation Guidelines]
 https://www.digicert.com/easy-csr/openssl.htm [General CSR Creation Guidelines]
 
