@@ -7,8 +7,9 @@ ansible-galaxy collection list [Collection]
 ansible-doc -l | grep win_ [List only Modules Windows]
 ansible-doc apt [information Modules]
 ansible-doc win_ping [information Modules]
+ansible-galaxy collection list
 ansible-galaxy collection install community.windows
-ansible-galaxy collection list 
+ansible-galaxy collection install community.windows --upgrade
 
 >> Commonly Used Linux Modules:
 -------------------------------
