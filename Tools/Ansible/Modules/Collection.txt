@@ -1,1 +1,5 @@
-#
+
+
+ansible-galaxy collection list
+ansible-galaxy collection install community.windows
+ansible-galaxy collection install community.windows --upgrade
