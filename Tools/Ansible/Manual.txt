@@ -11,6 +11,7 @@ ansible web-servers -m shell -a "df -h /" [only web-servers group in host file]
 
 # [Command] Modules Example:
 ansible all -m command -a "df -h /dev/sda"
+ansible all -m service -a "name=nginx state=restarted"
 
 # [Apt Modules Example:] install/remove neofetch tool
 ansible all -m apt -a "name=neofetch state=present"
