@@ -22,4 +22,5 @@ cd ~/.ansible/collections/ansible_collections/
 
 #Docs:
 https://galaxy.ansible.com/ui/
+https://docs.ansible.com/ansible/latest/collections/index.html
 https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
