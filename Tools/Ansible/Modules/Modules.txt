@@ -1,11 +1,14 @@
-#######################
-##      Modules      ##
-#######################
+###############################
+## Modules and Collection    ##
+###############################
 
 ansible-doc -l [List Modules]
+ansible-galaxy collection list [Collection]
 ansible-doc -l | grep win_ [List only Modules Windows]
 ansible-doc apt [information Modules]
 ansible-doc win_ping [information Modules]
+ansible-galaxy collection install community.windows
+ansible-galaxy collection list 
 
 >> Commonly Used Linux Modules:
 -------------------------------
