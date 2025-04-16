@@ -8,9 +8,3 @@ role_name/
     vars/
 
 ansible-galaxy init my_role
-
-Tasks: List of tasks to execute. These are the main actions of the role.
-Handlers: Contains handlers that can be triggered by tasks.
-Defaults: Contains default variables.
-Vars: Contains other variables.
-Files and Templates: Files or templates that the role deploys.
