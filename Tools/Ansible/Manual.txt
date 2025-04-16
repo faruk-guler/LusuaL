@@ -1,5 +1,5 @@
 ---------------------------------------
-## Linux Hosts (Defaults)
+## Linux Hosts Modules (Defaults)
 ---------------------------------------
 
 # [Shell] Modules Example:
@@ -24,7 +24,7 @@ ansible all -m user -a "name=faruk state=present" --become
 #ansible all -m user -a "name=faruk state=absent" --become
 
 ---------------------------------------
-## Windows Hosts (Others)
+## Windows Hosts Modules (Others)
 ---------------------------------------
 
 # [win_shell Modules:]
@@ -35,6 +35,7 @@ ansible all -m win_shell -a "systeminfo.exe" [get sysinfo]
 ansible windows -m win_copy -a "src=/tmp/test.txt dest=C:\Temp\test.txt"
 ansible windows -m win_service -a "name=Spooler state=restarted" [Restart Print Spooler Service]
 ansible windows -m win_package -a "path=http://example.com/app.msi state=present" [Install .msi package]
+ansible windows -m win_command -a "powershell.exe -File C:\scripts\install.ps1"
 
 ## Modules Docs:
 https://github.com/faruk-guler/LusuaL/tree/main/Tools/Ansible/Modules
