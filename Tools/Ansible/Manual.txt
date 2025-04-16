@@ -1,5 +1,5 @@
 ---------------------------------------
-## Default Linux Hosts
+## Linux Hosts (Defaults)
 ---------------------------------------
 
 # [Shell] Modules Example:
@@ -24,14 +24,14 @@ ansible all -m user -a "name=faruk state=present" --become
 #ansible all -m user -a "name=faruk state=absent" --become
 
 ---------------------------------------
-## Other Windows Hosts
+## Windows Hosts (Others)
 ---------------------------------------
 
 # [win_shell Modules:]
 ansible all -m win_shell -a "ipconfig /all"
 ansible all -m win_shell -a "systeminfo.exe" [get sysinfo]
 
-## Other Modules Example:
+## Other Modules Docs:
 https://github.com/faruk-guler/LusuaL/tree/main/Tools/Ansible/Modules
 https://docs.ansible.com/ansible/latest/module_plugin_guide/index.html
 https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
