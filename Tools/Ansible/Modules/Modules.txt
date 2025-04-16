@@ -1,7 +1,9 @@
--------------------
-## Modules
--------------------
->> Linux Modules:
+#######################
+##      Modules      ##
+#######################
+
+>> Commonly Used Linux Modules:
+-------------------------------
 ansible-doc -l [List Modules]
 ansible-doc -l | grep win_ [List Modules Windows]
 ansible-doc apt [information Modules]
@@ -35,4 +37,13 @@ git: Work with Git repositories.
 copy: Copy files.
 template: Manage template files (Jinja2).
 
-....etc
+>> Commonly Used Windows Modules:
+-----------------------------------
+win_ping: Tests the connection (equivalent to the ping module in Linux)
+win_copy: Copies files
+win_file: Manages file and directory permissions
+win_command: Runs commands
+win_feature: Installs/removes Windows features (e.g. IIS)
+win_service: Starts, stops, or restarts services
+win_user: Creates and edits user accounts
+win_package: Installs MSI or EXE packages
