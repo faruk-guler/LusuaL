@@ -48,3 +48,4 @@ win_feature: Installs/removes Windows features (e.g. IIS)
 win_service: Starts, stops, or restarts services
 win_user: Creates and edits user accounts
 win_package: Installs MSI or EXE packages
+.etc
