@@ -14,6 +14,7 @@ Ansible Vault uses the AES-256 (Advanced Encryption Standard 256-bit) encryption
 
 #File Encryption:
 ansible-vault encrypt existing.yml  # Encrypt existing file
+ansible-vault encrypt existing.yml file1.yml file2.yml file3.yml # Encrypt Multi existing files
 ansible-vault create secret.yml  # Create new encrypted file
 
 #Other Actions:
