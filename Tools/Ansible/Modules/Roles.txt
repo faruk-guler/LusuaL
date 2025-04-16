@@ -6,3 +6,5 @@ role_name/
     tasks/
     templates/
     vars/
+
+ansible-galaxy init my_role
