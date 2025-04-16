@@ -1,6 +1,6 @@
-###############################
-## Modules and Collection    ##
-###############################
+#########################
+## Modules 
+#########################
 
 ansible-doc -l [List Modules]
 ansible-galaxy collection list [Collection]
