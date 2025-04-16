@@ -30,6 +30,9 @@ ansible all -m user -a "name=faruk state=present" --become
 # [win_shell Modules:]
 ansible all -m win_shell -a "ipconfig /all"
 ansible all -m win_shell -a "systeminfo.exe" [get sysinfo]
+ansible windows -m win_copy -a "src=/tmp/test.txt dest=C:\Temp\test.txt"
+ansible windows -m win_service -a "name=Spooler state=restarted" [Restart Print Spooler Service]
+ansible windows -m win_package -a "path=http://example.com/app.msi state=present" [Install .msi package]
 
 ## Other Modules Docs:
 https://github.com/faruk-guler/LusuaL/tree/main/Tools/Ansible/Modules
