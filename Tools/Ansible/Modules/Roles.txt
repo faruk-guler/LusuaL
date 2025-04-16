@@ -1,1 +1,8 @@
-#
+role_name/
+    defaults/
+    files/
+    handlers/
+    meta/
+    tasks/
+    templates/
+    vars/
