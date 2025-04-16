@@ -1,5 +1,5 @@
 ---------------------------------------
-## Ansible Manual: Default Linux Hosts
+## Default Linux Hosts
 ---------------------------------------
 
 # [Shell] Modules Example:
@@ -24,7 +24,7 @@ ansible all -m user -a "name=faruk state=present" --become
 #ansible all -m user -a "name=faruk state=absent" --become
 
 ---------------------------------------
-## Ansible Manual: Other Windows Hosts
+## Other Windows Hosts
 ---------------------------------------
 
 # [win_shell Modules:]
