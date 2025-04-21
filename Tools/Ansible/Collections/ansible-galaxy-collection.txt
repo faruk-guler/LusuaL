@@ -1,7 +1,7 @@
 #######################
-## Ansible Collection
+## Ansible Galaxy Collection
 #######################
-Ansible Collection is a structure that brings together and packages modules, roles, playbook examples, plugins, and other content in Ansible. This makes complex structures easier to manage and reusable.
+Ansible Galaxy Collection is a structure that brings together and packages modules, roles, playbook examples, plugins, and other content in Ansible. This makes complex structures easier to manage and reusable.
 
 ansible-galaxy list # List locally installed content
 ansible-galaxy install <-name-> # Role/collection setup
