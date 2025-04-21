@@ -44,3 +44,4 @@ ansible windows -m win_command -a "powershell.exe -File C:\scripts\install.ps1"
 https://github.com/faruk-guler/LusuaL/tree/main/Tools/Ansible/Modules
 https://docs.ansible.com/ansible/latest/module_plugin_guide/index.html
 https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
+https://cheat.readthedocs.io/en/latest/ansible/index.html
