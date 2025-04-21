@@ -2,7 +2,7 @@
 ## Ansible Roles:
 ####################
 Ansible Roles are structures used to organize tasks and configurations in a modular way, providing reusable and configurable components.
-Roles allow specific tasks to be organized within a playbook.
+Roles allow specific tasks to be organized within a playbook. The directory where the roles are located is usually located in roles/
 
 ansible-galaxy role init <role_name> # Creates new role skeleton
 ansible-galaxy role remove <role_name> # Deletes the role
