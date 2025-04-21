@@ -34,7 +34,7 @@ cd /etc/ansible/roles
 ansible-inventory --graph
 ansible all -m ping
 ```
-# Uninstall Ansible
+# #Uninstall Ansible
 ```
 ansible-inventory --graph
 ansible all -m ping
