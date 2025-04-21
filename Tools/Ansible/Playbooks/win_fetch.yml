@@ -1,0 +1,10 @@
+---
+- name: Fetch a file from windows host
+  hosts: winhost
+  gather_facts: False
+  tasks:
+          - name: fetch the file from temp directory
+            fetch:
+                    src: C:\file.txt
+                    dest: ./file.txt
+                    flat: yes

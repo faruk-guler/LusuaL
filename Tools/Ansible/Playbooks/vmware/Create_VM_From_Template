@@ -1,0 +1,55 @@
+---
+- name: Create a VM from a template
+  hosts: localhost
+
+  vars_prompt:
+    - name: "vcenter_hostname"
+      prompt: "Enter vcenter hostname"
+      private: no
+      default: "vc65.labvmware.local"
+    - name: "vcenter_user"
+      prompt: "Enter vcenter username"
+      private: no
+      default: "administrator@vsphere.local"
+    - name: "vcenter_pass"
+      prompt: "Enter vcenter password"
+      private: yes
+
+  vars:
+    datacenter: 'Labvmware'
+    esxi_host: 'esxi1.labvmware.local'
+    notes: 'Created by Ansible'
+    vcenter_hostname: vc65.labvmware.local
+    vcenter_user: administrator@vsphere.local
+    vcenter_pass: Espoir@2019
+    datastore: vsanDatastore
+    network: VM Network
+    memory: 10
+    cpucount: 1
+    osid: debin6_64Guest
+
+  tasks:
+  - name: Create a VM from template
+    vmware_guest:
+      hostname: vc65.labvmware.local
+      username: administrator@vsphere.local
+      password: 'YourPassword'
+      validate_certs: no
+#      folder: /esxi3_local1/vm1/
+      name: testvm_3
+      state: present
+      template: vm1
+      disk:
+      - size_gb: 1
+        type: thin
+        datastore: esxi3_local1
+      hardware:
+        memory_mb: 512
+        num_cpus: 1
+        scsi: paravirtual
+#      networks:
+#      - name: 'VM Network'
+#        mac: aa:bb:dd:aa:00:14
+      wait_for_ip_address: yes
+#    delegate_to: localhost
+    register: deploy

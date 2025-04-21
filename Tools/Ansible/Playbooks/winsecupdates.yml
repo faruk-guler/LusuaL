@@ -1,0 +1,7 @@
+- name: install only sec updates
+  hosts: winhost
+  tasks:
+          - name: rollout sec updates
+            win_updates:
+                    catagory_names: SecurityUpdates
+                    reboot: yes

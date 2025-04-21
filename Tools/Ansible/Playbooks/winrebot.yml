@@ -1,0 +1,5 @@
+- name: Reboot the machine
+  hosts: winhost
+  tasks:
+          - name: rebooting windows machine
+            win_reboot:

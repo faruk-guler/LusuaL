@@ -1,0 +1,9 @@
+---
+- name: Install Apache from an MSI 
+  hosts: all 
+ 
+  tasks:
+    - name: Download the Apache installer
+      win_get_url:
+        url: https://download.microsoft.com/download/1/6/7/167F0D79-9317-48AE-AEDB-17120579F8E2/NDP451-KB2858728-x86-x64-AllOS-ENU.exe
+        dest: C:\temp\NDP451-KB2858728-x86-x64-AllOS-ENU.exe

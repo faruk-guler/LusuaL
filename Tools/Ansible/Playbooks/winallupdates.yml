@@ -1,0 +1,13 @@
+- name: WIndows updates
+  hosts: winhost
+  tasks:
+          - name: installing all updates
+            win_updates:
+                    category_names:
+                            - SecurityUpdates
+                            - CriticalUpdates
+                            - UpdateRollups
+            register: update_result
+          - name: Reboot if reboot required
+            win_reboot:
+                    when: update_result.reboot_required

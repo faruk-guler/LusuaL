@@ -1,0 +1,4 @@
+- name: Run ps1 script in privileged mode
+  hosts: winhost
+  tasks:
+    - win_shell: C:\Service.ps1 >> c:\somelog.txt

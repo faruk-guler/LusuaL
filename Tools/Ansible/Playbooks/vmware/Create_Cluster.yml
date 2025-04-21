@@ -1,0 +1,19 @@
+---
+- name : Create Cluster
+  hosts: localhost
+
+  tasks:
+  - name: Create Cluster
+    local_action:
+      module: vmware_cluster
+      hostname: vc65.labvmware.local
+      username: administrator@vsphere.local
+      password: 'YourMdp'
+      datacenter_name: 'vDc_Ansible'
+      cluster_name: C_Ansible
+      enable_ha: yes
+      enable_drs: yes
+      enable_vsan: no
+      validate_certs: no
+#    delegate_to: localhost
+#    register: vmfacts

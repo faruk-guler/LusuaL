@@ -1,0 +1,9 @@
+- name: run non shell command
+  hosts: winhost
+  tasks:
+          - name: running a non shell command
+            win_shell: ipconfig /all >> C:\cmd.txt
+            args:
+                    executable: cmd
+            register: homedir_out
+          - debug: msg= "{{ homedir_out.stdout }}"

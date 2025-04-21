@@ -1,0 +1,9 @@
+[winhost]
+3.14.148.198
+[winhost:vars]
+ansible_user=ansible_user
+ansible_password=Passw0rd
+ansible_port=5985
+ansible_connection=winrm
+ansible_winrm_transport=basic
+ansible_winrm_server_cert_validation=ignore

@@ -1,0 +1,9 @@
+---
+- name: Copy a file to windows host
+  hosts: winhost
+  gather_facts: false
+  tasks:
+          - name: copy file to windows machine
+            win_copy:
+                    src: /home/ubuntu/file.txt
+                    dest: C:\
