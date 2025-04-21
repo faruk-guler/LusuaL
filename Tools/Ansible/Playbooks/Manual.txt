@@ -1,6 +1,10 @@
+###################################
 # Ansible Galaxy Playbooks 🌍🌍🌍
-It is a ready-made playbook and role repository for Ansible.
-https://galaxy.ansible.com/ui/
+###################################
+Ansible Galaxy is a repository for sharing Ansible content such as playbooks, roles, and collections.  
+It provides reusable automation content created by the community and Red Hat.
+
+🔗 https://galaxy.ansible.com/ui/
 
 # Playbook Search:
 ansible-galaxy search mysql
