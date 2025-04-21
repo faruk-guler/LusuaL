@@ -1,6 +1,6 @@
 #######################
 # Plugins and Filters
-#######################
+#######################.
 
 Ansible plugin and filter structures are used to increase modularity and define custom behaviors.
 
