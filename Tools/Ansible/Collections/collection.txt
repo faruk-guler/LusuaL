@@ -11,6 +11,9 @@ ansible-galaxy collection publish <file> # Uploads the packaged collection to Ga
 ansible-galaxy collection install <name> # Installs a collection
 ansible-galaxy collection install <name> --upgrade # Updates the installed collection
 
+#Example:
+ansible-galaxy collection install ansible.windows  # Installs a windows collection
+
 #Docs:
 https://galaxy.ansible.com/ui/
 https://docs.ansible.com/ansible/latest/collections/index.html
