@@ -4,7 +4,7 @@
 ```
 ssh-keygen -t ed25519 -f /root/.ssh/ansible.key
 ```
-# SSH Key Perm..
+# SSH Key Perm.
 ```
 chmod 600 ~/.ssh/ansible.key
 ```
