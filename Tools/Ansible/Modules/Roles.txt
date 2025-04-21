@@ -1,11 +1,19 @@
-role_name/
-    defaults/
-    files/
-    handlers/
-    meta/
-    tasks/
-    templates/
-    vars/
+playbook.yml
+roles/
+   common/
+     tasks/
+       main.yml
+     handlers/
+       main.yml
+     vars/
+       main.yml
+     meta/
+       main.yml
+     defaults/
+       main.yml
+     files/
+     templates/
+     library/
 
 #Docs:
 https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html
