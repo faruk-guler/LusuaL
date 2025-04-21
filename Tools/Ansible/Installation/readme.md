@@ -36,7 +36,7 @@ ansible all -m ping
 ```
 # #Uninstall Ansible On Debian/RHELL:
 ```
-sudo yum remove ansible [other similar commands]
+#sudo yum remove ansible [other similar commands]
 #sudo apt remove ansible
 #sudo apt remove ansible-core
 #sudo apt remove sshpass
