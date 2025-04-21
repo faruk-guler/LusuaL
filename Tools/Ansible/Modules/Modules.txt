@@ -2,9 +2,9 @@
 ## Modules 
 #########################
 
-ansible-doc -l [List Modules]
+ansible-doc -l [List All Available Modules]
 ansible-doc -l | grep win_ [List Modules Windows]
-ansible-doc apt [information Modules]
+ansible-doc apt [Get Help for a Specific Module]
 ansible-doc win_ping [information Modules]
 
 >> Commonly Used Linux Modules:
