@@ -1,3 +1,4 @@
+🚀 2. Running Ad-Hoc Commands (Quick Tasks Without a Playbook)
 ---------------------------------------
 ## Linux Hosts Modules (Defaults)
 ---------------------------------------
