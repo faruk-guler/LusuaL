@@ -11,5 +11,5 @@ ansible-playbook -i debians-hosts.ini nginx-deploy.yml [Custom hostfile]
 
 # Useful Ansible Commands:
 ansible-playbook playbook.yml --syntax-check [Check Playbook Syntax]
-ansible-playbook playbook.yml --check [ansible-playbook playbook.yml --check]
+ansible-playbook playbook.yml --check [Dry Run Mode]
 ------
