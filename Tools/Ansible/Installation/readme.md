@@ -36,6 +36,12 @@ ansible all -m ping
 ```
 # #Uninstall Ansible
 ```
-ansible-inventory --graph
-ansible all -m ping
+#sudo apt remove ansible
+#sudo apt remove ansible-core
+#sudo apt remove sshpass
+sudo apt autoremove
+sudo apt clean
+
+#sudo rm -rf /etc/ansible
+#sudo rm -rf ~/.ansible
 ```
