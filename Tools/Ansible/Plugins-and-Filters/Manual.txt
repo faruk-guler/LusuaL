@@ -1,0 +1,10 @@
+#######################
+# Plugins and Filters
+#######################
+
+Ansible plugin and filter structures are used to increase modularity and define custom behaviors.
+
+For example; custom connection types, different inventory sources, callbacks that customize output, or Jinja2 filters.
+
+# For more information:
+🔗 https://docs.ansible.com/ansible/latest/plugins/plugins.html
