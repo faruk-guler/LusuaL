@@ -1,5 +1,6 @@
-# Ad-Hoc Commands: (Quick Tasks Without a Playbook) 🚀🚀🚀
-
+###################
+# Ad-Hoc Commands: 🚀🚀🚀 (Quick Tasks Without a Playbook)
+###################
 ansible all -m ping
 ansible all -m setup
 ansible all -m command -a "uptime"
