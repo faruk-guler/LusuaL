@@ -1,4 +1,4 @@
-# Ansible Galaxy 🌍🌍🌍
+# Ansible Galaxy Playbooks 🌍🌍🌍
 It is a ready-made playbook and role repository for Ansible.
 https://galaxy.ansible.com/ui/
 ansible-galaxy search mysql
