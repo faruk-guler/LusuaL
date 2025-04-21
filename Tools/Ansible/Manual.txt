@@ -38,6 +38,7 @@ ansible all -m user -a "name=faruk state=present" --become
 # [win_shell Modules:]
 ansible all -m win_shell -a "ipconfig /all"
 ansible all -m win_shell -a "systeminfo.exe" [get sysinfo]
+ansible anatolia -m win_shell -a "systeminfo | find 'System Boot Time'"
 
 # [Other Modules:]
 ansible windows -m win_copy -a 'src=/tmp/test.txt dest="C:\\dnslogs\\test.txt"'
