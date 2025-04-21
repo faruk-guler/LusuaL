@@ -3,11 +3,12 @@
 ##############################
 Ansible Galaxy Collection is a structure that brings together and packages modules, roles, playbook examples, plugins, and other content in Ansible. This makes complex structures easier to manage and reusable.
 
-ansible-galaxy collection init # Creates a new collection skeleton
+ansible-galaxy collection init <name> # Creates a new collection skeleton
 ansible-galaxy collection list # Lists installed collections
-ansible-galaxy collection build # Packages the collection
-ansible-galaxy collection publish # Uploads to Galaxy
-ansible-galaxy collection install <name> --upgrade # Install/update collection
+ansible-galaxy collection build # Packages the collection (tar.gz)
+ansible-galaxy collection publish <file> # Uploads the packaged collection to Galaxy
+ansible-galaxy collection install <name> # Installs a collection
+ansible-galaxy collection install <name> --upgrade # Updates the installed collection
 
 #Docs:
 https://galaxy.ansible.com/ui/
