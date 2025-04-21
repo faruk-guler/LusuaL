@@ -1,4 +1,8 @@
-🚀 2. Running Ad-Hoc Commands (Quick Tasks Without a Playbook)
+🚀 Ad-Hoc Commands (Quick Tasks Without a Playbook)
+
+example: ansible all -m setup
+example: ansible all -m command -a "uptime"
+
 ---------------------------------------
 ## Linux Hosts Modules (Defaults)
 ---------------------------------------
