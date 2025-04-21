@@ -34,8 +34,9 @@ cd /etc/ansible/roles
 ansible-inventory --graph
 ansible all -m ping
 ```
-# #Uninstall Ansible
+# #Uninstall Ansible On Debian/RHELL:
 ```
+sudo yum remove ansible -y
 #sudo apt remove ansible
 #sudo apt remove ansible-core
 #sudo apt remove sshpass
