@@ -1,5 +1,5 @@
 ####################
-Ansible Vault
+# Ansible Vault:
 ####################
 
 Ansible Vault encrypts sensitive data during configuration management.
