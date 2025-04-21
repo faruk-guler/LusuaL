@@ -29,7 +29,7 @@ ansible --version
 cd /etc/ansible/playbooks
 cd /etc/ansible/roles
 ```
-# Check Conf.
+# Conf. Check
 ```
 ansible-inventory --graph
 ansible all -m ping
