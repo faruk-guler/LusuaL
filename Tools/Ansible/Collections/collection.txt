@@ -12,7 +12,7 @@ ansible-galaxy collection install <name> # Installs a collection
 ansible-galaxy collection install <name> --upgrade # Updates the installed collection
 
 #Example:
-ansible-galaxy collection install ansible.windows  # Installs a windows collection
+ansible-galaxy collection install ansible.windows  # Install a windows collection
 
 #Docs:
 https://galaxy.ansible.com/ui/
