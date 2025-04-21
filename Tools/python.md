@@ -1,21 +1,3 @@
----
-title: Python
-category: Python
-layout: 2017/sheet
-tags: [Featured]
-updated: 2020-12-29
-keywords:
-    - "python"
-    - "python cheat sheet"
-prism_languages: [python]
-intro: |
-  Python cheat sheet 
----
-
-Shortcuts
----------
-{: .-two-column}
-
 ## Basics
 
 ### ABC Basics
