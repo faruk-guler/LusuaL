@@ -1,5 +1,5 @@
 - name: Grant Sudo Access
-  ansible.builtin.lineinfile:.
+  ansible.builtin.lineinfile:
     path: /etc/sudoers
     line: "developer ALL=(ALL) NOPASSWD: ALL"
     state: present
