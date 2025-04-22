@@ -11,13 +11,14 @@ ansible-galaxy list # Lists installed roles
 
 cd ~/roles/
 <role_name>/
-    ├── defaults/
-    ├── files/
-    ├── handlers/
-    ├── meta/
-    ├── tasks/
-    ├── templates/
-    └── vars/
+    ├── defaults/ - default variables for the role.
+    ├── files/ - contains files which can be deployed via this role.
+    ├── handlers/ - contains handlers, which may be used by this role or outside of this role.
+    ├── meta/ - defines some meta data for this role.
+    ├── tasks/ - contains the main list of tasks to be executed by the role.
+    ├── templates/ - contains templates which can be deployed via this role.
+    ├── vars/ - other variables for the role.
+    └── tests - contains tests for the role.
 
 #Docs:
 https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html
