@@ -1,0 +1,8 @@
+---
+- name: Disable WinRM
+  include_tasks: disable.yml
+  when: not winrm_configuration_enable | bool
+
+- name: Enable WinRM
+  include_tasks: enable.yml
+  when: winrm_configuration_enable | bool

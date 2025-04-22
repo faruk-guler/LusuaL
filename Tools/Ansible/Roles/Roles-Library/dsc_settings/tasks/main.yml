@@ -1,0 +1,42 @@
+---
+- name: Verify DSC settings format
+  assert:
+    that:
+      - item.keys() | sort == ['setting', 'resource_name', 'parameters'] | sort or
+        item.keys() | sort == ['setting', 'resource_name', 'parameters', 'reboot'] | sort
+      - item.setting is string
+      - item.resource_name is string
+      - item.parameters is mapping
+      - item.parameters | length > 0
+    fail_msg: |
+      Invalid or incomplete DSC setting:
+
+      {{ item | to_nice_yaml }}
+    quiet: true
+  loop: "{{ dsc_settings | select }}"
+  loop_control:
+    label: "{{ item.setting | default(omit) }}"
+
+# Set inject_facts_as_vars = False to avoid warnings
+- name: Apply DSC settings
+  ansible.windows.win_dsc:
+    resource_name: "{{ item.resource_name }}"
+    args: "{{ item.parameters }}"
+  register: dsc_config
+  loop: "{{ dsc_settings | select }}"
+  loop_control:
+    label: "{{ item.setting }}"
+
+- name: Reboot system
+  vars:
+    reboot_needed: "{{ dsc_config.results
+                       | selectattr('item.reboot', 'defined')
+                       | selectattr('item.reboot', 'equalto', true)
+                       | selectattr('changed', 'equalto', true) | length > 0 }}"
+  ansible.windows.win_reboot:
+    reboot_timeout: 600
+    msg: "Ansible reboot after DSC changes"
+  when:
+    - dsc_settings_reboot | bool
+    - dsc_config is changed
+    - reboot_needed

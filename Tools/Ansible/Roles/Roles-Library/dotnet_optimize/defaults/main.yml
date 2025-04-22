@@ -1,0 +1,7 @@
+---
+# Compile PowerShell assemblies
+# used with Ansible connections
+dotnet_optimize_powershell: true
+
+# Compile all installed assemblies
+dotnet_optimize_all_assemblies: false

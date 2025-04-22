@@ -1,0 +1,81 @@
+---
+- name: Configure NTFS Last Access Time updates
+  ansible.windows.win_regedit:
+    path: HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem
+    name: NtfsDisableLastAccessUpdate
+    type: DWord
+    data: "{{ 0x80000000 if ntfs_last_access_time_update | bool else 0x80000001 }}"
+
+- name: Configure automatic page file setting
+  community.windows.win_pagefile:
+    automatic: "{{ true if page_file_size == 'auto' else false }}"
+  register: page_file_automatic
+
+- name: Reboot system
+  ansible.windows.win_reboot:
+    reboot_timeout: 600
+    msg: "Ansible reboot after configuring page file"
+  when:
+    - page_file_reboot | bool
+    - page_file_automatic is changed
+    - page_file_size == 'auto' or
+      page_file_size == 'disabled' or
+      page_file_size == 'system'
+
+- name: Check page file configuration
+  community.windows.win_pagefile:
+  register: page_file_status
+
+- name: Configure page file
+  vars:
+    disable_page_file: "{{ true if page_file_size == 'disabled' else false }}"
+    static_page_file: "{{ true if page_file_size != 'auto' and
+                                  page_file_size != 'disabled' and
+                                  page_file_size != 'system' else false }}"
+    page_file_state: "{{ 'query' if page_file_size == 'auto' else 'present' }}"
+    override_needed: "{{ true if page_file_size != 'auto' and page_file_size != 'system' and
+                                 (page_file_size == 'disabled' or
+                                  (page_file_status.pagefiles | length and
+                                   (page_file_size != page_file_status.pagefiles[0].initial_size or
+                                    page_file_size != page_file_status.pagefiles[0].maximum_size))) else false }}"
+    static_to_system: "{{ page_file_size == 'system' and page_file_status.pagefiles | length and
+                          (page_file_status.pagefiles[0].initial_size != 0 or
+                           page_file_status.pagefiles[0].maximum_size != 0) }}"
+  community.windows.win_pagefile:
+    state: "{{ 'absent' if disable_page_file else page_file_state }}"
+    drive: "{{ page_file_disk if static_page_file or page_file_size == 'system' else omit }}"
+    automatic: "{{ true if page_file_size == 'auto' else false }}"
+    remove_all: "{{ true if disable_page_file else false }}"
+    override: "{{ override_needed or static_to_system }}"
+    initial_size: "{{ page_file_size | int if static_page_file else omit }}"
+    maximum_size: "{{ page_file_size | int if static_page_file else omit }}"
+    system_managed: "{{ true if page_file_size == 'system' else false }}"
+  register: page_file_config
+
+- name: Reboot system
+  ansible.windows.win_reboot:
+    reboot_timeout: 600
+    msg: "Ansible reboot after configuring page file"
+  when:
+    - page_file_reboot | bool
+    - page_file_config is changed
+
+- name: Check current power scheme
+  check_mode: false
+  ansible.windows.win_command: powercfg.exe /list
+  register: power_scheme_info
+  changed_when: false
+
+- name: Configure power scheme
+  vars:
+    current_name: "{{ (((power_scheme_info.stdout_lines | select('search', '\\*$'))[0] | split('('))[1]
+                        | replace(' ', '_'))[:-3] | lower }}"
+    current_guid: "{{ ((power_scheme_info.stdout_lines | select('search', '\\*$'))[0] | split(' '))[3] }}"
+    wanted_name: "{{ power_scheme | replace('_', ' ') }}"
+    wanted_guid: "{{ ((power_scheme_info.stdout_lines
+                       | select('search', wanted_name, ignorecase=true))[0] | split(' '))[3] }}"
+  ansible.windows.win_powershell:
+    error_action: stop
+    script: |
+      powercfg.exe /setactive {{ wanted_guid }}
+  when: current_guid != wanted_guid

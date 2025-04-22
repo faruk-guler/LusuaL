@@ -1,0 +1,9 @@
+---
+# Open Server Manager at logon
+user_experience_server_manager_at_logon: true
+
+# Enable or disable new network location wizard
+user_experience_network_location_wizard: false
+
+# Show or hide last user name on Welcome Screen
+user_experience_show_last_user_name: true

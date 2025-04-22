@@ -1,0 +1,33 @@
+---
+- name: Fail if Administrator trying to disable self
+  fail:
+    msg: "Refusing to disable Administrator own account."
+  when:
+    - not accounts_local_administrator_enable | bool
+    - ansible_user | lower == 'administrator'
+
+- name: Disable built-in Administrator account
+  ansible.windows.win_user:
+    name: Administrator
+    account_disabled: true
+  when: not accounts_local_administrator_enable | bool
+
+- name: Enable built-in Administrator account
+  ansible.windows.win_user:
+    name: Administrator
+    account_disabled: false
+  when: accounts_local_administrator_enable | bool
+
+- name: Configure password expiration for Ansible user
+  ansible.windows.win_user:
+    name: "{{ ansible_user }}"
+    password_never_expires: "{{ not accounts_local_ansible_user_password_expires | bool }}"
+  when: ansible_user | lower != 'administrator'
+
+- name: Configure showing Ansible user on Welcome Screen
+  ansible.windows.win_regedit:
+    path: HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList
+    name: "{{ ansible_user }}"
+    type: DWord
+    data: "{{ 1 if accounts_local_ansible_user_show_on_welcome | bool else 0 }}"
+  when: ansible_user | lower != 'administrator'
