@@ -1,6 +1,8 @@
-###################
-# Ad-Hoc Commands: 🚀🚀🚀 (Quick Tasks Without a Playbook)
-###################
+####################################
+# Ansible Ad-hoc Command Structure: (Quick Tasks Without a Playbook)
+####################################
+
+ansible [pattern] -m [module] -a "[module options]"
 ansible all -m ping
 ansible all -m setup
 ansible all -m command -a "uptime"
