@@ -31,6 +31,7 @@ cd /etc/ansible/roles
 ```
 # Conf. Check
 ```
+ansible-config dump
 ansible-inventory --graph
 ansible all -m ping
 ```
