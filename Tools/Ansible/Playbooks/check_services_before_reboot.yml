@@ -1,0 +1,14 @@
+---
+- name: Check running services before reboot
+  hosts: all
+  become: yes
+  tasks:
+    - name: Gather running services
+      shell: |
+        systemctl list-units --type=service --state=running --no-pager
+      register: running_services
+
+    - name: Save running services to a file
+      copy:
+        content: "{{ running_services.stdout }}"
+        dest: "/tmp/running_services_before_reboot_{{ ansible_hostname }}.txt"

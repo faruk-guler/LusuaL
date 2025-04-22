@@ -1,0 +1,34 @@
+---
+- name: Create user and setup SSH
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create user svc_nixadm
+      user:
+        name: svc_nixadm
+        create_home: yes
+
+    - name: Create .ssh directory
+      file:
+        path: /home/svc_nixadm/.ssh
+        state: directory
+        owner: svc_nixadm
+        group: svc_nixadm
+        mode: '0700'
+
+    - name: Create authorized_keys file
+      copy:
+        dest: /home/svc_nixadm/.ssh/authorized_keys
+        content: |
+          ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMQAcuMt5A9V89BHMaLIYmrMGbQJPo4LGA+d9TsMKuiIxrVfl7vs70ByoxNKQ0j3/ciUYMnxH8gV/QTRGRHn3Xs= svc_nixadm@uksdnnessus01
+        owner: svc_nixadm
+        group: svc_nixadm
+        mode: '0600'
+
+    - name: Ensure correct permissions on .ssh directory
+      file:
+        path: /home/svc_nixadm/.ssh
+        state: directory
+        owner: svc_nixadm
+        group: svc_nixadm
+        mode: '0700'

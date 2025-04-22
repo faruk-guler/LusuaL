@@ -1,0 +1,7 @@
+- name: Reboot Windows Servers
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Reboot the server
+      win_reboot:
+        reboot_timeout: 600

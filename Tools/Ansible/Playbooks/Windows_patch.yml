@@ -1,0 +1,32 @@
+---
+- name: Patch Windows Servers
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: Install Windows Updates
+      win_updates:
+        category_names:
+          - SecurityUpdates
+          - CriticalUpdates
+        reboot: yes
+      register: update_result
+
+    - name: Debug update result
+      debug:
+        var: update_result
+
+    - name: Reboot system if required
+      win_reboot:
+        reboot_timeout: 600
+        test_command: whoami
+      when: update_result.reboot_required
+
+    - name: Display update status (Updates Installed)
+      debug:
+        msg: "Updates installed: {{ update_result.installed_update_count }}"
+      when: update_result.installed_update_count > 0
+
+    - name: No updates needed
+      debug:
+        msg: "No updates were installed."
+      when: update_result.installed_update_count == 0

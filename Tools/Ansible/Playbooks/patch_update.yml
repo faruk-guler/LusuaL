@@ -1,0 +1,166 @@
+---
+- name: Check Filesystem, Repository Status, Patch Servers, and Check Reboot
+  hosts: all
+  become: yes
+  vars:
+    min_space_mb: 500
+    status_file: "/home/svc_aux/backup/patchstatus/system_status.csv"
+
+  tasks:
+    - name: Remove existing status file
+      ansible.builtin.file:
+        path: "{{ status_file }}"
+        state: absent
+      delegate_to: 10.1.34.26
+      run_once: true
+
+    - name: Create new status file with header
+      ansible.builtin.lineinfile:
+        path: "{{ status_file }}"
+        line: "hostname,filesystem_status,filesystem_details,repo_status,repo_details,patch_status,updated_packages,reboot_required"
+        create: yes
+      delegate_to: 10.1.34.26
+      run_once: true
+
+    - name: Initialize status
+      set_fact:
+        system_status:
+          hostname: "{{ inventory_hostname }}"
+          filesystem_status: "SUCCESS"
+          filesystem_details: "All filesystems have sufficient space"
+          repo_status: "SUCCESS"
+          repo_details: "No issues detected"
+          patch_status: "NOT PATCHED"
+          updated_packages: "N/A"
+          reboot_required: "NO"
+
+    # Filesystem Check
+    - name: Check available space in filesystems
+      ansible.builtin.shell: df -m {{ item }} | awk 'NR==2 {print $4}'
+      register: available_space
+      loop:
+        - /
+        - /boot
+        - /var
+      ignore_errors: yes
+
+    - name: Verify sufficient space
+      ansible.builtin.set_fact:
+        insufficient_space: "{{ insufficient_space | default([]) + [item.item] }}"
+      loop: "{{ available_space.results }}"
+      when: item.stdout | int < min_space_mb
+
+    - name: Set filesystem check status
+      set_fact:
+        system_status: "{{ system_status | combine({
+          'filesystem_status': 'FAILED',
+          'filesystem_details': 'Insufficient space in ' + (insufficient_space | join(', '))
+        }) }}"
+      when: insufficient_space is defined and insufficient_space | length > 0
+
+    # Repository Check
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: yes
+      register: apt_update_result
+      ignore_errors: yes
+
+    - name: Check if repos are up-to-date and valid
+      ansible.builtin.command: apt-get update
+      args:
+        warn: false
+      register: apt_check_result
+      changed_when: false
+      failed_when: false
+
+    - name: Set repository check status
+      set_fact:
+        system_status: "{{ system_status | combine({
+          'repo_status': 'FAILED',
+          'repo_details': apt_update_result.msg if apt_update_result is failed else (apt_check_result.stderr if apt_check_result.rc != 0 else 'No issues detected')
+        }) }}"
+      when: apt_update_result is failed or apt_check_result.rc != 0
+
+    # Patch servers only if both checks pass
+    - name: Check for and apply updates
+      block:
+        - name: Check for available updates
+          ansible.builtin.shell: apt-get upgrade --dry-run | grep -Po '^[0-9]+ (?=upgraded)'
+          register: update_check
+          changed_when: false
+
+        - name: Set fact for available updates
+          set_fact:
+            updates_available: "{{ update_check.stdout | int > 0 }}"
+
+        - name: Apply updates if available
+          ansible.builtin.apt:
+            upgrade: dist
+            update_cache: yes
+          when: updates_available
+          register: patch_result
+
+        - name: Get list of updated packages
+          ansible.builtin.shell: grep -E "^Unpacking|^Setting up" /var/log/dpkg.log | tail -n 50 | awk '{print $4}' | sort | uniq
+          register: updated_packages
+          when: patch_result.changed
+
+        - name: Check if reboot is required
+          ansible.builtin.stat:
+            path: /var/run/reboot-required
+          register: reboot_required
+
+        - name: Set patch status
+          set_fact:
+            system_status: "{{ system_status | combine({
+              'patch_status': 'PATCHING SUCCESSFUL' if patch_result.changed else 'NO PATCHES AVAILABLE TO PATCH',
+              'updated_packages': updated_packages.stdout_lines | default([]) | join(', '),
+              'reboot_required': 'YES' if reboot_required.stat.exists else 'NO'
+            }) }}"
+      when:
+        - system_status is defined
+        - system_status.filesystem_status is defined
+        - system_status.filesystem_status == "SUCCESS"
+        - system_status.repo_status is defined
+        - system_status.repo_status == "SUCCESS"
+      rescue:
+        - name: Set patch status on failure
+          set_fact:
+            system_status: "{{ system_status | combine({
+              'patch_status': 'PATCHING FAILED',
+              'updated_packages': 'Error occurred during patching',
+              'reboot_required': 'UNKNOWN'
+            }) }}"
+
+    # Update Status File
+    - name: Update status file
+      ansible.builtin.lineinfile:
+        path: "{{ status_file }}"
+        line: "{{ system_status.hostname }},{{ system_status.filesystem_status }},{{ system_status.filesystem_details | replace(',', ';') }},{{ system_status.repo_status }},{{ system_status.repo_details | replace(',', ';') }},{{ system_status.patch_status }},{{ system_status.updated_packages }},{{ system_status.reboot_required }}"
+        insertafter: EOF
+      delegate_to: 10.1.34.26
+      when: inventory_hostname != '10.1.34.26'
+
+    - name: Display system status
+      ansible.builtin.debug:
+        var: system_status
+      when: inventory_hostname != '10.1.34.26'
+
+- name: Convert CSV to HTML on remote server
+  hosts: 10.1.34.26
+  remote_user: svc_aux
+  become: yes
+  become_method: sudo
+  become_user: root
+  gather_facts: yes
+  tasks:
+    - name: Wait for CSV file to be created
+      wait_for:
+        path: /home/svc_aux/backup/patchstatus/system_status.csv
+        state: present
+        timeout: 600  # Increase timeout if needed
+
+    - name: Convert CSV to HTML
+      command: python3 /home/svc_aux/backup/patchstatus/csv_to_htmpl.py
+      args:
+        chdir: /home/svc_aux/backup/patchstatus/

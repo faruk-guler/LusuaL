@@ -1,0 +1,55 @@
+---
+- name: Save running services before reboot
+  hosts: all
+  tasks:
+    - name: Gather facts
+      ansible.builtin.setup:
+        gather_subset: all
+      when: inventory_hostname != '10.1.34.26'
+
+    - name: Get the hostname with domain using hostname -f
+      ansible.builtin.command: uname -n
+      register: fqdn_output
+      when: inventory_hostname != '10.1.34.26'
+
+    - name: Create directory using FQDN
+      ansible.builtin.file:
+        path: "/home/svc_aux/backup/files/{{ fqdn_output.stdout }}"
+        state: directory
+      delegate_to: 10.1.34.26
+      when: inventory_hostname != '10.1.34.26'
+
+    - name: Clear previous data before reboot
+      ansible.builtin.file:
+        path: "/home/svc_aux/backup/files/{{ fqdn_output.stdout }}/running_services_before_reboot.txt"
+        state: absent
+      delegate_to: 10.1.34.26
+      when: inventory_hostname != '10.1.34.26'
+
+    - name: Collect running services before reboot
+      ansible.builtin.shell: >
+        systemctl list-units --type=service --state=running | 
+        awk 'NR>1 && $1 !~ /^(LOAD|ACTIVE|SUB)$/ {print $1}' | 
+        awk 'NF > 0'
+      register: running_services_before_reboot
+      when: inventory_hostname != '10.1.34.26'
+
+    - name: Save running services before reboot to a file on remote server
+      ansible.builtin.copy:
+        content: "{{ running_services_before_reboot.stdout }}"
+        dest: "/home/svc_aux/backup/files/{{ fqdn_output.stdout }}/running_services_before_reboot.txt"
+      delegate_to: 10.1.34.26
+      when: inventory_hostname != '10.1.34.26'
+
+- name: Convert CSV to HTML on remote server
+  hosts: 10.1.34.26
+  remote_user: svc_aux
+  become: yes
+  become_method: sudo
+  become_user: root
+  gather_facts: yes
+  tasks:
+    - name: Convert CSV to HTML
+      command: python3 /home/svc_aux/backup/files/new_convert.py
+      args:
+        chdir: /home/svc_aux/backup/files

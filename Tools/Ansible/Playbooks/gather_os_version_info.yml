@@ -1,0 +1,56 @@
+---
+- name: Gather system information
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: Get IP address
+      ansible.builtin.set_fact:
+        ip_address: "{{ ansible_default_ipv4.address }}"
+
+    - name: Get OS version
+      ansible.builtin.set_fact:
+        os_version: "{{ ansible_distribution }} {{ ansible_distribution_version }}"
+
+    - name: Get hostname using uname -n
+      ansible.builtin.command:
+        cmd: uname -n
+      register: uname_output
+
+    - name: Set hostname fact
+      ansible.builtin.set_fact:
+        hostname: "{{ uname_output.stdout }}"
+
+    - name: Format data for CSV
+      ansible.builtin.set_fact:
+        csv_data: "{{ hostname }},{{ ip_address }},{{ os_version }}"
+
+- name: Update central CSV file
+  hosts: 10.1.34.26
+  become: yes
+  become_method: sudo
+  become_user: root
+  vars:
+    ansible_become_pass: just44now
+  tasks:
+    - name: Ensure directory exists
+      ansible.builtin.file:
+        path: /home/svc_aux/backup/All_Servers_information
+        state: directory
+        mode: '0775'
+        owner: root
+        group: root
+
+    - name: Create or truncate CSV file with header
+      ansible.builtin.copy:
+        content: "Hostname,IP Address,OS Version\n"
+        dest: "/home/svc_aux/backup/All_Servers_information/All_server_information.csv"
+        mode: '0664'
+        owner: svc_aux
+        group: svc_aux
+
+    - name: Append gathered information to CSV file
+      ansible.builtin.lineinfile:
+        path: "/home/svc_aux/backup/All_Servers_information/All_server_information.csv"
+        line: "{{ hostvars[item]['csv_data'] }}"
+      loop: "{{ groups['all'] }}"
+      when: hostvars[item]['csv_data'] is defined

@@ -1,0 +1,227 @@
+---
+- name: Gather system and service information
+  hosts: all
+  gather_facts: yes
+  become: yes
+  tasks:
+    - name: Get IP address
+      ansible.builtin.set_fact:
+        ip_address: "{{ ansible_default_ipv4.address }}"
+
+    - name: Get OS version
+      ansible.builtin.set_fact:
+        os_version: "{{ ansible_distribution }} {{ ansible_distribution_version }}"
+
+    - name: Get hostname using uname -n
+      ansible.builtin.command:
+        cmd: uname -n
+      register: uname_output
+
+    - name: Set hostname fact
+      ansible.builtin.set_fact:
+        hostname: "{{ uname_output.stdout }}"
+
+    - name: Check for running database services
+      shell: |
+        for db in oracle db2sysc mysqld mariadbd mongod postgres redis-server cassandra; do
+          if pgrep -x $db > /dev/null; then
+            echo "$db is running"
+          fi
+        done
+      register: db_services
+
+    - name: Set database services status if none are running
+      set_fact:
+        db_services_status: "{{ db_services.stdout if db_services.stdout else 'No database is running on this server' }}"
+
+    - name: Get database versions
+      shell: |
+        if pgrep -x oracle > /dev/null; then
+          echo "Oracle DB version: $(sqlplus -v)"
+        elif pgrep -x db2sysc > /dev/null; then
+          echo "DB2 version: $(db2level)"
+        elif pgrep -x mysqld > /dev/null; then
+          echo "MySQL version: $(mysql --version)"
+        elif pgrep -x mariadbd > /dev/null; then
+          echo "MariaDB version: $(mysql --version)"
+        elif pgrep -x mongod > /dev/null; then
+          echo "MongoDB version: $(mongod --version | grep 'db version' | awk '{print $3}')"
+        elif pgrep -x postgres > /dev/null; then
+          echo "PostgreSQL version: $(psql --version)"
+        elif pgrep -x redis-server > /dev/null; then
+          echo "Redis version: $(redis-server --version | awk '{print $3}')"
+        elif pgrep -x cassandra > /dev/null; then
+          echo "Cassandra version: $(cassandra -v)"
+        else
+          echo "No database version found"
+        fi
+      register: db_versions
+
+    - name: Check PHP version
+      shell: |
+        if command -v php > /dev/null 2>&1; then
+          echo "PHP version: $(php -v | grep -oP '^PHP \K[0-9]+\.[0-9]+\.[0-9]+')"
+        else
+          echo "PHP is not installed on this system."
+        fi
+      register: php_version
+
+    - name: Check for running web services
+      shell: |
+        for service in httpd apache2 nginx tomcat lighttpd caddy openresty wildfly jetty glassfish node gunicorn uwsgi; do
+          if pgrep -x $service > /dev/null; then
+            echo "$service is running"
+          fi
+        done
+      register: web_services
+
+    - name: Set web services status if none are running
+      set_fact:
+        web_services_status: "{{ web_services.stdout if web_services.stdout else 'No web services are running' }}"
+
+    - name: Collect all running services
+      shell: systemctl list-units --type=service --state=running | awk 'NR>1 && $1 !~ /^(LOAD|ACTIVE|SUB)$/ {print $1}' | awk 'NF > 0'
+      register: running_services
+
+    - name: Format data for CSV
+      ansible.builtin.set_fact:
+        csv_data: "{{ hostname }},{{ ip_address }},{{ os_version }},\"{{ db_services_status }}\",\"{{ db_versions.stdout | default('No database version found') }}\",{{ php_version.stdout | default('PHP is not installed') }},\"{{ web_services_status }}\",\"{{ running_services.stdout | default('No running services found') }}\""
+
+    - name: Create or clear output file
+      copy:
+        content: ""
+        dest: "/home/svc_aux/{{ hostname }}.txt"
+
+    - name: Write database information to file
+      lineinfile:
+        path: "/home/svc_aux/{{ hostname }}.txt"
+        line: "{{ item }}"
+      with_items:
+        - "Database Information:"
+        - "---------------------"
+        - "{{ db_services_status }}"
+
+    - name: Write database versions to file
+      lineinfile:
+        path: "/home/svc_aux/{{ hostname }}.txt"
+        line: "{{ item }}"
+      with_items:
+        - ""
+        - "Database Versions:"
+        - "------------------"
+        - "{{ db_versions.stdout_lines | join('\n') | default('No database version found') }}"
+
+    - name: Write PHP version to file
+      lineinfile:
+        path: "/home/svc_aux/{{ hostname }}.txt"
+        line: "{{ item }}"
+      with_items:
+        - ""
+        - "PHP Version:"
+        - "------------"
+        - "{{ php_version.stdout | default('PHP is not installed') }}"
+
+    - name: Write web services status to file
+      lineinfile:
+        path: "/home/svc_aux/{{ hostname }}.txt"
+        line: "{{ item }}"
+      with_items:
+        - ""
+        - "Web Services Status:"
+        - "--------------------"
+        - "{{ web_services_status }}"
+
+    - name: Write running services to file
+      lineinfile:
+        path: "/home/svc_aux/{{ hostname }}.txt"
+        line: "{{ item }}"
+      with_items:
+        - ""
+        - "Running Services:"
+        - "----------------"
+        - "{{ running_services.stdout_lines | join('\n') | default('No running services found') }}"
+
+- name: Update central CSV file
+  hosts: 10.1.34.26
+  become: yes
+  become_method: sudo
+  become_user: root
+  vars:
+    ansible_become_pass: just44now
+  tasks:
+    - name: Ensure directory exists
+      ansible.builtin.file:
+        path: /home/svc_aux/backup/All_Servers_information
+        state: directory
+        mode: '0775'
+        owner: root
+        group: root
+
+    - name: Create or truncate CSV file with header
+      ansible.builtin.copy:
+        content: "Hostname,IP Address,OS Version,Database Information,Database Version,PHP Version,Web Services,All Running Services\n"
+        dest: "/home/svc_aux/backup/All_Servers_information/All_server_information.csv"
+        mode: '0664'
+        owner: svc_aux
+        group: svc_aux
+
+    - name: Append gathered information to CSV file
+      ansible.builtin.lineinfile:
+        path: "/home/svc_aux/backup/All_Servers_information/All_server_information.csv"
+        line: "{{ hostvars[item]['csv_data'] }}"
+      loop: "{{ groups['all'] }}"
+      when: 
+        - hostvars[item]['csv_data'] is defined
+        - item != '10.1.34.26'
+
+- name: Save running services before reboot
+  hosts: all
+  tasks:
+    - name: Gather facts
+      ansible.builtin.setup:
+        gather_subset: all
+
+    - name: Get the hostname with domain using hostname -f
+      ansible.builtin.command: hostname -f
+      register: fqdn_output
+
+    - name: Create directory using FQDN
+      ansible.builtin.file:
+        path: "/home/svc_aux/backup/files/{{ fqdn_output.stdout }}"
+        state: directory
+      delegate_to: 10.1.34.26
+
+    - name: Clear previous data before reboot
+      ansible.builtin.file:
+        path: "/home/svc_aux/backup/files/{{ fqdn_output.stdout }}/running_services_before_reboot.txt"
+        state: absent
+      delegate_to: 10.1.34.26
+
+    - name: Collect running services before reboot
+      ansible.builtin.shell: systemctl list-units --type=service --state=running | awk 'NR>1 && $1 !~ /^(LOAD|ACTIVE|SUB)$/ {print $1}' | awk 'NF > 0'
+      register: running_services_before_reboot
+
+    - name: Save running services before reboot to a file on remote server
+      ansible.builtin.copy:
+        content: "{{ running_services_before_reboot.stdout }}"
+        dest: "/home/svc_aux/backup/files/{{ fqdn_output.stdout }}/running_services_before_reboot.txt"
+      delegate_to: 10.1.34.26
+
+- name: Convert CSV to HTML on remote server
+  hosts: 10.1.34.26
+  remote_user: svc_aux
+  become: yes
+  become_method: sudo
+  become_user: root
+  gather_facts: yes
+  tasks:
+    - name: Wait for CSV file to be created
+      wait_for:
+        path: /home/svc_aux/backup/All_Servers_information/All_server_information.csv
+        state: present
+        timeout: 600  # Increase timeout if needed
+
+    - name: Convert CSV to HTML
+      command: python3 /home/svc_aux/backup/All_Servers_information/convert_html.py
+      args:
+        chdir: /home/svc_aux/backup/All_Servers_information/

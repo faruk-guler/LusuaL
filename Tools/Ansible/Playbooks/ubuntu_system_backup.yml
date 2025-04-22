@@ -1,0 +1,123 @@
+---
+- name: Gather system configuration and backup files
+  hosts: all
+  become: true
+  tasks:
+
+    - name: Create base and backup directories
+      file:
+        path: "{{ item }}"
+        state: directory
+        mode: '0775'
+      with_items:
+        - /backup/config
+        - /backup/config/postgres-config-backup/
+        - /backup/config/apache2-config-backup/
+        - /backup/config/nginx-config-backup/
+        - /backup/config/mysql-config-backup/
+        - /backup/config/passwd-backup/
+        - /backup/config/group-backup/
+        - /backup/config/shadow-backup/
+        - /backup/config/fstab-backup/
+        - /backup/config/ssh-config-backup/
+
+    - name: Execute commands and save output to a file
+      shell: |
+        {
+          echo "### uname -a ###";
+          uname -a;
+          echo "### ps aux ###";
+          ps aux;
+          echo "### ifconfig -a ###";
+          ifconfig -a;
+          echo "### ip a ###";
+          ip a;
+          echo "### ip route show ###";
+          ip route show;
+          echo "### fdisk -l ###";
+          fdisk -l;
+          echo "### dpkg-query -l ###";
+          dpkg-query -l;
+          echo "### apt list --installed ###";
+          apt list --installed;
+          echo "### vgdisplay ###";
+          vgdisplay;
+          echo "### lvdisplay ###";
+          lvdisplay;
+          echo "### pvs ###";
+          pvs;
+          echo "### vgs ###";
+          vgs;
+          echo "### lsblk -d ###";
+          lsblk -d;
+          echo "### lsblk ###";
+          lsblk;
+          echo "### blkid ###";
+          blkid;
+          echo "### lsscsi ###";
+          lsscsi;
+          echo "### cat /etc/fstab ###";
+          cat /etc/fstab;
+          echo "### cat /etc/resolv.conf ###";
+          cat /etc/resolv.conf;
+          echo "### mount ###";
+          mount;
+          echo "### cat /etc/*release ###";
+          cat /etc/*release;
+          echo "### cat /etc/hosts ###";
+          cat /etc/hosts;
+          echo "### ls -l /dev/mapper ###";
+          ls -l /dev/mapper;
+          echo "### cat /boot/grub/grub.cfg ###";
+          cat /boot/grub/grub.cfg | grep -v ^#;
+          echo "### lsof -i ###";
+          lsof -i;
+          echo "### systemctl list-units --state=running ###";
+          systemctl list-units --state=running;
+          echo "### systemctl list-unit-files ###";
+          systemctl list-unit-files;
+          echo "### cat /etc/passwd ###";
+          cat /etc/passwd;
+          echo "### cat /etc/shadow ###";
+          cat /etc/shadow;
+          echo "### cat /etc/group ###";
+          cat /etc/group;
+          echo "### ls -l /boot/ ###";
+          ls -l /boot/;
+          echo "### lscpu ###";
+          lscpu;
+          echo "### df -hT ###";
+          df -hT;
+          echo "### df -h -x devtmpfs -x tmpfs | grep -v 'snapshot' ###";
+          df -h -x devtmpfs -x tmpfs | grep -v 'snapshot';
+          echo "### ip a | grep -i 'inet' | grep -i ens* ###";
+          ip a | grep -i 'inet' | grep -i ens*;
+          echo "### cat /var/log/dpkg.log* ###";
+          cat /var/log/dpkg.log*;
+          echo "### dpkg -l ###";
+          dpkg -l;
+          echo "### dpkg -s ###";
+          dpkg -s;
+        } > /root/system_configuration_output_$(date +\%F).txt
+
+    - name: Backup configuration files
+      copy:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        owner: root
+        group: root
+        mode: '0755'
+        force: true
+        remote_src: true
+      with_items:
+        - { src: /etc/ssh/sshd_config, dest: /backup/config/ssh-config-backup/ }
+        - { src: /etc/passwd, dest: /backup/config/passwd-backup/passwd.old }
+        - { src: /etc/group, dest: /backup/config/group-backup/group.old }
+        - { src: /etc/shadow, dest: /backup/config/shadow-backup/shadow.old }
+        - { src: /etc/fstab, dest: /backup/config/fstab-backup/fstab.old }
+        - { src: /etc/apache2/, dest: /backup/config/apache2-config-backup/ }
+        - { src: /etc/nginx/, dest: /backup/config/nginx-config-backup/ }
+        - { src: /etc/mysql/my.cnf, dest: /backup/config/mysql-config-backup/ }
+        - { src: /etc/postgresql/13/main/postgresql.conf, dest: /backup/config/postgres-config-backup/ }
+        - { src: /etc/postgresql/13/main/pg_hba.conf, dest: /backup/config/postgres-config-backup/ }
+      ignore_errors: yes

@@ -1,0 +1,40 @@
+---
+- name: Check repositories and updates
+  hosts: all
+  become: yes
+  tasks:
+    - name: Determine OS type
+      ansible.builtin.command: uname -a
+      register: os_type
+
+    - name: Check repositories and updates for Ubuntu/Debian
+      when: "'Ubuntu' in ansible_distribution or 'Debian' in ansible_distribution"
+      block:
+        - name: Update package list
+          ansible.builtin.apt:
+            update_cache: yes
+          register: apt_update_result
+
+        - name: List available updates
+          ansible.builtin.shell: apt list --upgradable
+          register: apt_upgrades
+
+        - name: Display available updates
+          ansible.builtin.debug:
+            msg: "{{ apt_upgrades.stdout_lines }}"
+
+    - name: Check repositories and updates for CentOS/Rocky Linux
+      when: "'CentOS' in ansible_distribution or 'Rocky' in ansible_distribution"
+      block:
+        - name: Clean yum cache
+          ansible.builtin.command: yum clean all
+          register: yum_clean_result
+
+        - name: Check for updates
+          ansible.builtin.command: yum check-update
+          register: yum_check_update_result
+          failed_when: false
+
+        - name: Display available updates
+          ansible.builtin.debug:
+            msg: "{{ yum_check_update_result.stdout_lines }}"

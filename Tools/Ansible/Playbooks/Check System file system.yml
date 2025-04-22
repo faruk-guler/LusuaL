@@ -1,0 +1,85 @@
+---
+- name: Check disk usage and generate a consolidated report
+  hosts: "{{ hosts | default('all') }}"
+  gather_facts: no
+  tasks:
+
+    - name: Get disk usage for all filesystems (excluding headers)
+      shell: df -h --output=target,pcent | tail -n +2
+      register: disk_usage_all
+
+    - name: Get the hostname (uname -n)
+      command: uname -n
+      register: system_hostname
+
+    - name: Analyze disk usage and generate a report
+      set_fact:
+        disk_report: |
+          **HOSTNAME: {{ inventory_hostname.upper() }} ({{ ansible_host }} - {{ system_hostname.stdout }})**
+          {% set critical_filesystems = [] %}
+          {% for line in disk_usage_all.stdout_lines %}
+            {% set mount, usage = line.split() %}
+            {% set usage_percent = usage[:-1] | int %}
+            {% if usage_percent > 80 and not (mount.startswith('/var/lib/docker') or mount.startswith('/snap')) %}
+              {{ critical_filesystems.append(mount) }}
+            {% endif %}
+          {% endfor %}
+          
+          {% if critical_filesystems | length > 0 %}
+          The following file systems crossed 80% usage:
+          {% for fs in critical_filesystems %}
+          - {{ fs }}
+          {% endfor %}
+          {% else %}
+          All file systems are good
+          {% endif %}
+
+          ==============================================================================
+
+    - name: Save disk report to temporary file on the AWX controller
+      local_action:
+        module: copy
+        content: "{{ disk_report }}\n"
+        dest: /tmp/disk_usage_{{ inventory_hostname }}.txt
+      when: inventory_hostname != '10.1.34.26'
+
+    - name: Consolidate all reports into a single file on the AWX controller
+      run_once: true
+      delegate_to: localhost
+      shell: |
+        > /tmp/Disk_usage
+        for file in /tmp/disk_usage_*.txt; do
+          cat "$file" >> /tmp/Disk_usage
+        done
+
+    - name: Transfer consolidated report to the remote server
+      run_once: true
+      copy:
+        src: /tmp/Disk_usage
+        dest: /home/svc_aux/backup/Diskspace/Disk_usage
+        remote_src: no
+      delegate_to: 10.1.34.26
+
+    - name: Clean up temporary files on the AWX controller
+      run_once: true
+      delegate_to: localhost
+      shell: rm -f /tmp/disk_usage_*.txt /tmp/Disk_usage
+
+- name: Convert CSV to HTML on remote server
+  hosts: 10.1.34.26
+  remote_user: svc_aux
+  become: yes
+  become_method: sudo
+  become_user: root
+  gather_facts: yes
+  tasks:
+    - name: Wait for CSV file to be created
+      wait_for:
+        path: /home/svc_aux/backup/Diskspace/Disk_usage
+        state: present
+        timeout: 600  # Increase timeout if needed
+
+    - name: Convert CSV to HTML
+      command: python3 /home/svc_aux/backup/Diskspace/conver_to_html.py
+      args:
+        chdir: /home/svc_aux/backup/Diskspace/

@@ -1,0 +1,25 @@
+---
+- name: Check running services after reboot and compare
+  hosts: all
+  become: yes
+  tasks:
+    - name: Gather running services
+      shell: |
+        systemctl list-units --type=service --state=running --no-pager
+      register: running_services_after
+
+    - name: Save running services after reboot to a file
+      copy:
+        content: "{{ running_services_after.stdout }}"
+        dest: "/tmp/running_services_after_reboot_{{ ansible_hostname }}.txt"
+
+    - name: Compare running services before and after reboot
+      shell: |
+        diff /tmp/running_services_before_reboot_{{ ansible_hostname }}.txt \
+             /tmp/running_services_after_reboot_{{ ansible_hostname }}.txt || true
+      register: service_diff
+      failed_when: false
+
+    - name: Display the difference in services
+      debug:
+        msg: "{{ service_diff.stdout if service_diff.stdout else 'No differences in services before and after reboot' }}"

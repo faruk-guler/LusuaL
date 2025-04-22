@@ -1,0 +1,8 @@
+{{ inventory_hostname }},
+{{ (root_disk_space.stdout | int >= min_disk_space_mb) and
+   (var_disk_space.stdout | int >= min_disk_space_mb) and
+   (boot_disk_space.stdout | int >= min_disk_space_mb) | ternary('SUCCESS', 'FAILED') }},
+{{ repo_status.rc == 0 | ternary('SUCCESS', 'FAILED') }},
+{{ patch_result is succeeded | ternary('SUCCESS', 'FAILED') }},
+{{ patch_list.stdout_lines | join(', ') | default('No patches available') }},
+{{ reboot_required.stdout.strip() | default('no') }}

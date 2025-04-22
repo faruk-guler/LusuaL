@@ -1,0 +1,25 @@
+---
+- name: Patch Ubuntu Server
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ensure apt is updated
+      apt:
+        update_cache: yes
+
+    - name: Perform apt autoremove
+      apt:
+        autoremove: yes
+
+    - name: Perform apt autoclean
+      apt:
+        autoclean: yes
+
+    - name: Upgrade all packages
+      apt:
+        upgrade: dist
+
+    - name: Reboot if required
+      reboot:
+        msg: "Rebooting after updates"
+      when: ansible_facts['pkg_mgr'] == 'apt' and (ansible_facts['os_family'] == 'Debian')

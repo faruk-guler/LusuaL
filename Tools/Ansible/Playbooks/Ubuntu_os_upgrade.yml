@@ -1,0 +1,49 @@
+---
+- name: Upgrade Ubuntu to the next available version
+  hosts: all
+  become: yes
+  tasks:
+    - name: Fix broken dependencies
+      command: dpkg --configure -a
+      register: dpkg_result
+      ignore_errors: yes
+
+    - name: Check if dpkg was configured successfully
+      fail:
+        msg: "dpkg configuration failed. Manual intervention required."
+      when: dpkg_result.rc != 0
+
+    - name: Update APT repository
+      apt:
+        update_cache: yes
+      register: update_cache_result
+      retries: 5
+      delay: 10
+      until: update_cache_result is succeeded
+
+    - name: Upgrade to the latest packages
+      apt:
+        upgrade: dist
+      register: upgrade_result
+      retries: 5
+      delay: 10
+      until: upgrade_result is succeeded
+
+    - name: Install update-manager-core if not already installed
+      apt:
+        name: update-manager-core
+        state: present
+
+    - name: Upgrade Ubuntu version
+      command: |
+        do-release-upgrade -f DistUpgradeViewNonInteractive
+      register: upgrade_result
+      ignore_errors: yes
+
+    - name: Check if the system needs a reboot
+      reboot:
+      when: upgrade_result.changed
+
+    - name: Notify about the upgrade status
+      debug:
+        msg: "Upgrade process finished. Check the system for the new version."
