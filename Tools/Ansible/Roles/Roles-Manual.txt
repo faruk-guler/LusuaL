@@ -2,24 +2,29 @@
 # Ansible Roles:
 ####################
 Ansible Roles are structures used to organize tasks and configurations in a modular way, providing reusable and configurable components.
-An Ansible Role has a defined directory structure with eight main standard directories.
+An Ansible Role has a defined directory structure with eight(8) main standard directories.
 Roles allow specific tasks to be organized within a playbook. The directory where the roles are located is usually located in roles/
+
+cd ~/roles/
+<role_name>/
+  ├── defaults/ - default variables for the role.
+  │   └── main.yml
+  ├── files/ - contains files which can be deployed via this role.
+  ├── handlers/  - contains handlers, which may be used by this role or outside of this role.
+  │   └── main.yml
+  ├── meta/ - defines some meta data for this role.
+  │   └── main.yml
+  ├── tasks/ - contains the main list of tasks to be executed by the role.
+  │   └── main.yml
+  ├── templates/ - contains templates which can be deployed via this role.
+  ├── vars/ - other variables for the role.
+  |   └── main.yml
+  ├──  tests - contains tests for the role.
 
 ansible-galaxy role init <role_name> # Creates new role skeleton
 ansible-galaxy role remove <role_name> # Deletes the role
 ansible-galaxy install <role_name> # Installs the role
 ansible-galaxy list # Lists installed roles
-
-cd ~/roles/
-<role_name>/
-    ├── defaults/ - default variables for the role.
-    ├── files/ - contains files which can be deployed via this role.
-    ├── handlers/ - contains handlers, which may be used by this role or outside of this role.
-    ├── meta/ - defines some meta data for this role.
-    ├── tasks/ - contains the main list of tasks to be executed by the role.
-    ├── templates/ - contains templates which can be deployed via this role.
-    ├── vars/ - other variables for the role.
-    └── tests - contains tests for the role.
 
 #Docs:
 https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html
