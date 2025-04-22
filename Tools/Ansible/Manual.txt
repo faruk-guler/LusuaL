@@ -4,6 +4,7 @@
 
 ansible [pattern] -m [module] -a "[module options]"
 ansible all -m ping
+ansible all -m gather_facts
 ansible all -m setup
 ansible all -m command -a "uptime"
 
