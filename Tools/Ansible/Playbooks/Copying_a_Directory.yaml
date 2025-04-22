@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+    - name: Copy a directory
+      copy:
+        src: /path/to/local/directory/
+        dest: /path/to/remote/directory/
+        owner: myuser
+        group: mygroup
+        mode: "0755"
+        recursive: yes
