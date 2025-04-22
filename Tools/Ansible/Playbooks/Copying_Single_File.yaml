@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+    - name: Copy a file
+      copy:
+        src: /path/to/local/file.txt
+        dest: /path/to/remote/file.txt
+        owner: myuser
+        group: mygroup
+        mode: "0644"
