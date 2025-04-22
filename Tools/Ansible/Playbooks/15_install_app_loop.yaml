@@ -1,0 +1,18 @@
+---
+- name: Install and Start the service
+  hosts: Testing
+  vars:
+    - apps: [yum,httpd,vim,telnet]
+  
+  tasks:
+  - name: Installing applications
+    apt:
+      name: "{{ item }}"
+      state: present
+    with_items: "{{ apps }}"
+  
+  - name: Updateing the applications
+    apt:
+      name: "{{ item }}"
+      state: latest
+    with_items: "{{ apps }}"

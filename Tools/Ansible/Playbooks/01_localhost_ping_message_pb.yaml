@@ -1,0 +1,9 @@
+---
+- name: Localhost Ping/Test Connectivity and Print Message Playbook
+  hosts: localhost
+
+  tasks:
+  - name: Test Connectivity
+    ping:
+  - name: Print Output
+    debug: msg="Print Output - Alright!!"

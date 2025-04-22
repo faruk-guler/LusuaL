@@ -1,0 +1,17 @@
+---
+- name: Install and Start the service
+  hosts: Testing
+  vars:
+    app: nginx
+  
+  tasks:
+  - name: Installing web server
+    apt:
+      name: "{{ app }}"
+      state: present
+  
+  - name: Starting the web server
+    service:
+      name: "{{ app }}"
+      state: started
+      enabled: true

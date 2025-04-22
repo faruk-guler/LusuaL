@@ -1,0 +1,13 @@
+---
+- name: Copying files to remote
+  hosts: all
+
+  tasks:
+  - name: Copy files
+    copy:
+      src: /root/myfile.txt
+      dest: /root/
+      owner: juju
+      group: juju
+      mode: ugo=rw
+      backup: true  

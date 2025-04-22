@@ -1,0 +1,47 @@
+---
+- name: User Management Playbook
+  hosts: Testing
+
+  tasks:
+  - name: Create a single user
+    user:
+      name: juju
+      comment: New user adding for QA Team
+      shell: /bin/bash
+  
+  - name: Add user to group
+    user:
+      name: juju
+      groups: devops
+  
+  - name: Add user to multiple groups
+    user:
+      name: juju
+      groups: devops, qa, test
+
+  - name: Create multiple users
+    user:
+      name: "{{ item }}"
+      comment: New user adding for QA Team
+      shell: /bin/bash
+    loop:
+      - Raju
+      - Ram
+      - Prince
+  
+  - name: Delete a user
+    user:
+      name: Raju
+      state: absent
+  
+  - name: Delete user and its data
+    user:
+      name: Raju
+      state: absent
+      remove: yes
+
+  - name: Set Password
+    user:
+      name: Prince
+      update_password: always
+      password: "{{'abcde@12345#' | password_hash('sha512', 'mysecretcode')}}"

@@ -1,0 +1,56 @@
+---
+- name: Crontab Setup & Modification
+  hosts: Testing
+
+  tasks:
+  - name: Add Crontab Job
+    cron:
+      name: Run Test Script
+      minute: 30
+      hour: "*"
+      day: "*"
+      month: "*"
+      weekday: "*"
+      user: juju
+      job: /tmp/script/test.sh
+  
+  - name: Disable Crontab Job
+    cron:
+      name: Run Test Script
+      disabled: yes
+      user: juju
+      job: /tmp/script/test.sh
+      
+  
+  - name: Remove Crontab Job
+    cron:
+      name: Run Test Script
+      state: absent
+      user: juju
+      job: /tmp/script/test.sh
+      
+  - name: Set Crontab Job with Environment Variables
+    cron:
+      name: PATH
+      env: yes
+      user: juju
+      job: /tmp/script/test.sh
+  
+  - name: Set Crontab Job with Environment Variables and Insert After
+    cron:
+      name: NEW_PATH
+      env: yes
+      user: juju
+      job: /tmp/script/test.sh
+      insertafter: PATH 
+      
+  - name: Remove Crontab Job's Environment Variables
+    cron:
+      name: NEW_PATH
+      env: yes
+      user: juju
+      job: /tmp/script/test.sh
+      state: absent
+      
+      
+      

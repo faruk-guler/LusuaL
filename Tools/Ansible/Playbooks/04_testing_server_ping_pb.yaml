@@ -1,0 +1,7 @@
+---
+- name: Remote Ping and Test Connectivity Playbook
+  hosts: Testing
+
+  tasks:
+  - name: Test Connectivity
+    ping:

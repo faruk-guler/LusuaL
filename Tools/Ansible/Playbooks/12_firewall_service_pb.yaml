@@ -1,0 +1,43 @@
+---
+- name: Firewall changes
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Enable a nginx service in firewalldd
+    firewalld:
+      service: nginx
+      permanent: true
+      state: enabled
+      notify: 
+      - Reload firewalld
+
+  - name: Disaple a http service in firewalldd
+    firewalld:
+      service: http
+      permanent: true
+      state: disabled
+      notify: 
+      - Reload firewalld
+
+  - name: Enable a tcp 443 port in firewalldd
+    firewalld:
+      port: 443/tcp
+      permanent: true
+      state: enabled
+      notify: 
+      - Reload firewalld
+  
+  - name: Disable a tcp 80 port in firewalldd
+    firewalld:
+      port: 80/tcp
+      permanent: true
+      state: disabled
+      notify: 
+      - Reload firewalld
+
+  handlers:    
+  - name: Reload firewalld
+    service:
+      name: firewalld
+      state: reloaded

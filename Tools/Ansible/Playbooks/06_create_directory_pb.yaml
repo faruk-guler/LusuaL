@@ -1,0 +1,37 @@
+---
+- name: File Module
+  hosts: all
+
+  tasks:
+  - name: Creating a file
+    file:
+      path: /tmp/newfile.txt
+      state: touch
+  
+  - name: Creating a file with a different permission
+    file:
+      path: /tmp/newfile.txt
+      state: touch
+      owner: juju
+      group: juju
+      mode: u=rwx,g=rw,o=r
+
+  - name: Creating a directory
+    file:
+      path: /tmp/myfolder
+      state: directory
+  
+  - name: Deleting a file
+    file:
+      path: /tmp/newfile.txt
+      state: absent
+
+  - name: Deleting a directory
+    file:
+      path: /tmp/myfolder
+      state: absent
+    
+  - name: change permissions
+    file:
+      path: /tmp/myfile.txt
+      mode: u=rwx,g=r,o=r

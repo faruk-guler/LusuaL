@@ -1,0 +1,54 @@
+---
+- name: Setup Nginx Web Server on Remote-Testing-Server
+  hosts: Remote-Testing-Server
+  become: true
+
+  vars:
+    local_static_files: ./static/
+    remote_static_dir: /usr/share/nginx/html
+
+  tasks:
+    - name: Install Nginx web server
+      apt:
+        name: nginx
+        state: present
+        update_cache: true
+      when: ansible_os_family == "Debian"
+
+    - name: Copy static HTML files to Nginx web root
+      copy:
+        src: "{{ local_static_files }}"
+        dest: "{{ remote_static_dir }}"
+        owner: www-data
+        group: www-data
+        mode: '0644'
+      tags: copy-html
+
+    - name: Start and enable Nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: true
+      tags: start-nginx
+
+    - name: Open HTTP port 80 in firewall
+      firewalld:
+        port: 80/tcp
+        permanent: true
+        state: enabled
+        immediate: false
+      notify: Reload firewalld
+
+    - name: Open HTTPS port 443 in firewall
+      firewalld:
+        port: 443/tcp
+        permanent: true
+        state: enabled
+        immediate: false
+      notify: Reload firewalld
+
+  handlers:
+    - name: Reload firewalld
+      service:
+        name: firewalld
+        state: reloaded
