@@ -1,1 +1,6 @@
-#
+###############
+# Jinja2:
+###############
+Jinja2 allows you to create dynamic content, making your Ansible playbooks more flexible and adaptable.
+By the end of this lab, you'll understand how to use Jinja2 syntax in Ansible, including variables, filters, conditionals, and loops.
+This knowledge will enable you to create more dynamic and efficient Ansible playbooks and roles.
