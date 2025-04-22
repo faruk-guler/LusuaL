@@ -1,6 +1,6 @@
 #########################
 ## Ansible Modules 
-#########################
+#########################.
 They are independent building blocks that perform tasks in any environment that Ansible runs in.
 Modules are scripts designed to perform a specific task (for example, copying a file, installing a package, etc.).
 
