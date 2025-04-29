@@ -1,4 +1,4 @@
-## Time Management:
+## Date and Time Management:
 Proper time management in Linux systems is essential for consistency of system logs, correct operation of scheduled tasks, and network synchronization.
 Keeping the hardware clock and system clock in sync, configuring time zone settings correctly, and synchronizing with NTP tools increases system reliability and performance.
 
