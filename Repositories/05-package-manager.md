@@ -10,6 +10,7 @@ A **package manager** is a tool that automates the process of installing, updati
 
 2. **Installing Software:**
    - When you install software, the package manager:
+     
      ✅ Downloads the package from the repository.
      
      ✅ Resolves dependencies (installs additional required software).
