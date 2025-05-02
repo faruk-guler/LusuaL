@@ -41,3 +41,16 @@ find $BACKUP_DIR -type f -name "*.sql" -mtime +30 -exec rm -f {} \;
 
 # Send email alert
 echo -e "$EMAIL_BODY" | mail -s "$EMAIL_SUBJECT" "$EMAIL_TO"
+
+# Sync backup to remote server (optional but recommended)
+
+SSH_KEY="/path/to/your/private/key.pem"           # Path to your SSH private key
+REMOTE_USER="your_remote_user"                    # Remote server username
+REMOTE_HOST="your.remote.server.com"              # Remote server address
+REMOTE_DIR="/path/on/remote/server"               # Target directory on remote server
+
+rsync -avz \
+  -e "ssh -i $SSH_KEY -o StrictHostKeyChecking=no" \
+  --delete-after \
+  "$BACKUP_DIR/" \
+  "$REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/"
