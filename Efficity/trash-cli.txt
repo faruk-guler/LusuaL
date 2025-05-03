@@ -1,4 +1,6 @@
-ls ~/.local/share/Trash
+ls -la ~/.local/share/Trash
+ls -la ~/.local/share/Trash/files/
+ls -la ~/.local/share/Trash/info/
 
 trash-list
 trash-put file.aspx
