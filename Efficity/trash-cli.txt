@@ -1,9 +1,9 @@
 ########################
-Overview trash-cli
+Overview: trash-cli
 https://github.com/andreafrancia/trash-cli
 Python 3 (Python 2.7 also work)
 ########################
-trash-cli, Unlike the rm command in Linux/Unix, it moves files to the Recycle Bin instead of permanently deleting them.
+trash-cli, Unlike the (rm) command in Linux/Unix, it moves files to the Recycle Bin instead of permanently deleting them.
 It complies with the Freedesktop.org recycle bin standard and is compatible with GNOME, KDE.
 
 #Installation:
