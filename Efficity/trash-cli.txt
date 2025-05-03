@@ -24,8 +24,7 @@ trash-put -r directory/ [Delete directory and its contents (-r) recursive]
 # \rm file.aspx  [Delete original with rm, skipping alias "Warning!!"]
 
 trash-list [Lists all files in recycle bin]
-trash-restore [restore file]
-trash-restore /file/deletedir [restore dir]
+trash-restore [What file to restore [0..38]:
 
 #trash-empty [Empty recycle bin]
 trash-empty 20 [20 day]
