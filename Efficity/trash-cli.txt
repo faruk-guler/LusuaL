@@ -1,5 +1,7 @@
+ls ~/.local/share/Trash
 
-
+trash-list
+#trash-empty 
 
 #Using a cron Job:
 
