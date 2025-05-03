@@ -1,5 +1,7 @@
 ########################
 Overview trash-cli
+https://github.com/andreafrancia/trash-cli
+Python 3 (Python 2.7 also work)
 ########################
 trash-cli, is a command-line tool for Linux/Unix systems
 that provides a recycle bin function that allows users to move files and directories to a trash bin rather than permanently deleting them (unlike rm).
