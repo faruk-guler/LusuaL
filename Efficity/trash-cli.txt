@@ -5,22 +5,38 @@ trash-cli is a command-line tool for Linux (and other Unix-like systems)
 that provides a recycle bin function that allows users to move files and directories to a trash bin rather than permanently deleting them (unlike rm).
 It conforms to the freedesktop.org Trash specification and guarantees compatibility with graphical desktop environments such as GNOME and KDE.
 
+#Installation:
+sudo apt install trash-cli [Debian]
+sudo dnf install trash-cli [RHEL]
+sudo pacman -S trash-cli   [Arch]
+trash-put --version
+
+#Config Dir:
 ls -la ~/.local/share/Trash
-ls -la ~/.local/share/Trash/files/
-ls -la ~/.local/share/Trash/info/
+ls -la ~/.local/share/Trash/files/ [files]
+ls -la ~/.local/share/Trash/info/  [Information files (path and deletion time)]
 du -sh ~/.local/share/Trash/
 
-trash-list
-trash-put file.aspx
-trash-put *.aspx
-trash-restore
-trash-restore /file/deletedir
+#Usage trash-cli:
+trash-put file.aspx [delete file]
+trash-put *.aspx [Delete Wildcard .*]
+trash-put -r directory/ [Delete directory and its contents (-r) recursive]
+# \rm file.aspx  [Delete original with rm, skipping alias "Warning!!"]
 
-#trash-empty
+trash-list [Lists all files in recycle bin]
+trash-restore [restore file]
+trash-restore /file/deletedir [restore dir]
+
+#trash-empty [Empty recycle bin]
 trash-empty 20 [20 day]
+trash-rm spec.txt [Delete specific file from recycle bin]
+
+#Adding Permanent Alias [Bash, Zsh, Fish, others]
+nano ~/.bashrc
+alias rm='trash-put'
+source ~/.bashrc [Apply]
 
 #Using a cron Job:
-
 crontab -e
 0 0 * * * trash-empty 30 [Clean Trash After 30 days]
 
