@@ -23,10 +23,7 @@ trash-put *.aspx [Delete Wildcard .*]
 # \rm file.aspx  [Delete original with rm, skipping alias "Warning!"]
 trash-put -r directory/ [Delete directory and its contents (-r) recursive]
 
-
-
 trash-list [Lists all files in recycle bin]
-
 trash-restore [What file to restore [0..38]:
 cp /root/.local/share/Trash/files/file.php /root/ [Manual Restore]
 
@@ -34,7 +31,7 @@ trash-empty 20 [20 day]
 #trash-rm "VMware-2020.pdf" [Delete specific file from recycle bin]
 #trash-empty [Empty All recycle bin "Warning!"]
 
-#Adding Permanent Alias [Bash, Zsh, Fish, others]
+#Adding Permanent Alias (rm) [Bash, Zsh, Fish, others]
 nano ~/.bashrc
 > alias rm='trash-put'
 source ~/.bashrc [Apply]
@@ -44,20 +41,20 @@ crontab -e
 0 0 * * * trash-empty 30 [Clean Trash After 30 days]
 
 ##############################
-# Other Location Recycle Bin:
+# Recycle Bin Other Location:
 ##############################
-mount /dev/sdX1 /Recycle-Bin
+mount /dev/sdd /mnt/Recycle-Bin
 mkdir -p /mnt/Recycle-Bin
 chown root:root /mnt/Recycle-Bin
 chmod 700 /mnt/Recycle-Bin
-
-#Fstab:
-nano /etc/fstab
-> UUID=DISK_UUID /mnt/Recycle-Bin ext4 defaults 0 2
-> sudo mount -a
 
 #Adding Permanent Alias [Bash, Zsh, Fish, others]
 nano /root/.bashrc
 > export XDG_DATA_HOME=/mnt/Recycle-Bin
 source /root/.bashrc
+
+#Fstab:
+nano /etc/fstab
+> UUID=DISK_UUID /mnt/Recycle-Bin ext4 defaults 0 2
+> sudo mount -a
 
