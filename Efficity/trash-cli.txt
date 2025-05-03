@@ -1,10 +1,16 @@
 ls ~/.local/share/Trash
 
 trash-list
-#trash-empty 
+trash-put file.aspx
+trash-put *.aspx
+trash-restore
+trash-restore /file/deletedir
+
+#trash-empty
+trash-empty 20 [20 day]
 
 #Using a cron Job:
 
 crontab -e
-0 0 * * * rm -r ~/.local/share/Trash/* [Clean After 30 days]
+0 0 * * * trash-empty 30 [Clean Trash After 30 days]
 
