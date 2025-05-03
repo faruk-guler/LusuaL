@@ -1,6 +1,14 @@
+########################
+Overview trash-cli
+########################
+trash-cli is a command-line tool for Linux (and other Unix-like systems)
+that provides a recycle bin function that allows users to move files and directories to a trash bin rather than permanently deleting them (unlike rm).
+It conforms to the freedesktop.org Trash specification and guarantees compatibility with graphical desktop environments such as GNOME and KDE.
+
 ls -la ~/.local/share/Trash
 ls -la ~/.local/share/Trash/files/
 ls -la ~/.local/share/Trash/info/
+du -sh ~/.local/share/Trash/
 
 trash-list
 trash-put file.aspx
