@@ -15,27 +15,47 @@ trash-put --version
 ls -la ~/.local/share/Trash
 ls -la ~/.local/share/Trash/files/ [files]
 ls -la ~/.local/share/Trash/info/  [Information files (path and deletion time)]
-du -sh ~/.local/share/Trash/
+du -sh ~/.local/share/Trash/ [Recycle Bin size]
 
 #Usage trash-cli:
 trash-put file.aspx [delete file]
 trash-put *.aspx [Delete Wildcard .*]
 trash-put -r directory/ [Delete directory and its contents (-r) recursive]
-# \rm file.aspx  [Delete original with rm, skipping alias "Warning!!"]
+#trash-rm "VMware-2020.pdf" [Delete specific objects from recycle bin]
+# \rm file.aspx  [Delete original with rm, skipping alias "Warning!"]
 
 trash-list [Lists all files in recycle bin]
 trash-restore [What file to restore [0..38]:
+cp /root/.local/share/Trash/files/file.php /root/ [Manual Restore]
 
-#trash-empty [Empty recycle bin]
 trash-empty 20 [20 day]
 trash-rm spec.txt [Delete specific file from recycle bin]
+#trash-empty [Empty recycle bin "Warning!"]
 
 #Adding Permanent Alias [Bash, Zsh, Fish, others]
 nano ~/.bashrc
-alias rm='trash-put'
+> alias rm='trash-put'
 source ~/.bashrc [Apply]
 
-#Using a cron Job:
+#Cleaning up trash Using a cron Job:
 crontab -e
 0 0 * * * trash-empty 30 [Clean Trash After 30 days]
+
+##############################
+# Other Location Recycle Bin:
+##############################
+mount /dev/sdX1 /Recycle-Bin
+mkdir -p /mnt/Recycle-Bin
+chown root:root /mnt/Recycle-Bin
+chmod 700 /mnt/Recycle-Bin
+
+#Fstab:
+nano /etc/fstab
+> UUID=DISK_UUID /mnt/Recycle-Bin ext4 defaults 0 2
+> sudo mount -a
+
+#Adding Permanent Alias [Bash, Zsh, Fish, others]
+nano /root/.bashrc
+> export XDG_DATA_HOME=/mnt/Recycle-Bin
+source /root/.bashrc
 
