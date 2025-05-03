@@ -3,9 +3,8 @@ Overview trash-cli
 https://github.com/andreafrancia/trash-cli
 Python 3 (Python 2.7 also work)
 ########################
-trash-cli, is a command-line tool for Linux/Unix systems
-that provides a recycle bin function that allows users to move files and directories to a trash bin rather than permanently deleting them (unlike rm).
-It conforms to the freedesktop.org Trash specification and guarantees compatibility with graphical desktop environments such as GNOME and KDE.
+trash-cli, Unlike the rm command in Linux/Unix, it moves files to the Recycle Bin instead of permanently deleting them.
+It complies with the Freedesktop.org recycle bin standard and is compatible with GNOME, KDE.
 
 #Installation:
 sudo apt install trash-cli [Debian]
@@ -25,18 +24,20 @@ trash-put *.aspx [Delete Wildcard .*]
 # \rm file.aspx  [Delete original with rm, skipping alias "Warning!"]
 trash-put -r directory/ [Delete directory and its contents (-r) recursive]
 
+#List and Restore:
 trash-list [Lists all files in recycle bin]
 trash-restore [What file to restore [0..38]:
 cp /root/.local/share/Trash/files/file.php /root/ [Manual Restore]
-
-trash-empty 20 [20 day]
-#trash-rm "VMware-2020.pdf" [Delete specific file from recycle bin]
-#trash-empty [Empty All recycle bin "Warning!"]
 
 #Adding Permanent Alias (rm) [Bash, Zsh, Fish, others]
 nano ~/.bashrc
 > alias rm='trash-put'
 source ~/.bashrc [Apply]
+
+#Cleaning up trash:
+trash-empty 20 [20 day]
+#trash-rm "VMware-2020.pdf" [Delete specific file from recycle bin]
+#trash-empty [Empty All recycle bin "Warning!"]
 
 #Cleaning up trash Using a cron Job:
 crontab -e
