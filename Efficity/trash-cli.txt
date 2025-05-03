@@ -61,3 +61,4 @@ nano /etc/fstab
 > UUID=DISK_UUID /mnt/Recycle-Bin ext4 defaults 0 2
 > sudo mount -a
 
+
