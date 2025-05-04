@@ -84,15 +84,7 @@ sudo mount /dev/vg_name/lv_name /mnt/home   # Tekrar mount et
 sudo pvcreate /dev/sdd                    # Yeni disk ekle
 sudo vgextend vg_veri /dev/sdd            # VG'ye ekle
 
-## LVM Snapshot Alma
-sudo lvcreate -L 5G -s -n lv_home_snapshot /dev/vg_veri/lv_home  # 5GB snapshot oluştur
-sudo mkdir /mnt/snapshot
-sudo mount /dev/vg_veri/lv_home_snapshot /mnt/snapshot  # Snapshot'ı mount et
-# İşlemler bittiğinde:
-sudo umount /mnt/snapshot
-sudo lvremove /dev/vg_veri/lv_home_snapshot  # Snapshot'ı sil
-
-## LVM Silme İşlemleri
+## LVM Silme İşlemleri:
 > LV Silme:
 sudo umount /mnt/home
 sudo lvremove /dev/vg_veri/lv_home
