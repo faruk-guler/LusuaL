@@ -1,3 +1,4 @@
+```sh
 ####################################
 ## LVM Logical Volume Management:
 ####################################
@@ -117,3 +118,5 @@ sudo vgcfgrestore -f /backup/vg_veri_backup vg_veri
 -thin provisioning
 -lvm archive ve lvm backup
 -LVM Caching
+
+```
