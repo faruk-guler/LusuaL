@@ -96,11 +96,10 @@ sudo vgremove vg_veri
 > PV Silme:
 sudo pvremove /dev/sdb
 
-## LVM Other:
+## Advanced LVM Management:
 -LVM Snapshot
 -lvrename, vgrename, pvrename
 -lvconvert
 -thin provisioning
 -lvm archive ve lvm backup
-
-
+-LVM Caching
