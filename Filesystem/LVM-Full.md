@@ -76,13 +76,13 @@ sudo lvextend -l +100%FREE /dev/vg_name/lv_name  # LV VG'nin tüm boş alanını
 sudo resize2fs /dev/vg_veri/lv_home        # EXT4 dosya sistemini boyutlandır
 sudo xfs_growfs /mnt/home                  # XFS  dosya sistemini boyutlandır (daraltılamaz, sadece genişletilir.)
 
-## LV Küçültme (Boyut Azaltma)
+## LV Küçültme (Boyut Azaltma) Artırımın tersine işlem)
 #################################
-sudo umount /mnt/home                       # Önce unmount et
-sudo e2fsck -f /dev/vg_name/lv_name         # Dosya sistemini kontrol et
-sudo resize2fs /dev/vg_name/lv_name 15G     # Dosya sistemini küçült (15G)
+sudo umount /mnt/home                        # Önce unmount et
+sudo e2fsck -f /dev/vg_name/lv_name          # Dosya sistemini kontrol et
+sudo resize2fs /dev/vg_name/lv_name 15G      # Dosya sistemini küçült (15G)
 sudo lvreduce -L -15G /dev/vg_name/lv_name   # LV boyutunu küçült
-sudo mount /dev/vg_name/lv_name /mnt/home   # Tekrar mount et
+sudo mount /dev/vg_name/lv_name /mnt/home    # Tekrar mount et
 ⚠️ Uyarı: LV küçültme işlemi veri kaybına yol açabilir. Verilerinizi yedekleyin!
 ```
 ```sh
