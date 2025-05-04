@@ -114,7 +114,7 @@ sudo vgcfgrestore -f /backup/vg_veri_backup vg_veri
 -lvrename, vgrename, pvrename
 -lvconvert
 -thin provisioning
--lvm archive ve lvm backup
+-LVM archive ve LVM backup
 -LVM Caching
 -
 -
