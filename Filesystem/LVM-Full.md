@@ -81,7 +81,7 @@ sudo xfs_growfs /mnt/home                  # XFS  dosya sistemini boyutlandır (
 sudo umount /mnt/home                       # Önce unmount et
 sudo e2fsck -f /dev/vg_name/lv_name         # Dosya sistemini kontrol et
 sudo resize2fs /dev/vg_name/lv_name 15G     # Dosya sistemini küçült (15G)
-sudo lvreduce -L 15G /dev/vg_name/lv_name   # LV boyutunu küçült
+sudo lvreduce -L -15G /dev/vg_name/lv_name   # LV boyutunu küçült
 sudo mount /dev/vg_name/lv_name /mnt/home   # Tekrar mount et
 ⚠️ Uyarı: LV küçültme işlemi veri kaybına yol açabilir. Verilerinizi yedekleyin!
 ```
