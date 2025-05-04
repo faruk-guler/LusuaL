@@ -6,8 +6,8 @@ LVM creates a logical storage pool by abstracting physical disks and allows you 
 This allows you to manage, expand, or shrink your storage space more flexibly.
 
 ## LVM Mimarisi:
-<p align="center">
-<img src="https://farukguler.com/assets/post_images/lvm-best.jpg" alt="Ansible Logo" width="500"/>
+<p align="left">
+  <img src="https://farukguler.com/assets/post_images/lvm-best.jpg" alt="Ansible Logo" width="500"/>
 </p>
 
 ```sh
