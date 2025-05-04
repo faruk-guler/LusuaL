@@ -1,4 +1,4 @@
-## Quota management:
+## Quota management:s
 sudo apt install quota quotatool
 quota --version
 sudo systemctl status quota
