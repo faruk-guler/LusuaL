@@ -24,7 +24,7 @@ sudo lvscan
 /dev/dm-N                      # Düşük seviye device mapper aygıtı
 
 ## Fiziksel Disk Oluşturma (PV)
-sudo pvcreate /dev/sdb            # Tek disk ekleme
+sudo pvcreate /dev/sdb            # Tek bir disk ekleme
 sudo pvcreate /dev/sdb1           # Belirli bir bölümü ekleme
 sudo pvcreate /dev/sdc /dev/sdd   # Birden fazla disk ekleme
 sudo pvs                          # PV'leri listele
@@ -56,7 +56,7 @@ sudo cp /etc/fstab /etc/fstab.old
 #nano /etc/fstab
 #/dev/vg_veri/lv_home /mnt/home ext4 defaults 0 0
 #/dev/vg_veri/lv_home /mnt/home xfs defaults 0 0
-#UUID=xxxx-xxxx /mnt/home ext4 defaults 0 0 (önerilen)
+#UUID=xxxx-xxxx /mnt/home ext4 defaults 0 0 (güvenli önerilen)
 sudo mount -av
 sudo findmnt --verify
 
@@ -95,6 +95,11 @@ sudo vgremove vg_veri
 
 > PV Silme:
 sudo pvremove /dev/sdb
+
+## LVM Metadata Yedekleme: (LVM config backup)
+sudo vgcfgbackup -f /backup/vg_veri_backup vg_veri
+sudo vgcfgrestore -f /backup/vg_veri_backup vg_veri
+⚠️ Uyarı: Bu işlem yanlış kullanılırsa mevcut volume group ayarlarını bozabilir, dikkatli olunmalıdır.
 
 ## Advanced LVM Management:
 -LVM Snapshot
