@@ -17,15 +17,15 @@ sudo zypper install lvm2      # SUSE/openSUSE:
 #LVM Configuration:
 /etc/lvm/lvm.conf
 
-## General view:
-sudo pvscan
-sudo vgscan
-sudo lvscan
-
 ## LV Yolları ve Alternatifler:
 /dev/vg_name/lv_name           # Standart yol
 /dev/mapper/vg_name-lv_name    # Device mapper yolu
 /dev/dm-N                      # Düşük seviye device mapper aygıtı
+
+## General view:
+sudo pvscan
+sudo vgscan
+sudo lvscan
 
 ## Fiziksel Disk Oluşturma (PV)
 sudo pvcreate /dev/sdb            # Tek bir disk ekleme
