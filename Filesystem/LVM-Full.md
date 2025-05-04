@@ -21,7 +21,8 @@ sudo zypper install lvm2      # SUSE/openSUSE:
 /dev/vg_name/lv_name           # Standart yol
 /dev/mapper/vg_name-lv_name    # Device mapper yolu
 /dev/dm-N                      # Düşük seviye device mapper aygıtı
-
+```
+```sh
 ## General view:
 sudo pvscan
 sudo vgscan
