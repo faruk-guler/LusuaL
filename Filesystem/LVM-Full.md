@@ -1,5 +1,5 @@
 
-# LVM Logical Volume Management:
+# LVM Logical Volume Management: -farukguler.com
 
 Logical Volume Manager (LVM), is a disk abstraction layer that provides flexibility in storage management in Linux systems.
 LVM creates a logical storage pool by abstracting physical disks and allows you to allocate flexible logical disks (logical volumes) from this pool.
