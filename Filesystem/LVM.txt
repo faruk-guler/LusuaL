@@ -9,8 +9,9 @@ sudo apt install lvm2         # Debian/Ubuntu
 sudo yum install lvm2         # RHEL/CentOS
 sudo zypper install lvm2      # SUSE/openSUSE:
 
-#LVM2 Conf.:
+#LVM Conf.:
 /etc/lvm/lvm.conf
+
 
 
 ## LVM Display:
@@ -20,17 +21,22 @@ sudo lvscan
 
 ## Fiziksel Disk Oluşturma (PV)
 sudo pvcreate /dev/sdb            # Tek disk ekleme
+sudo pvcreate /dev/sdb1           # Belirli bir bölümü ekleme
 sudo pvcreate /dev/sdc /dev/sdd   # Birden fazla disk ekleme
 sudo pvs                          # PV'leri listele
 sudo pvdisplay                    # Detaylı bilgi göster
 
 ## Volume Group Oluşturma (VG)
+sudo vgcreate vg_name /dev/sdb            # Tek bir PV ile VG oluşturma
+sudo vgcreate vg_name /dev/sdb /dev/sdc   # Birden fazla PV ile VG oluşturma
+sudo vgcreate --physicalextentsize 8G vg_name /dev/sdb #Özel PE boyutu ile VG oluşturma (örn. 8GB)
 sudo vgcreate vg_veri /dev/sdb /dev/sdc   # "vg_veri" adında VG oluştur
 sudo vgs                                  # VG'leri listele
 sudo vgdisplay                            # Detaylı bilgi göster
 
 ## Logical Volume Oluşturma (LV)
 sudo lvcreate -L 20G -n lv_home vg_veri         # 20GB'lık "lv_home" LV'si oluştur
+sudo lvcreate -l 80%VG -n lv_name vg_name       # G'nin yüzdesini kullanarak LV oluştur
 sudo lvcreate -l 100%FREE -n lv_backup vg_veri  # Tüm boş alanı kullan
 sudo lvs                                        # LV'leri listele
 sudo lvdisplay                                  # Detaylı bilgi göster
