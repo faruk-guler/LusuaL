@@ -83,8 +83,8 @@ sudo lvreduce -L 15G /dev/vg_name/lv_name   # LV boyutunu küçült
 sudo mount /dev/vg_name/lv_name /mnt/home   # Tekrar mount et
 
 ## VG Genişletme (Yeni Disk Eklemek)
-sudo pvcreate /dev/sdd                    # Yeni disk ekle
-sudo vgextend vg_veri /dev/sdd            # VG'ye ekle
+sudo pvcreate /dev/sdd                  # Yeni disk ekle
+sudo vgextend vg_veri /dev/sdd          # VG'ye ekle
 
 ## VG'den PV'yi Çıkarma (vgreduce)
 sudo vgreduce vg_veri /dev/sdd
