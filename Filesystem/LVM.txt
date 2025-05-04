@@ -1,4 +1,33 @@
 ## LVM Logical Volume Management:
+sudo apt install lvm2         # Debian/Ubuntu
+sudo yum install lvm2         # RHEL/CentOS
+
+## Fiziksel Disk Oluşturma (PV)
+sudo pvcreate /dev/sdb            # Tek disk ekleme
+sudo pvcreate /dev/sdc /dev/sdd   # Birden fazla disk ekleme
+sudo pvs                          # PV'leri listele
+sudo pvdisplay                    # Detaylı bilgi göster
+
+## Volume Group Oluşturma (VG)
+sudo vgcreate vg_veri /dev/sdb /dev/sdc   # "vg_veri" adında VG oluştur
+sudo vgs                                  # VG'leri listele
+sudo vgdisplay                            # Detaylı bilgi göster
+
+## Logical Volume Oluşturma (LV)
+sudo lvcreate -L 20G -n lv_home vg_veri         # 20GB'lık "lv_home" LV'si oluştur
+sudo lvcreate -l 100%FREE -n lv_backup vg_veri  # Tüm boş alanı kullan
+sudo lvs                                        # LV'leri listele
+sudo lvdisplay                                  # Detaylı bilgi göster
+
+
+## Dosya Sistemi Oluşturma ve Mount Etme
+sudo mkfs.ext4 /dev/vg_veri/lv_home           # EXT4 dosya sistemi oluştur
+sudo mkdir /mnt/home                          # Mount dizini oluştur
+sudo mount /dev/vg_veri/lv_home /mnt/home     # Mount et
+
+## Fstab Kalıcı Mount:
+echo "/dev/vg_veri/lv_home /mnt/home ext4 defaults 0 2" | sudo tee -a /etc/fstab  # Kalıcı mount
+
 
 pvcreate <path to block device>
 vgcreate <name of volume group> <path to block device> <path to block device>            # Create new VG on block device - a PV is automatically created 
