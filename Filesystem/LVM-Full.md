@@ -9,7 +9,7 @@ This allows you to manage, expand, or shrink your storage space more flexibly.
 ```
 # LVM Mimarisi:
 <p align="center">
-<img src="https://farukguler.com/assets/post_images/lvm-best.jpg" alt="Ansible Logo" width="300"/>
+<img src="https://farukguler.com/assets/post_images/lvm-best.jpg" alt="Ansible Logo" width="500"/>
 </p>
 
 ```sh
