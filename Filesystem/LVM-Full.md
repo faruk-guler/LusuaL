@@ -15,10 +15,10 @@ sudo apt install lvm2         # Debian/Ubuntu
 sudo yum install lvm2         # RHEL/CentOS
 sudo zypper install lvm2      # SUSE/openSUSE:
 
-#LVM Conf.:
+#LVM Configuration:
 /etc/lvm/lvm.conf
 
-## LVM Display:
+## General view:
 sudo pvscan
 sudo vgscan
 sudo lvscan
