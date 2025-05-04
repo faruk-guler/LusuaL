@@ -1,9 +1,7 @@
 
 # LVM Logical Volume Management -farukguler.com
 
-Logical Volume Manager (LVM), is a disk abstraction layer that provides flexibility in storage management in Linux systems.
-LVM creates a logical storage pool by abstracting physical disks and allows you to allocate flexible logical disks (logical volumes) from this pool.
-This allows you to manage, expand, or shrink your storage space more flexibly.
+Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde esneklik sağlayan bir disk soyutlama katmanıdır. LVM, fiziksel diskleri soyutlayarak mantıksal bir depolama havuzu oluşturur ve bu havuzdan esnek mantıksal diskler (mantıksal birimler) tahsis etmenize olanak tanır. Bu, depolama alanınızı daha esnek bir şekilde yönetmenize, genişletmenize veya daraltmanıza olanak tanır.
 
 ## LVM Mimarisi:
 <p align="left">
