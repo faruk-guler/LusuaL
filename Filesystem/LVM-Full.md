@@ -119,5 +119,7 @@ sudo vgcfgrestore -f /backup/vg_veri_backup vg_veri
 -LVM Caching
 -LVM ile RAID Entegrasyonu
 -volume group migration
+-pv migration
+-
 -
 ```
