@@ -7,6 +7,7 @@ This allows you to manage, expand, or shrink your storage space more flexibly.
 
 sudo apt install lvm2         # Debian/Ubuntu
 sudo yum install lvm2         # RHEL/CentOS
+sudo zypper install lvm2      # SUSE/openSUSE:
 
 ## LVM Display:
 sudo pvscan
