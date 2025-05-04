@@ -68,7 +68,6 @@ sudo findmnt --verify
 
 ## LV Genişletme (Boyut Artırma )
 ################################
-sudo lvextend -L 20G /dev/vg_name/lv_name        # LV'yi belirli bir boyuta ayarlama  (20GB) (artırma veya azaltma yapar. ⚠️ veri kaybı riski!)
 sudo lvextend -L +10G /dev/vg_veri/lv_home       # LV'ye belirli bir miktar alan ekleme (10GB)
 sudo lvextend -l +100%FREE /dev/vg_name/lv_name  # LV VG'nin tüm boş alanını kullansın
 
