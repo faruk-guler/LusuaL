@@ -70,7 +70,7 @@ sudo lvextend -l +100%FREE /dev/vg_name/lv_name LV'yi VG'nin tüm boş alanını
 
 ## Dosya Sistemini Genişletme
 sudo resize2fs /dev/vg_veri/lv_home          # EXT4 dosya sistemini genişlet
-sudo xfs_growfs /mnt/home                    # XFS  dosya sistemini genişlet (daraltılamaz, sadece genişletme)
+sudo xfs_growfs /mnt/home                    # XFS  dosya sistemini genişlet (daraltılamaz, sadece genişletilir.)
 
 ## LV Küçültme (Boyut Azaltma)
 sudo umount /mnt/home                       # Önce unmount et
