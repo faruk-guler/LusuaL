@@ -58,7 +58,7 @@ sudo mount /dev/vg_veri/lv_home /mnt/home     # Mount et
 
 ## Kalıcı Mount /etc/fstab:
 sudo cp /etc/fstab /etc/fstab.old
-#nano /etc/fstab
+nano /etc/fstab
 #/dev/vg_veri/lv_home /mnt/home ext4 defaults 0 0
 #/dev/vg_veri/lv_home /mnt/home xfs defaults 0 0
 #UUID=xxxx-xxxx /mnt/home ext4 defaults 0 0 (UUID ile güvenli önerilen)
