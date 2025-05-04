@@ -53,7 +53,6 @@ sudo mount /dev/vg_veri/lv_home /mnt/home     # Mount et
 
 ## Kalıcı Mount /etc/fstab düzenleme:
 sudo cp /etc/fstab /etc/fstab.old
-cat /etc/fstab
 #nano /etc/fstab
 #/dev/repo_vg/logs /alan ext4 defaults 0 0
 #/dev/repo_vg/logs /alan xfs  defaults 0 0
