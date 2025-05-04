@@ -22,7 +22,6 @@ sudo lvcreate -l 100%FREE -n lv_backup vg_veri  # Tüm boş alanı kullan
 sudo lvs                                        # LV'leri listele
 sudo lvdisplay                                  # Detaylı bilgi göster
 
-
 ## Dosya Sistemi Oluşturma ve Mount Etme
 sudo mkfs.ext4 /dev/vg_veri/lv_home           # EXT4 dosya sistemi oluştur
 sudo mkdir /mnt/home                          # Mount dizini oluştur
@@ -30,6 +29,49 @@ sudo mount /dev/vg_veri/lv_home /mnt/home     # Mount et
 
 ## Fstab Kalıcı Mount:
 echo "/dev/vg_veri/lv_home /mnt/home ext4 defaults 0 2" | sudo tee -a /etc/fstab  # Kalıcı mount
+
+## LV Genişletme (Boyut Artırma)
+sudo lvextend -L +10G /dev/vg_veri/lv_home   # 10GB ekle
+sudo resize2fs /dev/vg_veri/lv_home          # EXT4 dosya sistemini genişlet
+# XFS için: sudo xfs_growfs /mnt/home
+
+## LV Küçültme (Boyut Azaltma)
+sudo umount /mnt/home                     # Önce unmount et
+sudo e2fsck -f /dev/vg_veri/lv_home       # Dosya sistemi kontrolü
+sudo resize2fs /dev/vg_veri/lv_home 15G   # Dosya sistemini küçült
+sudo lvreduce -L 15G /dev/vg_veri/lv_home # LV boyutunu küçült
+sudo mount /dev/vg_veri/lv_home /mnt/home # Tekrar mount et
+
+## VG Genişletme (Yeni Disk Eklemek)
+sudo pvcreate /dev/sdd                    # Yeni disk ekle
+sudo vgextend vg_veri /dev/sdd            # VG'ye ekle
+
+## LVM Snapshot Alma
+sudo lvcreate -L 5G -s -n lv_home_snapshot /dev/vg_veri/lv_home  # 5GB snapshot oluştur
+sudo mkdir /mnt/snapshot
+sudo mount /dev/vg_veri/lv_home_snapshot /mnt/snapshot  # Snapshot'ı mount et
+# İşlemler bittiğinde:
+sudo umount /mnt/snapshot
+sudo lvremove /dev/vg_veri/lv_home_snapshot  # Snapshot'ı sil
+
+## LVM Silme İşlemleri
+> LV Silme:
+sudo umount /mnt/home
+sudo lvremove /dev/vg_veri/lv_home
+
+> VG Silme:
+sudo vgremove vg_veri
+
+> PV Silme:
+sudo pvremove /dev/sdb
+
+
+## LVM Display:
+sudo pvscan
+sudo vgscan
+sudo lvscan
+
+
 
 
 pvcreate <path to block device>
