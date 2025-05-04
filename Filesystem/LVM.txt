@@ -12,12 +12,17 @@ sudo zypper install lvm2      # SUSE/openSUSE:
 #LVM Conf.:
 /etc/lvm/lvm.conf
 
-
-
 ## LVM Display:
 sudo pvscan
 sudo vgscan
 sudo lvscan
+
+## LV Yolları ve Alternatifler:
+/dev/vg_name/lv_name           # Standart yol
+/dev/mapper/vg_name-lv_name    # Device mapper yolu
+/dev/dm-N                      # Düşük seviye device mapper aygıtı
+
+
 
 ## Fiziksel Disk Oluşturma (PV)
 sudo pvcreate /dev/sdb            # Tek disk ekleme
@@ -43,11 +48,19 @@ sudo lvdisplay                                  # Detaylı bilgi göster
 
 ## Dosya Sistemi Oluşturma ve Mount Etme
 sudo mkfs.ext4 /dev/vg_veri/lv_home           # EXT4 dosya sistemi oluştur
+sudo mkfs.xfs /dev/vg_name/lv_name            # XFS dosya sistemi oluştur
 sudo mkdir /mnt/home                          # Mount dizini oluştur
 sudo mount /dev/vg_veri/lv_home /mnt/home     # Mount et
 
-## Fstab Kalıcı Mount:
-echo "/dev/vg_veri/lv_home /mnt/home ext4 defaults 0 2" | sudo tee -a /etc/fstab  # Kalıcı mount
+## Kalıcı Mount /etc/fstab düzenleme:
+sudo cp /etc/fstab /etc/fstab.old
+cat /etc/fstab
+#nano /etc/fstab
+#/dev/repo_vg/logs /alan ext4 defaults 0 0
+#/dev/repo_vg/logs /alan xfs  defaults 0 0
+sudo mount -av
+sudo findmnt --verify
+sudo systemctl daemon-reload
 
 ## LV Genişletme (Boyut Artırma)
 sudo lvextend -L +10G /dev/vg_veri/lv_home   # 10GB ekle
