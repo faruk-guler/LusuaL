@@ -98,7 +98,7 @@ sudo vgremove vg_veri
 sudo pvremove /dev/sdb
 
 ## LVM Other:
--LVM Snapshots
+-LVM Snapshot
 -lvrename, vgrename, pvrename
 -lvconvert
 -thin provisioning
