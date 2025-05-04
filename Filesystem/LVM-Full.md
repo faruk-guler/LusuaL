@@ -84,7 +84,8 @@ sudo resize2fs /dev/vg_name/lv_name 15G     # Dosya sistemini küçült (15G)
 sudo lvreduce -L 15G /dev/vg_name/lv_name   # LV boyutunu küçült
 sudo mount /dev/vg_name/lv_name /mnt/home   # Tekrar mount et
 ⚠️ Uyarı: LV küçültme işlemi veri kaybına yol açabilir. Verilerinizi yedekleyin!
-
+```
+```sh
 ## VG Genişletme (Yeni Disk Eklemek)
 sudo pvcreate /dev/sdd                # Yeni disk ekle
 sudo vgextend vg_veri /dev/sdd        # VG'ye ekle
@@ -95,7 +96,8 @@ sudo vgreduce vg_veri /dev/sdd
 #LV Boyutlandırma Resize: (artırma veya azaltma yapar. ⚠️ veri kaybı riski!)
 lvresize -L -5G /dev/mapper/repo_vg/logs
 lvresize -L +5G /dev/mapper/repo_vg/logs
-
+```
+```sh
 ## LVM Silme İşlemleri:
 > LV Silme:
 sudo umount /mnt/home
