@@ -93,7 +93,7 @@ sudo vgextend vg_veri /dev/sdd        # VG'ye ekle
 ## VG'den PV'yi Çıkarma/Küçültme (vgreduce)
 sudo vgreduce vg_veri /dev/sdd
 
-#LV Boyutlandırma Resize: (artırma veya azaltma yapar. ⚠️ veri kaybı riski!)
+#LV Boyutlandırma Extra Resize: (artırma veya azaltma yapar. ⚠️ Kontrolsüz kullanımda veri kaybı riski!)
 lvresize -L -5G /dev/mapper/repo_vg/logs
 lvresize -L +5G /dev/mapper/repo_vg/logs
 ```
