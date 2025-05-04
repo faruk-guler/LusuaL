@@ -103,6 +103,7 @@ sudo vgremove vg_veri
 > PV Silme:
 sudo pvremove /dev/sdb
 
+## 
 
 pvcreate <path to block device>
 vgcreate <name of volume group> <path to block device> <path to block device>            # Create new VG on block device - a PV is automatically created 
