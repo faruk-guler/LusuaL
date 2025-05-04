@@ -59,7 +59,6 @@ sudo cp /etc/fstab /etc/fstab.old
 #UUID=xxxx-xxxx /mnt/home ext4 defaults 0 0 (önerilen)
 sudo mount -av
 sudo findmnt --verify
-sudo systemctl daemon-reload
 
 ## LV Genişletme (Boyut Artırma )
 ################################
