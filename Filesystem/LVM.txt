@@ -22,7 +22,6 @@ sudo lvscan
 /dev/mapper/vg_name-lv_name    # Device mapper yolu
 /dev/dm-N                      # Düşük seviye device mapper aygıtı
 
-
 ## Fiziksel Disk Oluşturma (PV)
 sudo pvcreate /dev/sdb            # Tek disk ekleme
 sudo pvcreate /dev/sdb1           # Belirli bir bölümü ekleme
@@ -67,10 +66,10 @@ sudo lvextend -L 20G /dev/vg_name/lv_name    # LV'yi belirli bir boyuta genişle
 sudo lvextend -L +10G /dev/vg_veri/lv_home   # LV'ye belirli bir miktar alan ekleme (10GB)
 sudo lvextend -l +100%FREE /dev/vg_name/lv_name LV'yi VG'nin tüm boş alanını kullansın
 
-## Dosya Sistemini Genişletme
+## Dosya Sistemi Boyutlandırma (file system resizing extend/reduce)
 #################################
-sudo resize2fs /dev/vg_veri/lv_home          # EXT4 dosya sistemini genişlet
-sudo xfs_growfs /mnt/home                    # XFS  dosya sistemini genişlet (daraltılamaz, sadece genişletilir.)
+sudo resize2fs /dev/vg_veri/lv_home          # EXT4 dosya sistemini boyutlandır
+sudo xfs_growfs /mnt/home                    # XFS  dosya sistemini boyutlandır (daraltılamaz, sadece genişletilir.)
 
 ## LV Küçültme (Boyut Azaltma)
 #################################
