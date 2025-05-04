@@ -54,13 +54,14 @@ sudo mount /dev/vg_veri/lv_home /mnt/home     # Mount et
 ## Kalıcı Mount /etc/fstab:
 sudo cp /etc/fstab /etc/fstab.old
 #nano /etc/fstab
-#/dev/repo_vg/logs /alan ext4 defaults 0 0
-#/dev/repo_vg/logs /alan xfs  defaults 0 0
+#/dev/vg_veri/lv_home /mnt/home ext4 defaults 0 0
+#/dev/vg_veri/lv_home /mnt/home xfs defaults 0 0
+#UUID=xxxx-xxxx /mnt/home ext4 defaults 0 0 (önerilen)
 sudo mount -av
 sudo findmnt --verify
 sudo systemctl daemon-reload
 
-## LV Genişletme (Boyut Artırma)
+## LV Genişletme (Boyut Artırma )
 ################################
 sudo lvextend -L 20G /dev/vg_name/lv_name        # LV'yi belirli bir boyuta ayarlama  (20GB) (artırma veya azaltma yapar. azaltılırsa veri kaybı riski!)
 sudo lvextend -L +10G /dev/vg_veri/lv_home       # LV'ye belirli bir miktar alan ekleme (10GB)
@@ -104,6 +105,9 @@ sudo pvremove /dev/sdb
 
 ## LVM Other:
 -LVM Snapshots
--
--
+-lvrename, vgrename, pvrename
+-lvconvert
+-thin provisioning
+-lvm archive ve lvm backup
+
 
