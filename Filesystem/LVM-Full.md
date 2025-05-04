@@ -10,6 +10,11 @@ This allows you to manage, expand, or shrink your storage space more flexibly.
   <img src="https://farukguler.com/assets/post_images/lvm-best.jpg" alt="Ansible Logo" width="500"/>
 </p>
 
+<div style="text-align: left;">
+  <img src="https://farukguler.com/assets/post_images/lvm-best.jpg" alt="Ansible Logo" width="500">
+</div>
+
+
 ```sh
 sudo apt install lvm2         # Debian/Ubuntu
 sudo yum install lvm2         # RHEL/CentOS
