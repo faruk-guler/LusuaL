@@ -6,12 +6,13 @@
 Logical Volume Manager (LVM), is a disk abstraction layer that provides flexibility in storage management in Linux systems.
 LVM creates a logical storage pool by abstracting physical disks and allows you to allocate flexible logical disks (logical volumes) from this pool.
 This allows you to manage, expand, or shrink your storage space more flexibly.
-
+```
 # LVM Mimarisi:
 <p align="center">
 <img src="https://farukguler.com/assets/post_images/lvm-best.jpg" alt="Ansible Logo" width="300"/>
 </p>)
 
+```sh
 sudo apt install lvm2         # Debian/Ubuntu
 sudo yum install lvm2         # RHEL/CentOS
 sudo zypper install lvm2      # SUSE/openSUSE:
