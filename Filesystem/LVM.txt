@@ -62,9 +62,9 @@ sudo systemctl daemon-reload
 
 ## LV Genişletme (Boyut Artırma)
 ################################
-sudo lvextend -L 20G /dev/vg_name/lv_name    # LV'yi belirli bir boyuta genişletme  (20GB)
-sudo lvextend -L +10G /dev/vg_veri/lv_home   # LV'ye belirli bir miktar alan ekleme (10GB)
-sudo lvextend -l +100%FREE /dev/vg_name/lv_name LV'yi VG'nin tüm boş alanını kullansın
+sudo lvextend -L 20G /dev/vg_name/lv_name        # LV'yi belirli bir boyuta genişletme  (20GB)
+sudo lvextend -L +10G /dev/vg_veri/lv_home       # LV'ye belirli bir miktar alan ekleme (10GB)
+sudo lvextend -l +100%FREE /dev/vg_name/lv_name  # LV VG'nin tüm boş alanını kullansın
 
 ## Dosya Sistemi Boyutlandırma (file system resizing extend/reduce)
 #################################
