@@ -109,6 +109,7 @@ sudo pvremove /dev/sdb
 sudo vgcfgbackup -f /backup/vg_veri_backup vg_veri
 sudo vgcfgrestore -f /backup/vg_veri_backup vg_veri
 ⚠️ Uyarı: Bu işlem yanlış kullanılırsa mevcut volume group ayarlarını bozabilir, dikkatli olunmalıdır.
+```
 
 ## Advanced LVM Management:
 -LVM Snapshot
@@ -120,4 +121,3 @@ sudo vgcfgrestore -f /backup/vg_veri_backup vg_veri
 -
 -
 
-```
