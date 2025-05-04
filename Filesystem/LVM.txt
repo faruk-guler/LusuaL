@@ -101,3 +101,9 @@ sudo vgremove vg_veri
 
 > PV Silme:
 sudo pvremove /dev/sdb
+
+## LVM Other:
+-LVM Snapshots
+-
+-
+
