@@ -23,7 +23,6 @@ sudo lvscan
 /dev/dm-N                      # Düşük seviye device mapper aygıtı
 
 
-
 ## Fiziksel Disk Oluşturma (PV)
 sudo pvcreate /dev/sdb            # Tek disk ekleme
 sudo pvcreate /dev/sdb1           # Belirli bir bölümü ekleme
@@ -72,11 +71,11 @@ sudo resize2fs /dev/vg_veri/lv_home          # EXT4 dosya sistemini genişlet
 sudo xfs_growfs /mnt/home                    # XFS dosya sistemini genişlet
 
 ## LV Küçültme (Boyut Azaltma)
-sudo umount /mnt/home                     # Önce unmount et
-sudo e2fsck -f /dev/vg_veri/lv_home       # Dosya sistemi kontrolü
-sudo resize2fs /dev/vg_veri/lv_home 15G   # Dosya sistemini küçült
-sudo lvreduce -L 15G /dev/vg_veri/lv_home # LV boyutunu küçült
-sudo mount /dev/vg_veri/lv_home /mnt/home # Tekrar mount et
+sudo umount /mnt/home                       # Önce unmount et
+sudo e2fsck -f /dev/vg_veri/lv_home         # Dosya sistemi kontrolü
+sudo resize2fs /dev/vg_veri/lv_home 15G     # Dosya sistemini küçült
+sudo lvreduce -L 15G /dev/vg_veri/lv_home   # LV boyutunu küçült
+sudo mount /dev/vg_veri/lv_home /mnt/home   # Tekrar mount et
 
 ## VG Genişletme (Yeni Disk Eklemek)
 sudo pvcreate /dev/sdd                    # Yeni disk ekle
