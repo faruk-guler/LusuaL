@@ -113,9 +113,11 @@ sudo vgcfgrestore -f /backup/vg_veri_backup vg_veri
 -LVM Snapshot
 -lvrename, vgrename, pvrename
 -lvconvert
--thin provisioning
+-LVM thin provisioning
+-LVM ile Şifreleme (LUKS)
 -LVM archive ve LVM backup
 -LVM Caching
--
+-LVM ile RAID Entegrasyonu
+-volume group migration
 -
 ```
