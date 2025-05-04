@@ -89,7 +89,7 @@ sudo mount /dev/vg_name/lv_name /mnt/home   # Tekrar mount et
 sudo pvcreate /dev/sdd                # Yeni disk ekle
 sudo vgextend vg_veri /dev/sdd        # VG'ye ekle
 
-## VG'den PV'yi Çıkarma (vgreduce)
+## VG'den PV'yi Çıkarma/Küçültme (vgreduce)
 sudo vgreduce vg_veri /dev/sdd
 
 ## LVM Silme İşlemleri:
