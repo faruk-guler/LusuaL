@@ -73,8 +73,8 @@ sudo lvextend -l +100%FREE /dev/vg_name/lv_name  # LV VG'nin tüm boş alanını
 
 ## Dosya Sistemi Boyutlandırma (file system resizing extend/reduce)
 #################################
-sudo resize2fs /dev/vg_veri/lv_home          # EXT4 dosya sistemini boyutlandır
-sudo xfs_growfs /mnt/home                    # XFS  dosya sistemini boyutlandır (daraltılamaz, sadece genişletilir.)
+sudo resize2fs /dev/vg_veri/lv_home        # EXT4 dosya sistemini boyutlandır
+sudo xfs_growfs /mnt/home                  # XFS  dosya sistemini boyutlandır (daraltılamaz, sadece genişletilir.)
 
 ## LV Küçültme (Boyut Azaltma)
 #################################
@@ -87,8 +87,8 @@ sudo lvreduce -L 15G /dev/vg_name/lv_name   # LV boyutunu küçült
 sudo mount /dev/vg_name/lv_name /mnt/home   # Tekrar mount et
 
 ## VG Genişletme (Yeni Disk Eklemek)
-sudo pvcreate /dev/sdd                  # Yeni disk ekle
-sudo vgextend vg_veri /dev/sdd          # VG'ye ekle
+sudo pvcreate /dev/sdd                # Yeni disk ekle
+sudo vgextend vg_veri /dev/sdd        # VG'ye ekle
 
 ## VG'den PV'yi Çıkarma (vgreduce)
 sudo vgreduce vg_veri /dev/sdd
