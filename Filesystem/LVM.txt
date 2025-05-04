@@ -61,7 +61,6 @@ sudo mount -av
 sudo findmnt --verify
 sudo systemctl daemon-reload
 
-#################################
 ## LV Genişletme (Boyut Artırma)
 ################################
 sudo lvextend -L 20G /dev/vg_name/lv_name    # LV'yi belirli bir boyuta genişletme  (20GB)
@@ -69,15 +68,17 @@ sudo lvextend -L +10G /dev/vg_veri/lv_home   # LV'ye belirli bir miktar alan ekl
 sudo lvextend -l +100%FREE /dev/vg_name/lv_name LV'yi VG'nin tüm boş alanını kullansın
 
 ## Dosya Sistemini Genişletme
+#################################
 sudo resize2fs /dev/vg_veri/lv_home          # EXT4 dosya sistemini genişlet
 sudo xfs_growfs /mnt/home                    # XFS  dosya sistemini genişlet (daraltılamaz, sadece genişletilir.)
 
 ## LV Küçültme (Boyut Azaltma)
+#################################
 sudo umount /mnt/home                       # Önce unmount et
-sudo e2fsck -f /dev/vg_veri/lv_home         # Dosya sistemi kontrolü
-sudo resize2fs /dev/vg_veri/lv_home 15G     # Dosya sistemini küçült
-sudo lvreduce -L 15G /dev/vg_veri/lv_home   # LV boyutunu küçült
-sudo mount /dev/vg_veri/lv_home /mnt/home   # Tekrar mount et
+sudo e2fsck -f /dev/vg_name/lv_name         # Dosya sistemini kontrol et
+sudo resize2fs /dev/vg_name/lv_name 15G     # Dosya sistemini küçült (Ext4)
+sudo lvreduce -L 15G /dev/vg_name/lv_name   # LV boyutunu küçült
+sudo mount /dev/vg_name/lv_name /mnt/home   # Tekrar mount et
 
 ## VG Genişletme (Yeni Disk Eklemek)
 sudo pvcreate /dev/sdd                    # Yeni disk ekle
