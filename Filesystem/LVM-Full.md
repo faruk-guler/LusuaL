@@ -24,9 +24,9 @@ sudo zypper install lvm2      # SUSE/openSUSE:
 ```
 ```sh
 ## General view:
-sudo pvscan
-sudo vgscan
-sudo lvscan
+sudo pvscan # Fiziksel birimleri (PV) tarar
+sudo vgscan # Volume gruplarını (VG) tarar
+sudo lvscan # Mantısksal birimleri (LV) tarar
 
 ## Fiziksel Disk Oluşturma (PV)
 sudo pvcreate /dev/sdb            # Tek bir disk ekleme
