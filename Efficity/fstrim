@@ -6,14 +6,18 @@ Bu işlem, SSD'nin performansını korumasına ve gereksiz yazma işlemlerinin �
 HDD'lerde TRIM gerekli değildir çünkü çalışma prensipleri farklıdır.
 
 
+nano /lib/systemd/system/fstrim.timer # Config
+
 sudo fstrim -av  # Manuel olarak çalıştırmak için: 
 sudo fstrim -v / # Manuel bir dizini tara
+sudo journalctl -u fstrim.service  # TRIM Loglarını Görüntüle
 
 sudo systemctl enable --now fstrim.timer
-sudo systemctl enable fstrim.timer       # TRIM Servisini aktif et
+sudo systemctl enable fstrim.timer       # TRIM Servisini başlangıçta aktif et
 sudo systemctl start fstrim.timer        # TRIM Servisini başlat
-sudo systemctl status fstrim.timer       # TRIM Servisinin Durumunu Kontrol Et
+sudo systemctl status fstrim.timer       # TRIM Zamanlayıcısını Kontrol Et:
 sudo systemctl status fstrim.service     # TRIM Servisinin Durumunu Kontrol Et
 
 
-lsblk --discard  # RIM Destekleyen Diskleri Kontrol Et
+sudo lsblk --discard         # RIM Destekleyen Diskleri Kontrol Et
+systemctl list-timers --all  # Mevcut Timer'ı Kontrol Etme
