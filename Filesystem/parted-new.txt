@@ -1,6 +1,0 @@
-sudo apt install parted         Debian, Ubuntu and Mint
-sudo yum install parted         RHEL/CentOS/Fedora and Rocky/AlmaLinux
-sudo emerge -a sys-apps/parted  Gentoo Linux
-sudo apk add parted             Alpine Linux
-sudo pacman -S parted           Arch Linux
-sudo zypper install parted      OpenSUSE
