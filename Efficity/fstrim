@@ -5,8 +5,8 @@ TRIM, işletim sisteminin SSD'ye artık kullanılmayan veri bloklarını bildirm
 Bu işlem, SSD'nin performansını korumasına ve gereksiz yazma işlemlerinin önlenmesine yardımcı olur.
 HDD'lerde TRIM gerekli değildir çünkü çalışma prensipleri farklıdır.
 
-
-nano /lib/systemd/system/fstrim.timer # Config
+sudo fstrim --version  # fstrim sürüm bilgisi
+nano /lib/systemd/system/fstrim.timer # fstrim Config file
 
 sudo fstrim -av  # Manuel olarak çalıştırmak için: 
 sudo fstrim -v / # Manuel bir dizini tara
