@@ -126,6 +126,6 @@ sudo vgcfgrestore -f /backup/vg_veri_backup vg_veri
 -LVM ile RAID Entegrasyonu
 -volume group migration
 -pv migration
--
+- BTRFS ve ZFS desteği
 -
 ```
