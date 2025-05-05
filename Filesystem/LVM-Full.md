@@ -5,7 +5,7 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
 
 ## LVM Mimarisi:
 <p align="left">
-  <img src="https://farukguler.com/assets/post_images/lvm-best.jpg" alt="Ansible Logo" width="500"/>
+  <img src="https://farukguler.com/assets/post_images/lvm-best.jpg" alt="LVM Logo" width="500"/>
 </p>
 
 ```sh
