@@ -5,10 +5,20 @@ TRIM, işletim sisteminin SSD'ye artık kullanılmayan veri bloklarını bildirm
 Bu işlem, SSD'nin performansını korumasına ve gereksiz yazma işlemlerinin önlenmesine yardımcı olur.
 HDD'lerde TRIM gerekli değildir çünkü çalışma prensipleri farklıdır.
 
-sudo fstrim --version  # fstrim sürüm bilgisi
-nano /lib/systemd/system/fstrim.timer # fstrim Config file
+#Install:
+sudo apt install util-linux  # Ubuntu/Debian
+sudo dnf install util-linux  # Fedora
+sudo pacman -S util-linux    # Arch Linux
 
-sudo fstrim -av  # Manuel olarak çalıştırmak için: 
+
+#Fstrim Config File:
+nano /lib/systemd/system/fstrim.timer 
+
+sudo fstrim --version        # fstrim sürüm bilgisi
+sudo lsblk --discard         # RIM Destekleyen Diskleri Kontrol Et
+systemctl list-timers --all  # Mevcut Timer'ı Kontrol Et
+
+sudo fstrim -av  # Manuel olarak çalıştır 
 sudo fstrim -v / # Manuel bir dizini tara
 sudo journalctl -u fstrim.service  # TRIM Loglarını Görüntüle
 
@@ -19,5 +29,4 @@ sudo systemctl status fstrim.timer       # TRIM Zamanlayıcısını Kontrol Et:
 sudo systemctl status fstrim.service     # TRIM Servisinin Durumunu Kontrol Et
 
 
-sudo lsblk --discard         # RIM Destekleyen Diskleri Kontrol Et
-systemctl list-timers --all  # Mevcut Timer'ı Kontrol Etme
+
