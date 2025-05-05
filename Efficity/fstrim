@@ -1,20 +1,19 @@
 ##############
 ## fstrim:
 ###############
+TRIM, işletim sisteminin SSD'ye artık kullanılmayan veri bloklarını bildirmesine olanak tanıyan bir komuttur.
+Bu işlem, SSD'nin performansını korumasına ve gereksiz yazma işlemlerinin önlenmesine yardımcı olur.
+HDD'lerde TRIM gerekli değildir çünkü çalışma prensipleri farklıdır.
 
-fstrim, bir dosya sisteminde kullanılmayan (boş) veri bloklarını tespit ederek, bu blokları depolama cihazına bildiren bir komuttur.
-Bu işlem, SSD'lerin ve diğer flash tabanlı depolama cihazlarının performansını ve ömrünü artırmak için kullanılır.
-TRIM işlemi, cihazın hangi blokların artık kullanılmadığını bilmesini sağlayarak, bu blokları sıfırlamak veya yeniden yazma için hazır hale getirmek için kullanılır.
 
-Kontrol etmek için: systemctl status fstrim.timer
-Manuel olarak çalıştırmak için: sudo fstrim -av sudo fstrim -v /
+sudo fstrim -av  # Manuel olarak çalıştırmak için: 
+sudo fstrim -v / # Manuel bir dizini tara
 
-Linux'ta fstrim komutuyla manuel trimleme yapılabilir veya fstrim.timer servisini etkinleştirerek otomatik hale getirilebilir.
 sudo systemctl enable --now fstrim.timer
+sudo systemctl enable fstrim.timer       # TRIM Servisini aktif et
+sudo systemctl start fstrim.timer        # TRIM Servisini başlat
+sudo systemctl status fstrim.timer       # TRIM Servisinin Durumunu Kontrol Et
+sudo systemctl status fstrim.service     # TRIM Servisinin Durumunu Kontrol Et
 
-Hangi diskleri ve dosya sistemlerini trimlemek gerektiğini görmek için lsblk --discard komutunu çalıştırabilirsiniz.
 
-sblk --discard
-
-sudo systemctl enable fstrim.timer
-sudo systemctl start fstrim.timer
+lsblk --discard  # RIM Destekleyen Diskleri Kontrol Et
