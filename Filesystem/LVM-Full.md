@@ -71,6 +71,7 @@ sudo findmnt --verify
 ################################
 sudo lvextend -L +10G /dev/vg_veri/lv_home       # LV'ye belirli bir miktar alan ekleme (10GB)
 sudo lvextend -l +100%FREE /dev/vg_name/lv_name  # LV VG'nin tüm boş alanını kullansın
+sudo lvextend -l +80%FREE /dev/vg_name/lv_name  # LV VG'nin %80 alanını kullansın
 
 ## Dosya Sistemi Boyutlandırma (file system resizing extend/reduce)
 #################################
