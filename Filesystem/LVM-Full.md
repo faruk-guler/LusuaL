@@ -94,8 +94,8 @@ sudo vgextend vg_veri /dev/sdd        # VG'ye ekle
 sudo vgreduce vg_veri /dev/sdd
 
 #LV Boyutlandırma: Extra Resize: (artırma veya azaltma yapar. ⚠️ Kontrolsüz kullanımda veri kaybı riski!)
-lvresize -L -5G /dev/mapper/repo_vg/logs
-lvresize -L +5G /dev/mapper/repo_vg/logs
+lvresize -L -5G /dev/vg_name/lv_name
+lvresize -L +5G /dev/vg_name/lv_name
 ```
 ```sh
 ## LVM Silme İşlemleri:
