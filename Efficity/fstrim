@@ -14,14 +14,14 @@ sudo pacman -S util-linux    # Arch Linux
 #Fstrim Config File:
 nano /lib/systemd/system/fstrim.timer 
 
-sudo fstrim --version              # fstrim sürüm bilgisi
-sudo lsblk --discard               # RIM Destekleyen Diskleri Kontrol Et
-systemctl list-timers --all        # Mevcut Timer'ı Kontrol Et
-systemctl list-timers fstrim.timer # Zamanlama bilgisi default her haftadır.
+sudo fstrim --version               # fstrim sürüm bilgisi
+sudo lsblk --discard                # RIM Destekleyen Diskleri Kontrol Et
+systemctl list-timers --all         # Mevcut Timer'ı Kontrol Et
+systemctl list-timers fstrim.timer  # Zamanlama bilgisi default her haftadır.
 
 sudo fstrim -av  # Manuel olarak çalıştır, Tüm uygun dosya sistemleri için
 sudo fstrim -v / # Manuel bir dizini tara
-sudo journalctl -u fstrim.service  # TRIM Loglarını Görüntüle
+journalctl -u fstrim.service  # TRIM Loglarını Görüntüle
 
 sudo systemctl enable fstrim.timer       # TRIM Servisini başlangıçta aktif et
 sudo systemctl start fstrim.timer        # TRIM Servisini başlat
