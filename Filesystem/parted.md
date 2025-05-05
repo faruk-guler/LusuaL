@@ -13,6 +13,7 @@ Welcome to GNU Parted! Type 'help' to view a list of commands.
 
 
 ```sh
+# Install:
 sudo apt install parted        # Debian/Ubuntu
 sudo dnf install parted        # Fedora/centos
 sudo pacman -S parted          # Arch/Manjaro
