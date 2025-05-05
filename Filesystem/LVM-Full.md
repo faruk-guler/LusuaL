@@ -63,6 +63,7 @@ nano /etc/fstab
 #/dev/vg_veri/lv_home /mnt/home ext4 defaults 0 0
 #/dev/vg_veri/lv_home /mnt/home xfs defaults 0 0
 #UUID=xxxx-xxxx /mnt/home ext4 defaults 0 0 (UUID ile güvenli önerilen)
+sudo blkid | grep /dev/vg_veri/lv_home
 sudo mount -av
 sudo findmnt --verify
 
