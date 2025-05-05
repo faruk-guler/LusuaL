@@ -13,9 +13,13 @@ Welcome to GNU Parted! Type 'help' to view a list of commands.
 
 
 ```sh
-sudo apt install parted      # Debian/Ubuntu
-sudo dnf install parted      # Fedora/centos
-sudo pacman -S parted        # Arch/Manjaro
+sudo apt install parted        # Debian/Ubuntu
+sudo dnf install parted        # Fedora/centos
+sudo pacman -S parted          # Arch/Manjaro
+sudo apk add parted            # Alpine Linux
+sudo emerge -a sys-apps/parted # Gentoo Linux
+sudo zypper install parted     # OpenSUSE
+
 ```
 
 ```sh
