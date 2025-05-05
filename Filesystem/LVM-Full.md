@@ -37,7 +37,7 @@ sudo pvdisplay                    # Detaylı bilgi göster
 
 ## Volume Group Oluşturma (VG)
 sudo vgcreate vg_name /dev/sdb            # Tek bir PV ile VG oluşturma
-sudo vgcreate vg_name /dev/sdb3	          # Belirli bölümden VG oluşturma
+sudo vgcreate vg_name /dev/sdb3           # Belirli bölümden VG oluşturma
 sudo vgcreate vg_name /dev/sdb /dev/sdc   # Birden fazla PV ile VG oluşturma
 sudo vgcreate --physicalextentsize 8G vg_name /dev/sdb # Özel PE boyutu ile VG oluşturma (örn. 8GB)
 sudo vgcreate vg_veri /dev/sdb /dev/sdc   # "vg_veri" adında VG oluştur
