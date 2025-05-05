@@ -139,3 +139,17 @@ sudo parted /dev/sdc --script 'mkpart primary fat32 1MiB 4GiB set 1 boot on'
 >> ISO'yu yaz:
 sudo dd if=ubuntu.iso of=/dev/sdc1 bs=4M status=progress
 ```
+```sh
+Desteklenen bayraklar:
+1 boot
+2 root
+3 swap
+4 hidden
+5 raid
+6 lvm
+7 lba
+8 legacy_boot
+9 irst
+10 esp
+11 palo
+```
