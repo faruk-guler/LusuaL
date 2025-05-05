@@ -1,0 +1,16 @@
+Linux sunucularınızda SSD kullanıyorsanız, TRIM işlemi genellikle gereklidir.
+TRIM, işletim sisteminin SSD'ye artık kullanılmayan blokları bildirmesine olanak tanır, böylece SSD bu blokları yeniden yazım için hazırlayabilir.
+Bu süreç performansı korur ve SSD'nin ömrünü uzatır. Ancak HDD'lerde TRIM gerekmez.
+
+Kontrol etmek için: systemctl status fstrim.timer
+Manuel olarak çalıştırmak için: sudo fstrim -av sudo fstrim -v /
+
+Linux'ta fstrim komutuyla manuel trimleme yapılabilir veya fstrim.timer servisini etkinleştirerek otomatik hale getirilebilir.
+sudo systemctl enable --now fstrim.timer
+
+Hangi diskleri ve dosya sistemlerini trimlemek gerektiğini görmek için lsblk --discard komutunu çalıştırabilirsiniz.
+
+sblk --discard
+
+sudo systemctl enable fstrim.timer
+sudo systemctl start fstrim.timer
