@@ -4,7 +4,7 @@
 fstrim, işletim sisteminin SSD'ye artık kullanılmayan veri bloklarını bildirmesine olanak tanıyan bir komuttur.
 Bu işlem, SSD'nin performansını korumasına ve gereksiz yazma işlemlerinin önlenmesine yardımcı olur.
 HDD'lerde TRIM gerekli değildir çünkü çalışma prensipleri farklıdır. 
-fstrim, "util-linux" ile gelir. util-linux temel sistem yönetimi ve bakım görevleri için kullanılan açık kaynaklı bir yazılım paketidir.
+fstrim, "util-linux" ile gelir. util-linux temel sistem yönetimi ve bakım görevleri için kullanılan açık kaynaklı bir yazılım paketidir. (lsblk, fdisk, mkfs .etc)
 
 #Install:
 sudo apt install util-linux  # Ubuntu/Debian
