@@ -112,7 +112,7 @@ sudo pvremove /dev/sdb
 ## LVM Metadata Yedekleme: (LVM config backup)
 sudo vgcfgbackup -f /backup/vg_veri_backup vg_veri
 sudo vgcfgrestore -f /backup/vg_veri_backup vg_veri
-⚠️ Uyarı: Eski config varolan volume group ayarlarını bozabilir, dikkatli olunmalıdır.
+⚠️ Uyarı: Eski config mevcut volume group ayarlarını bozabilir, dikkatli olunmalıdır.
 ```
 ```sh
 ## Advanced LVM Management:
