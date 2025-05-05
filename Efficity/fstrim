@@ -2,9 +2,9 @@
 ## fstrim:
 ###############
 
-Linux sunucularınızda SSD kullanıyorsanız, TRIM işlemi genellikle gereklidir..
-TRIM, işletim sisteminin SSD'ye artık kullanılmayan blokları bildirmesine olanak tanır, böylece SSD bu blokları yeniden yazım için hazırlayabilir.
-Bu süreç performansı korur ve SSD'nin ömrünü uzatır. Ancak HDD'lerde TRIM gerekmez.
+fstrim, bir dosya sisteminde kullanılmayan (boş) veri bloklarını tespit ederek, bu blokları depolama cihazına bildiren bir komuttur.
+Bu işlem, SSD'lerin ve diğer flash tabanlı depolama cihazlarının performansını ve ömrünü artırmak için kullanılır.
+TRIM işlemi, cihazın hangi blokların artık kullanılmadığını bilmesini sağlayarak, bu blokları sıfırlamak veya yeniden yazma için hazır hale getirmek için kullanılır.
 
 Kontrol etmek için: systemctl status fstrim.timer
 Manuel olarak çalıştırmak için: sudo fstrim -av sudo fstrim -v /
