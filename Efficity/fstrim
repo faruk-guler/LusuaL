@@ -1,4 +1,4 @@
-Linux sunucularınızda SSD kullanıyorsanız, TRIM işlemi genellikle gereklidir.
+Linux sunucularınızda SSD kullanıyorsanız, TRIM işlemi genellikle gereklidir..
 TRIM, işletim sisteminin SSD'ye artık kullanılmayan blokları bildirmesine olanak tanır, böylece SSD bu blokları yeniden yazım için hazırlayabilir.
 Bu süreç performansı korur ve SSD'nin ömrünü uzatır. Ancak HDD'lerde TRIM gerekmez.
 
