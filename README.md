@@ -1,7 +1,7 @@
 <img src="https://farukguler.com/assets/img/handbook.jpg" alt="alt text" width="380" height="230">
 
 🅻🆄🆂🆄🅰🅻 - 🅷🅰🅽🅳🅱🅾🅾🅺
-- Name: LusuaL
+- Name: LusuaL Project
 - Author: Faruk Guler
 - Description: Handbook for Linux Users
 - POC: Debian 12 (Bookworm) - AlmaLinux 9
