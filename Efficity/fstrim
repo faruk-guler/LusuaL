@@ -1,4 +1,4 @@
-##############
+###############
 ## fstrim:
 ###############
 fstrim, işletim sisteminin SSD'ye artık kullanılmayan veri bloklarını bildirmesine olanak tanıyan bir komuttur.
