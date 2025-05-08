@@ -18,6 +18,7 @@ Workflows: Create complex automation chains
 Credential management: Securely store sensitive information
 Audit logging: Track who did what when
 Scalability: Adapt to increasing workloads
+Open Source: Free and community-supported; forms the basis of the Red Hat Ansible Automation Platform.
 
 #AWX Installation:
 
