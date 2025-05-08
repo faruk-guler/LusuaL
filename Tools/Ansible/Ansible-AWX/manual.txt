@@ -7,3 +7,18 @@ Tower is an enterprise-grade, commercial product from Red Hat and is officially 
 AWX is the open source, community-supported version of Tower and forms the basis of Tower.
 AWX is the building block of Tower, and Red Hat uses AWX to build Tower.
 
+#Key Features:
+Web-based UI: Manage Ansible playbooks via browser
+Role-Based Access Control (RBAC): Granular authorization and permission management
+Job scheduling and scheduling: Automate playbooks at specific times
+Integrated notifications: Job status notifications via Slack, email, etc.
+Visualized inventory management: Streamline Ansible inventory management
+Comprehensive API: Integrate with other systems
+Workflows: Create complex automation chains
+Credential management: Securely store sensitive information
+Audit logging: Track who did what when
+Scalability: Adapt to increasing workloads
+
+#AWX Installation:
+
+
