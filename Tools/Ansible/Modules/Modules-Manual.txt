@@ -9,8 +9,9 @@ ansible-doc -l | grep win_ [List Modules Windows]
 ansible-doc apt [Get Help for a Specific Module]
 ansible-doc win_ping [information Modules]
 
+---------------------------------
 >> Commonly Used Linux Modules:
--------------------------------
+---------------------------------
 # System Modules:
 user: Manage user creation/removal.
 group: Manage group creation/removal.
@@ -40,8 +41,9 @@ git: Work with Git repositories.
 copy: Copy files.
 template: Manage template files (Jinja2).
 
+-----------------------------------
 >> Commonly Used Windows Modules:
----------------------------------
+-----------------------------------
 win_ping: Tests the connection (equivalent to the ping module in Linux)
 win_copy: Copies files
 win_file: Manages file and directory permissions
