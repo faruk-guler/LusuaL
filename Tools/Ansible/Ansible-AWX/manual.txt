@@ -21,6 +21,45 @@ Scalability: Adapt to increasing workloads
 Container Architecture: AWX typically runs on Docker or Kubernetes and is deployed as microservices.
 Open Source: Free and community-supported; forms the basis of the Red Hat Ansible Automation Platform.
 
-#AWX Installation:
+#############################
+#AWX Install on Kubernetes:
+#############################
+
+# AWX Operator Namespace’i oluştur:
+kubectl create namespace awx
+
+# Operator’u yükle:
+git clone https://github.com/ansible/awx-operator.git
+cd awx-operator
+git checkout <sürüm>  # örnek: git checkout 2.16.2 (uyumlu olanı seç)
+make deploy NAMESPACE=awx
+
+> En güncel sürümü öğrenmek için: https://github.com/ansible/awx-operator/releases
+
+# AWX Pod’unu Başlat: (awx-deploy.yml)
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+  namespace: awx
+spec:
+  service_type: nodeport
+  ingress_type: none
+  hostname: awx.local
+  admin_user: admin
+  admin_password_secret: awx-admin-password
+
+# Create Secret and Deploy:
+kubectl -n awx create secret generic awx-admin-password --from-literal=password='SeninGizliŞifren'
+kubectl apply -f awx-deploy.yml
+
+# Servis ve Web Arayüzüne Erişim:
+kubectl get svc -n awx
+http://<node-ip>:<nodeport>
+
+
+
+
+
 
 
