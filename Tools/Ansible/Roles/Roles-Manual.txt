@@ -17,7 +17,7 @@ cd ~/roles/
   ├── tasks/  # contains the main list of tasks to be executed by the role.
   │   └── main.yml
   ├── templates/  # contains templates which can be deployed via this role.
-  ├── vars/ - other variables for the role.
+  ├── vars/  # other variables for the role.
   |   └── main.yml
   ├──  tests  # contains tests for the role.
 
