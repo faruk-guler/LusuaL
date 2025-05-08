@@ -10,6 +10,7 @@ It provides reusable automation content created by the community and Red Hat.
 ansible-galaxy search mysql
 
 # Playbook Apply:
+ansible-playbook playbook.yml --check
 ansible-playbook nginx-deploy.yml [Default hostfile]
 ansible-playbook -i debians-hosts.ini nginx-deploy.yml [Custom hostfile]
 
@@ -17,3 +18,9 @@ ansible-playbook -i debians-hosts.ini nginx-deploy.yml [Custom hostfile]
 ansible-playbook nginx-deploy.yml --syntax-check [Check Playbook Syntax]
 ansible-playbook nginx-deploy.yml --check [Dry Run Mode]
 ------
+
+# Debugging:
+ansible-playbook playbook.yml -v # Detailed
+ansible-playbook playbook.yml -vv # More detailed
+ansible-playbook playbook.yml -vvv # Debug
+ansible-playbook playbook.yml -vvvv # Connection debugging
