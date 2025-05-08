@@ -7,19 +7,19 @@ Roles allow specific tasks to be organized within a playbook. The directory wher
 
 cd ~/roles/
 <role_name>/
-  ├── defaults/ - default variables for the role.
+  ├── defaults/  # default variables for the role.
   │   └── main.yml
-  ├── files/ - contains files which can be deployed via this role.
-  ├── handlers/  - contains handlers, which may be used by this role or outside of this role.
+  ├── files/ # contains files which can be deployed via this role.
+  ├── handlers/  # contains handlers, which may be used by this role or outside of this role.
   │   └── main.yml
-  ├── meta/ - defines some meta data for this role.
+  ├── meta/  # defines some meta data for this role.
   │   └── main.yml
-  ├── tasks/ - contains the main list of tasks to be executed by the role.
+  ├── tasks/  # contains the main list of tasks to be executed by the role.
   │   └── main.yml
-  ├── templates/ - contains templates which can be deployed via this role.
+  ├── templates/  # contains templates which can be deployed via this role.
   ├── vars/ - other variables for the role.
   |   └── main.yml
-  ├──  tests - contains tests for the role.
+  ├──  tests  # contains tests for the role.
 
 ansible-galaxy role init <role_name> # Creates new role skeleton
 ansible-galaxy role remove <role_name> # Deletes the role
