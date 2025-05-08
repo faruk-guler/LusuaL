@@ -4,5 +4,8 @@
 Jinja2 is a powerful and flexible template engine based on Python.
 It is widely used in Ansible to create dynamic configuration files, scripts or other text-based outputs.
 It integrates with YAML-based Ansible playbooks and provides features such as variables, loops, conditions and filters.
+Ansible uses Jinja2 specifically with the template module.
+This module processes Jinja2 template files (.j2 extension) and generates dynamic configuration files on target machines.
+Additionally, Jinja2 expressions such as variables and loops can be used directly in playbooks.
 
 
