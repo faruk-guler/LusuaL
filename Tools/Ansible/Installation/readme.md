@@ -17,6 +17,12 @@ sudo apt search ansible
 sudo apt install ansible-core
 #sudo apt install ansible
 #sudo apt install sshpass
+
+> macOS:
+brew install ansible
+
+> Python PIP:
+pip install ansible
 ```
 # Check Version
 ```
