@@ -24,3 +24,5 @@ ansible-playbook playbook.yml -v # Detailed
 ansible-playbook playbook.yml -vv # More detailed
 ansible-playbook playbook.yml -vvv # Debug
 ansible-playbook playbook.yml -vvvv # Connection debugging
+ansible-playbook playbook.yml --diff
+
