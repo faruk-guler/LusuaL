@@ -13,7 +13,6 @@ sudo yum install -y ansible
 
 > Debian:
 sudo apt install software-properties-common
-sudo apt search ansible
 sudo apt install ansible-core
 #sudo apt install ansible
 #sudo apt install sshpass
