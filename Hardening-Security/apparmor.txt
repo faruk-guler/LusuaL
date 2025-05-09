@@ -1,18 +1,21 @@
-# apparmor will protect a system by confining programs to a limited set of resources.
+#
+sudo systemctl enable apparmor
+sudo systemctl start apparmor
 
-# To activate a profile:
-sudo aa-enforce usr.bin.firefox
-# or
-export _PROFILE_='usr.bin.firefox' sudo $(rm /etc/apparmor.d/disable/$_PROFILE_ ; cat /etc/apparmor.d/$_PROFILE_ | apparmor_parser -a )
-
-# To disable a profile:
-sudo aa-disable usr.bin.firefox
-# or
-export _PROFILE_='usr.bin.firefox' sudo $(ln -s /etc/apparmor.d/$_PROFILE_ /etc/apparmor.d/disable/ && apparmor_parser -R /etc/apparmor.d/$_PROFILE_)
-
-# To list profiles loaded:
-sudo aa-status
-# or
+# Create Custom AppArmor Profiles:
+cd /etc/apparmor.d/
 sudo apparmor_status
+sudo aa-genprof /path/to/application
+sudo aa-enforce /path/to/profile
 
-# List of available profiles: /etc/apparmor.d/
+# Enforcing or Complain Mode:
+sudo aa-enforce /path/to/profile   # Enforce mode
+sudo aa-complain /path/to/profile  # Complain mode
+
+# Auditing with AppArmor:
+cd /var/log/syslog
+sudo journalctl -xe | grep apparmor
+
+# 
+
+
