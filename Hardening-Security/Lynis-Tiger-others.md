@@ -22,3 +22,5 @@
   Report: /var/log/tiger
   ```
 # OpenSCAP:
+
+# Other:
