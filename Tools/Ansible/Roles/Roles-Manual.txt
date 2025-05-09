@@ -21,6 +21,12 @@ cd ~/roles/
   |   └── main.yml
   ├──  tests  # contains tests for the role.
 
+> Sample playbook to use the role:
+---
+- hosts: all
+  roles:
+    - role_name
+
 ansible-galaxy role init <role_name> # Creates new role skeleton
 ansible-galaxy role remove <role_name> # Deletes the role
 ansible-galaxy install <role_name> # Installs the role
