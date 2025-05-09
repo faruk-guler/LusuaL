@@ -1,4 +1,16 @@
+##############
+# AppArmor:
+##############
+AppArmor is a security module used in Linux operating systems.
+It works with the Mandatory Access Control (MAC) approach and increases security by restricting applications' access to system resources.
+A profile is created for each application, determining which files, directories, or network connections that application can access.
+In this way, even if an application tries to behave maliciously, it becomes difficult to cause damage due to access limits.
+It is common in Linux distributions such as Ubuntu and Debian.
+
 #
+sudo apt update
+sudo apt install apparmor apparmor-utils
+sudo aa-status
 sudo systemctl enable apparmor
 sudo systemctl start apparmor
 
@@ -13,9 +25,15 @@ sudo aa-enforce /path/to/profile   # Enforce mode
 sudo aa-complain /path/to/profile  # Complain mode
 
 # Auditing with AppArmor:
-cd /var/log/syslog
+/var/log/syslog
+/var/log/audit/audit.log
 sudo journalctl -xe | grep apparmor
+sudo aa-logprof
 
-# 
+# Basic AppArmor Commands:
+sudo apparmor_status # Lists active profiles.
+sudo aa-complain /path/to/bin   # Puts an application in complaint mode.
+sudo aa-enforce /path/to/bin    # Puts an application profile in enforce mode.
+sudo systemctl restart apparmor # Restarts the AppArmor service.
 
 
