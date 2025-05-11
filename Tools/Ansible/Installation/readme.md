@@ -8,8 +8,8 @@ sudo yum update
 # Install Ansible
 ```
 > RHELL:
-sudo yum install -y epel-release
-sudo yum install -y ansible
+sudo yum install epel-release -y 
+sudo yum install ansible -y 
 
 > Debian:
 sudo apt install software-properties-common
