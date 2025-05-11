@@ -29,8 +29,8 @@ ansible --version
 ```
 # Ansible Conf.
 ```
-/etc/ansible/hosts
-/etc/ansible/ansible.cfg
+vi /etc/ansible/hosts
+vi /etc/ansible/ansible.cfg
 cd /etc/ansible/playbooks
 cd /etc/ansible/roles
 ```
