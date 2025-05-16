@@ -1,4 +1,4 @@
-#Conf:
+# Alias  Conf:
 nano ~/.bashrc
 nano ~/.zshrc
 
@@ -19,6 +19,6 @@ ansibleshell () {
 source ~/.bashrc
 source ~/.zshrc
 
-#Example:
+# Example:
 ansible lsblk -p
 ansible all -m shell -a 'hostname'
