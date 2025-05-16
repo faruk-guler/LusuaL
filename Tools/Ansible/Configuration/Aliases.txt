@@ -1,0 +1,20 @@
+#Conf:
+nano ~/.bashrc
+nano ~/.zshrc
+
+#>>>>>>
+ansible() {
+    /usr/bin/ansible all -m shell -a "$*"
+}
+ansible() {
+    if [[ "$1" =~ ^- ]] || [[ "$1" == "all" ]] || [[ "$1" == "localhost" ]]; then
+        command ansible "$@"
+    else
+        command ansible all -m shell -a "$*"
+    fi
+}
+#>>>>>>
+
+# Apply:
+source ~/.bashrc
+source ~/.zshrc
