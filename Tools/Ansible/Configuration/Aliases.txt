@@ -20,5 +20,5 @@ source ~/.bashrc
 source ~/.zshrc
 
 # Example:
-ansible lsblk -p
-ansible all -m shell -a 'hostname'
+ansibleshell lsblk -p
+ansible all -m shell -a 'lsblk -p'
