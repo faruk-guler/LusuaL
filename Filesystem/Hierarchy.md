@@ -2,6 +2,7 @@
 Linux file system hierarchy structure may vary depending on the distribution, the following hierarchy reflects the standard structure of the file system.
 
 ```sh
+
 /: Known as the root directory. The entire file system starts at this point.
 /bin: This directory contains the basic system programs that users use to manage the system. For example, commands such as ls, cp, rm are located in this directory.
 /boot: This directory contains the files required for system startup. Items such as the boot loader, kernel, and startup configuration files are located in this directory.
@@ -22,6 +23,5 @@ Linux file system hierarchy structure may vary depending on the distribution, th
 /lost+found: Recovered files. This directory holds the bits of files that are damaged or have been interrupted due to an interruption.
 /usr: This directory has a separate hierarchy containing secondary programs, libraries, and documentation. For example, applications installed by users and secondary programs that come with the system can be found in this directory.
 /var: This directory contains variable data. For example, log files, databases, email, and other variable data can be found in this directory.
-```sh
 
--------
+```sh
