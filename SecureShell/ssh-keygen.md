@@ -1,5 +1,3 @@
-
----
 --------------------------------------------------------------------------------
 # How to create and setup an SSH key
 1. Open the ssh config file:
