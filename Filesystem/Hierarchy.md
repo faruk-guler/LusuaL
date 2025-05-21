@@ -1,5 +1,6 @@
 ###########
 Linux file system hierarchy structure may vary depending on the distribution, the following hierarchy reflects the standard structure of the file system.
+<img src="https://farukguler.com/assets/post_images/fs.png" alt="alt text" width="380" height="230">
 
 ```sh
 
