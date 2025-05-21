@@ -24,4 +24,4 @@ Linux file system hierarchy structure may vary depending on the distribution, th
 /usr: This directory has a separate hierarchy containing secondary programs, libraries, and documentation. For example, applications installed by users and secondary programs that come with the system can be found in this directory.
 /var: This directory contains variable data. For example, log files, databases, email, and other variable data can be found in this directory.
 
-```sh
+```
