@@ -3,7 +3,7 @@
 1. Open the ssh config file:
 
 	```sh
-	$ ee /etc/ssh/sshd_config
+	$ vi /etc/ssh/sshd_config
 	```
 
 2. Edit/Add the following options as such:
