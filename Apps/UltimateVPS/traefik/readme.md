@@ -1,1 +1,0 @@
-see: https://youtu.be/CmUzMi5QLzI & https://github.com/JamesTurland/JimsGarage/tree/main/Traefikv3
