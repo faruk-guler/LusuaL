@@ -42,4 +42,4 @@
 ## Trick to remember all 7-layers in OSI Model:
 
 ### "All People Seem To Need Data Processing"
-![image](https://farukguler.com\assets\img\osi-all.jpg)
+![image](https://farukguler.com/assets/img/osi-all.jpg)
