@@ -1,4 +1,4 @@
-# (authorized_keys) -farukguler.com
+# (SSH authorized_keys) -farukguler.com
 
 # Create SSH Key
 ```
