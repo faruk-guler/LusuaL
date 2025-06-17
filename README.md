@@ -8,5 +8,5 @@
 - Repository: https://github.com/faruk-guler/
 - Contributions: For contribution, send PR.
 - Contact: www.farukguler.com
-- License: CC-BY-4.0
+- License: MIT
 ## Notice: The structure mostly built on open-source mentality.
