@@ -3,3 +3,14 @@ What is Kdump?
 Kdump is a crash dump mechanism used to detect and analyze kernel crashes in Linux operating systems.
 When a system crash (kernel panic) occurs, kdump records the current memory state of the system as a dump file (usually called "vmcore").
 This dump file is used by system administrators or developers to understand the cause of the crash and perform debugging.
+
+Kdump consists of two(2) main components:
+
+# Kexec:
+Kdump works using the kexec mechanism.
+Kexec allows you to start a new kernel directly from memory without restarting the existing kernel.
+Kdump starts a "crash kernel" when the system crashes. This kernel saves the current state of the system.
+
+# Kdump Service:
+Kdump is a user-space service that is automatically started in the event of a system crash.
+This service detects the kernel crash and starts the crash kernel via kexec.
