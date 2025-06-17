@@ -15,8 +15,7 @@ apt remove wget              # Removes the wget package
 apt upgrade                  # Upgrades all upgradable packages
 
 ##Local installation File:
-dpkg -i pkg.deb – install a package (Debian)
-rpm -Uvh pkg.rpm – install a package (RPM)
+dpkg -i pkg.deb – install a package
 
 ##Building from Source Code:
 ./configure
