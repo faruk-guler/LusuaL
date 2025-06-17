@@ -43,7 +43,7 @@ sudo apt search [package-name]
 sudo apt list --installed [package-name]
 
 # list all packages
-sudo apt list 
+sudo apt list
 
 # list all packages that can be upgraded
 sudo apt list --upgradable
