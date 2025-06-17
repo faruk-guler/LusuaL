@@ -111,4 +111,4 @@ https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-bagl
 -Sisteminize uygun kernel sürümünü yükleyin (örneğin, linux-image-5.15.0-76-generic).
 -UEFI kullanıyorsanız ve GRUB menüsü görünmüyorsa, BIOS'ta "Secure Boot" ayarını kapatın.
 -İşlem sonu Kernel’in mevcut olup olmadığını kontrol edin, yoksa yeniden yükleyin: [ls /boot/vmlinuz*]
--Alternatif Araçlar: systemd-nspawn, arch-chroot
+-Chroot alternatif araçlar: systemd-nspawn, arch-chroot
