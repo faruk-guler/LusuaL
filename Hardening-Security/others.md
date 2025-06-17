@@ -1,4 +1,4 @@
-# Lynisff
+# Lynis
 - sudo apt update
 - sudo apt install lynis
 - lynis
