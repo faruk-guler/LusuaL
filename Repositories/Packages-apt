@@ -50,3 +50,23 @@ sudo apt list --upgradable
 
 # list all packages that can be upgraded [ -y = accept install]
 sudo apt list --upgradable -y
+
+# Provides information about the package.
+apt show package
+
+# Only downloads the package, not install it.
+apt download package
+
+# Shows information about the installed package.
+dpkg -s package
+
+# Lists the files of the installed package in the system.
+dpkg -L package
+
+# Finds which package a file belongs to.
+dpkg -S /file/path
+
+# Shows the installed version and the candidate version.
+apt policy package
+
+.....etc
