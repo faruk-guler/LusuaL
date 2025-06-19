@@ -33,6 +33,7 @@ ufw allow 3000:3100/tcp #[Port Range/Protocol]
 
 ufw delete allow 22 #[Delete Rule]
 ufw delete allow 22/TCP
+sudo ufw delete 4 #[Delete Rule Numbered]
 
 ufw allow from 10.5.25.85 #[Spesific ip All Allow]
 ufw delete allow from 10.5.25.85 #[Delete Rule]
