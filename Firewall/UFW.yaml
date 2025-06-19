@@ -7,8 +7,11 @@ ufw status verbose
 ufw status numbered #[The first added rule is valid first]
 
 #Default UFW Policies
-ufw default deny incoming #[Block incoming rules]
+ufw default allow incoming #[Allow incoming rules]
+ufw default deny incoming  #[Deny incoming rules]
+
 ufw default allow outgoing #[Allow outgoing rules]
+ufw default deny outgoing  #[Deny outgoing rules]
 
 #UFW Management
 ufw enable
