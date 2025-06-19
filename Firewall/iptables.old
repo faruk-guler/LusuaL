@@ -1,1 +1,27 @@
-**iptables** is a powerful and flexible firewall tool that works at the kernel level and is used to control and filter network traffic in Linux operating systems. Built on the Netfilter infrastructure in 1998, iptables has become the default solution for providing network security for Linux-based servers and clients over the years. Ensuring that every packet coming and going over the network is checked according to certain criteria, iptables performs this function in an integrated manner with the Netfilter module in the Linux kernel. Using iptables, system administrators can define detailed rules for all network traffic coming into, leaving, or being routed through a Linux system; thus, traffic can be allowed, blocked, or subjected to special processes. These rules can be determined based on various criteria such as source IP address, destination IP address, port, network protocol used (such as TCP, UDP, ICMP), and connection status (for example, whether it is a new connection or the continuation of an existing connection). iptables implements these rules in logical structures called chains and tables. Each table serves different purposes; for example, the `filter` table is used for basic packet filtering operations, the `nat` table for address translation (NAT) operations, and the `mangle` table for modifying packets. By using chains such as INPUT, OUTPUT, and FORWARD, packets can be processed according to their direction in the system (incoming, outgoing, or forwarded). iptables is designed to work with the IPv4 protocol, and a separate tool called ip6tables is used for IPv6 traffic. It works via the command line, and each rule must be defined explicitly, sequentially, and manually; this provides high flexibility, but can also make managing large rule sets complex and time-consuming. Although it has been adopted by many system administrators and security experts over the years and is supported by extensive documentation, the complexity of iptables' structure and syntax has become limiting for modern network security needs. For this reason, **nftables** was introduced in 2014 by Linux developers as a more flexible, simple, and high-performance alternative. nftables is a modern tool developed to replace iptables, combining both IPv4 and IPv6 support under one roof, offering a simpler syntax and working more efficiently with large rule sets. Although many new Linux distributions have started using nftables by default today, iptables is still actively used and supported on many systems. Especially on older systems, iptables is widely used to maintain existing security configurations or for compatibility reasons. In conclusion, iptables is a powerful but classic tool with a deep-rooted history in providing network security on Linux systems and still plays an important role in the transition to modern security solutions.
+## iptables ##
+
+is a powerful and flexible firewall tool that works at the kernel level and is used to control and filter network traffic in Linux operating systems.
+Built on the Netfilter infrastructure in 1998, iptables has become the default solution for providing network security for Linux-based servers and clients over the years.
+Ensuring that every packet coming and going over the network is checked according to certain criteria,
+iptables performs this function in an integrated manner with the Netfilter module in the Linux kernel.
+Using iptables, system administrators can define detailed rules for all network traffic coming into,
+leaving, or being routed through a Linux system; thus, traffic can be allowed, blocked, or subjected to special processes.
+These rules can be determined based on various criteria such as source IP address,
+destination IP address, port, network protocol used (such as TCP, UDP, ICMP), and connection status
+(for example, whether it is a new connection or the continuation of an existing connection).
+iptables implements these rules in logical structures called chains and tables.
+Each table serves different purposes; for example, the `filter` table is used for basic packet filtering operations,
+the `nat` table for address translation (NAT) operations, and the `mangle` table for modifying packets.
+By using chains such as INPUT, OUTPUT, and FORWARD, packets can be processed according to their direction in the system (incoming, outgoing, or forwarded).
+iptables is designed to work with the IPv4 protocol, and a separate tool called ip6tables is used for IPv6 traffic.
+It works via the command line, and each rule must be defined explicitly, sequentially, and manually; this provides high flexibility,
+but can also make managing large rule sets complex and time-consuming.
+Although it has been adopted by many system administrators and security experts over the years and is supported by extensive documentation,
+the complexity of iptables' structure and syntax has become limiting for modern network security needs.
+For this reason, **nftables** was introduced in 2014 by Linux developers as a more flexible, simple, and high-performance alternative.
+nftables is a modern tool developed to replace iptables, combining both IPv4 and IPv6 support under one roof,
+offering a simpler syntax and working more efficiently with large rule sets.
+Although many new Linux distributions have started using nftables by default today, iptables is still actively used and supported on many systems.
+Especially on older systems, iptables is widely used to maintain existing security configurations or for compatibility reasons.
+In conclusion, iptables is a powerful but classic tool with a deep-rooted history in providing network security on Linux systems
+and still plays an important role in the transition to modern security solutions.
