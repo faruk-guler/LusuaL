@@ -4,9 +4,7 @@
 #apt install ufw
 ufw version
 ufw status verbose
-
 ufw status numbered #[The first added rule is valid first]
-ufw insert 1 allow from 192.168.1.200 to any port 443 #[Define primacy rule]
 
 #Default UFW Policies
 ufw default deny incoming #[Block incoming rules]
@@ -41,11 +39,12 @@ ufw delete allow 22 #[Delete Rule]
 ufw delete allow 22/TCP
 sudo ufw delete 4 #[Delete Rule Numbered]
 
+#Rules
 ufw allow from 10.5.25.85 #[Spesific ip All Allow]
 ufw delete allow from 10.5.25.85 #[Delete Rule]
 ufw deny from 10.5.10./24 #[Subnets Deny/Allow]
 ufw deny in on eth0 from 10.5.10.10 #[Network Interface Deny/Allow]
-
+ufw insert 1 allow from 192.168.1.200 to any port 443 #[Define primacy rule]
 ufw default allow forward #[Allow gateway Forwarding]
 
 #UFW Configuration:
@@ -55,5 +54,14 @@ ufw default allow forward #[Allow gateway Forwarding]
 ufw logging on #[UFW Logging On/Off]
 /var/log/messages
 /var/log/syslog
+
+#Logging Enable/Disable
+sudo ufw logging on
+sudo ufw logging off
+
+#Logging Level
+sudo ufw logging low
+sudo ufw logging medium
+sudo ufw logging high
 
 #ufw reset #[Factory Reset and Backup]
