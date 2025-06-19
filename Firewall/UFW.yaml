@@ -12,9 +12,14 @@ ufw insert 1 allow from 192.168.1.200 to any port 443 #[Define primacy rule]
 ufw default deny incoming #[Block incoming rules]
 ufw default allow outgoing #[Allow outgoing rules]
 
-#[UFW Management]
+#UFW Management
 ufw enable
 ufw disable
+
+#UFW Service Management
+systemctl enable ufw
+systemctl disable ufw
+systemctl restart ufw
 
 ufw deny 21 #[Spesific Services Ports]
 ufw deny ftp
@@ -50,9 +55,5 @@ ufw default allow forward #[Allow gateway Forwarding]
 ufw logging on #[UFW Logging On/Off]
 /var/log/messages
 /var/log/syslog
-
-systemctl enable ufw #[Service Management]
-systemctl disable ufw
-systemctl restart ufw
 
 #ufw reset #[Factory Reset and Backup]
