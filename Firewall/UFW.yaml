@@ -5,6 +5,7 @@
 ufw version
 ufw status verbose
 ufw status numbered #[The first added rule is valid first]
+ufw help
 
 #Default UFW Policies
 ufw default allow incoming #[Allow incoming rules]
