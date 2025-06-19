@@ -55,6 +55,7 @@ ufw default allow forward #[Allow gateway Forwarding]
 /etc/default/ufw
 
 ufw logging on #[UFW Logging On/Off]
+/var/log/ufw.log
 /var/log/messages
 /var/log/syslog
 
