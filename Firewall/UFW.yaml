@@ -22,6 +22,7 @@ ufw allow 22
 ufw allow ssh
 
 ufw app list #[Service based]
+ufw allow “OpenSSH”
 ufw allow “LDAPS”
 cat /etc/services
 
