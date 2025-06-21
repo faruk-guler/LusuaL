@@ -1,2 +1,3 @@
 # Optimize SWAP Space: [recommended 10 or 20]
-echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf
+echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
