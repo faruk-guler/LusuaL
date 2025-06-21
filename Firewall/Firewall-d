@@ -4,11 +4,15 @@
 
 sudo dnf install firewalld
 sudo systemctl status firewalld
-firewalld-cmd --stat
+sudo firewalld-cmd --stat
 sudo systemctl enable firewalld
+sudo systemctl disable firewalld
 sudo systemctl start firewalld
 systemctl stop firewalld
 systemctl restart firewalld
+
+  # Block all network traffic in case of emergency:
+  
 
   
 
