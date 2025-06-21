@@ -1,2 +1,3 @@
+# Automates security updates on Debian Linux systems. [only security updates]
 sudo apt install unattended-upgrades
 sudo dpkg-reconfigure unattended-upgrades
