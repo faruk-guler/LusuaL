@@ -64,13 +64,15 @@ sudo umount -l /secrets
 
 # Setting a GRUB Password:
 
+# Password Protect GNU GRUB Loader
+
 # Different Partitions for Higher Data Security:
 
 # Remove Unwanted Services:
 
 # Disabling Control Alt Delete:
 
-#Turn off IPv6:
+# Turn off IPv6:
 
 # BIOS Protection:
 
