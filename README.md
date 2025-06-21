@@ -4,7 +4,7 @@
 - Name: LusuaL Project
 - Author: Faruk Guler
 - Description: Handbook for Linux Admins
-- POC: Debian 12 (Bookworm) - AlmaLinux 9
+- POC: Debian 12 (Bookworm) - AlmaLinux 10
 - Repository: https://github.com/faruk-guler/
 - Contributions: For contribution, send PR.
 - Contact: www.farukguler.com
