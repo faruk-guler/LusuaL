@@ -4,15 +4,31 @@
 
 sudo dnf install firewalld
 sudo systemctl status firewalld
-sudo firewalld-cmd --stat
+sudo firewalld-cmd --state
 sudo systemctl enable firewalld
 sudo systemctl disable firewalld
 sudo systemctl start firewalld
 systemctl stop firewalld
 systemctl restart firewalld
 
-  # Block all network traffic in case of emergency:
-  
+# Block all network traffic in case of emergency:
+firewall-cmd --panic-on
+firewall-cmd --panic-off
+
+# Default zone in the system:
+sudo firewall-cmd --get-default-zone
+
+# All available zones:
+sudo  firewall-cmd --get-zones
+
+# Replacing a default zone with another zone:
+firewall-cmd –set-default-zone=home
+
+# List zones associated with specific network range:
+firewall-cmd --get-zone-of-source=192.168.20.0/24
+
+# 
+
 
   
 
