@@ -24,6 +24,8 @@ make install
 
 *** apt always requires root privileges [sudo ...]***
 
+#General:
+
 # install package
 sudo apt install [package-name]
 
