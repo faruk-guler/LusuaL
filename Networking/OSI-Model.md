@@ -1,4 +1,4 @@
-# Understanding the OSI Model
+# Understanding the OSI Model.
 
 - **OSI Model is the original model on which the TCP/IP Model was based upon**
 - **It has 7 layers**
