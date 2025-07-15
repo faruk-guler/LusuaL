@@ -1,5 +1,5 @@
 
-| Kali Linux Commands  |  Function  |
+| Linux Commands  |  Function  |
 | --- | --- |
 |  A  |  A  |
 | apropos  | Search Help manual pages (man -k)  |
