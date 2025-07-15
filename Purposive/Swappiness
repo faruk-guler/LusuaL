@@ -1,3 +1,19 @@
-# Optimize SWAP Space: [recommended 10 or 20]
-echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.conf
+# Optimize SWAP Space: [Recommended 10 or 20]
+
+vm.swappiness (0-100 arası değer), Sistemin fiziksel RAM dolmadan swap alanını ne kadar agresif kullanacağını belirler.
+echo "vm.swappiness = 10" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
+
+Varsayılan değer (60): # Çoğu sistem için fazla yüksek
+Önerilen değer (10):   # RAM kullanımını optimize eder
+0 değeri:              # Swap'i sadece acil durumlarda kullanır (tümüyle devre dışı bırakmaz)
+
+# Swap Disable: # Önerilmez
+$ cat /proc/swaps
+$ swapon --show
+$ sudo swapoff -a
+$ cp /etc/fstab /etc/fstab.bak
+$ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+$ free -m
+$ lscpu
+
