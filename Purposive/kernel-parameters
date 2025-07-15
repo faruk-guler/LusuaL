@@ -43,3 +43,12 @@ sysctl net.ipv4.ip_forward
 
 # Değişiklikleri uygula
 sudo sysctl -p
+
++++ Linuxta önemli bazı kernel parametreleri:
+net.ipv4.ip_forward	           # IP yönlendirme
+net.ipv4.tcp_syncookies	       # SYN Flood koruması
+vm.swappiness	                 # Swap kullanım eğilimi
+fs.file-max	                   # Maksimum açık dosya sayısı
+kernel.pid_max	               # Maksimum PID sayısı
+kernel.shmmax	                 # Paylaşımlı bellek maksimum boyutu
+vm.dirty_ratio	               # Disk yazma öncesi bellek doluluk oranı
