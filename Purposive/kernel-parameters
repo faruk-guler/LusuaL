@@ -40,6 +40,7 @@ sysctl -a
 
 # Belirli bir parametreyi sorgula
 sysctl net.ipv4.ip_forward
+sysctl -a | grep fs.file-max
 
 # Değişiklikleri uygula
 sudo sysctl -p
@@ -49,7 +50,7 @@ Linux kernel parametreleri aslında /proc/sys/ dizininde dosyalar olarak bulunur
 
 net.ipv4.ip_forward	           # IP yönlendirme
 net.ipv4.tcp_syncookies	       # SYN Flood koruması
-vm.swappiness	                 # Swap kullanım eğilimi
+vm.swappiness = 10             # Swap kullanım eğilimi
 fs.file-max	                   # Maksimum açık dosya sayısı
 kernel.pid_max	               # Maksimum PID sayısı
 kernel.shmmax	                 # Paylaşımlı bellek maksimum boyutu
