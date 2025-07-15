@@ -53,6 +53,6 @@ net.ipv4.tcp_syncookies = 1    # SYN Flood koruması
 vm.swappiness = 10             # Swap kullanım eğilimi %
 fs.file-max = 2097152          # Maksimum açılabilecek dosya sayısı
 kernel.pid_max = 32768         # Maksimum PID sayısı
-kernel.shmmax = 776736         # Paylaşımlı bellek maksimum boyutu
+kernel.shmmax = 7176736        # Paylaşımlı bellek maksimum boyutu
 vm.dirty_ratio = 20            # Disk yazma öncesi bellek doluluk oranı
 kernel.panic = 20              # Sistemin Kernel panik durumunda rebot edeceği süre
