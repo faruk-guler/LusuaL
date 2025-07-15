@@ -1,3 +1,7 @@
+Linux Kernel Parametreleri Nedir?
+Linux kernel parametreleri, işletim sisteminin çekirdek (kernel) davranışını kontrol eden ayarlardır.
+Bu parametreler, sistem kaynaklarının yönetimi, ağ performansı, güvenlik, bellek kullanımı ve donanım etkileşimi gibi kritik işlevleri yapılandırmak için kullanılır.
+
 ### IP Yönlendirme: (net.ipv4.ip_forward)
 net.ipv4.ip_forward=1 parametresi, Linux sisteminizin bir yönlendirici (router) gibi davranmasını sağlar.
 Bu özellik, ağ trafiğinin bir ağ arabiriminden diğerine iletilmesine izin verir.
