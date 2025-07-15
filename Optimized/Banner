@@ -19,7 +19,7 @@ sudo nano /etc/issue
 
 ---------------------------------------------
 Welcome Server Console
-Datacenter Istanbul / Almalinux 10
+Datacenter: Istanbul / Almalinux 10
 www.farukguler.com
 ---------------------------------------------
 Hostname : \n
