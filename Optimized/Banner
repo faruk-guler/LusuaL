@@ -4,6 +4,7 @@ sudo nano /etc/ssh-bannerim
 sudo nano /etc/ssh/sshd_config
 >> Banner /etc/ssh-bannerim
 
+#############################
  / _| __ _ _ __ _   _| | ____ _ _   _| | ___ _ __ ___ ___  _ __ ___
 | |_ / _` | '__| | | | |/ / _` | | | | |/ _ \ '__/ __/ _ \| '_ ` _ \
 |  _| (_| | |  | |_| |   < (_| | |_| | |  __/ | | (_| (_) | | | | | |
@@ -15,3 +16,22 @@ sudo systemctl restart sshd
 
 ## Create Console Banner:
 sudo nano /etc/issue
+
+############################
+#   Welcome Server Console #
+############################
+
+Hostname : \n
+Domain   : \o
+IPv4     : \4
+OS       : \s
+Kernel   : \r
+Arch     : \m
+TTY      : \l
+Date     : \d
+Time     : \t
+
+############################
+#   www.farukguler.com     #
+############################
+
