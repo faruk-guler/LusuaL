@@ -35,11 +35,11 @@ cat /proc/sys/fs/file-nr
 ----------------------------
 >>> Temel Komutlar: <<<
 -----------------------------
-# Tüm aktif parametreleri listeleme
+# Tüm aktif kernel parametreleri listele
 sysctl -a
 
-# Belirli bir parametreyi sorgulama
+# Belirli bir parametreyi sorgula
 sysctl net.ipv4.ip_forward
 
-# Değişiklikleri uygulama
+# Değişiklikleri uygula
 sudo sysctl -p
