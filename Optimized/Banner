@@ -17,9 +17,10 @@ sudo systemctl restart sshd
 ## Create Console Banner:
 sudo nano /etc/issue
 
-############################
-#   Welcome Server Console #
-############################
+###################################
+Welcome Server Console
+Datacenter Istanbul / Almalinux 10
+###################################
 
 Hostname : \n
 Domain   : \o
