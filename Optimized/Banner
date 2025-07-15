@@ -1,4 +1,4 @@
-## Create SSH Banner:
+## Create a SSH Banner:
 sudo nano /etc/ssh-bannerim
 sudo nano /etc/ssh/sshd_config
 >> Banner /etc/ssh-bannerim
@@ -13,7 +13,7 @@ from www.farukguler.com, Authorized access only!
 ---------------------------------------------------------------------------
 sudo systemctl restart sshd
 
-## Create Server Console Banner:
+## Create a Server Console Banner:
 sudo nano /etc/issue
 >> /etc/issue
 ----------------------------------------------------
