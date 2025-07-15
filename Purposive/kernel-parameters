@@ -46,7 +46,8 @@ sysctl -a | grep fs.file-max
 sudo sysctl -p
 
 **** Linuxta önemli bazı kernel parametreleri:
-Linux kernel parametreleri aslında /proc/sys/ dizininde dosyalar olarak bulunur.
+Linux kernel parametreleri /proc/sys/ dizininde dosyalar olarak bulunur.
+(kernel) parametrelerini kalıcı olarak yapılandırmak için /etc/sysctl.conf dosyasına yazılması gerekir.
 
 net.ipv4.ip_forward = 1        # IP yönlendirme
 net.ipv4.tcp_syncookies = 1    # SYN Flood koruması
