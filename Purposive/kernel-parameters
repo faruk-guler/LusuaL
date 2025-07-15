@@ -3,7 +3,6 @@
 net.ipv4.ip_forward=1 parametresi, Linux sisteminizin bir yönlendirici (router) gibi davranmasını sağlar.
 Bu özellik, ağ trafiğinin bir ağ arabiriminden diğerine iletilmesine izin verir.
 
-🔧 Kullanım Senaryoları
 NAT (Ağ Adres Çevirisi) uygulamaları
 VPN sunucuları (OpenVPN, WireGuard)
 Kubernetes node'lar arası yönlendirme
@@ -43,4 +42,4 @@ sysctl -a
 sysctl net.ipv4.ip_forward
 
 # Değişiklikleri uygulama
-sysctl -p
+sudo sysctl -p
