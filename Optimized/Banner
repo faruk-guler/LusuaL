@@ -1,4 +1,4 @@
-## Create SSH Warning Banner:
+## Create SSH Banner:
 
 sudo vim /etc/ssh-bannerim
 sudo vim /etc/ssh/sshd_config
@@ -13,3 +13,5 @@ sudo vim /etc/ssh/sshd_config
 from www.farukguler.com, Authorized access only!
 ##
 sudo systemctl restart sshd
+
+## Create Console Banner:
