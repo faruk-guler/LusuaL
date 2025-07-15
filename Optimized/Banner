@@ -1,10 +1,9 @@
 ## Create SSH Banner:
 
-sudo vim /etc/ssh-bannerim
-sudo vim /etc/ssh/sshd_config
+sudo nano /etc/ssh-bannerim
+sudo nano /etc/ssh/sshd_config
 >> Banner /etc/ssh-bannerim
 
-##
  / _| __ _ _ __ _   _| | ____ _ _   _| | ___ _ __ ___ ___  _ __ ___
 | |_ / _` | '__| | | | |/ / _` | | | | |/ _ \ '__/ __/ _ \| '_ ` _ \
 |  _| (_| | |  | |_| |   < (_| | |_| | |  __/ | | (_| (_) | | | | | |
@@ -15,3 +14,4 @@ from www.farukguler.com, Authorized access only!
 sudo systemctl restart sshd
 
 ## Create Console Banner:
+sudo nano /etc/issue
