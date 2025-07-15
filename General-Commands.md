@@ -1,5 +1,5 @@
 | Commands | Function |
-|--- |--- |
+| --- | --- |
 |  A  |  A  |
 | apropos  | Search Help manual pages (man -k)  |
 | apt-get  | Search for and install software packages (Debian)  |
