@@ -1,4 +1,4 @@
-# 4 efsane kernel parametresi:
+# 4 efsane kernel parametresi:dd
 
 1. net.ipv4.ip_forward = 1
 
