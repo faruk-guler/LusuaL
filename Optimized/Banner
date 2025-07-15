@@ -1,1 +1,10 @@
+# Create SSH Warning Banner
+sudo vim /etc/ssh-bannerim
+sudo vim /etc/ssh/sshd_config
+>> Banner /etc/ssh-bannerim
 
+##
+------------------------------------------------------------
+------------------------------------------------------------
+www.farukguler.com Authorized access only!
+##
