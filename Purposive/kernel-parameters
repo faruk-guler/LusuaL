@@ -1,5 +1,4 @@
 ### IP Yönlendirme: (net.ipv4.ip_forward)
-
 net.ipv4.ip_forward=1 parametresi, Linux sisteminizin bir yönlendirici (router) gibi davranmasını sağlar.
 Bu özellik, ağ trafiğinin bir ağ arabiriminden diğerine iletilmesine izin verir.
 
@@ -51,9 +50,9 @@ Kalıcı olarak yapılandırmak için /etc/sysctl.conf dosyasına yazmanız yada
 
 net.ipv4.ip_forward = 1        # IP yönlendirme
 net.ipv4.tcp_syncookies = 1    # SYN Flood koruması
-vm.swappiness = 10             # Swap kullanım eğilimi
-fs.file-max = 2097152          # Maksimum açık  dosya sayısı
+vm.swappiness = 10             # Swap kullanım eğilimi %
+fs.file-max = 2097152          # Maksimum açılabilecek dosya sayısı
 kernel.pid_max = 4194304       # Maksimum PID sayısı
 kernel.shmmax = 68719476736    # Paylaşımlı bellek maksimum boyutu
 vm.dirty_ratio = 25            # Disk yazma öncesi bellek doluluk oranı
-kernel.panic = 20              # Sistemi Kernel panik durumunda 20 saniye sonra reboot eder.
+kernel.panic = 20              # Sistemin Kernel panik durumunda rebot edeceği süre
