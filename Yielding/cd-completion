@@ -1,0 +1,2 @@
+shopt cdspell
+Bash kabuğunda (shell) bir dizin değiştirme (cd komutu) sırasında yapılan küçük yazım hatalarını otomatik olarak düzeltmeye yarayan bir özelliktir.
