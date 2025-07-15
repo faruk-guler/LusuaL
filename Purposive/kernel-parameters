@@ -44,7 +44,9 @@ sysctl net.ipv4.ip_forward
 # Değişiklikleri uygula
 sudo sysctl -p
 
-+++ Linuxta önemli bazı kernel parametreleri:
+**** Linuxta önemli bazı kernel parametreleri:
+Linux kernel parametreleri aslında /proc/sys/ dizininde dosyalar olarak bulunur.
+
 net.ipv4.ip_forward	           # IP yönlendirme
 net.ipv4.tcp_syncookies	       # SYN Flood koruması
 vm.swappiness	                 # Swap kullanım eğilimi
