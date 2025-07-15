@@ -1,1 +1,10 @@
 
+# All
+cat <<EOF >> /etc/sysctl.conf
+net.ipv4.ip_forward = 1
+net.ipv4.tcp_syncookies = 1
+vm.swappiness = 10
+fs.file-max = 100000
+EOF
+
+sysctl -p
