@@ -36,6 +36,7 @@ to 1. Here is the list of possible values in /proc/sys/kernel/sysrq:
 You can set the value in the file by the following command::
 
     echo "number" >/proc/sys/kernel/sysrq
+    echo "1" > /proc/sys/kernel/sysrq # Enable SysRq 
 
 The number may be written here either as decimal or as hexadecimal
 with the 0x prefix. CONFIG_MAGIC_SYSRQ_DEFAULT_ENABLE must always be
