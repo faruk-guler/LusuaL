@@ -54,3 +54,5 @@ fs.file-max	                   # Maksimum açık dosya sayısı
 kernel.pid_max	               # Maksimum PID sayısı
 kernel.shmmax	                 # Paylaşımlı bellek maksimum boyutu
 vm.dirty_ratio	               # Disk yazma öncesi bellek doluluk oranı
+sysctl -w kernel.panic=10      # Kernel panik durumunda sistemin yeniden başlatılmadan önce bekleyeceği süreyi belirler
+
