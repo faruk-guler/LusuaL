@@ -19,7 +19,6 @@ sysctl -p
 sen artık sadece bir makine değilsin, trafik yönlendirici oldun” demektir.
 
 
-
 2. net.ipv4.tcp_syncookies
 
 SYN Flood Koruması
@@ -31,10 +30,6 @@ SYN Flood, DDoS türü bir saldırıdır. Bu parametre ile TCP SYN Cookies aktif
 net.ipv4.tcp_syncookies = 1
 
 🛡️ Ücretsiz bir güvenlik kalkanı gibidir. Ağ saldırılarında seni ayakta tutar.
-
-
-
-
 
 3. vm.swappiness = 10
 
@@ -52,15 +47,9 @@ Varsayılan değer 60’tır. Bu, sistemi swap kullanmaya biraz fazla meraklı y
 echo "vm.swappiness = 10" >> /etc/sysctl.conf
 sysctl -p
 
-
-
-
-
-
 4. fs.file-max
 
 Sistemin açabileceği maksimum dosya sayısı
-
 
 📌 Ne işe yarar?
 
@@ -72,11 +61,6 @@ echo "fs.file-max = 100000" > /etc/sysctl.conf
 ✅ Yetersizse “Too many open files” hataları alırsın.
 🎯 Özellikle yüksek trafikli sunucular için kritik.
 
-
-
-
-
-
 Peki neden sysctl.conf. kullanıyoruz?
 
 ✅ Kalıcı değişiklik
@@ -84,7 +68,3 @@ Peki neden sysctl.conf. kullanıyoruz?
 ✅ Temiz, merkezi konfigürasyon
 
 🧨 Tüm bu parametreleri /etc/sysctl.conf içine ekleyip sysctl -p komutuyla aktif edebilirsin.
-
- Bu ayarlar küçük görünüyor ama sistem performansı, güvenliği ve ağ yönlendirmesi için hayati önem taşır!
-
-#LinuxTips #SysctlMagic #NetAdmin #DevOpsLife #LinuxPerformance #KernelHacks
