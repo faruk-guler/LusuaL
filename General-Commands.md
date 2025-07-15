@@ -1,5 +1,4 @@
-
-| Commands | Function  |
+|Commands |Function  |
 | --- | --- |
 |  A  |  A  |
 | apropos  | Search Help manual pages (man -k)  |
