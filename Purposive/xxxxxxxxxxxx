@@ -1,6 +1,4 @@
-https://www.linkedin.com/posts/denizkocc_linuxtips-sysctlmagic-netadmin-activity-7343959686305538048-bnTt?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAE9SbuIB1TVYf2TtCsKQwyLbu7TRaRBNfNg&utm_campaign=whatsapp
-
-Linux sistem yöneticilerinin en sık dokunduğu ama çoğu zaman nedenini sorgulamadığı 4 efsane kernel parametresi:
+# 4 efsane kernel parametresi:
 
 1. net.ipv4.ip_forward = 1
 
