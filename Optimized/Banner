@@ -16,11 +16,11 @@ sudo systemctl restart sshd
 ## Create Server Console Banner:
 sudo nano /etc/issue
 >> /etc/issue
----------------------------------------------
+----------------------------------------------------
 Welcome Server Console
-Datacenter: Istanbul / Almalinux 10
+Datacenter: Istanbul / AlmaLinux OS 10 “Purple Lion”
 www.farukguler.com
----------------------------------------------
+-----------------------------------------------------
 Hostname : \n
 Domain   : \o
 IPv4     : \4
