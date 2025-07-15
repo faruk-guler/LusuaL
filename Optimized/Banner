@@ -17,11 +17,11 @@ sudo systemctl restart sshd
 ## Create Console Banner:
 sudo nano /etc/issue
 
-###################################
+---------------------------------------------
 Welcome Server Console
 Datacenter Istanbul / Almalinux 10
-###################################
-
+www.farukguler.com
+---------------------------------------------
 Hostname : \n
 Domain   : \o
 IPv4     : \4
@@ -31,8 +31,3 @@ Arch     : \m
 TTY      : \l
 Date     : \d
 Time     : \t
-
-#################################
-#   www.farukguler.com
-#################################
-
