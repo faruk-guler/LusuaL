@@ -1,0 +1,7 @@
+# Automatic security updates: [only security updates]
+sudo apt install unattended-upgrades
+sudo dpkg-reconfigure unattended-upgrades
+
+# Normal updates: [not recommended]
+sudo crontab -e
+0 3 * * * apt update && apt upgrade -y
