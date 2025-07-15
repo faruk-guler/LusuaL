@@ -1,5 +1,4 @@
 ## Create SSH Banner:
-
 sudo nano /etc/ssh-bannerim
 sudo nano /etc/ssh/sshd_config
 >> Banner /etc/ssh-bannerim
