@@ -14,9 +14,9 @@ from www.farukguler.com, Authorized access only!
 ---------------------------------------------------------------------------
 sudo systemctl restart sshd
 
-## Create Console Banner:
+## Create Server Console Banner:
 sudo nano /etc/issue
-
+>> /etc/issue
 ---------------------------------------------
 Welcome Server Console
 Datacenter: Istanbul / Almalinux 10
