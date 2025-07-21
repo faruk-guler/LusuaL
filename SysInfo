@@ -44,7 +44,7 @@ cfdisk #disk partition
 dmidecode -t system
 dmidecode -t bios
 lsof
-du -hc <argüman>
+du -hc <argument>
 systemctl list-units --type=service
 journalctl
 dpkg -l
