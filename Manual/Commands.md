@@ -1,5 +1,5 @@
 # General Commands:
-| Commands | Function |
+| Commands | Function |t
 | --- | --- |
 |  A  |  A  |
 | apropos  | Search Help manual pages (man -k)  |
