@@ -283,5 +283,6 @@ format  Format disks or tapes
 | xdg-open  | Open a file or URL in the user’s preferred application  |
 |  Y  |  Y  |
 | yes  | Print a string until interrupted  |
+| .etc | |
 
 
