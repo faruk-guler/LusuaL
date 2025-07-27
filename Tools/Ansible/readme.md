@@ -8,7 +8,7 @@ Ansible lets you perform configuration management, task automation, security/com
 
 ## Key Features
 
-- **Agentless**: Runs over SSH or Windows Remote Management (WinRM), no additional software is installed on managed machines
+- **Agentless**: Runs over SSH or WinRM (Windows Remote Management), no additional software is installed on managed machines
 - **YAML Based**: Playbooks are written in YAML format
 - **Idempotent**: Even if the same playbook is run more than once, the final state of the system does not change
 - **Modular Structure**: Provides fast automation with ready-to-use modules
