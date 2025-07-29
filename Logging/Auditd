@@ -1,6 +1,7 @@
+# Install auditd
 apt-get install auditd audispd-plugins -y
-# apt-get install rsyslog-imfile [imfile module opsional]
 systemctl enable auditd
+systemctl status auditd
 
 # Moving Audit conf. files
 mv syslog.conf /etc/audit/plugins.d/syslog.conf
@@ -8,7 +9,7 @@ mv audit.rules /etc/audit/rules.d/audit.rules
 systemctl restart auditd
 
 
-# Edit rsyslog.conf
+# Edit Rsyslog conf. file
 vi /etc/rsyslog.conf
 
 # >
@@ -22,7 +23,7 @@ input(type="imfile"
 local6.* @10.5.10.80:514
 # >
 
-# log dir.
+# log dir. location
 /var/log/audit/
 
 # Cron Job for Log Cleaning
