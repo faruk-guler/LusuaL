@@ -23,7 +23,7 @@ input(type="imfile"
 local6.* @10.5.10.80:514
 # >
 
-# log dir. location
+# log dir.
 /var/log/audit/
 
 # Cron Job for Log Cleaning
