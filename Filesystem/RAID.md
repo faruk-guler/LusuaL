@@ -19,3 +19,4 @@ Tek bir diske kıyasla dört kat daha fazla okuma ve iki kat daha fazla yazma h�
 Yüksek performans ihtiyaçları için faydalı olsa da, doğru şekilde uygulanmadığı takdirde avantajlarını kaybedebilir.
 
 -
+-
