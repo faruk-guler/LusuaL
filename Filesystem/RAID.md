@@ -17,3 +17,5 @@ Ancak, yoğun yazma işlemleri sırasında gecikmeler gösterebilir.
 RAID 10 (1+0): En az dört disk gerektirir ve Raid 0 ve Raid 1'in özelliklerini birleştirir.
 Tek bir diske kıyasla dört kat daha fazla okuma ve iki kat daha fazla yazma hızı sunar.
 Yüksek performans ihtiyaçları için faydalı olsa da, doğru şekilde uygulanmadığı takdirde avantajlarını kaybedebilir.
+
+---
