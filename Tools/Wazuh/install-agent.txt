@@ -1,0 +1,3 @@
+https://wazuh.com/install/
+https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-windows.html
+https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-linux.html
