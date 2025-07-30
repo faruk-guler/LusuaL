@@ -1,4 +1,4 @@
-RAID (Redundant Array of Independent Disks)
+# RAID (Redundant Array of Independent Disks)
 Birden fazla sabit diski bir araya getirerek veri depolama performansını ve/veya güvenilirliğini artırmak için kullanılan bir teknolojidir.
 RAID, verileri farklı diskler arasında bölerek veya kopyalayarak çalışır ve farklı RAID seviyeleri vardır. (ör. RAID 0, RAID 1, RAID 5)
 
