@@ -115,6 +115,7 @@ sudo systemctl daemon-reload
 -------------------------------------------------------------|
 
 ## >>> Extend Operation <<<
+
 # Check for errors with fsck:
 sudo e2fsck -ff -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
@@ -134,6 +135,7 @@ df -Th
 df -Th
 
 ## >>> Reducing Operation <<< (only Ext3/Ext4)
+
 # If you shrink more than the disk data, you will lose data!
 # Check for errors with fsck:
 sudo e2fsck -ff -v /dev/nvme0n2p1
