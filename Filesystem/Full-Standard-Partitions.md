@@ -8,7 +8,6 @@ Bu bölümler, sistem dosyalarını veya kullanıcı verilerini içeren dizinler
 
 Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve yönetilir. (parted, fdisk, gparted vb.)
 
-
 <p align="left">
   <img src="https://farukguler.com/assets/post_images/disk-lnx.jpg" alt="LVM Logo" width="500"/>
 </p>
@@ -23,9 +22,9 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # EFI System Partition (ESP
 
   /dev/sda1     /dev/sda2       /dev/sda3           /dev/sda4
--------------+-------------+--------------+--------------+--------------------------+
-/boot/efi    |  /boot      |      /       |   /data      |      boş alan            |
--------------+-------------+--------------+--------------+--------------------------+
+-------------+-------------+--------------+----------------+--------------------------+
+/boot/efi    |  /boot      |      /       |   /data        |      boş alan            |
+-------------+-------------+--------------+----------------+--------------------------+
   500MB–1GB      500MB          40-50GB       500-800GB+   |<--- Genişletilebilir --->|
   FAT32           ext4          ext4/xfs       xfs/btrsf
 ```
