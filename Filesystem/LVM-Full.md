@@ -1,5 +1,5 @@
 
-# LVM Logical Volume Management -farukguler.com
+# 🗃️🗃️🗃️ LVM Logical Volume Management -farukguler.com
 
 Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde esneklik sağlayan bir disk soyutlama katmanıdır. LVM, fiziksel diskleri soyutlayarak mantıksal bir depolama havuzu oluşturur ve bu havuzdan esnek mantıksal diskler (mantıksal birimler) tahsis etmenize olanak tanır. Bu, depolama alanınızı daha esnek bir şekilde yönetmenize, genişletmenize veya daraltmanıza imkan verir.
 
