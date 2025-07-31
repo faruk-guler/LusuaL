@@ -1,6 +1,6 @@
 # RAID (Redundant Array of Independent Disks)
 Birden fazla sabit diski bir araya getirerek veri depolama performansını ve/veya güvenilirliğini artırmak için kullanılan bir teknolojidir.
-RAID, verileri farklı diskler arasında bölerek veya kopyalayarak çalışır ve farklı RAID seviyeleri vardır. (ör. RAID 0, RAID 1, RAID 5)
+RAID, verileri farklı diskler arasında bölerek veya kopyalayarak çalışır ve farklı RAID seviyeleri vardır. (önemli seviyeler: RAID 0, RAID 1, RAID 5, RAID 10)
 
 RAID 0 (Striping): en az iki disk kullanarak sunucu performansını artıran bir sistemdir. 
 Verileri bu diskler arasında bölerek eş zamanlı yazmaya olanak tanır, ancak hata toleransı yoktur. Bir disk arızalanırsa tüm veriler kaybolur.
