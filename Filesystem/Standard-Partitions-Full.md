@@ -8,6 +8,7 @@ Standard partitions are used to separate physical disk spaces of a certain size 
 <p align="left">
   <img src="https://farukguler.com/assets/post_images/disk-lnx.jpg" alt="LVM Logo" width="500"/>
 </p>
+
 ## Standart Disk Mimarisi:
 
 ```sh
