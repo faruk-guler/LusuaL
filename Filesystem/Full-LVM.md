@@ -9,7 +9,8 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
 </p>
 
 ```sh
-# Name: İleriye dönük optimize disk bölümleme planı
+# Name: İleriye dönük LVM optimize disk bölümleme planı
+# ??
 # Disk Space: 4TB
 # Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
 # ESP:  Gerekirse EFI System Partition (ESP) alanı oluşturulabilir.
