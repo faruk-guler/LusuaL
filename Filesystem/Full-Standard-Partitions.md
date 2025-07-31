@@ -19,7 +19,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 ```sh
 # Name: Optimize Disk Bölümleme Planı
 # Disk Space: 4TB
-# Swap: swapfile gerekirse /data altında oluşturulabilir.
+# Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
 
   /dev/sda1     /dev/sda2         /dev/sda3            /dev/sda4       -------------
 +-------------+--------------+----------------------+--------------+--------------------------+
