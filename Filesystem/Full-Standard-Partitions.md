@@ -21,7 +21,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Disk Space: 4TB
 # Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
 
-  /dev/sda1     /dev/sda2       /dev/sda3           /dev/sda4
+  /dev/sda1     /dev/sda2       /dev/sda3           /dev/sda5
 +-------------+--------------+--------------+--------------------------+
 |  /boot      |      /       |   /data      |      boş alan            |
 +-------------+--------------+--------------+--------------------------+

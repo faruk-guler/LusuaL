@@ -1,0 +1,24 @@
+#Log binding
+Linux sistemlerde log dosyaları varsayılan olarak /var/log dizininde birikir.
+Eğer / (root) bölümü sınırlıysa, log dosyaları alanı doldurabilir ve sistemin çalışmasını engelleyebilir.
+Bu sorunu çözmek için, log dosyalarının fiziksel olarak geniş alanlı bir bölüme (örneğin /data) yönlendirilmesi gerekir.
+
+
+# Stop and start log services
+systemctl stop rsyslog
+systemctl stop systemd-journald
+systemctl start systemd-journald
+systemctl start rsyslog
+
+# Move logs:
+mkdir -p /data/log
+mv /var/log/* /data/log/
+
+# fstab edit:
+nano /etc/fstab
+/data/log /var/log none bind 0 0
+mount -a
+
+# Test:
+df -h /var/log
+tail -f /var/log/syslog
