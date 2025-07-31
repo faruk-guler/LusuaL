@@ -1,10 +1,10 @@
 
 # 💾⚙️ Standard Partitions Management -farukguler.com
+Linux'taki standart disk yapılandırması genellikle standart bölümleri içerir. Bu yapılandırma, sabit diski fiziksel olarak ayrılmış bölümlere ayırır ve her birini ayrı bir dosya sistemi olarak biçimlendirir.
+Linux sistemlerinde LVM (Mantıksal Birim Yöneticisi) yoksa, varsayılan olarak standart bölümler kullanılır.
 
-Standard disk configuration in Linux usually includes standard partitions. This configuration divides the hard disk into physically separated partitions and formats each as a separate file system. "If Linux systems do not have LVM (Logical Volume Manager), standard partitions are used by default.
-
-Standard partitions are used to separate physical disk spaces of a certain size and format each with a separate file system. These partitions may be directories containing system files or user data, such as (/boot, /home, /var /logs .etc.)
-
+Standart bölümler, belirli boyuttaki fiziksel disk alanlarını ayırmak ve her birini ayrı bir dosya sistemiyle biçimlendirmek için kullanılır.
+Bu bölümler, sistem dosyalarını veya kullanıcı verilerini içeren dizinler olabilir (örneğin /boot, /home, /var /logs vb.)
 
 <p align="left">
   <img src="https://farukguler.com/assets/post_images/disk-lnx.jpg" alt="LVM Logo" width="500"/>
