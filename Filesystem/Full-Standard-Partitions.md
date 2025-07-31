@@ -19,7 +19,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Name: İleriye dönük optimize disk bölümleme planı
 # Disk Space: 4TB
 # Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
-# EFI System Partition (ESP
+# ESP:  Gerekirse EFI System Partition (ESP) alanı oluşturulabilir.
 
   /dev/sda1     /dev/sda2       /dev/sda3     /dev/sda4
 -------------+-------------+--------------+----------------+--------------------------+
