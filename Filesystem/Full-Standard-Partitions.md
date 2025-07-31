@@ -19,12 +19,14 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 ```sh
 # Optimize Disk Bölümleme Planı
 # Disk Boyutu: 4TB
+# swapfile gerekirse /data altında oluşturulabilir.
 
-+---------+--------------+----------------------+--------------+--------------------------+
-|  /boot  |      /       |        /home         |   /data      |      boş alan            |
-+---------+--------------+----------------------+--------------+--------------------------+
-/dev/sda1  /dev/sda2     /dev/sda3              /dev/sda4       ---
-  500MB    40-50GB              20-30GB          500-800GB+    |<--- Genişletilebilir --->|
+ /dev/sda1     /dev/sda2          /dev/sda3            /dev/sda4       ------
++------------+--------------+----------------------+--------------+--------------------------+
+|  /boot     |      /       |        /home         |   /data      |      boş alan            |
++------------+--------------+----------------------+--------------+--------------------------+
+  500MB        40-50GB              20-30GB          500-800GB+   |<--- Genişletilebilir --->|
+
 
 
 ```
