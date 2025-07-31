@@ -75,7 +75,7 @@ L - List partition type:
 p - List disk partitions:
 q - Exit from fdisk tool:
 
-# Introduce disk changes to the kernel:
+# Introduce disk changes to the Kernel:
 partprobe -s
 
 # Disk/Partition Status:
