@@ -1,5 +1,5 @@
 
-# 💾⚙️ Standard Partitions -farukguler.com
+# 💾⚙️ Standard Partitions Management -farukguler.com
 
 Standard disk configuration in Linux usually includes standard partitions. This configuration divides the hard disk into physically separated partitions and formats each as a separate file system. If Linux systems do not have LVM (Logical Volume Manager), standard partitions are used by default.
 
