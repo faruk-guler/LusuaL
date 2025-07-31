@@ -16,8 +16,9 @@ Standard partitions are used to separate physical disk spaces of a certain size 
 
 ```sh
 --------------------------------------------------|
-#[Standard Partitions] Install, Configure, Manage:
-#[Tools: Fdisk
+# Standard Partitions] Install, Configure, Manage:
+# Tools: Fdisk
+# 2025
 --------------------------------------------------|
 
 #Disk/Directory Status:
