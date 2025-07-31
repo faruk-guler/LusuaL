@@ -1,6 +1,6 @@
 # 📜 Tutorials / Information:
 ```sh
-Standart:
+Standard Partitions:
 ⦁ Disks can be divided into partitions.
 ⦁ Partitions are logical sections within a disk. Each section can be formatted with a separate file format.
 ⦁ Formatting must be done separately for each partition after partitioning. otherwise you will lose all partitions.
@@ -30,7 +30,7 @@ Standart:
 ⦁
 
 
-LVM:
+LVM (Logical Volume Management):
 ⦁ The highest number of physical volumes within each volume group is 256.
 ⦁ LVM size is minimum 4MB and maximum 255.99GB.
 ⦁ The bootloader cannot read LVM volumes directly. Therefore, you need to create your /boot partition on a standard (non-LVM) partition and define it in the fstab file. Skipping this step may cause your system to fail to boot after LVM migration. You may need to use an external live disk image to resolve this situation.
