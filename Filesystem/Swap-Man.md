@@ -45,7 +45,7 @@ Creating a swap file on Linux is a simple process.
 Use the **dd** tool to create a new storage file.
 
 ```shell
-$ sudo dd if=/dev/zero of=/swapfile bs=1M count=2048
+$ sudo dd if=/dev/zero of=/swapfile bs=1M count=1024
 ```
 
 The command contains the following parameters:
