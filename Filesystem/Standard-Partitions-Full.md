@@ -106,12 +106,12 @@ sudo systemctl daemon-reload
 
 ```sh
 -------------------------------------------------------------|
-# Standard Partitions -Extend and Reduce  **Online/Offline
 # Name: Extend and Reduce  **Online/Offline
 # Author: faruk-guler
+# 
 -------------------------------------------------------------|
 
-## >>A Extend Operation
+## >>> Extend Operation
 # Check for errors with fsck:
 sudo e2fsck -ff -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
@@ -130,7 +130,7 @@ df -Th
 # sudo xfs_growfs /dev/nvme0n2p1 18G [spesific]
 df -Th
 
-## >> B Reducing Operation (only Ext3/Ext4, not Xfs)
+## >>> Reducing Operation (only Ext3/Ext4)
 # If you shrink more than the disk data, you will lose data!
 # Check for errors with fsck:
 sudo e2fsck -ff -v /dev/nvme0n2p1
