@@ -139,7 +139,7 @@ df -Th
 sudo e2fsck -ff -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
 
-# B1 First size the File System: (Reverse)
+# First size the File System: (Reverse Operation)
 ⦁⦁If you are using Ext3/Ext4: (resize2fs) [Offline]
 sudo umount /dev/nvme0n2p1 /alan [umount]
 sudo e2fsck -f /dev/nvme0n2p1
