@@ -18,6 +18,10 @@ Bu bölümler, sistem dosyalarını veya kullanıcı verilerini içeren dizinler
 # Author: faruk-guler
 # 
 --------------------------------|
+# Install Fdisk:
+sudo apt install util-linux -y
+sudo yum install util-linux -y
+fdisk -v
 
 # Disk/Directory Status:
 sudo du -hla /storage/log
@@ -148,6 +152,13 @@ df -Th
 # Author: faruk-guler
 # 
 -------------------------|
+
+# Install Parted:
+sudo apt install parted
+sudo yum install parted
+parted --version
+
+# 
 
 ```
 
