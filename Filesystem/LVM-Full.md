@@ -71,7 +71,7 @@ sudo findmnt --verify
 ################################
 sudo lvextend -L +10G /dev/vg_veri/lv_home       # LV'ye belirli bir miktar alan ekleme (10GB)
 sudo lvextend -l +100%FREE /dev/vg_name/lv_name  # LV VG'nin tüm boş alanını kullansın
-sudo lvextend -l +80%FREE /dev/vg_name/lv_name  # LV VG'nin %80 alanını kullansın
+sudo lvextend -l +80%FREE /dev/vg_name/lv_name   # LV VG'nin %80 alanını kullansın
 
 ## Dosya Sistemi Boyutlandırma (file system resizing extend/reduce)
 #################################
@@ -83,7 +83,7 @@ sudo xfs_growfs /mnt/home                  # XFS  dosya sistemini boyutlandır (
 sudo umount /mnt/home                        # Önce unmount et
 sudo e2fsck -f /dev/vg_name/lv_name          # Dosya sistemini kontrol et
 sudo resize2fs /dev/vg_name/lv_name 15G      # Dosya sistemini küçült (15G)
-sudo lvreduce -L 15G /dev/vg_name/lv_name   # LV boyutunu küçült (15GB)
+sudo lvreduce -L 15G /dev/vg_name/lv_name    # LV boyutunu küçült (15GB)
 sudo mount /dev/vg_name/lv_name /mnt/home    # Tekrar mount et
 ⚠️ Uyarı: LV küçültme işlemi veri kaybına yol açabilir. Verilerinizi yedekleyin!
 ```
