@@ -11,17 +11,8 @@ Standard partitions are used to separate physical disk spaces of a certain size 
 </p>
 
 ```sh
-#Install:
-sudo apt install lvm2         # Debian/Ubuntu
-sudo yum install lvm2         # RHEL/CentOS
-sudo zypper install lvm2      # SUSE/openSUSE:
-
-#LVM Configuration:
-/etc/lvm/lvm.conf
-
-## LV Yolları ve Alternatifler:
-/dev/vg_name/lv_name           # Standart yol
-/dev/mapper/vg_name-lv_name    # Device mapper yolu
-/dev/dm-N                      # Düşük seviye device mapper aygıtı
+-------------------------------------------------------------------|
+#[Standard Partitions] Manage: Extend and Reduce  **Online/Offline
+-------------------------------------------------------------------|
 ```
 [Standard Partitions - Install, Configure, Manage -farukguler.com](https://farukguler.com/posts/standard-partitions-install-configure-manage/)
