@@ -99,7 +99,7 @@ sudo mount /dev/nvme0n2p1 /alan
 sudo umount /dev/nvme0n2p1 /alan
 sudo umount -l /dev/nvme0n2p1 /alan
 
-# fstab edit: (Persistence)
+# fstab edit: (for Persistence)
 sudo cp /etc/fstab /etc/fstab.old
 cat /etc/fstab
 # nano /etc/fstab
