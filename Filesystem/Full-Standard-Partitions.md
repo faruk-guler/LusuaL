@@ -20,7 +20,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Yapı: Tüm veri alanları standart partitions ile yönetilir.
 # Disk Space: 4TB
 # Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
-# ESP:  Gerekirse EFI System Partition (ESP) alanı oluşturulabilir.
+# ESP:  UEFI sistem kullanılıyorsa EFI System Partition (ESP) alanı zorunludur.
 
   /dev/sda1     /dev/sda2       /dev/sda3     /dev/sda4
 -------------+-------------+--------------+----------------+----------------------------+
