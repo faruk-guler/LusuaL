@@ -137,10 +137,10 @@ sudo systemctl daemon-reload
 sudo e2fsck -ff -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
 
-# A1 -First size Extend the Partition:
+# A1 -Before size Extend the Partition:
 df -Th
 
-# A2 -Later size Extend the File System:
+# A2 -After size Extend the File System:
 ⦁⦁If you are using Ext3/Ext4: (resize2fs) [Online]
 # sudo resize2fs /dev/nvme0n2p1 [%100]
 # sudo resize2fs /dev/nvme0n2p1 18G [spesific]
