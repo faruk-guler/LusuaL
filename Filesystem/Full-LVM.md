@@ -13,11 +13,11 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
 # Disk Space: 4TB
 # Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
 
-  /dev/sda1     /dev/sda2         /dev/sda3            /dev/sda4       -------------
+  /dev/sda1     /dev/sda2         /dev/sda3            /dev/sda4
 +-------------+--------------+----------------------+--------------+--------------------------+
 |  /boot      |      /       |        /home         |   /data      |      boş alan            |
 +-------------+--------------+----------------------+--------------+--------------------------+
-  500MB        40-50GB              20-30GB          500-800GB+   |<--- Genişletilebilir --->|
+  500MB        40-50GB              20-30GB          500-800GB+    |<--- Genişletilebilir --->|
 
 
 ```
