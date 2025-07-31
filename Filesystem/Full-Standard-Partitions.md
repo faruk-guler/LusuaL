@@ -110,6 +110,7 @@ sudo systemctl daemon-reload
 
 -------------------------------------------------------------|
 # Name: Extend and Reduce  **Online/Offline
+# Author: faruk-guler
 # 
 -------------------------------------------------------------|
 
