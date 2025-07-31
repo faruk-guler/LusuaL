@@ -9,6 +9,20 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
 </p>
 
 ```sh
+# Name: İleriye dönük optimize LVM planı
+# Disk Space: 4TB
+# Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
+
+  /dev/sda1     /dev/sda2         /dev/sda3            /dev/sda4       -------------
++-------------+--------------+----------------------+--------------+--------------------------+
+|  /boot      |      /       |        /home         |   /data      |      boş alan            |
++-------------+--------------+----------------------+--------------+--------------------------+
+  500MB        40-50GB              20-30GB          500-800GB+   |<--- Genişletilebilir --->|
+
+
+```
+
+```sh
 # Install LVM:
 sudo apt install lvm2         # Debian/Ubuntu
 sudo yum install lvm2         # RHEL/CentOS
