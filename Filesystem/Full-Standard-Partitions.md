@@ -21,13 +21,13 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Disk Space: 4TB
 # Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
 
-    ext4                                               xfs/btrsf
   /dev/sda1     /dev/sda2         /dev/sda3            /dev/sda4
-+-------------+--------------+----------------------+--------------+--------------------------+
-|  /boot/efi  |      /       |        /home         |   /data      |      boş alan            |
-+-------------+--------------+----------------------+--------------+--------------------------+
-  500MB        40-50GB              20-30GB          500-800GB+    |<--- Genişletilebilir --->|
-  ext4                                               xfs/btrsf
+[/boot/efi]
++-------------+--------------+--------------+--------------------------+
+|  /boot      |      /       |   /data      |      boş alan            |
++-------------+--------------+--------------+--------------------------+
+    1GB          40-50GB       500-800GB+   |<--- Genişletilebilir --->|
+    ext4                        xfs/btrsf
 
 ```
 
