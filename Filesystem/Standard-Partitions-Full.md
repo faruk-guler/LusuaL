@@ -114,12 +114,10 @@ sudo systemctl daemon-reload
 sudo e2fsck -ff -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
 
-#A1 -First size Extend the Partition:
-Fdisk tool:
-Parted or Cdisk tool:
+# A1 -First size Extend the Partition:
 df -Th
 
-#A2 -Later size Extend the File System:
+# A2 -Later size Extend the File System:
 ⦁If you are using Ext3/Ext4: (resize2fs) [Online]
 #sudo resize2fs /dev/nvme0n2p1 [%100]
 #sudo resize2fs /dev/nvme0n2p1 18G [spesific]
@@ -130,13 +128,13 @@ df -Th
 #sudo xfs_growfs /dev/nvme0n2p1 18G [spesific]
 df -Th
 
-##>>B +Reducing Operation ## (only Ext3/Ext4, not Xfs)
+##>> B +Reducing Operation ## (only Ext3/Ext4, not Xfs)
 #If you shrink more than the disk data, you will lose data!
 #Check for errors with fsck:
 sudo e2fsck -ff -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
 
-#B1 First size the File System: (Reverse)
+# B1 First size the File System: (Reverse)
 ⦁If you are using Ext3/Ext4: (resize2fs) [Offline]
 sudo umount /dev/nvme0n2p1 /alan [umount]
 sudo e2fsck -f /dev/nvme0n2p1
