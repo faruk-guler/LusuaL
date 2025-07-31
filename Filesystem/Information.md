@@ -33,8 +33,10 @@ Standart:
 LVM:
 ⦁ The highest number of physical volumes within each volume group is 256.
 ⦁ LVM size is minimum 4MB and maximum 255.99GB.
+⦁ The bootloader cannot read LVM volumes directly. Therefore, you need to create your /boot partition on a standard (non-LVM) partition and define it in the fstab file. Skipping this step may cause your system to fail to boot after LVM migration. You may need to use an external live disk image to resolve this situation.
 ⦁ The maximum volume group (VG) per device is 99.
 ⦁ Traditional partitioning is good, but LVM is better. (RedHat Enterprise)
+⦁ In the default installation, the [/] and [swap] partitions are always created in LVM, and the [/boot] partition is created in a separate Standard Partition.
 ⦁ XFS file system can be expanded but not reducing!! (year 2024) The only solution is to back up the data, delete the volume, create a smaller volume and restore the data there.
 ⦁ Disk reducing is not recommended. If the reducing is greater than the disk capacity, you will lose data!!
 ⦁
