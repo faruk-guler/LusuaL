@@ -21,7 +21,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
 # EFI System Partition (ESP
 
-  /dev/sda1     /dev/sda2       /dev/sda3           /dev/sda4
+  /dev/sda1     /dev/sda2       /dev/sda3     /dev/sda4
 -------------+-------------+--------------+----------------+--------------------------+
 /boot/efi    |  /boot      |      /       |   /data        |      boş alan            |
 -------------+-------------+--------------+----------------+--------------------------+
