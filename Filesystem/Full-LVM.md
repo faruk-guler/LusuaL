@@ -21,9 +21,9 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
              |             |  lv_root, lv_data, lv_logs, ...  |                              |
              |             |  mount: /, /data, /home, /logs   |                              |
 -------------+-------------+----------------------------------+------------------------------+                       
-  500MB–1GB      500MB               100–500GB                          ~2–3TB ort. boş alan
-  FAT32           ext4              ext4/xfs/btrfs                           -------
-                                       LVM                                 ( VG içinde)
+  500MB–1GB      500MB               100–500GB                         ~2–3TB ort. boş alan
+  FAT32           ext4              ext4/xfs/btrfs                          -------
+                                       LVM                                ( VG içinde)
 ```
 
 ```sh
