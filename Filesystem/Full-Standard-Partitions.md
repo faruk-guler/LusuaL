@@ -17,7 +17,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Standard Partitions: [Install, Configure, Manage:]
 
 ```sh
-# Name: Optimize Disk Bölümleme Planı
+# Name: İleriye dönük optimize disk bölümleme planı
 # Disk Space: 4TB
 # Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
 
