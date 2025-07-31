@@ -67,7 +67,7 @@ Partition type
 t - Change partition type:
 L - List partition type:
 8e - Set/change partition type:
-# w - Write changes to disk:
+#w - Write changes to disk:
 p - List disk partitions:
 q - Exit from fdisk tool:
 
