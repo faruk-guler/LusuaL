@@ -17,10 +17,12 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Standard Partitions: [Install, Configure, Manage:]
 
 ```sh
+# Optimize Disk Bölümleme Planı
+
 +---------+--------------+----------------------+--------------+
-|  /boot  |      /       |        /data         |   boş alan   |
+|  /boot  |      /       |        /home         |   /data      |
 +---------+--------------+----------------------+--------------+
-  500MB    40-50GB       Geniş ve büyüyebilir     500-800GB+
+  500MB    40-50GB              20-30GB          Geniş ve büyüyebilir     500-800GB+
 
 
 ```
