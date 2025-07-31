@@ -9,7 +9,7 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
 </p>
 
 ```sh
-#Install:
+#Install LVM:
 sudo apt install lvm2         # Debian/Ubuntu
 sudo yum install lvm2         # RHEL/CentOS
 sudo zypper install lvm2      # SUSE/openSUSE:
