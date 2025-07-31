@@ -14,11 +14,11 @@ Standard partitions are used to separate physical disk spaces of a certain size 
 # Standard Partitions: [Install, Configure, Manage:]
 
 ```sh
---------------------------------------------------|
-# Standard Partitions -Install, Configure, Manage:
-# Tools: Fdisk
-# faruk-guler
---------------------------------------------------|
+---------------------------------------------------------|
+# Name: Standard Partitions -Install, Configure, Manage:
+# Tools: fdisk
+# Author: faruk-guler
+---------------------------------------------------------|
 
 # Disk/Directory Status:
 sudo du -hla /storage/log
