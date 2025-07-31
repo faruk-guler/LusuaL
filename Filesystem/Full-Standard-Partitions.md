@@ -28,7 +28,6 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
   500MB        40-50GB              20-30GB          500-800GB+   |<--- Genişletilebilir --->|
 
 
-
 ```
 
 ```sh
