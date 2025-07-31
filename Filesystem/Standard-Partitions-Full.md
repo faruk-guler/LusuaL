@@ -15,10 +15,10 @@ Standard partitions are used to separate physical disk spaces of a certain size 
 # Standard Partitions: [Manage]
 
 ```sh
---------------------------------------------|
-#[Standard Partitions] Install, Configure:
+--------------------------------------------------|
+#[Standard Partitions] Install, Configure, Manage:
 #[Tools: Fdisk
---------------------------------------------|
+--------------------------------------------------|
 
 #Disk/Directory Status:
 sudo du -hla /storage/log
@@ -104,9 +104,9 @@ sudo findmnt --verify
 sudo systemctl daemon-reload
 ```
 ```sh
--------------------------------------------------------------------|
-#[Standard Partitions] Manage: Extend and Reduce  **Online/Offline
--------------------------------------------------------------------|
+--------------------------------------------------------------|
+#[Standard Partitions] Extend and Reduce  **Online/Offline
+--------------------------------------------------------------|
 
 ##>>A +Extend Operation##
 #Check for errors with fsck:
