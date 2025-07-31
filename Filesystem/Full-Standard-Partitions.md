@@ -18,6 +18,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 
 ```sh
 # Optimize Disk Bölümleme Planı
+# Disk Boyutu: 4TB
 
 +---------+--------------+----------------------+--------------+--------------------------+
 |  /boot  |      /       |        /home         |   /data      |      boş alan            |
