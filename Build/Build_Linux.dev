@@ -5,14 +5,14 @@ Build type: Basic
 Author: Faruk Guler
 ######################################
 
-#About Build-essential:
+# About Build-essential:
 Build-essential is a metapackage containing essential build tools for Linux distributions such as Debian and Ubuntu.
 It provides the most basic tools needed to compile C and C++ programs. 
 It usually contains references to a large number of packages needed for software development. "build-essential" supports the following languages:
 C, C++, Objective-C, Fortran, Ada, Go and more...
 
-#The build-essential package includes:
-#cat /usr/share/doc/build-essential/list
+# The build-essential package includes:
+# cat /usr/share/doc/build-essential/list
 
 gcc → GNU compiler for C language
 g++ → GNU compiler for C++ language
@@ -20,12 +20,12 @@ make → Tool to automate build processes
 libc6-dev → C libraries and header files
 dpkg-dev → Debian package development tools
 
-#Installation:
+# Installation:
 sudo apt update
 sudo apt install build-essential
 
-#sudo apt install gcc -y  [GCC GNU Compiler Collection] #optional and other versions install
-#sudo apt install g++ -y
+# sudo apt install gcc -y  [GCC GNU Compiler Collection] #optional and other versions install
+# sudo apt install g++ -y
 # and more
 
 ## Verify Versions
@@ -33,7 +33,7 @@ gcc --version
 g++ --version
 make --version
 
-#Go Calendar App Example:
+# Go Calendar App Example:
 // go.c begin
 #include <stdio.h>
 int main() {
@@ -41,13 +41,13 @@ int main() {
     return 0;
 }
 
-#Compile a Calendar App: [from GCC]
+# Compile a Calendar App: [from GCC]
 nano go.c
 gcc go.c -o calendar_tool
 chmod +x calendar_tool
 ./calendar_tool
 
-#Compile from source code:
+# Compile from source code:
 ./configure
 make
 sudo make install
@@ -66,7 +66,7 @@ Pzt Sal Çar Per Cum Cmt Paz
 24 25 26 27 28
 ---------------------------------
 
-#Docs:
+# Docs:
 https://gcc.gnu.org
 https://packages.debian.org/sid/build-essential
 https://www.debian.org/doc/manuals/debian-handbook/
