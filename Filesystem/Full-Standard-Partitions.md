@@ -17,6 +17,15 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Standard Partitions: [Install, Configure, Manage:]
 
 ```sh
++---------+--------------+----------------------+--------------+
+|  /boot  |      /       |        /data         |   boş alan   |
++---------+--------------+----------------------+--------------+
+  500MB    40-50GB       Geniş ve büyüyebilir     500-800GB+
+
+
+```
+
+```sh
 --------------------------------|
 # Tools: Fdisk
 # Author: faruk-guler
