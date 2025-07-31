@@ -22,4 +22,4 @@ sudo zypper install lvm2      # SUSE/openSUSE:
 /dev/mapper/vg_name-lv_name    # Device mapper yolu
 /dev/dm-N                      # Düşük seviye device mapper aygıtı
 ```
-[Standard Partitions - Install, Configure, Manage](https://farukguler.com/posts/standard-partitions-install-configure-manage/)
+[Standard Partitions - Install, Configure, Manage -farukguler.com](https://farukguler.com/posts/standard-partitions-install-configure-manage/)
