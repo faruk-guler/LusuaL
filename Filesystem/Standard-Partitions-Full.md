@@ -107,6 +107,8 @@ sudo systemctl daemon-reload
 ```sh
 -------------------------------------------------------------|
 # Standard Partitions -Extend and Reduce  **Online/Offline
+# Name: Extend and Reduce  **Online/Offline
+# Author: faruk-guler
 -------------------------------------------------------------|
 
 ## >>A Extend Operation
