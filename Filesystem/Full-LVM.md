@@ -17,8 +17,8 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
 
   /dev/sda1     /dev/sda2     vg_root       vg_data                            boş alan
 -------------+-------------+-----------+------------------------------------+------------------------------+
-/boot/efi    |  /boot      |  lv_root  |  lv_data, lv_app lv_logs, lv_swap  |  (Genişletilebilir alan)     |  
--------------+-------------+-----------+------------------------------------+------------------------------+                             
+/boot/efi    |  /boot      |  lv_root  |  lv_data, lv_app lv_logs, lv_swap  |  (Genişletilebilir alan)     |
+-------------+-------------+-----------+------------------------------------+------------------------------+                       
   500MB–1GB      500MB        40–50GB             500–1000GB                         ~2–3TB boş alan
   FAT32           ext4      ext4/xfs/btrfs        ----------                           ---------
                               LVM                   LVM                                   LVM
