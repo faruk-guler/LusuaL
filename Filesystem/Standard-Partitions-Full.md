@@ -13,11 +13,11 @@ Bu bölümler, sistem dosyalarını veya kullanıcı verilerini içeren dizinler
 # Standard Partitions: [Install, Configure, Manage:]
 
 ```sh
----------------------------------------------------------|
-# Name: Standard Partitions -Install, Configure, Manage:
+--------------------------------|
 # Tools: fdisk
 # Author: faruk-guler
----------------------------------------------------------|
+# 
+--------------------------------|
 
 # Disk/Directory Status:
 sudo du -hla /storage/log
@@ -102,12 +102,9 @@ cat /etc/fstab
 sudo mount -av
 sudo findmnt --verify
 sudo systemctl daemon-reload
-```
 
-```sh
 -------------------------------------------------------------|
 # Name: Extend and Reduce  **Online/Offline
-# Author: faruk-guler
 # 
 -------------------------------------------------------------|
 
@@ -143,6 +140,14 @@ sudo e2fsck -f /dev/nvme0n2p1
 # sudo resize2fs /dev/nvme0n2p1 17G [spesific size]
 sudo mount /dev/nvme0n2p1 /alan [try mount]
 df -Th
+
+```
+```sh
+-------------------------|
+# Tools: parted
+# Author: faruk-guler
+# 
+-------------------------|
 
 ```
 
