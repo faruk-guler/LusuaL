@@ -5,7 +5,6 @@ Standard disk configuration in Linux usually includes standard partitions. This 
 
 Standard partitions are used to separate physical disk spaces of a certain size and format each with a separate file system. These partitions may be directories containing system files or user data, such as (/boot, /home, /var /logs .etc.)
 
-# Standard Partitions: [Install, Configure, Manage:]
 
 <p align="left">
   <img src="https://farukguler.com/assets/post_images/disk-lnx.jpg" alt="LVM Logo" width="500"/>
