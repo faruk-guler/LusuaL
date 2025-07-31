@@ -1,7 +1,7 @@
 # 📜 Tutorials / Information:
 ```sh
 Standart:
-- Disks can be divided into partitions.
+⦁ Disks can be divided into partitions.
 ⦁ Partitions are logical sections within a disk. Each section can be formatted with a separate file format.
 ⦁ Formatting must be done separately for each partition after partitioning. otherwise you will lose all partitions.
 ⦁ If Linux systems do not have LVM (Logical Volume Manager), standard partitions are used by default.
