@@ -12,7 +12,7 @@ Standard partitions are used to separate physical disk spaces of a certain size 
 </p>
 
 
-👨🏼‍💻 Standard Partitions: [Manage]
+# Standard Partitions: [Manage]
 
 ```sh
 --------------------------------------------|
