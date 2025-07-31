@@ -13,8 +13,7 @@ Standard partitions are used to separate physical disk spaces of a certain size 
 
 
 👨🏼‍💻 Standard Partitions: [Manage]
-##System: RHELL / Centos /Debian /Alma /Ubuntu
-##Tools: Fdisk
+# Tools: Fdisk
 
 ```sh
 --------------------------------------------|
