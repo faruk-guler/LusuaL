@@ -17,7 +17,7 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
 
   /dev/sda1     /dev/sda2            /dev/sda3                     boş alan
 -------------+-------------+----------------------------------+------------------------------+
-             |             |         PV → VG → LV             |                              |
+             |             |      PV → VG → LV                |                              |
 /boot/efi    |  /boot      | (PV → VG: vg_data → LV: lv_*)    |  (Genişletilebilir alan)     |
              |             |  lv_data, lv_logs, lv_swap       |                              |
 -------------+-------------+--------------+--------------------------------------------------+                       
