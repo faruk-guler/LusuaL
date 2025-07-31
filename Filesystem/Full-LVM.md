@@ -15,8 +15,9 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
 # Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
 # ESP:  Gerekirse EFI System Partition (ESP) alanı oluşturulabilir.
 
-  /dev/sda1     /dev/sda2              PV → VG → LV                  boş alan
+  /dev/sda1     /dev/sda2            /dev/sda3                     boş alan
 -------------+-------------+----------------------------------+------------------------------+
+             |             |         PV → VG → LV             |                              |
 /boot/efi    |  /boot      | (PV → VG: vg_data → LV: lv_*)    |  (Genişletilebilir alan)     |
              |             |  lv_data, lv_logs, lv_swap       |                              |
 -------------+-------------+--------------+--------------------------------------------------+                       
