@@ -15,10 +15,11 @@ Standard partitions are used to separate physical disk spaces of a certain size 
 👨🏼‍💻 Standard Partitions: [Manage]
 ##System: RHELL / Centos /Debian /Alma /Ubuntu
 ##Tools: Fdisk
+
+```sh
 --------------------------------------------|
 #[Standard Partitions] Install, Configure:
 --------------------------------------------|
-### Disk Configuration ###
 
 #Disk/Directory Status:
 sudo du -hla /storage/log
@@ -103,10 +104,10 @@ sudo mount -av
 sudo findmnt --verify
 sudo systemctl daemon-reload
 ```
+```sh
 -------------------------------------------------------------------|
 #[Standard Partitions] Manage: Extend and Reduce  **Online/Offline
 -------------------------------------------------------------------|
-```sh
 
 ##>>A +Extend Operation##
 #Check for errors with fsck:
