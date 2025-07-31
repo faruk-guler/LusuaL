@@ -14,7 +14,7 @@ Bu bölümler, sistem dosyalarını veya kullanıcı verilerini içeren dizinler
 
 ```sh
 --------------------------------|
-# Tools: fdisk
+# Tools: Fdisk
 # Author: faruk-guler
 # 
 --------------------------------|
@@ -144,7 +144,7 @@ df -Th
 ```
 ```sh
 -------------------------|
-# Tools: parted
+# Tools: Parted
 # Author: faruk-guler
 # 
 -------------------------|
