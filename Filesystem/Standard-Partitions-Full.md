@@ -1,7 +1,9 @@
 
-# LVM Logical Volume Management -farukguler.com
+# 💾⚙️ Standard Partitions: [Install, Configure]
 
-Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde esneklik sağlayan bir disk soyutlama katmanıdır. LVM, fiziksel diskleri soyutlayarak mantıksal bir depolama havuzu oluşturur ve bu havuzdan esnek mantıksal diskler (mantıksal birimler) tahsis etmenize olanak tanır. Bu, depolama alanınızı daha esnek bir şekilde yönetmenize, genişletmenize veya daraltmanıza imkan verir.
+Standard disk configuration in Linux usually includes standard partitions. This configuration divides the hard disk into physically separated partitions and formats each as a separate file system. If Linux systems do not have LVM (Logical Volume Manager), standard partitions are used by default.
+
+Standard partitions are used to separate physical disk spaces of a certain size and format each with a separate file system. These partitions may be directories containing system files or user data, such as /boot, /home, /var .etc.
 
 ## LVM Mimarisi:
 <p align="left">
