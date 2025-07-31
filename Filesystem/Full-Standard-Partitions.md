@@ -28,7 +28,7 @@ fdisk -v
 sudo du -hla /storage/log
 sudo du -hla --max-depth=1 / | sort -h
 
-# Check Status:
+# Check Disk Status:
 ls -l /dev/sd*
 df -Th
 lsblk -p
@@ -123,12 +123,12 @@ sudo e2fsck -f /dev/nvme0n2p1
 df -Th
 
 # A2 -Later size Extend the File System:
-⦁If you are using Ext3/Ext4: (resize2fs) [Online]
+⦁⦁If you are using Ext3/Ext4: (resize2fs) [Online]
 # sudo resize2fs /dev/nvme0n2p1 [%100]
 # sudo resize2fs /dev/nvme0n2p1 18G [spesific]
 df -Th
 
-⦁If you are using Xfs: (xfs_growfs) [Online]
+⦁⦁If you are using Xfs: (xfs_growfs) [Online]
 # sudo xfs_growfs -d /dev/nvme0n2p1 [%100]
 # sudo xfs_growfs /dev/nvme0n2p1 18G [spesific]
 df -Th
@@ -140,7 +140,7 @@ sudo e2fsck -ff -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
 
 # B1 First size the File System: (Reverse)
-⦁If you are using Ext3/Ext4: (resize2fs) [Offline]
+⦁⦁If you are using Ext3/Ext4: (resize2fs) [Offline]
 sudo umount /dev/nvme0n2p1 /alan [umount]
 sudo e2fsck -f /dev/nvme0n2p1
 # sudo resize2fs /dev/nvme0n2p1 17G [spesific size]
