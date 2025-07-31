@@ -13,11 +13,11 @@ Standard partitions are used to separate physical disk spaces of a certain size 
 
 
 👨🏼‍💻 Standard Partitions: [Manage]
-# Tools: Fdisk
 
 ```sh
 --------------------------------------------|
 #[Standard Partitions] Install, Configure:
+#[Tools: Fdisk
 --------------------------------------------|
 
 #Disk/Directory Status:
