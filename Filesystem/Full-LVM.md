@@ -72,7 +72,7 @@ sudo lvdisplay                                  # Detaylı bilgi göster
 
 ## Dosya Sistemi Oluşturma ve Mount Etme
 sudo mkfs.ext4 /dev/vg_veri/lv_home           # EXT4 dosya sistemi oluştur
-#sudo mkfs.xfs /dev/vg_name/lv_name           # XFS dosya sistemi oluştur (daraltılamaz, sadece genişletilir.)
+#sudo mkfs.xfs /dev/vg_name/lv_name           # XFS dosya sistemi oluştur (daraltılamaz, sadece genişletilir, ama performanslıdır.)
 sudo mkdir /mnt/home                          # Mount dizini oluştur
 sudo mount /dev/vg_veri/lv_home /mnt/home     # Mount et
 
