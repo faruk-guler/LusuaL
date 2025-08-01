@@ -72,16 +72,16 @@ sudo lvdisplay                                  # Detaylı bilgi göster
 
 ## Dosya Sistemi Oluşturma ve Mount Etme
 sudo mkfs.ext4 /dev/vg_veri/lv_home           # EXT4 dosya sistemi oluştur
-sudo mkfs.xfs /dev/vg_name/lv_name            # XFS dosya sistemi oluştur
+#sudo mkfs.xfs /dev/vg_name/lv_name           # XFS dosya sistemi oluştur (daraltılamaz, sadece genişletilir.)
 sudo mkdir /mnt/home                          # Mount dizini oluştur
 sudo mount /dev/vg_veri/lv_home /mnt/home     # Mount et
 
 ## Kalıcı Mount /etc/fstab:
 sudo cp /etc/fstab /etc/fstab.old
 nano /etc/fstab
-#/dev/vg_veri/lv_home /mnt/home ext4 defaults 0 0
+/dev/vg_veri/lv_home /mnt/home ext4 defaults 0 0
 #/dev/vg_veri/lv_home /mnt/home xfs defaults 0 0
-#UUID=xxxx-xxxx /mnt/home ext4 defaults 0 0 (UUID ile güvenli önerilen)
+UUID=xxxx-xxxx /mnt/home ext4 defaults 0 0 (UUID ile güvenli önerilen)
 sudo blkid | grep /dev/vg_veri/lv_home
 sudo mount -av
 sudo findmnt --verify
