@@ -15,7 +15,7 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
 # Yapı: /boot ve /boot/efi ayrı, veri alanları LVM içinde yönetilir.
 # Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
 
-  /dev/sda1     /dev/sda2          /dev/sda3 (PV)                  <--- PV_EXTEND --->
+  /dev/sda1     /dev/sda2          /dev/sda3 (PV)               <-------- PV_EXTEND -------->
 -------------+-------------+----------------------------------+------------------------------+
 /boot/efi    |  /boot      |  PV → VG: vg_data → LV: lv_*     |  (Genişletilebilir alan)     |
              |             |  lv_root, lv_data, lv_logs, ...  |                              |
