@@ -23,11 +23,11 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # ESP: UEFI sistem kullanılıyorsa EFI System Partition (ESP) alanı zorunludur.
 
   /dev/sda1     /dev/sda2       /dev/sda3     /dev/sda4
--------------+-------------+--------------+----------------+----------------------------+
-/boot/efi    |  /boot      |      /       |   /data        |         boş alan           |
--------------+-------------+--------------+----------------+----------------------------+
-  500MB–1GB      500MB          40-50GB       500-800GB+   | <--- Genişletilebilir ---> |
-  FAT32           ext4          ext4/xfs       xfs/btrsf
+-------------+-------------+---------------+----------------+----------------------------+
+/boot/efi    |  /boot      |      /        |   /data        |         boş alan           |
+-------------+-------------+---------------+----------------+----------------------------+
+  500MB–1GB      500MB          40-50GB       500-800GB+    | <--- Genişletilebilir ---> |
+  FAT32           ext4      ext4/xfs/btrsf    ----------
 ```
 
 ```sh
