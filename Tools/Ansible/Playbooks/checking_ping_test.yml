@@ -1,7 +1,0 @@
----
-- name: Ping test to check connectivity
-  hosts: all
-  tasks:
-    - name: Ping all hosts
-      ansible.builtin.ping:
-

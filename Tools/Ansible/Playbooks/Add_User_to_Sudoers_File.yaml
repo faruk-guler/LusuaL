@@ -1,6 +1,0 @@
-- name: Grant Sudo Access
-  ansible.builtin.lineinfile:
-    path: /etc/sudoers
-    line: "developer ALL=(ALL) NOPASSWD: ALL"
-    state: present
-    validate: "visudo -cf %s"

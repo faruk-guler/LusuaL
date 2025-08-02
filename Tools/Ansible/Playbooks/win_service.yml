@@ -1,7 +1,0 @@
-- name: Restart a service in windows
-  hosts: winhost
-  tasks:
-          - name: restarting a service
-            win_service:
-                    name: DPS
-                    state: restarted

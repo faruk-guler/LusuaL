@@ -1,7 +1,0 @@
----
-- name: Localhost Ping and Test Connectivity Playbook
-  hosts: localhost
-
-  tasks:
-  - name: Test Connectivity
-    ping:
