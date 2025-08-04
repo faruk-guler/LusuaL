@@ -5,9 +5,8 @@ RAID, verileri farklı diskler arasında bölerek veya kopyalayarak çalışır 
 RAID 0 (Striping): En az 2 disk kullanarak sunucu performansını artıran bir sistemdir. 
 Verileri bu diskler arasında bölerek eş zamanlı yazmaya olanak tanır, ancak hata toleransı yoktur. Bir disk arızalanırsa tüm veriler kaybolur.
 
-RAID 1 (Mirroring): Disk yansıtma olarak da bilinr. Verileri sürekli olarak bir diskten diğerine kopyalayarak, bir disk arızalansa bile verilerin kaybolmamasını sağlar. 
-Ancak, Raid 0'a kıyasla daha düşük performansa sahiptir ve en az 2 disk gerektirir.
-Raid 1 kurulumunda 2 TB'lık bir disk kullanıldığında, toplam depolama kapasitesi 2 TB değil, 2 TB olarak kalır.
+RAID 1 (Mirroring): Disk yansıtma olarak da bilinir. Veriler, sürekli olarak bir diskten diğerine birebir kopyalanır. böylece bir disk arızalansa bile veri kaybı yaşanmaz.
+İki adet 2 TB disk kullanıldığında toplam (ham kapasite) 4 TB olsa da, kullanılabilir depolama alanı yalnızca 2 TB olur. RAID 1 en az 2  disk gerektirir.
 
 Raid 5, En az 3 disk gerektiren yaygın olarak kullanılan bir sistemdir. Depolama kapasitesini üçte bir oranında azaltırken daha iyi yazma performansı sunar. 
 Bir disk arızalanırsa, veriler bir eşlik bloğu kullanılarak otomatik olarak kurtarılabilir.
