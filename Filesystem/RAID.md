@@ -8,7 +8,7 @@ Verileri bu diskler arasında bölerek eş zamanlı yazmaya olanak tanır, ancak
 RAID 1 (Mirroring): En az 2  disk gerektirir. Disk yansıtma olarak da bilinir. Veriler, sürekli olarak bir diskten diğerine birebir kopyalanır.
 2 adet 2 TB disk kullanıldığında toplam (ham kapasite) 4 TB olsa da, kullanılabilir depolama alanı yalnızca 2 TB olur.
 
-RAID 5, En az 3 disk gerektiren yaygın olarak kullanılan bir sistemdir. Depolama kapasitesini üçte bir oranında azaltırken daha iyi yazma performansı sunar. 
+RAID 5: En az 3 disk gerektiren yaygın olarak kullanılan bir sistemdir. Depolama kapasitesini üçte bir oranında azaltırken daha iyi yazma performansı sunar. 
 Bir disk arızalanırsa, veriler bir eşlik bloğu kullanılarak otomatik olarak kurtarılabilir.
 Bu da sistemin hasarlı disk değiştirilene kadar düşük kapasiteyle çalışmasını sağlar.
 
