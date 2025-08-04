@@ -12,9 +12,8 @@ RAID 5: En az 3 disk gerektiren yaygın olarak kullanılan bir sistemdir. Depola
 Bir disk arızalanırsa, veriler bir eşlik bloğu kullanılarak otomatik olarak kurtarılabilir.
 Bu da sistemin hasarlı disk değiştirilene kadar düşük kapasiteyle çalışmasını sağlar.
 
-RAID 10 (1+0): En az 4 disk gerektirir ve RAID 0 ve RAID 1'in özelliklerini birleştirir.
-Tek bir diske kıyasla dört kat daha fazla okuma ve iki kat daha fazla yazma hızı sunar. Sadece çift sayıda diskler ile çalışır.
-Yüksek performans ihtiyaçları için faydalıdır.
+RAID 10 (1+0): En az 4 disk gerektirir ve RAID 0 ve RAID 1'in özelliklerini birleştirir. Sadece çift sayıda diskler ile çalışır.
+Veriler diskler arasında eşit olarak şeritlenir ve bunlar da yansıtılır. Yüksek performans ihtiyaçları için faydalıdır.
 
 -
 -
