@@ -2,10 +2,10 @@
 Birden fazla sabit diski bir araya getirerek veri depolama performansını ve/veya güvenilirliğini artırmak için kullanılan bir teknolojidir.
 RAID, verileri farklı diskler arasında bölerek veya kopyalayarak çalışır ve farklı RAID seviyeleri vardır. (önemli seviyeler: RAID 0, RAID 1, RAID 5, RAID 10)
 
-RAID 0 (Striping): En az 2 disk kullanarak sunucu performansını artıran bir sistemdir. 
+RAID 0 (Striping-Şeritleme): En az 2 disk kullanarak sunucu performansını artıran bir sistemdir. 
 Verileri bu diskler arasında bölerek eş zamanlı yazmaya olanak tanır, ancak hata toleransı yoktur. Bir disk arızalanırsa tüm veriler kaybolur.
 
-RAID 1 (Mirroring): En az 2  disk gerektirir. Disk yansıtma olarak da bilinir. Veriler, sürekli olarak bir diskten diğerine birebir kopyalanır.
+RAID 1 (Mirroring-Aynalama): En az 2  disk gerektirir. Disk yansıtma olarak da bilinir. Veriler, sürekli olarak bir diskten diğerine birebir kopyalanır.
 2 adet 2 TB disk kullanıldığında toplam (ham kapasite) 4 TB olsa da, kullanılabilir depolama alanı yalnızca 2 TB olur.
 
 RAID 5: En az 3 disk gerektiren yaygın olarak kullanılan bir sistemdir. Depolama kapasitesini üçte bir oranında azaltırken daha iyi yazma performansı sunar. 
