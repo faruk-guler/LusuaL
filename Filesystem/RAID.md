@@ -13,7 +13,7 @@ Bir disk arızalanırsa, veriler bir eşlik bloğu kullanılarak otomatik olarak
 Bu da sistemin hasarlı disk değiştirilene kadar düşük kapasiteyle çalışmasını sağlar.
 
 RAID 10 (1+0): En az 4 disk gerektirir ve RAID 0 ve RAID 1'in özelliklerini birleştirir. Sadece çift sayıda diskler ile çalışır.
-Veriler diskler arasında eşit olarak şeritlenir ve bunlar da yansıtılır. Yüksek performans ihtiyaçları için faydalıdır.
+Veriler diskler arasında eşit olarak şeritlenir ve bunlar da yansıtılır. Yüksek performans ihtiyaçları için faydalıdır. Kullanılabilir kapasite toplam disk kapasitesinin yarısıdır.
 
 -
 -
