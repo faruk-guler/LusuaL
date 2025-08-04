@@ -18,4 +18,3 @@ Yüksek performans ihtiyaçları için faydalıdır.
 
 -
 -
--
