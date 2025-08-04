@@ -9,7 +9,7 @@ RAID 1 (Mirroring): Disk yansıtma olarak da bilinr. Verileri sürekli olarak bi
 Ancak, Raid 0'a kıyasla daha düşük performansa sahiptir ve en az iki disk gerektirir.
 Raid 1 kurulumunda 2 TB'lık bir disk kullanıldığında, toplam depolama kapasitesi 2 TB değil, 2 TB olarak kalır.
 
-Raid 5, En az üç disk gerektiren yaygın olarak kullanılan bir sistemdir. Depolama kapasitesini üçte bir oranında azaltırken daha iyi yazma performansı sunar. 
+Raid 5, En az 3 disk gerektiren yaygın olarak kullanılan bir sistemdir. Depolama kapasitesini üçte bir oranında azaltırken daha iyi yazma performansı sunar. 
 Bir disk arızalanırsa, veriler bir eşlik bloğu kullanılarak otomatik olarak kurtarılabilir.
 Bu da sistemin hasarlı disk değiştirilene kadar düşük kapasiteyle çalışmasını sağlar. 
 Ancak, yoğun yazma işlemleri sırasında gecikmeler gösterebilir.
