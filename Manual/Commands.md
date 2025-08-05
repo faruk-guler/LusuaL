@@ -1,7 +1,7 @@
 # General Commands:
-| Commands | Function |
-| --- | --- |
-|  A  |  A  |
+| Commands | Function |   xxx |
+| --- | --- | --- |
+|  A  |  A  | --- |
 | apropos  | Search Help manual pages (man -k)  |
 | apt-get  | Search for and install software packages (Debian)  |
 | aptitude  | Search for and install software packages (Debian)  |
