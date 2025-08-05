@@ -116,3 +116,38 @@ find [path] [expression]
   ```bash
   find / -iname "user*"
   ```
+  ```bash
+find /hedef/dizin -name "dosya_adı"
+find /home -iname "example"
+find /var/log -name "*.log"
+find /home -type d
+find /var -type d -name "log"
+find / -type f -size +100M
+find /var/log -type f -mtime -7
+find /var/log -type f -mtime +30
+find /etc -atime -1
+find /home -uid 1000
+find /var/ -gid 33
+find /usr/bin -type f -executable
+find /home -type f -perm /u=w
+find /h -type f -perm 0777
+find /home -type f -perm 0777
+find /etc -type f -name "config.yaml"
+find /var/log -type f -exec grep -il "error" {} +
+find /home -mmin -120
+find /home -type f -mmin -120
+find /home -newermt "2024-02-01"
+find / -type f -perm 0777
+find /usr/bin -type f -perm -u=x
+find /home -type f -user faruk
+find /var/www -group www-data
+find /etc -type f -exec grep -H "password" {} +
+find /usr -type l
+find /var/log -type f -exec grep -il "hacked" {} +
+find /home -type f -empty
+find /var -type d -empty
+find /home -iname "*.jpg"
+find /home -type f -perm -002
+find /usr/bin -type f -perm /u=s
+find /var -type f -exec du -h {} + | sort -rh | head -5
+  ```
