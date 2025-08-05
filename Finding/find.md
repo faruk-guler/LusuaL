@@ -116,7 +116,7 @@ find [path] [expression]
   ```bash
   find / -iname "user*"
   ```
-
+## General Using:
 ```sh
 find /hedef/dizin -name "dosya_adı"
 find /home -iname "example"
