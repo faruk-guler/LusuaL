@@ -117,7 +117,7 @@ find [path] [expression]
   find / -iname "user*"
   ```
 
-```bash
+```sh
 find /hedef/dizin -name "dosya_adı"
 find /home -iname "example"
 find /var/log -name "*.log"
