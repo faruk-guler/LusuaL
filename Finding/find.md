@@ -150,4 +150,3 @@ find /home -iname "*.jpg"
 find /home -type f -perm -002
 find /usr/bin -type f -perm /u=s
 find /var -type f -exec du -h {} + | sort -rh | head -5
-  ```
