@@ -1,5 +1,4 @@
 # LDAP cheat sheet
-## implementation
 
 ## commands
 whoami
