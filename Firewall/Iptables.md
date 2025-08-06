@@ -1,7 +1,5 @@
 # `iptables`
 
-# **iptables Command Guide**  
-
 iptables is a powerful firewall tool that works at the kernel level (kernel-space) in Linux operating systems to filter, direct and control network traffic.
 It works using the Netfilter infrastructure and accepts, rejects, logs or redirects data packets passing over the network according to defined rules.
 iptables was developed in 1998 to replace the previous security system of Linux, ipchains, and was the default firewall tool in Linux distributions for many years.
