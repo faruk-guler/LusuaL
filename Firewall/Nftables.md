@@ -1,7 +1,8 @@
 # **nftables Command Guide**  
 
-`nftables` is the modern replacement for `iptables`, introduced in Linux kernel 3.13. It provides better performance, a more unified syntax, and enhanced features for firewall and packet filtering.  
-
+`# nftables is the modern successor to iptables, which is used to filter, route and enforce security policies on network traffic in Linux operating systems.
+It was introduced in 2014 with Linux kernel version 3.13 and was developed based on the Netfilter infrastructure.
+nftables combines the functionality of tools such as iptables, ip6tables, arptables and ebtables under a single unified roof and provides high performance.  
 
 
 ## **Installation**  
