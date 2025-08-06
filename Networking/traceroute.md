@@ -1,32 +1,66 @@
-# traceroute
+# **Traceroute Command**  
 
-> Print the route packets trace to network host.
-> More information: <https://manned.org/traceroute>.
+The `traceroute` command is used to track the path that packets take from your system to a destination host. It helps in diagnosing network issues by showing each hop along the way and measuring transit delays.  
 
-- Traceroute to a host:
 
-`traceroute {{example.com}}`
+## **Installation**  
 
-- Disable IP address and host name mapping:
+### **Debian/Ubuntu**  
+```bash
+sudo apt install traceroute -y
+```
 
-`traceroute -n {{example.com}}`
+### **RHEL/CentOS**  
+```bash
+sudo yum install traceroute -y
+```
 
-- Specify wait time in seconds for response:
 
-`traceroute --wait={{0.5}} {{example.com}}`
+## **Syntax**  
+```bash
+traceroute [options] destination
+```
 
-- Specify number of queries per hop:
 
-`traceroute --queries={{5}} {{example.com}}`
 
-- Specify size in bytes of probing packet:
+## **Examples**  
 
-`traceroute {{example.com}} {{42}}`
+- **Basic Traceroute to a Host**  
+  ```bash
+  traceroute google.com
+  ```
 
-- Determine the MTU to the destination:
+- **Specify Number of Probes per Hop** (default is 3)  
+  ```bash
+  traceroute -q 5 google.com
+  ```
 
-`traceroute --mtu {{example.com}}`
+- **Limit the Maximum Number of Hops**  
+  ```bash
+  traceroute -m 15 google.com
+  ```
 
-- Use ICMP instead of UDP for tracerouting:
+- **Use ICMP Instead of UDP** (Similar to Windows `tracert`)  
+  ```bash
+  traceroute -I google.com
+  ```
 
-`traceroute --icmp {{example.com}}`
+- **Use TCP SYN Instead of UDP** (Useful for bypassing firewalls)  
+  ```bash
+  traceroute -T google.com
+  ```
+
+- **Specify a Source IP Address**  
+  ```bash
+  traceroute -s 192.168.1.100 google.com
+  ```
+
+- **Specify a Gateway (Default Gateway is Used if Not Set)**  
+  ```bash
+  traceroute -g 192.168.1.1 google.com
+  ```
+
+- **Set a Custom Packet Size**  
+  ```bash
+  traceroute -p 80 -q 5 -m 20 google.com
+  ```
