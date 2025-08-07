@@ -137,7 +137,8 @@ sudo systemctl daemon-reload
 sudo e2fsck -ff -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
 
-# A1 -Boyut Öncesi Bölümü Genişletme:
+# A1 -Boyut Öncesi Bölümü Genişletin:
+Fdisk, Parted or Cfdisk Tool:
 df -Th
 
 # A2 - Dosya Sistemini Genişlettikten Sonra:
@@ -159,7 +160,7 @@ sudo e2fsck -ff -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
 
 # İlk önce Dosya Sistemini boyutlandırın: (Ters İşlem)
-⦁⦁If you are using Ext3/Ext4: (resize2fs) [Offline]
+⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Offline]
 sudo umount /dev/nvme0n2p1 /alan [umount]
 sudo e2fsck -f /dev/nvme0n2p1
 # sudo resize2fs /dev/nvme0n2p1 17G [spesific size]
