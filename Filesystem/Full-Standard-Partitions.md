@@ -99,17 +99,17 @@ partprobe -s
 sudo file -sL /dev/nvme0n2
 sudo blkid /dev/repo_vg/logs
 
-1- Disk, Partition Formatting [Ext3/Ext4]: (sdb1,nvme0n2p1, ..)
+1- Disk Bölümünü Biçimlendir: [Ext3/Ext4]: (sdb1,nvme0n2p1, ..)
 #sudo mkfs -t ext4 /dev/nvme0n2
 #sudo mkfs -t ext4 /dev/nvme0n2p1
 
-2- Disk, Partition Formatting [Xfs]: (sdb1,nvme0n2p1, ...)
+2- Disk Bölümünü Biçimlendir: [xfs]: (sdb1,nvme0n2p1, ...)
 #sudo mkfs -t xfs /dev/nvme0n2
 #sudo mkfs -t xfs /dev/nvme0n2p1
 
 # Dizin İşlemleri:
 sudo mkdir /alan
-sudo mkdir -p /alan/hodl-77/xxx (sub tree)
+sudo mkdir -p /alan/hodl-77/xxx
 
 # Mount & Umount:
 sudo mount /dev/nvme0n2p1 /alan
@@ -118,8 +118,8 @@ sudo umount -l /dev/nvme0n2p1 /alan
 
 # fstab düzenleme: (Kalıcılık için)
 sudo cp /etc/fstab /etc/fstab.old
-cat /etc/fstab
-# nano /etc/fstab
+nano /etc/fstab
+>>
 # /dev/nvme0n2p1 /alan ext4 defaults 0 0
 sudo mount -av
 sudo findmnt --verify
