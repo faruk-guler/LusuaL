@@ -3,7 +3,7 @@
 🅻🆄🆂🆄🅰🅻 - 🅷🅰🅽🅳🅱🅾🅾🅺
 - Name: LusuaL Project
 - Author: Faruk Guler
-- Description: Handbook for Linux Admins
+- Description: Handbook for Linux Administrators
 - POC: Debian 12 (Bookworm) - AlmaLinux 10
 - Repository: https://github.com/faruk-guler/
 - Contributions: For contribution, send PR.
