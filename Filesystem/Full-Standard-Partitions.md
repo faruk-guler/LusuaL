@@ -141,12 +141,12 @@ sudo e2fsck -f /dev/nvme0n2p1
 df -Th
 
 # A2 - Dosya Sistemini Genişlettikten Sonra:
-⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Çevrimiçi]
+⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Online]
 # sudo resize2fs /dev/nvme0n2p1 [%100]
 # sudo resize2fs /dev/nvme0n2p1 18G [spesific]
 df -Th
 
-⦁⦁Xfs kullanıyorsanız: (xfs_growfs) [Çevrimiçi]
+⦁⦁Xfs kullanıyorsanız: (xfs_growfs) [Online]
 # sudo xfs_growfs -d /dev/nvme0n2p1 [%100]
 # sudo xfs_growfs /dev/nvme0n2p1 18G [spesific]
 df -Th
