@@ -36,27 +36,27 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Author: faruk-guler
 # 
 --------------------------------|
-# Install Fdisk:
+# Fdisk'i yükleyin:
 sudo apt install util-linux -y
 sudo yum install util-linux -y
 fdisk -v
 
-# Disk/Directory Status:
+# Disk/Dizin Durumu:
 sudo du -hla /storage/log
 sudo du -hla --max-depth=1 / | sort -h
 
-# Check Disk Status:
+# Disk Durumunu Kontrol Edin:
 ls -l /dev/sd*
 df -Th
 lsblk -p
 sudo fdisk -l
 
-# Check the disk added to the system: (SCSI or NVMe)
+# Sisteme eklenen diski kontrol edin: (SCSI, NVMe, .etc)
 ls  /sys/class/scsi_host/
 echo "- - -" | tee /sys/class/scsi_host/host*/scan
 echo "1" > /sys/class/block/sda/device/rescan
 
-# Disk Partitioning 
+# Disk Bölümlendirme:
 sudo fdisk /dev/nvme0n2
 sudo fdisk /dev/sdb1
 
@@ -92,10 +92,10 @@ L - List partition type:
 p - List disk partitions:
 q - Exit from fdisk tool:
 
-# Introduce disk changes to the Kernel:
+# Disk değişikliklerini Çekirdeğe tanıtın:
 partprobe -s
 
-# Disk/Partition Status:
+# Disk/Bölüm Durumu:
 sudo file -sL /dev/nvme0n2
 sudo blkid /dev/repo_vg/logs
 
@@ -107,7 +107,7 @@ sudo blkid /dev/repo_vg/logs
 #sudo mkfs -t xfs /dev/nvme0n2
 #sudo mkfs -t xfs /dev/nvme0n2p1
 
-# Directory Ops.:
+# Dizin İşlemleri:
 sudo mkdir /alan
 sudo mkdir -p /alan/hodl-77/xxx (sub tree)
 
@@ -116,7 +116,7 @@ sudo mount /dev/nvme0n2p1 /alan
 sudo umount /dev/nvme0n2p1 /alan
 sudo umount -l /dev/nvme0n2p1 /alan
 
-# fstab edit: (for Persistence)
+# fstab düzenleme: (Kalıcılık için)
 sudo cp /etc/fstab /etc/fstab.old
 cat /etc/fstab
 # nano /etc/fstab
@@ -126,39 +126,39 @@ sudo findmnt --verify
 sudo systemctl daemon-reload
 
 -------------------------------------------------------------|
-# Name: Extend and Reduce  **Online/Offline
+# Name: Genişlet ve Azalt  **Online/Offline
 # Author: faruk-guler
 # 
 -------------------------------------------------------------|
 
-## >>> Extend Operation <<<
+## >>> Extend İşlemi <<<
 
-# Check for errors with fsck:
+# fsck ile hataları kontrol edin:
 sudo e2fsck -ff -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
 
-# A1 -Before size Extend the Partition:
+# A1 -Boyut Öncesi Bölümü Genişletme:
 df -Th
 
-# A2 -After size Extend the File System:
-⦁⦁If you are using Ext3/Ext4: (resize2fs) [Online]
+# A2 - Dosya Sistemini Genişlettikten Sonra:
+⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Çevrimiçi]
 # sudo resize2fs /dev/nvme0n2p1 [%100]
 # sudo resize2fs /dev/nvme0n2p1 18G [spesific]
 df -Th
 
-⦁⦁If you are using Xfs: (xfs_growfs) [Online]
+⦁⦁Xfs kullanıyorsanız: (xfs_growfs) [Çevrimiçi]
 # sudo xfs_growfs -d /dev/nvme0n2p1 [%100]
 # sudo xfs_growfs /dev/nvme0n2p1 18G [spesific]
 df -Th
 
-## >>> Reducing Operation <<< (only Ext3/Ext4)
+## >>> Azaltma İşlemi <<< (only Ext3/Ext4)
 
-# If you shrink more than the disk data, you will lose data!
-# Check for errors with fsck:
+# Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
+# fsck ile hataları kontrol edin:
 sudo e2fsck -ff -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
 
-# First size the File System: (Reverse Operation)
+# İlk önce Dosya Sistemini boyutlandırın: (Ters İşlem)
 ⦁⦁If you are using Ext3/Ext4: (resize2fs) [Offline]
 sudo umount /dev/nvme0n2p1 /alan [umount]
 sudo e2fsck -f /dev/nvme0n2p1
