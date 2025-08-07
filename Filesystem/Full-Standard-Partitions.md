@@ -147,12 +147,12 @@ df -Th
 # A2 - Dosya Sistemini Genişletin:
 ⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Online]
 # sudo resize2fs /dev/nvme0n2p1 [%100]
-# sudo resize2fs /dev/nvme0n2p1 18G [spesific]
+# sudo resize2fs /dev/nvme0n2p1 18G [specific]
 df -Th
 
 ⦁⦁Xfs kullanıyorsanız: (xfs_growfs) [Online]
 # sudo xfs_growfs -d /dev/nvme0n2p1 [%100]
-# sudo xfs_growfs /dev/nvme0n2p1 18G [spesific]
+# sudo xfs_growfs /dev/nvme0n2p1 18G [specific]
 df -Th
 
 ## >>> Reduce İşlemi <<< (only Ext3/Ext4)
@@ -166,7 +166,7 @@ sudo e2fsck -f /dev/nvme0n2p1
 ⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Offline]
 sudo umount /dev/nvme0n2p1 /alan [umount]
 sudo e2fsck -f /dev/nvme0n2p1
-# sudo resize2fs /dev/nvme0n2p1 17G [spesific size]
+# sudo resize2fs /dev/nvme0n2p1 17G [specific size]
 
 # Mount edin:
 sudo mount /dev/nvme0n2p1 /alan [try mount]
