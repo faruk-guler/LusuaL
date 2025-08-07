@@ -113,8 +113,8 @@ sudo mkdir -p /alan/hodl-77/xxx
 
 # Mount & Umount:
 sudo mount /dev/nvme0n2p1 /alan
-sudo umount /dev/nvme0n2p1 /alan
-sudo umount -l /dev/nvme0n2p1 /alan
+sudo umount /alan
+sudo umount -l /dev/nvme0n2p1
 
 # fstab düzenleme: (Kalıcılık için)
 sudo cp /etc/fstab /etc/fstab.old
