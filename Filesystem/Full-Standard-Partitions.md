@@ -51,12 +51,12 @@ df -Th
 lsblk -p
 sudo fdisk -l
 
-# Sisteme eklenen diski kontrol edin: (SCSI, NVMe, .etc)
+# Sisteme eklenen diski algıla: (SCSI, NVMe, .etc)
 ls  /sys/class/scsi_host/
 echo "- - -" | tee /sys/class/scsi_host/host*/scan
 echo "1" > /sys/class/block/sda/device/rescan
 
-# Disk Bölümlendirme:
+# Disk Bölümlendirme -Diski seçin:
 sudo fdisk /dev/nvme0n2
 sudo fdisk /dev/sdb1
 
