@@ -30,22 +30,22 @@ quit
 ```
 
 ```sh
-#Disk Tablosu Oluşturma [MBR/GPT]
+# Disk Tablosu Oluşturma [MBR/GPT]
 (parted) mklabel gpt    # GPT için
 (parted) mklabel msdos  # MBR için
 ```
 ```sh
-#Dosya Sistemi Oluşturma: [ex4/fat32...]
+# Dosya Sistemi Oluşturma: [ex4/fat32...]
 sudo mkfs.ext4 /dev/sda3
 ```
 
 ```sh
-#Disk Yedekleme - Taşıma:
+# Disk Yedekleme - Taşıma:
 sudo dd if=/dev/sda of=/path/to/backup.img bs=4M
 ```
 
 ```sh
-#Bölüm Silme ve Yeniden Boyutlandırma:
+# Bölüm Silme ve Yeniden Boyutlandırma:
 sudo parted /dev/sda
 (parted) print                   # Bölüm yapısını kontrol et
 (parted) rm 2                    # 2 numaralı bölümü sil
@@ -54,7 +54,7 @@ sudo parted /dev/sda
 ```
 
 ```sh
-#GPT Disk Bölümlendirme: (Daha yeni Sistemler İçin) [ex4/fat32...]
+# GPT Disk Bölümlendirme: (Daha yeni Sistemler İçin) [ex4/fat32...]
 sudo parted /dev/sda
 (parted) mklabel gpt            # Yeni GPT bölümlendirme tablosu oluştur
 (parted) mkpart primary ext4 0% 50%    # İlk bölüm
@@ -62,7 +62,7 @@ sudo parted /dev/sda
 (parted) print                  # Bölüm yapısını kontrol et
 (parted) quit                   # çık
 
-#MBR Bölümlendirme: (Eski Sistemler İçin) [ex4/fat32...]
+# MBR Bölümlendirme: (Eski Sistemler İçin) [ex4/fat32...]
 sudo parted /dev/sdb
 (parted) mklabel msdos          # MBR bölümleme tablosu oluştur
 (parted) mkpart primary ext4 0% 25%    # İlk bölüm (0% - 25%)
@@ -72,33 +72,33 @@ sudo parted /dev/sdb
 ```
 
 ```sh
-#Bölüm İşaretleme: (Flag)
+# Bölüm İşaretleme: (Flag)
 (parted) set 1 boot on  # 1 numaralı bölümü önyükleme bölümü olarak işaretler.
 (parted) set 1 esp on   # 1 numaralı bölümü EFI sistem bölümü (ESP) olarak işaretler
 ```
 
 ```sh
-#Bölüm Boyutunu Değiştirme:
+# Bölüm Boyutunu Değiştirme:
 (parted) resizepart 1 2000MiB  # 1. bölümün bitişini 2000MB yapar.
 ```
 
 ```sh
-#Hizalama: (Alignment)          #Bölümleri SSD veya modern disklerde performans için hizalamak önemlidir:
+# Hizalama: (Alignment)          #Bölümleri SSD veya modern disklerde performans için hizalamak önemlidir:
 (parted) align-check optimal 1
 ```
 
 ```sh
-#Betikleme: (Scripting)        #Komutları doğrudan terminalden çalıştırma:
+# Betikleme: (Scripting)        #Komutları doğrudan terminalden çalıştırma:
 sudo parted /dev/sda --script 'mklabel gpt mkpart primary ext4 1MiB 5GiB print quit'
 ```
 
 ```sh
-#Kayıp Bölüm Kurtarma:
+# Kayıp Bölüm Kurtarma:
 (parted) rescue 0% 100%  # Tüm diskte tarama yapar.
 ```
 
 ```sh
-##Yeni Bir Disk Bölümleme:
+## Yeni Bir Disk Bölümleme:
 
 >> Diski GPT olarak formatla:
 sudo parted /dev/sdb --script 'mklabel gpt'
@@ -111,7 +111,7 @@ sudo parted /dev/sdb --script 'mkpart primary ext4 500MiB 100%'
 ```
 
 ```sh
-#Varolan Bölümü Genişletme:
+# Varolan Bölümü Genişletme:
 
 >> Bölümü bağlıysa kaldır:
 sudo umount /dev/sda2
@@ -124,7 +124,7 @@ sudo resize2fs /dev/sda2  # ext4 için
 ```
 
 ```sh
-##Boot Edilebilir USB Oluşturmak:
+## Boot Edilebilir USB Oluşturmak:
 
 1- USB sürücünüzü MBR formatında bölümleyin.
 2- FAT32 dosya sistemi ile boot edilebilir bir bölüm oluşturun.
