@@ -163,6 +163,8 @@ sudo e2fsck -f /dev/nvme0n2p1
 sudo umount /dev/nvme0n2p1 /alan [umount]
 sudo e2fsck -f /dev/nvme0n2p1
 # sudo resize2fs /dev/nvme0n2p1 17G [spesific size]
+
+# Mount edin:
 sudo mount /dev/nvme0n2p1 /alan [try mount]
 df -Th
 
