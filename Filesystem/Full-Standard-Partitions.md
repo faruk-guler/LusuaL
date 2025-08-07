@@ -38,7 +38,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 --------------------------------|
 # Fdisk'i yükleyin:
 sudo apt install util-linux -y
-sudo yum install util-linux -y
+sudo dnf install util-linux -y
 fdisk -v
 
 # Disk/Dizin Durumu:
