@@ -141,7 +141,7 @@ sudo e2fsck -f /dev/nvme0n2p1
 Fdisk, Parted or Cfdisk Tool:
 df -Th
 
-# A2 - Dosya Sistemini Genişlettikten Sonra:
+# A2 - Dosya Sistemini Genişletin:
 ⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Online]
 # sudo resize2fs /dev/nvme0n2p1 [%100]
 # sudo resize2fs /dev/nvme0n2p1 18G [spesific]
