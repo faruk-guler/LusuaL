@@ -174,7 +174,7 @@ df -Th
 # 
 -------------------------|
 
-# Install Parted:
+# Parted'ı kurun:
 sudo apt install parted
 sudo yum install parted
 parted --version
