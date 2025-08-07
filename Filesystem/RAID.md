@@ -17,3 +17,24 @@ Veriler diskler arasında eşit olarak şeritlenir ve bunlar da yansıtılır. Y
 
 -
 -
+
+## **RAID Levels**  
+
+Different RAID configurations, known as **RAID levels**, provide varying degrees of **redundancy, speed, and storage efficiency**.  
+
+| **RAID Level** | **Description** | **Pros** | **Cons** |
+|--------------|-----------------|-----------|----------|
+| **RAID 0 (Striping)** | Data is split across multiple disks for speed. **No redundancy.** | High performance | No fault tolerance |
+| **RAID 1 (Mirroring)** | Data is duplicated on two disks. If one fails, the other takes over. | High redundancy | Uses double the storage |
+| **RAID 5 (Striping with Parity)** | Data is spread across disks with **parity for recovery**. Requires **3+ disks**. | Balanced speed, storage, and redundancy | Slower writes due to parity calculation |
+| **RAID 6 (Striping with Double Parity)** | Similar to RAID 5 but with **extra parity** for higher fault tolerance. Needs **4+ disks**. | Can survive **2 disk failures** | Slower than RAID 5 |
+| **RAID 10 (RAID 1+0)** | Combines RAID 1 & RAID 0: **Mirroring + Striping**. Needs **minimum 4 disks**. | High performance & fault tolerance | Expensive (uses 50% of total storage) |
+
+
+
+### **RAID Selection Guide**
+- **Need high performance?** → **RAID 0** (if redundancy isn't important)  
+- **Want redundancy and simple recovery?** → **RAID 1**  
+- **Balanced performance & fault tolerance?** → **RAID 5**  
+- **Extra protection against disk failures?** → **RAID 6**  
+- **Best of speed and redundancy?** → **RAID 10**  
