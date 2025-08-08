@@ -133,7 +133,7 @@ sudo findmnt --verify
 sudo systemctl daemon-reload
 
 -------------------------------------------------------------|
-# Name: Genişlet ve Azalt  **Online/Offline
+# Name: Genişlet ve Azalt (Online/Offline)
 # Author: faruk-guler
 # Note: Filesystem küçültüldükten sonra bölüm küçültülebilir. (genişletmenin tersi işlemi)
 # 
