@@ -30,8 +30,8 @@ quit
 
 ```sh
 # Disk Tablosu Oluşturma [MBR/GPT]
-(parted) mklabel gpt    # GPT için
-(parted) mklabel msdos  # MBR için
+(parted) mklabel gpt    # GPT için > 2 TB GPT
+(parted) mklabel msdos  # MBR için < 2TB MBR
 ```
 ```sh
 # Dosya Sistemi Oluşturma: [ex4/fat32...]
