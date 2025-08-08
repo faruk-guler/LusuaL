@@ -31,12 +31,13 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 ```
 
 ```sh
------------------------------------|
-# Tools: Fdisk
+----------------------------------------|
+# Tools: Fdisk Tool
 # Author: faruk-guler
 # Size: < 2TB MBR (DOS) / > 2 TB GPT
-# Format: ext4, xfs
------------------------------------|
+# Format: ext4, xfs, NTFS,
+#
+----------------------------------------|
 
 # Fdisk'i yükleyin:
 sudo apt install util-linux -y # Debian
@@ -142,7 +143,6 @@ sudo findmnt --verify
 ```sh
 ------------------------------------------------------------|
 # Name: Extend İşlemi: [xfs/ext4] (Online/Offline)
-# Author: faruk-guler
 # Note: Önce partition, sonra filesytem genişletilir.
 #
 ------------------------------------------------------------|
@@ -172,8 +172,7 @@ df -Th
 
 ------------------------------------------------------------|
 # Name: Reduce İşlemi: (only ext4) (Online/Offline)
-# Author: faruk-guler
-# Filesystem küçültüldükten sonra partition küçültülebilir.
+# Önce filesystem, sonra partition küçültülür.
 # Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
 # xfs dosya sistemini küçültülmez! 2025
 #
