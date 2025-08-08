@@ -34,7 +34,8 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 -----------------------------------------------------------|
 # Tools: Fdisk Tool
 # Author: faruk-guler
-# Note: 2TB  kadar MBR (DOS) 2TB büyük disklerde GPT
+# MBR: Maksimum 4 birincil bölüm, <2TB diskler için.
+# GPT: 128 bölüme kadar destekler, >2TB diskler için.
 # Format: ext4, xfs, ...
 #
 -----------------------------------------------------------|
