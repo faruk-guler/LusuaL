@@ -1,4 +1,6 @@
-## Parted: 👹    
+## Parted: 👹
+
+
 -----
 ```sh
 root@debian:~# parted
