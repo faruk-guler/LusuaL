@@ -62,7 +62,7 @@ echo "1" > /sys/class/block/*/device/rescan
 sudo fdisk /dev/nvme0n2
 sudo fdisk /dev/sda
 
-Welcome to fdisk (util-linux 2.37.4).
+Welcome to fdisk (util-linux 2.38.1).
 Changes will remain in memory only, until you decide to write them.
 Be careful before using the write command.
 
