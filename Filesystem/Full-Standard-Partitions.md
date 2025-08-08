@@ -121,12 +121,13 @@ sudo umount -l /dev/nvme0n2p1
 
 # UUID al:
 sudo blkid -s UUID -o value /dev/nvme0n2p1
+sudo blkid -s UUID -o value /storex
 
 # fstab düzenleme: (Kalıcılık için)
 sudo cp /etc/fstab /etc/fstab.old
 nano /etc/fstab
 >>
-# UUID=7e1a91c5-23f4-4d58-8b1a-cc1e12345678 /storex ext4 defaults 0 0 [recommended]
+# UUID=7e1a91c5-23f4-4d58-8b1a-cc1e12345678 /storex ext4 defaults 0 0
 # /dev/nvme0n2p1 /storex ext4 defaults 0 0
 >>
 sudo mount -av
