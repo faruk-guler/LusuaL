@@ -175,7 +175,7 @@ df -Th
 ------------------------------------------------------------|
 # Name: Reduce İşlemi: (only ext4) (Online/Offline)
 # Önce filesystem, sonra partition küçültülür.
-# Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
+# Diski verisinden fazla küçültürseniz veri kaybedersiniz!
 # XFS, 2025 itibarıyla küçültülemez.
 #
 ------------------------------------------------------------|
