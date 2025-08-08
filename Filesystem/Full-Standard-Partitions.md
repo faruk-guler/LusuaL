@@ -38,8 +38,8 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Format: ext3/ext4, xfs
 -----------------------------------|
 # Fdisk'i yükleyin:
-sudo apt install util-linux -y
-sudo dnf install util-linux -y
+sudo apt install util-linux -y # Debian
+sudo dnf install util-linux -y # RedHat
 fdisk -v
 
 # Disk/Dizin Durumu:
