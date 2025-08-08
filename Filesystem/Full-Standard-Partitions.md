@@ -133,12 +133,12 @@ sudo mount -av
 sudo findmnt --verify
 sudo systemctl daemon-reload
 
-------------------------------------------------------------|
+-----------------------------------------------------------------|
 # Name: Genişlet ve Azalt (Online/Offline)
 # Author: faruk-guler
-# Note: Filesystem küçültüldükten sonra bölüm küçültülebilir. (genişletmenin tersi işlemi)
+# Note: Filesystem küçültüldükten sonra partition küçültülebilir.
 # 
--------------------------------------------------------------|
+-----------------------------------------------------------------|
 
 ## >>> Extend İşlemi <<<
 
@@ -161,14 +161,15 @@ df -Th
 # sudo xfs_growfs /dev/nvme0n2p1 18G [specific]
 df -Th
 
-## >>> Reduce İşlemi <<< (only Ext3/Ext4) [önce filesystem küçültülür, sonra partition küçültülür]
+## >>> Reduce İşlemi <<< (only Ext3/Ext4)
+## önce filesystem küçültülür, sonra partition küçültülür]
 
 # Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
 # fsck ile hataları kontrol edin:
 sudo e2fsck -f -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
 
-# İlk önce Dosya Sistemini boyutlandırın: (Ters İşlem)
+# İlk önce filesystemi boyutlandırın: (Ters İşlem)
 ⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Offline]
 sudo umount /storex [umount]
 sudo e2fsck -f /dev/nvme0n2p1
