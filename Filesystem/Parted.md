@@ -1,5 +1,12 @@
 ## Parted: 👹
+Linux’ta parted aracı, disk bölümlerini (partition) yönetmek için kullanılan güçlü bir komut satırı aracıdır.
+Hem MBR hem GPT disk yapısını destekler ve modern disk boyutlarıyla (2 TB üzeri) sorunsuz çalışır. 1999 yılından beri geliştirilmektedir.
 
+- Disk Boyutu Desteği	GPT (>2TB <8ZB'ye kadar) ve MBR
+- Dosya Sistemi Desteği	ext2/3/4, xfs, btrfs, fat, ntfs
+- Yeniden Boyutlandırma	Dinamik (bazı FS'lerde)
+- Kullanım	Etkileşimli ve komut satırı
+- Gerçek Zamanlı Değişiklik	Bazı işlemler anında uygulanır
 
 -----
 ```sh
