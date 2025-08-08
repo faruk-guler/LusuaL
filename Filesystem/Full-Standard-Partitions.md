@@ -140,12 +140,11 @@ sudo mount -av
 sudo findmnt --verify
 ```
 ```sh
------------------------------------------------------------------|
-# Name: Genişlet ve Azalt (Online/Offline)
+------------------------------------------------------------|
+# Name: Disk Genişlet ve Azalt (Online/Offline)
 # Author: faruk-guler
-# Note: Filesystem küçültüldükten sonra partition küçültülebilir.
 # 
------------------------------------------------------------------|
+------------------------------------------------------------|
 
 ## >>> Extend İşlemi <<<
 
@@ -173,7 +172,7 @@ df -Th
 df -Th
 
 ## >>> Reduce İşlemi <<< (only Ext4)
-## önce filesystem küçültülür, sonra partition küçültülür]
+## Filesystem küçültüldükten sonra partition küçültülebilir.
 ## Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
 ## XFS dosya sistemini küçültülmez! 2025
 
