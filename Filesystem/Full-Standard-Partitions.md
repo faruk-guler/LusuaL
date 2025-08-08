@@ -55,10 +55,8 @@ sudo fdisk -l
 
 # Sisteme eklenen diski algıla: (SCSI, NVMe, .etc)
 ls  /sys/class/scsi_host/
-echo "- - -" | tee /sys/class/scsi_host/host*/scan
-echo "- - -" | sudo tee /sys/class/scsi_host/host*/scan
-echo "1" | sudo tee /sys/class/block/*/device/rescan
 echo "1" > /sys/class/block/*/device/rescan
+echo "- - -" | sudo tee /sys/class/scsi_host/host*/scan
 echo "1" | sudo tee /sys/class/block/*/device/rescan
 
 # Disk Bölümlendirme -Diski seçin:
