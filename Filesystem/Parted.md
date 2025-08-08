@@ -4,6 +4,7 @@ Hem MBR hem GPT disk yapısını destekler ve modern disk boyutlarıyla (2 TB ü
 
 - Disk Boyutu Desteği	GPT (>2TB <8ZB'ye kadar) ve MBR
 - Dosya Sistemi Desteği	ext2/3/4, xfs, btrfs, fat, ntfs
+- Disk etiketini değiştirme (MBR ↔ GPT)
 - Yeniden Boyutlandırma	Dinamik (bazı FS'lerde)
 - Kullanım	Etkileşimli ve komut satırı
 - Gerçek Zamanlı Değişiklik	Bazı işlemler anında uygulanır
