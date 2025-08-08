@@ -102,6 +102,7 @@ partprobe -s
 # Disk/Bölüm/Dizin Durumu:
 sudo file -sL /dev/nvme0n2
 sudo file -sL /dev/nvme0n2p1
+sudo tune2fs -l /dev/nvme0n2p1
 sudo blkid /dev/repo_vg/logs [for LVM]
 
 1- Disk/Bölüm Formatla: [Ext4]: (sdb1,nvme0n2p1, ..)
