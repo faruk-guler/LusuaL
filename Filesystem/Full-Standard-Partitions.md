@@ -182,7 +182,7 @@ sudo resize2fs -P /dev/nvme0n2p1
 # Partition tablosunu fdisk veya parted ile küçültün:
 sudo fdisk /dev/nvme0n2
 > a. Mevcut bölümü silin (d)
-> b. Aynı başlangıç sektörüyle yeni bir bölüm oluşturun (n)
+> b. Aynı başlangıç sektörüyle (aynı) yeni bir bölüm oluşturun (n)
 > c. Yeni boyutu belirtin (örneğin, 17G)
 > d. Değişiklikleri yazın (w) [Dikkat!]
 
