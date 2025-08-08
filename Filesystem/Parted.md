@@ -8,6 +8,7 @@ Hem MBR hem GPT disk yapısını destekler ve modern disk boyutlarıyla (2 TB ü
 - Yeniden Boyutlandırma	Dinamik (bazı FS'lerde)
 - Kullanım	etkileşimli ve doğrudan komut satırı
 - Parted komutları hemen uygulanır, geri alınamaz!
+- Kalıcı veri kaybı oluşabilir, mutlaka verilerinizi yedekleyin. 🔴🔴🔴
 
 -----
 ```sh
