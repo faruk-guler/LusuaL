@@ -187,7 +187,7 @@ sudo fdisk /dev/nvme0n2
 > d. Değişiklikleri yazın (w) [Dikkat!]
 
 # Kernele değişikliği tanıtın:
-sudo partprobe /dev/nvme0n2p1
+sudo partprobe -s
 
 # Dosya sistemini kontrol et:
 sudo e2fsck -f /dev/nvme0n2p1
