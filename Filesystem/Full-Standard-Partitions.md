@@ -35,7 +35,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Tools: Fdisk
 # Author: faruk-guler
 # Size: < 2TB
-# Format: ext3/ext4, xfs
+# Format: ext4, xfs
 -----------------------------------|
 # Fdisk'i yükleyin:
 sudo apt install util-linux -y # Debian
@@ -102,7 +102,7 @@ sudo file -sL /dev/nvme0n2
 sudo file -sL /dev/nvme0n2p1
 sudo blkid /dev/repo_vg/logs [for LVM]
 
-1- Disk/Bölüm Formatla: [Ext3/Ext4]: (sdb1,nvme0n2p1, ..)
+1- Disk/Bölüm Formatla: [Ext4]: (sdb1,nvme0n2p1, ..)
 #sudo mkfs -t ext4 /dev/nvme0n2 [Disk]
 #sudo mkfs -t ext4 /dev/nvme0n2p1 [Bölüm]
 
@@ -152,7 +152,7 @@ Fdisk, Parted or Cfdisk Tool:
 df -Th
 
 # A2 - Dosya Sistemini Genişletin:
-⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Online]
+⦁⦁Ext4 kullanıyorsanız: (resize2fs) [Online]
 # sudo resize2fs /dev/nvme0n2p1 [%100]
 # sudo resize2fs /dev/nvme0n2p1 18G [specific]
 df -Th
@@ -162,7 +162,7 @@ df -Th
 # sudo xfs_growfs /dev/nvme0n2p1 18G [specific]
 df -Th
 
-## >>> Reduce İşlemi <<< (only Ext3/Ext4)
+## >>> Reduce İşlemi <<< (only Ext4)
 ## önce filesystem küçültülür, sonra partition küçültülür]
 ## Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
 
@@ -176,7 +176,7 @@ sudo e2fsck -f -v /dev/nvme0n2p1
 sudo resize2fs -P /dev/nvme0n2p1
 
 # Önce filesystemi küçültün: (Ters İşlem)
-⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Offline]
+⦁⦁Ext4 kullanıyorsanız: (resize2fs) [Offline]
 # sudo resize2fs /dev/nvme0n2p1 17G [specific size]
 
 # Partition tablosunu fdisk veya parted ile küçültün:
