@@ -31,7 +31,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 ```
 
 ```sh
-----------------------------------------------------------------|
+------------------------------------------------------------------|
 # Tools: Fdisk Tool
 # Author: faruk-guler
 # MBR: Maksimum 4 birincil bölüm, <2TB diskler için.
