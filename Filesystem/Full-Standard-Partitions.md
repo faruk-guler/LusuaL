@@ -183,7 +183,7 @@ sudo resize2fs -P /dev/nvme0n2p1
 ?? sudo fdisk /dev/nvme0n2p1
 ?? # partition sil ve yeniden oluşturun küçültülmüş boyutla
 
-# Kernele değişikliği bildirin:
+# Kernele değişikliği tanıtın:
 sudo partprobe /dev/nvme0n2p1
 
 # Tekrar Mount edin:
