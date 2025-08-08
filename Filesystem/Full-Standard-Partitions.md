@@ -164,7 +164,7 @@ sudo e2fsck -f /dev/nvme0n2p1
 
 # İlk önce Dosya Sistemini boyutlandırın: (Ters İşlem)
 ⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Offline]
-sudo umount /dev/nvme0n2p1 /alan [umount]
+sudo umount /alan [umount]
 sudo e2fsck -f /dev/nvme0n2p1
 # sudo resize2fs /dev/nvme0n2p1 17G [specific size]
 
