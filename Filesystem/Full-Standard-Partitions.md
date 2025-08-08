@@ -175,13 +175,16 @@ sudo e2fsck -f -v /dev/nvme0n2p1
 # Minimum güvenli boyutu öğrenin:
 sudo resize2fs -P /dev/nvme0n2p1
 
-# Önce filesystemi boyutlandırın: (Ters İşlem)
+# Önce filesystemi küçültün: (Ters İşlem)
 ⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Offline]
 # sudo resize2fs /dev/nvme0n2p1 17G [specific size]
 
-?? # Partition tablosunu fdisk veya parted ile küçültün (aynı başlangıç noktası korunmalı)
-?? sudo fdisk /dev/nvme0n2p1
-?? # partition sil ve yeniden oluşturun küçültülmüş boyutla
+# Partition tablosunu fdisk veya parted ile küçültün:
+sudo fdisk /dev/nvme0n2
+> a. Mevcut bölümü silin (d)
+> b. Aynı başlangıç sektörüyle yeni bir bölüm oluşturun (n)
+> c. Yeni boyutu belirtin (örneğin, 17G)
+> d. Değişiklikleri yazın (w) [Dikkat! ]
 
 # Kernele değişikliği tanıtın:
 sudo partprobe /dev/nvme0n2p1
