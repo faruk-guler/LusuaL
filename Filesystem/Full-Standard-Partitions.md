@@ -19,7 +19,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Name: İleriye dönük optimize disk bölümleme planı
 # Yapı: Tüm veri alanları standart partitions ile yönetilir.
 # Disk Space: 4TB
-# Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir.
+# Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir. "swapfile" xfs dosya sisteminde desteklenmez.
 # ESP: UEFI sistem kullanılıyorsa EFI System Partition (ESP) alanı zorunludur.
 
   /dev/sda1     /dev/sda2       /dev/sda3     /dev/sda4      <--- Genişletilebilir --->
