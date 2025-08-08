@@ -78,8 +78,8 @@ Create a new label
    s - create a new empty Sun partition table
 
 Partition type
-   p   primary (0 primary, 0 extended, 4 free) [Max 4 pieces]
-   e   extended (container for logical partitionsSelect (default p):[128 pieces]
+   p   primary (0 primary, 0 extended, 4 free) [Max 4 partitions]
+   e   extended (container for logical partitionsSelect (default p):[128 partitions]
 
 *Specify the starting and ending sectors. You can use 100% of all unallocated space.
 *Disk type will be [Linux] by default.
