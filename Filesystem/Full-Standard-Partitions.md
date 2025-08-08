@@ -98,7 +98,7 @@ q - Exit from fdisk tool:
 # Disk değişikliklerini kernele tanıtın:
 partprobe -s
 
-# Disk/Bölüm Durumu:
+# Disk/Bölüm/Dizin Durumu:
 sudo file -sL /dev/nvme0n2
 sudo file -sL /dev/nvme0n2p1
 sudo blkid /dev/repo_vg/logs [for LVM]
