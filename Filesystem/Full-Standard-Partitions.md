@@ -180,8 +180,7 @@ sudo xfs_repair /dev/nvme0n2p1
 # Minimum güvenli boyutu öğrenin:
 sudo resize2fs -P /dev/nvme0n2p1
 
-# Önce filesystemi küçültün: (Ters İşlem)
-⦁⦁Ext4 kullanıyorsanız: (resize2fs) [Offline]
+# Önce filesystemi küçültün: (Ters İşlem) [Offline]
 # sudo resize2fs /dev/nvme0n2p1 17G [specific size]
 
 # Partition tablosunu fdisk veya parted ile küçültün:
