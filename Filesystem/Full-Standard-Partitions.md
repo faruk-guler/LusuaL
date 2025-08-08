@@ -31,14 +31,15 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 ```
 
 ```sh
------------------------------------------------------------|
+----------------------------------------------------------------|
 # Tools: Fdisk Tool
 # Author: faruk-guler
 # MBR: Maksimum 4 birincil bölüm, <2TB diskler için.
 # GPT: 128 bölüme kadar destekler, >2TB diskler için.
 # Format: ext4, xfs, ...
-#
------------------------------------------------------------|
+# Kalıcı veri kaybı oluşabilir, mutlaka verilerinizi yedekleyin. 🔴🔴🔴
+# 
+-------------------------------------------------------------------|
 
 # Fdisk'i yükleyin:
 sudo apt install util-linux -y # Debian
