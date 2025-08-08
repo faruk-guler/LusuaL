@@ -145,7 +145,6 @@ sudo systemctl daemon-reload
 
 # fsck ile hataları kontrol edin:
 sudo e2fsck -f -v /dev/nvme0n2p1
-sudo e2fsck -f /dev/nvme0n2p1
 
 # A1 -Boyut Öncesi Bölümü Genişletin:
 Fdisk, Parted or Cfdisk Tool:
