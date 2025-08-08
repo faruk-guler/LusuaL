@@ -79,7 +79,7 @@ Create a new label
 
 Partition type
    p   primary (0 primary, 0 extended, 4 free) [Max 4 partitions]
-   e   extended (container for logical partitionsSelect (default p):[128 partitions]
+   e   extended (container for logical partitions Select (default p):[128 partitions]
 
 *Specify the starting and ending sectors. You can use 100% of all unallocated space.
 *Disk type will be [Linux] by default.
