@@ -143,7 +143,8 @@ sudo findmnt --verify
 ------------------------------------------------------------|
 # Name: Extend İşlemi: [xfs/ext4] (Online/Offline)
 # Author: faruk-guler
-# 
+# Note: Önce partition, sonra filesytem genişletilir.
+#
 ------------------------------------------------------------|
 
 # Hataları kontrol edin: [xfs_repair/fsck]
