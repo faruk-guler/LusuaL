@@ -36,7 +36,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Author: faruk-guler
 # MBR: Maksimum 4 birincil bölüm, <2TB diskler için.
 # GPT: 128 bölüme kadar destekler, >2TB diskler için.
-# Format: ext4, xfs, ...
+# Format: ext4, xfs, ... 🔴
 #
 -----------------------------------------------------------|
 
