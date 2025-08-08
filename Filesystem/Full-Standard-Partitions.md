@@ -110,12 +110,12 @@ sudo blkid /dev/repo_vg/logs [for LVM]
 #sudo mkfs -t xfs /dev/nvme0n2p1
 
 # Dizin İşlemleri:
-sudo mkdir /alan
-sudo mkdir -p /alan/hodl-77/xxx
+sudo mkdir /storex
+sudo mkdir -p /storex/hodl-77/xxx
 
 # Mount & Umount:
-sudo mount /dev/nvme0n2p1 /alan
-sudo umount /alan
+sudo mount /dev/nvme0n2p1 /storex
+sudo umount /storex
 sudo umount -l /dev/nvme0n2p1
 
 # UUID al:
@@ -125,8 +125,8 @@ sudo blkid -s UUID -o value /dev/nvme0n2p1
 sudo cp /etc/fstab /etc/fstab.old
 nano /etc/fstab
 >>
-# UUID=7e1a91c5-23f4-4d58-8b1a-cc1e12345678 /alan ext4 defaults 0 0 [recommended]
-# /dev/nvme0n2p1 /alan ext4 defaults 0 0
+# UUID=7e1a91c5-23f4-4d58-8b1a-cc1e12345678 /storex ext4 defaults 0 0 [recommended]
+# /dev/nvme0n2p1 /storex ext4 defaults 0 0
 >>>
 sudo mount -av
 sudo findmnt --verify
@@ -169,12 +169,12 @@ sudo e2fsck -f /dev/nvme0n2p1
 
 # İlk önce Dosya Sistemini boyutlandırın: (Ters İşlem)
 ⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Offline]
-sudo umount /alan [umount]
+sudo umount /storex [umount]
 sudo e2fsck -f /dev/nvme0n2p1
 # sudo resize2fs /dev/nvme0n2p1 17G [specific size]
 
 # Mount edin:
-sudo mount /dev/nvme0n2p1 /alan [try mount]
+sudo mount /dev/nvme0n2p1 /storex [try mount]
 df -Th
 
 ```
