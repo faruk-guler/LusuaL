@@ -89,7 +89,7 @@ Partition type
 # Write the changes to disk. [Attention!]
 t - Change partition type:
 L - List partition type:
-8e - Set/change partition type:
+83 - Set/change partition type:
 #w - Write changes to disk:
 p - List disk partitions:
 q - Exit from fdisk tool:
