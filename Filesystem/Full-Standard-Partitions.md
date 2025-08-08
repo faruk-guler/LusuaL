@@ -208,15 +208,5 @@ df -Th
 
 ```
 ```sh
--------------------------|
-# Tools: Parted
-# Author: faruk-guler
-# Note:
--------------------------|
-
-Bkz.
-https://github.com/faruk-guler/LusuaL/blob/main/Filesystem/parted.md
-
-```
 
 [Standard Partitions - Install, Configure, Manage -farukguler.com](https://farukguler.com/posts/standard-partitions-install-configure-manage/)
