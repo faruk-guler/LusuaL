@@ -127,7 +127,7 @@ nano /etc/fstab
 >>
 # UUID=7e1a91c5-23f4-4d58-8b1a-cc1e12345678 /storex ext4 defaults 0 0 [recommended]
 # /dev/nvme0n2p1 /storex ext4 defaults 0 0
->>>
+>>
 sudo mount -av
 sudo findmnt --verify
 sudo systemctl daemon-reload
