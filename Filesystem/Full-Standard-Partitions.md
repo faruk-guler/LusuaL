@@ -36,7 +36,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Author: faruk-guler
 # MBR: Maksimum 4 birincil bölüm, <2TB diskler için.
 # GPT: 128 bölüme kadar destekler, >2TB diskler için.
-# Format: ext4, xfs, ... 🔴
+# Format: ext4, xfs, ...
 #
 -----------------------------------------------------------|
 
@@ -94,7 +94,7 @@ Partition type
 t - Change partition type:
 L - List partition type:
 83 - Set/change partition type:
-#w - Write changes to disk:
+#w - Write changes to disk: 🔴
 p - List disk partitions:
 q - Exit from fdisk tool:
 
@@ -108,11 +108,11 @@ sudo tune2fs -l /dev/nvme0n2p1
 sudo blkid /dev/repo_vg/logs [for LVM]
 
 1- Disk/Bölüm Formatla: [ext4]: (sdb1,nvme0n2p1, ..)
-#sudo mkfs -t ext4 /dev/nvme0n2 [Tüm Disk]
+#sudo mkfs -t ext4 /dev/nvme0n2 [Tüm Disk] 🔴
 #sudo mkfs -t ext4 /dev/nvme0n2p1 [Bölüm]
 
 2- Disk/Bölüm Formatla: [xfs]: (sdb1,nvme0n2p1, ...)
-#sudo mkfs -t xfs /dev/nvme0n2 [Tüm Disk]
+#sudo mkfs -t xfs /dev/nvme0n2 [Tüm Disk] 🔴
 #sudo mkfs -t xfs /dev/nvme0n2p1 [Bölüm]
 
 # Dizin İşlemleri:
@@ -131,7 +131,7 @@ sudo umount -l /dev/nvme0n2p1
 sudo blkid /dev/nvme0n2 [Tüm Disk]
 sudo blkid /dev/nvme0n2p1 [Bölüm]
 
-# fstab düzenleme: (Kalıcılık için)
+# fstab düzenleme: (Kalıcılık için) 🔴
 sudo cp /etc/fstab /etc/fstab.old
 sudo nano /etc/fstab
 >>
@@ -153,11 +153,11 @@ sudo e2fsck -f -v /dev/nvme0n2p1
 sudo xfs_repair /dev/nvme0n2p1
 
 # A1 Önce partition tablosunu genişletin: (fdisk tool)
-#sudo fdisk /dev/nvme0n2
-> a. sil (d)
-> b. yeni (daha büyük, aynı başlangıç) (n)
-> c. değişikliği yaz (w)
-sudo partprobe
+sudo fdisk /dev/nvme0n2
+> a. Mevcut bölümü silin (d)
+> b. Aynı başlangıç sektörüyle (aynı) daha büyük bir bölüm oluşturun (n)
+> c. Yeni boyutu belirtin (örneğin, 17G)
+> d. Değişiklikleri yazın (w) [Dikkat!] 🔴
 
 # A2 Sonra filesystemi genişletin:
 ===ext4 kullanıyorsanız: (resize2fs) [Online]
@@ -197,7 +197,7 @@ sudo fdisk /dev/nvme0n2
 > a. Mevcut bölümü silin (d)
 > b. Aynı başlangıç sektörüyle (aynı) yeni bir bölüm oluşturun (n)
 > c. Yeni boyutu belirtin (örneğin, 17G)
-> d. Değişiklikleri yazın (w) [Dikkat!]
+> d. Değişiklikleri yazın (w) [Dikkat!] 🔴
 
 # Kernele değişikliği tanıtın:
 sudo partprobe -s
