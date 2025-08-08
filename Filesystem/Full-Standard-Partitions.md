@@ -31,11 +31,12 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 ```
 
 ```sh
---------------------------------|
+-----------------------------------|
 # Tools: Fdisk
 # Author: faruk-guler
 # Size: < 2TB
---------------------------------|
+# Format: ext3/ext4, xfs
+-----------------------------------|
 # Fdisk'i yükleyin:
 sudo apt install util-linux -y
 sudo dnf install util-linux -y
@@ -132,7 +133,7 @@ sudo mount -av
 sudo findmnt --verify
 sudo systemctl daemon-reload
 
--------------------------------------------------------------|
+------------------------------------------------------------|
 # Name: Genişlet ve Azalt (Online/Offline)
 # Author: faruk-guler
 # Note: Filesystem küçültüldükten sonra bölüm küçültülebilir. (genişletmenin tersi işlemi)
