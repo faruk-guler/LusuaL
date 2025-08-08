@@ -46,6 +46,7 @@ sudo du -hla /storage/log
 sudo du -hla --max-depth=1 / | sort -h
 
 # Disk Durumunu Kontrol Edin:
+lsblk -o NAME,TYPE,SIZE,MODEL
 ls -l /dev/sd*
 df -Th
 lsblk -p
