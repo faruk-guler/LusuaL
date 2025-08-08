@@ -102,8 +102,8 @@ sudo file -sL /dev/nvme0n2p1
 sudo blkid /dev/repo_vg/logs [for LVM]
 
 1- Disk/Bölüm Formatla: [Ext3/Ext4]: (sdb1,nvme0n2p1, ..)
-#sudo mkfs -t ext4 /dev/nvme0n2
-#sudo mkfs -t ext4 /dev/nvme0n2p1
+#sudo mkfs -t ext4 /dev/nvme0n2 [Disk]
+#sudo mkfs -t ext4 /dev/nvme0n2p1 [Bölüm]
 
 2- Disk/Bölüm Formatla: [xfs]: (sdb1,nvme0n2p1, ...)
 #sudo mkfs -t xfs /dev/nvme0n2
