@@ -137,7 +137,7 @@ sudo systemctl daemon-reload
 ## >>> Extend İşlemi <<<
 
 # fsck ile hataları kontrol edin:
-sudo e2fsck -ff -v /dev/nvme0n2p1
+sudo e2fsck -f -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
 
 # A1 -Boyut Öncesi Bölümü Genişletin:
@@ -159,7 +159,7 @@ df -Th
 
 # Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
 # fsck ile hataları kontrol edin:
-sudo e2fsck -ff -v /dev/nvme0n2p1
+sudo e2fsck -f -v /dev/nvme0n2p1
 sudo e2fsck -f /dev/nvme0n2p1
 
 # İlk önce Dosya Sistemini boyutlandırın: (Ters İşlem)
