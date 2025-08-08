@@ -2,7 +2,7 @@
 Linux’ta parted aracı, disk bölümlerini (partition) yönetmek için kullanılan güçlü bir komut satırı aracıdır.
 Hem MBR hem GPT disk yapısını destekler ve modern disk boyutlarıyla (2 TB üzeri) sorunsuz çalışır.  1990'ların sonunda Andrew Clausen tarafından geliştirilmeye başlanmıştır. Geleneksel "fdisk" aracının sınırlarını aşmak ve daha modern disk yönetimi ihtiyaçlarını karşılamak amacıyla tasarlanmıştır.
 
-- Disk Boyutu Desteği	GPT (>2TB <8ZB'ye kadar) ve MBR
+- Disk Boyutu Desteği	GPT (>2TB <9.4ZB'ye kadar) ve MBR
 - Dosya Sistemi Desteği	ext2/3/4, xfs, btrfs, fat, ntfs
 - Disk etiketini değiştirme (MBR ↔ GPT)
 - Yeniden Boyutlandırma	Dinamik (bazı FS'lerde)
