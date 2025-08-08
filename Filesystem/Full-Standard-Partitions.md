@@ -160,6 +160,7 @@ df -Th
 df -Th
 
 ⦁⦁Xfs kullanıyorsanız: (xfs_growfs) [Online]
+# sudo xfs_growfs -d /storex
 # sudo xfs_growfs -d /dev/nvme0n2p1 [%100]
 # sudo xfs_growfs /dev/nvme0n2p1 18G [specific]
 df -Th
