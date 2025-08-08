@@ -169,6 +169,7 @@ df -Th
 ## >>> Reduce İşlemi <<< (only Ext4)
 ## önce filesystem küçültülür, sonra partition küçültülür]
 ## Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
+## XFS dosya sistemini küçültülmez! 2025
 
 # Umount edin:
 sudo umount /storex [umount]
