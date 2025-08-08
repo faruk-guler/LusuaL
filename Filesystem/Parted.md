@@ -150,6 +150,13 @@ sudo parted /dev/sdc --script 'mkpart primary fat32 1MiB 4GiB set 1 boot on'
 sudo dd if=ubuntu.iso of=/dev/sdc bs=4M status=progress
 ```
 ```sh
+# Parted faydalı komutlar:
+(parted) select /dev/sdb    # Başka diske geçiş
+(parted) unit GB            # Birim değiştirme  
+(parted) name 1 "System"    # Bölüme isim verme
+```
+
+```sh
 Desteklenen bayraklar:
 1 boot
 2 root
