@@ -129,7 +129,7 @@ sudo umount /storex
 sudo umount -l /dev/nvme0n2p1
 
 # UUID al:
-sudo blkid /dev/nvme0n2 [Tüm Disk]
+sudo blkid /dev/nvme0n2 [Tüm Disk] 🔴
 sudo blkid /dev/nvme0n2p1 [Bölüm]
 
 # fstab düzenleme: (Kalıcılık için) 🔴
