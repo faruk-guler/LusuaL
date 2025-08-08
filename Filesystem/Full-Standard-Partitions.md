@@ -40,7 +40,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Fdisk'i yükleyin:
 sudo apt install util-linux -y # Debian
 sudo dnf install util-linux -y # RedHat
-fdisk -v
+fdisk --version
 
 # Disk/Dizin Durumu:
 sudo du -hla /storage/log
