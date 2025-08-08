@@ -115,7 +115,9 @@ sudo mkdir /storex
 sudo mkdir -p /storex/hodl-77/xxx
 
 # Mount & Umount:
-sudo mount /dev/nvme0n2p1 /storex
+sudo mount -t ext4 /dev/nvme0n2p1 /storex [ext4]
+sudo mount -t xfs /dev/nvme0n2p1 /storex [xfs]
+sudo mount -t ntfs-3g /dev/nvme0n2p1 /storex [NTFS]
 sudo umount /storex
 sudo umount -l /dev/nvme0n2p1
 
