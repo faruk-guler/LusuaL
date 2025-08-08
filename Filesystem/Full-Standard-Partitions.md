@@ -141,12 +141,10 @@ sudo findmnt --verify
 ```
 ```sh
 ------------------------------------------------------------|
-# Name: Disk Genişlet ve Azalt (Online/Offline)
+# Name: Extend İşlemi: [xfs/ext4] (Online/Offline)
 # Author: faruk-guler
 # 
 ------------------------------------------------------------|
-
-## >>> Extend İşlemi <<<
 
 # Hataları kontrol edin: [xfs_repair/fsck]
 sudo e2fsck -f -v /dev/nvme0n2p1
@@ -160,24 +158,28 @@ sudo xfs_repair /dev/nvme0n2p1
 sudo partprobe
 
 # A2 - Dosya Sistemini Genişletin:
-==Ext4 kullanıyorsanız: (resize2fs) [Online]
+===Ext4 kullanıyorsanız: (resize2fs) [Online]
 # sudo resize2fs /dev/nvme0n2p1 [%100]
 # sudo resize2fs /dev/nvme0n2p1 18G [specific]
 df -Th
 
-==xfs kullanıyorsanız: (xfs_growfs) [Online]
+===xfs kullanıyorsanız: (xfs_growfs) [Online]
 # sudo xfs_growfs -d /storex
 # sudo xfs_growfs -d /dev/nvme0n2p1 [%100]
 # sudo xfs_growfs /dev/nvme0n2p1 18G [specific]
 df -Th
 
-## >>> Reduce İşlemi <<< (only Ext4)
-## Filesystem küçültüldükten sonra partition küçültülebilir.
-## Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
-## XFS dosya sistemini küçültülmez! 2025
+------------------------------------------------------------|
+# Name: Reduce İşlemi: (only Ext4) (Online/Offline)
+# Author: faruk-guler
+# Filesystem küçültüldükten sonra partition küçültülebilir.
+# Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
+# XFS dosya sistemini küçültülmez! 2025
+#
+------------------------------------------------------------|
 
 # Umount edin:
-sudo umount /storex [umount]
+sudo umount /storex
 
 # Hataları kontrol edin: [xfs_repair/fsck]
 sudo e2fsck -f -v /dev/nvme0n2p1
