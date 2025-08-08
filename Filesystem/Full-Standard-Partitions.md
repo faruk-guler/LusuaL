@@ -106,11 +106,11 @@ sudo tune2fs -l /dev/nvme0n2p1
 sudo blkid /dev/repo_vg/logs [for LVM]
 
 1- Disk/Bölüm Formatla: [ext4]: (sdb1,nvme0n2p1, ..)
-#sudo mkfs -t ext4 /dev/nvme0n2 [Disk]
+#sudo mkfs -t ext4 /dev/nvme0n2 [Tüm Disk]
 #sudo mkfs -t ext4 /dev/nvme0n2p1 [Bölüm]
 
 2- Disk/Bölüm Formatla: [xfs]: (sdb1,nvme0n2p1, ...)
-#sudo mkfs -t xfs /dev/nvme0n2 [Disk]
+#sudo mkfs -t xfs /dev/nvme0n2 [Tüm Disk]
 #sudo mkfs -t xfs /dev/nvme0n2p1 [Bölüm]
 
 # Dizin İşlemleri:
@@ -126,7 +126,7 @@ sudo umount /storex
 sudo umount -l /dev/nvme0n2p1
 
 # UUID al:
-sudo blkid /dev/nvme0n2 [Disk]
+sudo blkid /dev/nvme0n2 [Tüm Disk]
 sudo blkid /dev/nvme0n2p1 [Bölüm]
 
 # fstab düzenleme: (Kalıcılık için)
