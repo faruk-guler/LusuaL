@@ -150,17 +150,20 @@ sudo findmnt --verify
 sudo e2fsck -f -v /dev/nvme0n2p1
 sudo xfs_repair /dev/nvme0n2p1
 
-# A1 -Boyut Öncesi Bölümü Genişletin:
-Fdisk, Parted or Cfdisk Tool:
-df -Th
+# A1 -Boyut Öncesi Bölümü Genişletin: (fdisk tool)
+#sudo fdisk /dev/nvme0n2
+d → sil
+n → yeni (daha büyük, aynı başlangıç)
+w → değişikliği yaz (!)
+sudo partprobe
 
 # A2 - Dosya Sistemini Genişletin:
-⦁⦁Ext4 kullanıyorsanız: (resize2fs) [Online]
+==Ext4 kullanıyorsanız: (resize2fs) [Online]
 # sudo resize2fs /dev/nvme0n2p1 [%100]
 # sudo resize2fs /dev/nvme0n2p1 18G [specific]
 df -Th
 
-⦁⦁Xfs kullanıyorsanız: (xfs_growfs) [Online]
+==xfs kullanıyorsanız: (xfs_growfs) [Online]
 # sudo xfs_growfs -d /storex
 # sudo xfs_growfs -d /dev/nvme0n2p1 [%100]
 # sudo xfs_growfs /dev/nvme0n2p1 18G [specific]
