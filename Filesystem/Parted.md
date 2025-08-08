@@ -147,7 +147,7 @@ sudo parted /dev/sdc --script 'mklabel msdos'
 sudo parted /dev/sdc --script 'mkpart primary fat32 1MiB 4GiB set 1 boot on'
 
 >> ISO'yu yaz:
-sudo dd if=ubuntu.iso of=/dev/sdc1 bs=4M status=progress
+sudo dd if=ubuntu.iso of=/dev/sdc bs=4M status=progress
 ```
 ```sh
 Desteklenen bayraklar:
