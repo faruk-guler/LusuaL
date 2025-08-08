@@ -148,6 +148,7 @@ sudo findmnt --verify
 
 # fsck ile hataları kontrol edin:
 sudo e2fsck -f -v /dev/nvme0n2p1
+sudo xfs_repair /dev/nvme0n2p1
 
 # A1 -Boyut Öncesi Bölümü Genişletin:
 Fdisk, Parted or Cfdisk Tool:
@@ -174,6 +175,7 @@ sudo umount /storex [umount]
 
 # fsck ile hataları kontrol edin:
 sudo e2fsck -f -v /dev/nvme0n2p1
+sudo xfs_repair /dev/nvme0n2p1
 
 # Minimum güvenli boyutu öğrenin:
 sudo resize2fs -P /dev/nvme0n2p1
