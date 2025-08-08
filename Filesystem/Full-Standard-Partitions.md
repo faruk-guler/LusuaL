@@ -60,7 +60,7 @@ echo "1" > /sys/class/block/*/device/rescan
 
 # Disk Bölümlendirme -Diski seçin:
 sudo fdisk /dev/nvme0n2
-sudo fdisk /dev/sdb
+sudo fdisk /dev/sda
 
 Welcome to fdisk (util-linux 2.37.4).
 Changes will remain in memory only, until you decide to write them.
