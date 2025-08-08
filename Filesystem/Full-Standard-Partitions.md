@@ -47,7 +47,7 @@ sudo du -hla --max-depth=1 / | sort -h
 
 # Disk Durumunu Kontrol Edin:
 lsblk -o NAME,TYPE,SIZE,MODEL
-ls -l /dev/sd*
+ls -l /dev/sd* /dev/nvme* [SATA/SCSI, NVMe]
 df -Th
 lsblk -p
 sudo fdisk -l
