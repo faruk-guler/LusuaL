@@ -184,7 +184,7 @@ sudo fdisk /dev/nvme0n2
 > a. Mevcut bölümü silin (d)
 > b. Aynı başlangıç sektörüyle yeni bir bölüm oluşturun (n)
 > c. Yeni boyutu belirtin (örneğin, 17G)
-> d. Değişiklikleri yazın (w) [Dikkat! ]
+> d. Değişiklikleri yazın (w) [Dikkat!]
 
 # Kernele değişikliği tanıtın:
 sudo partprobe /dev/nvme0n2p1
