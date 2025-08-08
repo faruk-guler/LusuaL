@@ -7,7 +7,7 @@ Hem MBR hem GPT disk yapısını destekler ve modern disk boyutlarıyla (2 TB ü
 - Disk etiketini değiştirme (MBR ↔ GPT)
 - Yeniden Boyutlandırma	Dinamik (bazı FS'lerde)
 - Kullanım	etkileşimli ve doğrudan komut satırı
-- Gerçek Zamanlı Değişiklik	Bazı işlemler anında uygulanır
+- Parted komutları hemen uygulanır, geri alınamaz!
 
 -----
 ```sh
