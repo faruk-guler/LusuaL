@@ -180,7 +180,6 @@ sudo resize2fs -P /dev/nvme0n2p1
 ⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Offline]
 # sudo resize2fs /dev/nvme0n2p1 17G [specific size]
 
-
 ?? # Partition tablosunu fdisk veya parted ile küçültün (aynı başlangıç noktası korunmalı)
 ?? sudo fdisk /dev/nvme0n2p1
 ?? # partition sil ve yeniden oluşturun küçültülmüş boyutla
