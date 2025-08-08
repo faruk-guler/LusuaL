@@ -174,8 +174,8 @@ sudo e2fsck -f /dev/nvme0n2p1
 sudo umount /storex [umount]
 # sudo resize2fs /dev/nvme0n2p1 17G [specific size]
 
-# Mount edin:
-sudo mount /dev/nvme0n2p1 /storex [try mount]
+# Tekrar Mount edin:
+sudo mount /dev/nvme0n2p1 /storex
 df -Th
 
 ```
