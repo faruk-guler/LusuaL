@@ -143,7 +143,7 @@ sudo findmnt --verify
 ```sh
 ------------------------------------------------------------|
 # Name: Extend İşlemi: [xfs/ext4] (Online/Offline)
-# Note: Önce partition, sonra filesytem genişletilir.
+# Note: Önce partition, sonra filesystem genişletilir.
 #
 ------------------------------------------------------------|
 
