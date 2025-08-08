@@ -211,5 +211,5 @@ sudo mount /dev/nvme0n2p1 /storex
 df -Th
 
 ```
-
+Daha fazlası için:
 [Standard Partitions - Install, Configure, Manage -farukguler.com](https://farukguler.com/posts/standard-partitions-install-configure-manage/)
