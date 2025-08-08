@@ -189,6 +189,9 @@ sudo fdisk /dev/nvme0n2
 # Kernele değişikliği tanıtın:
 sudo partprobe /dev/nvme0n2p1
 
+# Dosya sistemini kontrol et:
+sudo e2fsck -f /dev/nvme0n2p1
+
 # Tekrar Mount edin:
 sudo mount /dev/nvme0n2p1 /storex
 df -Th
