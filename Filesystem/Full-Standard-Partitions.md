@@ -152,14 +152,14 @@ sudo findmnt --verify
 sudo e2fsck -f -v /dev/nvme0n2p1
 sudo xfs_repair /dev/nvme0n2p1
 
-# A1 -Boyut Öncesi Bölümü Genişletin: (fdisk tool)
+# A1 Önce partition tablosunu genişletin: (fdisk tool)
 #sudo fdisk /dev/nvme0n2
 > a. sil (d)
 > b. yeni (daha büyük, aynı başlangıç) (n)
 > c. değişikliği yaz (w)
 sudo partprobe
 
-# A2 - Dosya Sistemini Genişletin:
+# A2 Sonra filesystemi genişletin:
 ===ext4 kullanıyorsanız: (resize2fs) [Online]
 # sudo resize2fs /dev/nvme0n2p1 [%100]
 # sudo resize2fs /dev/nvme0n2p1 18G [specific]
@@ -192,7 +192,7 @@ sudo resize2fs -P /dev/nvme0n2p1
 # Önce filesystemi küçültün: (Ters İşlem) [Offline]
 # sudo resize2fs /dev/nvme0n2p1 17G [specific size]
 
-# Partition tablosunu fdisk veya parted ile küçültün:
+# Sonra partition tablosunu fdisk veya parted ile küçültün:
 sudo fdisk /dev/nvme0n2
 > a. Mevcut bölümü silin (d)
 > b. Aynı başlangıç sektörüyle (aynı) yeni bir bölüm oluşturun (n)
