@@ -211,15 +211,11 @@ df -Th
 -------------------------|
 # Tools: Parted
 # Author: faruk-guler
-# Size: > 2TB
+# Note:
 -------------------------|
 
-# Parted'ı kurun:
-sudo apt install parted
-sudo yum install parted
-parted --version
-
-# 
+Bkz.
+https://github.com/faruk-guler/LusuaL/blob/main/Filesystem/parted.md
 
 ```
 
