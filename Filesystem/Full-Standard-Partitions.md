@@ -134,7 +134,6 @@ sudo nano /etc/fstab
 >>
 sudo mount -av
 sudo findmnt --verify
-sudo systemctl daemon-reload
 
 -----------------------------------------------------------------|
 # Name: Genişlet ve Azalt (Online/Offline)
