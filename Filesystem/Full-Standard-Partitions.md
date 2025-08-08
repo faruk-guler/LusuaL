@@ -146,7 +146,7 @@ sudo findmnt --verify
 
 ## >>> Extend İşlemi <<<
 
-# fsck ile hataları kontrol edin:
+# Hataları kontrol edin: [xfs_repair/fsck]
 sudo e2fsck -f -v /dev/nvme0n2p1
 sudo xfs_repair /dev/nvme0n2p1
 
@@ -173,7 +173,7 @@ df -Th
 # Umount edin:
 sudo umount /storex [umount]
 
-# fsck ile hataları kontrol edin:
+# Hataları kontrol edin: [xfs_repair/fsck]
 sudo e2fsck -f -v /dev/nvme0n2p1
 sudo xfs_repair /dev/nvme0n2p1
 
