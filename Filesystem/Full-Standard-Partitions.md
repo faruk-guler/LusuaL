@@ -152,9 +152,9 @@ sudo xfs_repair /dev/nvme0n2p1
 
 # A1 -Boyut Öncesi Bölümü Genişletin: (fdisk tool)
 #sudo fdisk /dev/nvme0n2
-d → sil
-n → yeni (daha büyük, aynı başlangıç)
-w → değişikliği yaz (!)
+> a. sil (d)
+> b. yeni (daha büyük, aynı başlangıç) (n)
+> c. değişikliği yaz (w)
 sudo partprobe
 
 # A2 - Dosya Sistemini Genişletin:
