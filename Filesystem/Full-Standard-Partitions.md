@@ -105,7 +105,7 @@ sudo file -sL /dev/nvme0n2p1
 sudo tune2fs -l /dev/nvme0n2p1
 sudo blkid /dev/repo_vg/logs [for LVM]
 
-1- Disk/Bölüm Formatla: [Ext4]: (sdb1,nvme0n2p1, ..)
+1- Disk/Bölüm Formatla: [ext4]: (sdb1,nvme0n2p1, ..)
 #sudo mkfs -t ext4 /dev/nvme0n2 [Disk]
 #sudo mkfs -t ext4 /dev/nvme0n2p1 [Bölüm]
 
@@ -158,7 +158,7 @@ sudo xfs_repair /dev/nvme0n2p1
 sudo partprobe
 
 # A2 - Dosya Sistemini Genişletin:
-===Ext4 kullanıyorsanız: (resize2fs) [Online]
+===ext4 kullanıyorsanız: (resize2fs) [Online]
 # sudo resize2fs /dev/nvme0n2p1 [%100]
 # sudo resize2fs /dev/nvme0n2p1 18G [specific]
 df -Th
@@ -170,11 +170,11 @@ df -Th
 df -Th
 
 ------------------------------------------------------------|
-# Name: Reduce İşlemi: (only Ext4) (Online/Offline)
+# Name: Reduce İşlemi: (only ext4) (Online/Offline)
 # Author: faruk-guler
 # Filesystem küçültüldükten sonra partition küçültülebilir.
 # Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
-# XFS dosya sistemini küçültülmez! 2025
+# xfs dosya sistemini küçültülmez! 2025
 #
 ------------------------------------------------------------|
 
