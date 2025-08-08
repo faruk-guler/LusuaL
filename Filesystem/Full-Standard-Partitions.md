@@ -34,7 +34,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 --------------------------------|
 # Tools: Fdisk
 # Author: faruk-guler
-# 
+# Size: < 2TB
 --------------------------------|
 # Fdisk'i yükleyin:
 sudo apt install util-linux -y
@@ -177,7 +177,7 @@ df -Th
 -------------------------|
 # Tools: Parted
 # Author: faruk-guler
-# 
+# Size: > 2TB
 -------------------------|
 
 # Parted'ı kurun:
