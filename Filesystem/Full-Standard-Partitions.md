@@ -34,7 +34,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 -----------------------------------|
 # Tools: Fdisk
 # Author: faruk-guler
-# Size: < 2TB MBR / > 2 TB GPT
+# Size: < 2TB MBR (DOS) / > 2 TB GPT
 # Format: ext4, xfs
 -----------------------------------|
 # Fdisk'i yükleyin:
