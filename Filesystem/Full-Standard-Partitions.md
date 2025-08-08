@@ -138,7 +138,8 @@ sudo nano /etc/fstab
 >>
 sudo mount -av
 sudo findmnt --verify
-
+```
+```sh
 -----------------------------------------------------------------|
 # Name: Genişlet ve Azalt (Online/Offline)
 # Author: faruk-guler
