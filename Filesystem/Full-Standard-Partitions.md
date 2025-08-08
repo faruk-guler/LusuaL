@@ -122,8 +122,8 @@ sudo umount /storex
 sudo umount -l /dev/nvme0n2p1
 
 # UUID al:
-sudo blkid -s UUID -o value /dev/nvme0n2p1
-sudo blkid -s UUID -o value /storex
+sudo blkid /dev/nvme0n2 [Disk]
+sudo blkid /dev/nvme0n2p1 [Bölüm]
 
 # fstab düzenleme: (Kalıcılık için)
 sudo cp /etc/fstab /etc/fstab.old
