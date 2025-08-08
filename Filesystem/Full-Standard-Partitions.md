@@ -161,7 +161,7 @@ df -Th
 # sudo xfs_growfs /dev/nvme0n2p1 18G [specific]
 df -Th
 
-## >>> Reduce İşlemi <<< (only Ext3/Ext4)
+## >>> Reduce İşlemi <<< (only Ext3/Ext4) [önce filesystem küçültülür, sonra partition küçültülür]
 
 # Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
 # fsck ile hataları kontrol edin:
