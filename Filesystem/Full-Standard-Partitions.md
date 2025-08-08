@@ -163,15 +163,28 @@ df -Th
 
 ## >>> Reduce İşlemi <<< (only Ext3/Ext4)
 ## önce filesystem küçültülür, sonra partition küçültülür]
+## Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
 
-# Disk verilerinden fazlasını küçültürseniz, veri kaybedersiniz!
+# Umount edin:
+sudo umount /storex [umount]
+
 # fsck ile hataları kontrol edin:
 sudo e2fsck -f -v /dev/nvme0n2p1
 
-# İlk önce filesystemi boyutlandırın: (Ters İşlem)
+# Minimum güvenli boyutu öğrenin:
+sudo resize2fs -P /dev/nvme0n2p1
+
+# Önce filesystemi boyutlandırın: (Ters İşlem)
 ⦁⦁Ext3/Ext4 kullanıyorsanız: (resize2fs) [Offline]
-sudo umount /storex [umount]
 # sudo resize2fs /dev/nvme0n2p1 17G [specific size]
+
+
+?? # Partition tablosunu fdisk veya parted ile küçültün (aynı başlangıç noktası korunmalı)
+?? sudo fdisk /dev/nvme0n2p1
+?? # partition sil ve yeniden oluşturun küçültülmüş boyutla
+
+# Kernele değişikliği bildirin:
+sudo partprobe /dev/nvme0n2p1
 
 # Tekrar Mount edin:
 sudo mount /dev/nvme0n2p1 /storex
