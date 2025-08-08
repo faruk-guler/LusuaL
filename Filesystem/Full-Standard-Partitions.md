@@ -93,7 +93,7 @@ L - List partition type:
 p - List disk partitions:
 q - Exit from fdisk tool:
 
-# Disk değişikliklerini Çekirdeğe tanıtın:
+# Disk değişikliklerini kernele tanıtın:
 partprobe -s
 
 # Disk/Bölüm Durumu:
