@@ -31,13 +31,13 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 ```
 
 ```sh
-----------------------------------------|
+-----------------------------------------------------------|
 # Tools: Fdisk Tool
 # Author: faruk-guler
-# Size: < 2TB MBR (DOS) / > 2 TB GPT
-# Format: ext4, xfs, NTFS,
+# Note: 2TB  kadar MBR (DOS) 2TB büyük disklerde GPT
+# Format: ext4, xfs, ...
 #
-----------------------------------------|
+-----------------------------------------------------------|
 
 # Fdisk'i yükleyin:
 sudo apt install util-linux -y # Debian
