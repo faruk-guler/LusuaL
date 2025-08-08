@@ -108,11 +108,11 @@ sudo file -sL /dev/nvme0n2p1
 sudo tune2fs -l /dev/nvme0n2p1
 sudo blkid /dev/repo_vg/logs [for LVM]
 
-1- Disk/Bölüm Formatla: [ext4]: (sdb1,nvme0n2p1, ..)
+1- Disk/Bölüm Formatla: [ext4]:
 #sudo mkfs -t ext4 /dev/nvme0n2 [Tüm Disk] 🔴
 #sudo mkfs -t ext4 /dev/nvme0n2p1 [Bölüm]
 
-2- Disk/Bölüm Formatla: [xfs]: (sdb1,nvme0n2p1, ...)
+2- Disk/Bölüm Formatla: [xfs]:
 #sudo mkfs -t xfs /dev/nvme0n2 [Tüm Disk] 🔴
 #sudo mkfs -t xfs /dev/nvme0n2p1 [Bölüm]
 
