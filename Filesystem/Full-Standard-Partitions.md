@@ -77,7 +77,7 @@ Create a new label
 
 Partition type
    p   primary (0 primary, 0 extended, 4 free) [Max 4 pieces]
-   e   extended (container for logical partitionsSelect (default p):[128 pices]
+   e   extended (container for logical partitionsSelect (default p):[128 pieces]
 
 *Specify the starting and ending sectors. You can use 100% of all unallocated space.
 *Disk type will be [Linux] by default.
@@ -103,7 +103,7 @@ sudo blkid /dev/repo_vg/logs
 #sudo mkfs -t ext4 /dev/nvme0n2
 #sudo mkfs -t ext4 /dev/nvme0n2p1
 
-2- Disk/Bölümünü Fotmatla: [xfs]: (sdb1,nvme0n2p1, ...)
+2- Disk/Bölümünü Formatla: [xfs]: (sdb1,nvme0n2p1, ...)
 #sudo mkfs -t xfs /dev/nvme0n2
 #sudo mkfs -t xfs /dev/nvme0n2p1
 
