@@ -150,4 +150,5 @@ sudo vgcfgrestore -f /backup/vg_veri_backup vg_veri
 -BTRFS ve ZFS desteği
 -
 ```
+Daha fazlası için:
 [LVM: Logical Volume Management - Install, Configure, Manage -farukguler.com](https://farukguler.com/posts/lvm-logical-volume-management-install-configure-manage/)
