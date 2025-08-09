@@ -1,6 +1,6 @@
 # >> /etc/network/interfaces
 
-#STATIC [Debian 12 Bookworm]
+# STATIC [Debian 12 Bookworm]
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 
@@ -18,3 +18,4 @@ iface ens33 inet static
     gateway 192.168.18.2
     dns-nameservers 192.168.18.2 1.1.1.1 8.8.4.4
     dns-domain guler.com
+
