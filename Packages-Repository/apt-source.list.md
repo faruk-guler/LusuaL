@@ -20,7 +20,7 @@ deb-src [options] URI distribution [components]
 
 ### Example Entries
 
-Here are some example entries in `/etc/apt/sources.list` for Ubuntu:
+Here are some example entries in `/etc/apt/sources.list` for Debian:
 
 ```plaintext
 #https://wiki.debian.org/SourcesList
