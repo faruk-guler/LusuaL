@@ -1,0 +1,7 @@
+# Disable Ctrl+Alt+Del reboot
+sudo systemctl mask ctrl-alt-del.target
+sudo systemctl daemon-reload
+
+# Enable Ctrl+Alt+Del reboot
+sudo systemctl unmask ctrl-alt-del.target
+sudo systemctl daemon-reload
