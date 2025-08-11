@@ -3,6 +3,10 @@
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
+
+Unix benzeri işletim sistemlerindeki bu aliaskomut, diğer komutlar veya komut kümeleri için kısayollar veya takma adlar oluşturmak için kullanılır. Bu, uzun veya karmaşık komut dizilerini sık sık kullanırken zamandan tasarruf sağlayabilir ve hata olasılığını azaltabilir.
+
+Örnekler:
 <p>🗑 <code>cls</code> (Clear Screen) komutu, özellikle Windows işletim sistemi kullanıcılarının komut istemcisinde (Command Prompt) terminal ekranını temizlemek için kullanılan bir komuttur. Bu komut, terminal penceresindeki tüm önceki çıktıları temizler ve size yeni bir boş ekran sunar.</p>
 <!-- /wp:paragraph -->
 
