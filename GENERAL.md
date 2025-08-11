@@ -199,7 +199,7 @@ format  Format disks or tapes
 | rm  | Remove files  |
 | rmdir  | Remove folders  |
 | rsync  | Remote file copy (Synchronize file trees)  |
-| S  | S  |
+| S  | S  | * |
 | screen  | Multiplex terminal, run remote shells via ssh  |
 | scp  | Secure copy (remote file copy)  |
 | sdiff  | Merge two files interactively  |
@@ -219,7 +219,7 @@ format  Format disks or tapes
 | ssh  | Secure Shell client (remote login program)  |
 | strace  | Trace system calls and signals  |
 | su  | Substitute user identity  |
-| sudo  | Execute a command as another user  |
+| sudo  | Execute a command as another user  | super user do
 | sum  | Print a checksum for a file  |
 | suspend  | Suspend execution of this shell  |
 | symlink  | Make a new name for a file  |
