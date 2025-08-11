@@ -90,8 +90,8 @@ for  Expand words, and execute commands
 format  Format disks or tapes 
 
 
-| free  | Display memory usage  |
-| --- | --- |
+| free  | Display memory usage  | * |
+| --- | --- | --- |
 | fsck  | File system consistency check and repair  |
 | ftp  | File Transfer Protocol  |
 | function  | Define Function Macros  |
@@ -143,7 +143,7 @@ format  Format disks or tapes
 | lprm  | Remove jobs from the print queue  |
 | ls  | List information about files  |
 | lsof  | List open files  |
-|  M  |  M  |
+|  M  |  M  | * |
 | make  | Recompile a group of programs  |
 | man  | Help manual  |
 | mkdir  | Create new folders  | make directory
