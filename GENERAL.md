@@ -52,7 +52,7 @@
 | dirname  | Convert a full pathname to just a path  |
 | dirs  | Display list of remembered directories  |
 | dmesg  | Print kernel &amp; driver messages  |
-| du  | Estimate file space usage  |
+| du  | Estimate file space usage  | disk usage
 
 
 
