@@ -146,7 +146,7 @@ format  Format disks or tapes
 |  M  |  M  |
 | make  | Recompile a group of programs  |
 | man  | Help manual  |
-| mkdir  | Create new folders  |
+| mkdir  | Create new folders  | make directory
 | mkfifo  | Make FIFOs (named pipes)  |
 | mkisofs  | Create an hybrid ISO9660/JOLIET/HFS filesystem  |
 | mknod  | Make block or character special files  |
