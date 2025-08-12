@@ -1,4 +1,4 @@
-sudo apt clean: İndirilen .deb paketlerini temizler..
+sudo apt clean: İndirilen .deb paketlerini temizler.
 sudo apt autoclean: Artık kullanılmayan eski paketlerin .deb dosyalarını temizler.
 sudo apt purge firefox: Belirtilen paketi ve konfigürasyon dosyalarını tamamen kaldırır.
 sudo apt remove firefox: Belirtilen paketi kaldırır, ancak konfigürasyon dosyalarını bırakır.
