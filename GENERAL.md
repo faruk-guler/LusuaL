@@ -155,7 +155,7 @@ format  Format disks or tapes
 | mtools  | Manipulate MS-DOS files  |
 | mtr  | Network diagnostics (traceroute/ping)  |
 | mv  | Move or rename files or directories  |
-| mmv  | Mass Move and rename files  |
+| mmv  | Mass Move and rename files  | move
 |  N  |  N  |
 | netstat  | Networking information  |
 | nice  | Set the priority of a command or job  |
