@@ -7,7 +7,7 @@ The **UEFI Shell** is a command-line interface provided by the UEFI (Unified Ext
 - **Purpose**: The UEFI Shell provides a command-line environment within the UEFI firmware that can be used for various tasks like executing shell commands, running scripts, and managing the UEFI environment.
 - **Environment**: It operates independently of the operating system and is accessed during the system's boot process, usually through a special UEFI menu or boot option.
 
-### Accessing the UEFI Shell........................
+### Accessing the UEFI Shell
 
 1. **Direct Boot**:
    - Some UEFI firmware implementations include the UEFI Shell as an option in the firmware settings. You can boot into it directly from the UEFI firmware setup menu.
