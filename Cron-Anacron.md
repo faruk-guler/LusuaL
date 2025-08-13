@@ -21,9 +21,6 @@ However, the cron daemon (service) assumes the pc (server) runs 24 hours a day, 
 Anacron, on the contrary is conceived for pc’s that are not meant to operate on 24x7 basis. So when the pc goes down, the tasks normally scheduled during that downtime will be executed as soon as the pc is brought back online.
 >
 
-
-## Check Cron
-
 ###  Check if Cron is Active
 
 On General Linux
