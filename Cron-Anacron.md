@@ -12,6 +12,13 @@ Cron is a way of automating tasks to run every hour/day/month, or even on reboot
 > **Crontab:** Crontab (CRON TABle) is a file which contains the schedule of cron entries to be run and at specified times. File location varies by operating systems.
 >
 > **Cron job or cron schedule:** Cron job or cron schedule is a specific set of execution instructions specifying day, time and command to execute. crontab can have multiple execution statements.
+> 
+## Cron vs Anacron
+Both systems let configure automated runs of tasks at predefined periods.
+
+However, the cron daemon (service) assumes the pc (server) runs 24 hours a day, 7 days a week (24x7), thus continuously. That means that in case of downtime, jobs that would have had to run when the server was down won’t be run until the next schedule.
+
+Anacron, on the contrary is conceived for pc’s that are not meant to operate on 24x7 basis. So when the pc goes down, the tasks normally scheduled during that downtime will be executed as soon as the pc is brought back online.
 >
 
 
