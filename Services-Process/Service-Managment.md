@@ -27,9 +27,15 @@ Linux services are background processes that run automatically. They can be mana
 
 
 
-## **Checking if a Service is Active or Enabled**  
+## **Checking if a Service is Active Enabled** 
 
-- **Check if a service is running:**  
+- **Check all a services is or running:**  
+  ```bash
+  systemctl list-units --type=service
+  systemctl list-units --type=service --state=running
+  ```
+
+- **Check if a specific service is running:**  
   ```bash
   systemctl is-active service_name
   ```
