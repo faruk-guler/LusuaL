@@ -54,6 +54,15 @@ The components in the `sources.list` file define different sections of the repos
 - **universe**: Community-maintained free and open-source software.
 - **multiverse**: Software that is not free and may have licensing restrictions.
 
+### Main Components
+
+- main = Consists of packages that comply with the Debian Free Software Guidelines (DFSG) and do not rely on software from outside the main repository. Packages included here are considered part of the Debian distribution.
+- contrib = Contains DFSG-compliant packages, but depends on other packages not in the main package.
+- non-free = Contains packages that are not DFSG-compliant.
+- security = Contains security updates.
+- backports = Contains newer versions of packages found in main. The development cycle for Debian's stable releases is quite long (about two years), and this ensures that users get the most up-to-date packages without having to change the main kernel repository.
+
+
 ### Managing Repositories
 
 In addition to `/etc/apt/sources.list`, additional repository entries can be placed in files within the `/etc/apt/sources.list.d/` directory. This allows for modular and organized management of repository sources.
