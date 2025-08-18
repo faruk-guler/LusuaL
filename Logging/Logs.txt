@@ -1,6 +1,6 @@
 The log level is typically defined as level 7 or level 8. According to the standards, these levels are as follows:
 
-| Number | Level | Description |
+|ID |    Level      | Description |
 |   | ------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | 7 | **DEBUG**     | The most verbose level. Used for debugging. Generally intended for developers. May affect performance. |
 | 6 | **INFO**      | General informational messages. Indicates that the system or application is operating normally. |
