@@ -59,6 +59,7 @@ sudo fdisk -l
 
 # Sisteme eklenen diski algıla: (SCSI, NVMe, .etc)
 ls  /sys/class/scsi_host/
+sudo for host in /sys/class/scsi_host/*; do echo "- - -" | sudo tee $host/scan; ls /dev/sd* ; done
 echo "1" > /sys/class/block/*/device/rescan
 echo "- - -" | sudo tee /sys/class/scsi_host/host*/scan
 echo "1" | sudo tee /sys/class/block/*/device/rescan
