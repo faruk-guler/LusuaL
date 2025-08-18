@@ -1,16 +1,16 @@
 The log level is typically defined as level 7 or level 8. According to the standards, these levels are as follows:
 
-| Level Number | Level | Description |
+| Number | Level | Description |
 |   | ------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| 7 | **DEBUG** | The most verbose level. Used for debugging. Generally intended for developers. May affect performance. |
-| 6 | **INFO** | General informational messages. Indicates that the system or application is operating normally. |
-| 5 | **NOTICE** | Indicates slightly more important events than INFO. Generally ignored, but may be important. (Often seen on POSIX systems.) |
-| 4 | **WARNING** | Warning messages. There may be a problem, but the system is still running. Attention may be needed. |
-| 3 | **ERROR** | Errors. Indicates that the operation failed, but the system may still be running. |
-| 2 | **CRITICAL** | A serious error. Usually can affect system stability. |
-| 1 | **ALERT** | Critical situation requiring immediate attention. |
+| 7 | **DEBUG**     | The most verbose level. Used for debugging. Generally intended for developers. May affect performance. |
+| 6 | **INFO**      | General informational messages. Indicates that the system or application is operating normally. |
+| 5 | **NOTICE**    | Indicates slightly more important events than INFO. Generally ignored, but may be important. (Often seen on POSIX systems.) |
+| 4 | **WARNING**   | Warning messages. There may be a problem, but the system is still running. Attention may be needed. |
+| 3 | **ERROR**     | Errors. Indicates that the operation failed, but the system may still be running. |
+| 2 | **CRITICAL**  | A serious error. Usually can affect system stability. |
+| 1 | **ALERT**     | Critical situation requiring immediate attention. |
 | 0 | **EMERGENCY** | Condition in which the system is unusable. Highest priority log level. |
-| ----------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------------------------------------------------------------------------------------------------------------------------------------- |
 Total: 8 levels (0–7)
 (0 is the highest priority – most serious, 7 is the lowest priority – most detailed)
 
