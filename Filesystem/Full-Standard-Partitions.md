@@ -21,13 +21,14 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Disk Space: 4TB
 # Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir. "swapfile" xfs dosya sisteminde desteklenmez.
 # ESP: UEFI sistem kullanılıyorsa EFI System Partition (ESP) alanı zorunludur.
+# /home alanında kullanıcıya özel kota ayarlanması önerilir.
 
-  /dev/sda1     /dev/sda2       /dev/sda3     /dev/sda4      <--- Genişletilebilir --->
--------------+-------------+---------------+----------------+----------------------------+
-/boot/efi    |  /boot      |      /        |   /data        |         boş alan           |
--------------+-------------+---------------+----------------+----------------------------+
-  512MB–1GB      500MB          75-100GB       500-800GB+
-  FAT32           ext4      ext4/xfs/btrfs    ------------
+  /dev/sda1     /dev/sda2       /dev/sda3     /dev/sda4        /dev/sda5    <--- Genişletilebilir --->
+-------------+-------------+---------------+------------------------------+----------------------------+
+/boot/efi    |  /boot      |      /        |   /data        | /home       |         boş alan           |
+-------------+-------------+---------------+------------------------------+----------------------------+
+  512MB–1GB      500MB          75-100GB       500-800GB+      50-100GB
+  FAT32           ext4      ext4/xfs/btrfs    ------------    ------------
 ```
 
 ```sh
