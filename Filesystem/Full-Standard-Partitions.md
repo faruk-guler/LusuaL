@@ -25,10 +25,10 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 
  /dev/sda1       /dev/sda2      /dev/sda3     /dev/sda4     /dev/sda5    <--- Genişletilebilir --->
 --------------+-------------+-------------+-----------------------------+----------------------------+
- /boot/efi    |  /boot      |   /         |   /data      |  /home       |         boş alan           |
+ /boot/efi    |  /boot      |   /         |   /home      |  /data       |         boş alan           |
 --------------+-------------+-------------+-----------------------------+----------------------------+
-  512MB–1GB      500MB          75-100GB      500-800GB+    50-100GB
-    FAT32         ext4       ext4/xfs/btrfs   ------------  ----------
+  512MB–1GB      500MB          75-100GB      50-80GB+    500-700GB+
+    FAT32         ext4       ext4/xfs/btrfs   ----------  ----------
 ```
 
 ```sh
