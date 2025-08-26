@@ -16,10 +16,10 @@ sudo iptables -P INPUT DROP
 
 # Ama yerel ağ (örneğin 192.168.1.0/24) içi trafiğe izin ver
 sudo iptables -A OUTPUT -d 192.168.1.0/24 -j ACCEPT
+sudo iptables -A INPUT -s 192.168.1.0/24 -j ACCEPT
 
 # Opsiyonel: Sadece DNS trafiğine izin ver (UDP 53)
 # sudo iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
-sudo iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
 
 # Özel VM IP'sine özel izin:
 sudo iptables -A OUTPUT -d 192.168.1.10 -j ACCEPT
