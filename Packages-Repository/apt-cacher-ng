@@ -36,5 +36,8 @@ sudo iptables-save > /etc/iptables/rules.v4
 iptables-restore < /etc/iptables/rules.v4
 sudo rm /etc/iptables.rules
 
+# Kuralları listele:
+sudo iptables -L -n -v
+
 # Tüm kuralları temizle:
 # sudo iptables -F
