@@ -24,11 +24,13 @@ sudo iptables -A INPUT -s 192.168.1.0/24 -j ACCEPT
 # Özel IP'ye izin:
 sudo iptables -A OUTPUT -d 192.168.1.10 -j ACCEPT
 
-# Loopback'e izin ver:
+# Loopback (localhost) trafiğine izin ver:
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
 
 # Kuralları kalıcı yap-restore et-sil:
+sudo apt install iptables-persistent
+
 sudo iptables-save > /etc/iptables/rules.v4
 iptables-restore < /etc/iptables/rules.v4
 sudo rm /etc/iptables.rules
