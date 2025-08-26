@@ -29,8 +29,8 @@ iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
 
 # Kuralları kalıcı yap-restore et-sil:
-iptables-save > /etc/iptables.rules
-iptables-restore < /etc/iptables.rules
+sudo iptables-save > /etc/iptables/rules.v4
+iptables-restore < /etc/iptables/rules.v4
 sudo rm /etc/iptables.rules
 
 # Tüm kuralları temizle:
