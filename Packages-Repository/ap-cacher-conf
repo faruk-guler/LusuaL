@@ -1,0 +1,17 @@
+
+## dark-side vm hazırlamak:
+
+# Giden trafiği engelle (internet)
+sudo iptables -P OUTPUT DROP
+
+# Ama yerel ağ (örneğin 192.168.1.0/24) içi trafiğe izin ver
+sudo iptables -A OUTPUT -d 192.168.1.0/24 -j ACCEPT
+
+# Opsiyonel: DNS trafiği (VM1'de DNS yoksa, istersen ekleyebilirsin)
+# sudo iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
+
+# VM1'in IP'sine özel izin (ekstra netlik için)
+sudo iptables -A OUTPUT -d 192.168.1.10 -j ACCEPT
+
+# Kuralları kalıcı yap:
+sudo iptables-save > /etc/iptables.rules
