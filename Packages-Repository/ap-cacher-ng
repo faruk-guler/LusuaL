@@ -10,7 +10,7 @@ sudo iptables -A OUTPUT -d 192.168.1.0/24 -j ACCEPT
 # Opsiyonel: DNS trafiği (VM1'de DNS yoksa, istersen ekleyebilirsin)
 # sudo iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
 
-# VM1'in IP'sine özel izin (ekstra netlik için)
+# Özel VM IP'sine özel izin:
 sudo iptables -A OUTPUT -d 192.168.1.10 -j ACCEPT
 
 SSH portuna izin ver (opsiyonel)
