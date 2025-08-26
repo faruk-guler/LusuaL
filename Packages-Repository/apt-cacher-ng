@@ -44,6 +44,7 @@ sudo rm /etc/iptables.rules
 
 # Kuralları listele:
 sudo iptables -L -n -v
+sudo iptables -S
 
 # Tüm kuralları temizle:
 # sudo iptables -F
