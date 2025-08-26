@@ -21,8 +21,12 @@ sudo iptables -A INPUT -s 192.168.1.0/24 -j ACCEPT
 # Opsiyonel: Sadece DNS trafiğine izin ver (UDP 53)
 # sudo iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
 
-# Özel VM IP'sine özel izin:
+# Özel IP'ye izin:
 sudo iptables -A OUTPUT -d 192.168.1.10 -j ACCEPT
+
+# Loopback'e izin ver:
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A OUTPUT -o lo -j ACCEPT
 
 # Kuralları kalıcı yap-restore et-sil:
 iptables-save > /etc/iptables.rules
