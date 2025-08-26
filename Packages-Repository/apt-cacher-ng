@@ -15,7 +15,7 @@ sudo iptables -P OUTPUT DROP
 # Gelen trafiği engelle (internet)
 sudo iptables -P INPUT DROP
 
-# Ama yerel ağ (örneğin 192.168.1.0/24) içi trafiğe izin ver
+# Yerel ağ (örneğin 192.168.1.0/24) içi trafiğe izin ver:
 sudo iptables -A OUTPUT -d 192.168.1.0/24 -j ACCEPT
 sudo iptables -A INPUT -s 192.168.1.0/24 -j ACCEPT
 
