@@ -30,6 +30,7 @@ iptables -A OUTPUT -o lo -j ACCEPT
 
 # Kuralları kalıcı yap-restore et-sil:
 sudo apt install iptables-persistent
+sudo netfilter-persistent save
 
 sudo iptables-save > /etc/iptables/rules.v4
 iptables-restore < /etc/iptables/rules.v4
