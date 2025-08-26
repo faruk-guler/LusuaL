@@ -22,7 +22,7 @@ sudo iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
 sudo iptables -A OUTPUT -d 192.168.1.10 -j ACCEPT
 
 # Kuralları kalıcı yap-restore et-sil:
-sudo iptables-save > /etc/iptables.rules
+iptables-save > /etc/iptables.rules
 iptables-restore < /etc/iptables.rules
 sudo rm /etc/iptables.rules
 
