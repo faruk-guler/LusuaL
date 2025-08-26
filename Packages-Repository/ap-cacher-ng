@@ -4,6 +4,9 @@
 # Giden trafiği engelle (internet)
 sudo iptables -P OUTPUT DROP
 
+# Gelen trafiği engelle (internet)
+sudo iptables -P INPUT DROP
+
 # Ama yerel ağ (örneğin 192.168.1.0/24) içi trafiğe izin ver
 sudo iptables -A OUTPUT -d 192.168.1.0/24 -j ACCEPT
 
@@ -15,7 +18,8 @@ sudo iptables -A OUTPUT -d 192.168.1.0/24 -j ACCEPT
 sudo iptables -A OUTPUT -d 192.168.1.10 -j ACCEPT
 
 # SSH portuna izin ver (opsiyonel)
-sudo iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT (giden)
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT (gelen)
 
 # Kuralları kalıcı yap-restore et-sil:
 sudo iptables-save > /etc/iptables.rules
