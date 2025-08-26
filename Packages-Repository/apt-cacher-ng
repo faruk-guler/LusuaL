@@ -2,7 +2,7 @@
 
 
 
-## dark-side VM hazırlama: [iptables]
+## dark-side client VM hazırlama: [iptables]
 ** Mevcut bağlantının korunması için önce ACCEPT, sonra DROP policy uygulanmalıdır.
 
 # Öncelikle SSH portuna izin ver. (opsiyonel)
