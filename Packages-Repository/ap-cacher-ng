@@ -13,5 +13,8 @@ sudo iptables -A OUTPUT -d 192.168.1.0/24 -j ACCEPT
 # VM1'in IP'sine özel izin (ekstra netlik için)
 sudo iptables -A OUTPUT -d 192.168.1.10 -j ACCEPT
 
+SSH portuna izin ver (opsiyonel)
+sudo iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT
+
 # Kuralları kalıcı yap:
 sudo iptables-save > /etc/iptables.rules
