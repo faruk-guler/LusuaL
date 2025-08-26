@@ -29,5 +29,5 @@ iptables-save > /etc/iptables.rules
 iptables-restore < /etc/iptables.rules
 sudo rm /etc/iptables.rules
 
-# Tüm kuralları sil:
+# Tüm kuralları temizle:
 # sudo iptables -F
