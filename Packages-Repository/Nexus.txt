@@ -1,2 +1,4 @@
+https://dev.to/aciklab/ubuntu-2204-nexus-oss-kurulumu-6gk
 https://tr.linkedin.com/pulse/centos7-%C3%BCzerine-nexus-oss-repo-management-kurulumu-eyup-g%C3%BCner
+https://dev.to/aciklab/nexus-oss-repository-apt-repository-proxy-olusturma-4mj1
 
