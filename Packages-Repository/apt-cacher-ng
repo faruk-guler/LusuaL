@@ -1,5 +1,7 @@
 # Apt-cacher-ng Kurulumu:
 
+Ports: 8080 or 3142
+
 
 
 ## dark-side client VM hazırlama: [iptables]
