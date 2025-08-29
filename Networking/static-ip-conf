@@ -27,5 +27,3 @@ iface enp2s5 inet static
   # dns-nameservers 192.168.26.2 1.1.1.1 8.8.4.4
   # NO GATEWAY - only local network
 
-
-
