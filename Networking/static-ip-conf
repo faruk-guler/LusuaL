@@ -10,7 +10,7 @@ source /etc/network/interfaces.d/*
 auto lo
 iface lo inet loopback
 
-# NAT Interface: (Internet/External Network) - ens33
+# NAT Interface - ens33
 allow-hotplug ens33
 iface ens33 inet static
     address 192.168.47.171
@@ -19,7 +19,7 @@ iface ens33 inet static
     dns-nameservers 192.168.47.2 1.1.1.1 8.8.4.4
     dns-domain guler.com
 
-# Host-only Interface: (Internal Network) - enp2s5
+# Host-only Interface - enp2s5
 allow-hotplug enp2s5
 iface enp2s5 inet static
     address 192.168.26.130
