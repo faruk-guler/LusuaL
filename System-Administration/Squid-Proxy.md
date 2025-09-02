@@ -17,7 +17,7 @@ Squid Cache log: /var/log/squid/cache.log
 ```
 
 # Squid Server:
->>>
+
 ```sh
 # ===================================
 # ACL TANIMLARI
@@ -87,7 +87,6 @@ access_log /var/log/squid/access.log combined
 
 
 ## Squid Client:
->>>
 
 ```sh
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
