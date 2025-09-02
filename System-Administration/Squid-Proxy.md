@@ -1,6 +1,12 @@
 # Squid Proxy Server:
 Squid is a most popular caching and forwarding HTTP web proxy server used my wide range of companies to cache web pages from a web server to improve web server speed, reduce response times and reduce network bandwidth usage.
 
+# Requirements
+
+## 2 network interfaces
+eth0: 192.168.1.10/24 (internet)
+eth1: 10.0.0.1/24 (internal network)
+
 # Istall Squid
 
 ```sh
@@ -11,12 +17,13 @@ sudo systemctl start squid
 sudo systemctl restart squid
 sudo systemctl enable squid
 sudo systemctl status squid
+sudo squid -k parse
 ```
 
 # Squid Files:
 ```sh
 Squid Server configuration file: /etc/squid/squid.conf
-Squid Client configuration file: /etc/environment 
+Squid Client configuration file: /etc/environment
 Squid Access log: /var/log/squid/access.log
 Squid Cache log: /var/log/squid/cache.log
 ```
