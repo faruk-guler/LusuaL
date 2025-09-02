@@ -1,20 +1,23 @@
-
+```sh
 sudo apt install squid -y
 sudo systemctl start squid
 sudo systemctl restart squid
 sudo systemctl enable squid
 sudo systemctl status squid
+```
 
 # Squid Files:
+```sh
 Squid Server configuration file: /etc/squid/squid.conf
 Squid Client configuration file: /etc/environment 
 Squid Access log: /var/log/squid/access.log
 Squid Cache log: /var/log/squid/cache.log
-
+```
 
 Squid Server:
 >>>
-
+>>>
+```sh
 # ===================================
 # ACL TANIMLARI
 # ===================================
@@ -79,14 +82,16 @@ include /etc/squid/conf.d/*.conf
 
 # Log
 access_log /var/log/squid/access.log combined
+```
 
 
-
-Squid Client:
+## Squid Client:
 >>>
 
+```sh
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 http_proxy="http://192.168.26.130:3128/"
 https_proxy="http://192.168.26.130:3128/"
 # ftp_proxy="http://192.168.26.130:3128/"  # Gerekirse etkinleştir
 no_proxy="localhost,127.0.0.1,192.168.26.130,192.168.0.0/16,10.0.0.0/8,.local,.internal,.svc,.cluster.local"
+```
