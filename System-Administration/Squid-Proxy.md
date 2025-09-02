@@ -4,7 +4,9 @@ Squid is a most popular caching and forwarding HTTP web proxy server used my wid
 # Istall Squid
 
 ```sh
-sudo apt install squid -y
+sudo apt install squid -y # Debian
+sudo yum install squid -y # RHELL
+
 sudo systemctl start squid
 sudo systemctl restart squid
 sudo systemctl enable squid
