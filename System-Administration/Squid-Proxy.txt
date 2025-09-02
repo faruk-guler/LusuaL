@@ -1,5 +1,19 @@
+
+sudo apt install squid -y
+sudo systemctl start squid
+sudo systemctl restart squid
+sudo systemctl enable squid
+sudo systemctl status squid
+
+# Squid Files:
+Squid Server configuration file: /etc/squid/squid.conf
+Squid Client configuration file: /etc/environment 
+Squid Access log: /var/log/squid/access.log
+Squid Cache log: /var/log/squid/cache.log
+
+
 Squid Server:
->>> file: /etc/squid/squid.conf
+>>>
 
 # ===================================
 # ACL TANIMLARI
@@ -68,10 +82,8 @@ access_log /var/log/squid/access.log combined
 
 
 
-
-
 Squid Client:
->>> file: /etc/environment 
+>>>
 
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 http_proxy="http://192.168.26.130:3128/"
