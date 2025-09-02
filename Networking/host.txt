@@ -1,6 +1,6 @@
 /etc/hosts         [IP and hostname mapping, used before DNS]
 /etc/hostname      [System's hostname]
 /etc/resolv.conf   [DNS servers]
-/etc/systemd/resolved.conf [ ???????? ]
+/etc/systemd/resolved.conf [systemd-based DNS management]
 /etc/nsswitch.conf [Name resolution order]
 .etc
