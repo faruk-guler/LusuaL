@@ -1,3 +1,5 @@
+# Istall Squid
+
 ```sh
 sudo apt install squid -y
 sudo systemctl start squid
@@ -14,8 +16,7 @@ Squid Access log: /var/log/squid/access.log
 Squid Cache log: /var/log/squid/cache.log
 ```
 
-Squid Server:
->>>
+# Squid Server:
 >>>
 ```sh
 # ===================================
