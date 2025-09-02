@@ -24,6 +24,6 @@ allow-hotplug enp2s5
 iface enp2s5 inet static
     address 192.168.26.130
     netmask 255.255.255.0
-  # dns-nameservers 192.168.26.2 1.1.1.1 8.8.4.4
-  # NO GATEWAY - only local network
+    # dns-nameservers 192.168.26.2 1.1.1.1 8.8.4.4
+    # NO GATEWAY - only local network
 
