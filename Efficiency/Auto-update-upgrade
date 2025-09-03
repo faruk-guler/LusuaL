@@ -39,6 +39,6 @@ sudo cat /etc/apt/apt.conf.d/20auto-upgrades
 # Active-Deactive-Status
 sudo dpkg-reconfigure unattended-upgrades
 
-# Normal updates: [not recommended]
+# Cron update-upgrade: [not recommended]
 sudo crontab -e
 0 3 * * * apt update && apt upgrade -y
