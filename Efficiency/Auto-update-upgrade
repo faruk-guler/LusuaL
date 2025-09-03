@@ -1,5 +1,32 @@
-# Automatic security updates: [only security updates]
+unattended-upgrades is a tool used to automatically download and install security and software updates in Debian-based Linux distributions
+(Ubuntu, Debian, Linux Mint, Pop!_OS, etc.).
+
+# Features:
+-Only performs automatic security updates.
+-Automatically reboots if the kernel is updated.
+-Adjustable reboot time.
+-Automatic upgrades of specific packages can be blocked.
+-Keeps detailed logs.
+-Sends email notifications.
+-Postpones updates if the system is under high load.
+-Official and supported tool.
+-Developed and tested by Debian/Ubuntu.
+-Generates post-update reports.
+-Easily customizable with configuration files.
+-Ensures system security without requiring manual intervention.
+
+# Install:
+sudo apt update
 sudo apt install unattended-upgrades
+
+# Congfiguration:
+sudo cat /etc/apt/apt.conf.d/50unattended-upgrades
+sudo cat /etc/apt/apt.conf.d/20auto-upgrades
+
+# Logs:
+/var/log/unattended-upgrades/**
+
+# Active-Deactive
 sudo dpkg-reconfigure unattended-upgrades
 
 # Normal updates: [not recommended]
