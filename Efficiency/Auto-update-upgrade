@@ -1,5 +1,5 @@
 unattended-upgrades is a tool used to automatically download and install security and software updates in Debian-based Linux distributions
-(Ubuntu, Debian, Linux Mint, Pop!_OS, etc.).
+(Ubuntu, Debian, Linux Mint, Pop!_OS, etc.) On RedHat/CentOS systems, "dnf-automatic" or "yum-cron" is used as an alternative.
 
 # Features:
 -Only performs automatic security updates.
