@@ -4,8 +4,8 @@ Squid is a most popular caching and forwarding HTTP web proxy server used my wid
 # Requirements:
 ```sh
 2 network interfaces
-- eth0: 192.168.1.10/24 (internet)
-- eth1: 10.0.0.1/24 (internal network)
+- eth0: 192.168.1.10/24 (NAT: internet)
+- eth1: 10.0.0.1/24 (Host-only: internal network)
 ```
 
 # Istall Squid:
