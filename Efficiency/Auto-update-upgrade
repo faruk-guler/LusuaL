@@ -19,6 +19,13 @@ unattended-upgrades is a tool used to automatically download and install securit
 sudo apt update
 sudo apt install unattended-upgrades
 
+# Status:
+sudo systemctl enable unattended-upgrades
+sudo systemctl disable unattended-upgrades
+sudo systemctl start unattended-upgrades
+sudo systemctl stop unattended-upgrades
+sudo systemctl status unattended-upgrades
+
 # Congfiguration:
 sudo cat /etc/apt/apt.conf.d/50unattended-upgrades
 sudo cat /etc/apt/apt.conf.d/20auto-upgrades
@@ -26,7 +33,7 @@ sudo cat /etc/apt/apt.conf.d/20auto-upgrades
 # Logs:
 /var/log/unattended-upgrades/**
 
-# Active-Deactive
+# Active-Deactive-Status
 sudo dpkg-reconfigure unattended-upgrades
 
 # Normal updates: [not recommended]
