@@ -1,4 +1,4 @@
-# Squid Proxy Server:
+# What is Squid Proxy Server?
 Squid is a most popular caching and forwarding HTTP web proxy server used my wide range of companies to cache web pages from a web server to improve web server speed, reduce response times and reduce network bandwidth usage.
 
 # Requirements:
