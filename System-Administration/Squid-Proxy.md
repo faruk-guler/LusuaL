@@ -8,7 +8,7 @@ Squid is a most popular caching and forwarding HTTP web proxy server used my wid
 - eth1: 10.0.0.1/24 (Host-only: internal network)
 ```
 
-# Istall Squid:
+# Install Squid:
 
 ```sh
 sudo apt install squid -y # Debian
