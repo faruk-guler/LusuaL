@@ -116,7 +116,7 @@ sudo tail -f /var/log/squid/cache.log
 
 ```
 
-# squid.conf2 [extra conf.]
+# squid.conf2 [Squid Server Extra Conf.]
 ```sh
 # General
 
