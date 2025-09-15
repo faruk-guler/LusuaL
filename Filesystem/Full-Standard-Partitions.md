@@ -22,14 +22,14 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Swap: swap alanı gerekirse, /data altında "swapfile" oluşturulabilir. "swapfile" xfs dosya sisteminde desteklenmez.
 # ESP: UEFI sistem kullanılıyorsa EFI System Partition (ESP) alanı zorunludur.
 # /home alanında kullanıcıya özel kota ayarlanması önerilir.
-# /var herzaman farklı bir partitionda bulunmalıdır. çünkü sistemin default logları burada tutulur.
+# /var dizini, log patlamalarına karşı korunmalıdır. çünkü sistemin default logları burada tutulur.
 
- /dev/sda1       /dev/sda2      /dev/sda3     /dev/sda4    /dev/sd5     /dev/sda6          <--- Genişletilebilir --->
+ /dev/sda1       /dev/sda2      /dev/sda3     /dev/sda4      /dev/sd5     /dev/sda6          <--- Genişletilebilir --->
 --------------+-------------+-------------+-------------------------------------------+-------------------------------------+
  /boot/efi    |  /boot      |   /         |   /home      |   /var     |   /data       |         boş alan                    |
 --------------+-------------+-------------+-------------------------------------------+-------------------------------------+
   512MB–1GB      500MB          75-100GB      30-50GB+     50-100GB+      500-700GB+
-    FAT32         ext4       ext4/xfs/btrfs   ----------   ---------      ----------
+    FAT32         ext4       ext4/xfs/btrfs   ----------   ----------      ----------
 ```
 
 ```sh
