@@ -24,7 +24,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # /home alanında kullanıcıya özel kota ayarlanması önerilir.
 # /var, Mümkünse ayrı bir partition üzerinde tutulmalı. Log patlamalarına ve devasa veri artışlarına karşı sistem korunmalı!
 # /tmp, RAM disk (tmpfs) üzerinde olmalıdır. fstab üzerinde Boyutu sınırlandırılmalı sistem korunmalıdır! örneğin size=5G
-  ⤷ tmpfs /tmp tmpfs defaults,noexec,nosuid,nodev,size=5G 0 0
+ ⤷ tmpfs /tmp tmpfs defaults,noexec,nosuid,nodev,size=5G 0 0
 
  /dev/sda1       /dev/sda2      /dev/sda3     /dev/sda4      /dev/sd5     /dev/sda6      <-- Genişletilebilir -->
  -------------+-------------+-------------+-------------------------------------------+-----------------------------+
