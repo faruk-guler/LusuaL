@@ -14,7 +14,8 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
 # ESP: UEFI sistem kullanılıyorsa EFI System Partition (ESP) alanı zorunludur.
 # Structure: /boot ve /boot/efi ayrı, veri alanları LVM içinde yönetilir.
 # Swap: swap alanı gerekirse, /lv_data altında "swapfile" oluşturulabilir.
-# /var dizini, log patlamalarına karşı korunmalıdır. çünkü sistemin default logları burada tutulur.
+# /var dizini, yüklü veri yazma ve log patlamalarına karşı korunmalıdır. çünkü sistemin default logları burada tutulur.
+# /tmp dizini, herkesin yazma yetkisi olduğu için yüklü veri yazmaya karşı korunmalıdır.
 
   /dev/sda1     /dev/sda2          /dev/sda3 (PV)               <-------- PV_EXTEND -------->
 -------------+-------------+----------------------------------+------------------------------+
