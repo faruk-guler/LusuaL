@@ -17,9 +17,9 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
 # /var, Mümkünse ayrı bir partition üzerinde tutulmalı. Log patlamalarına ve devasa veri artışlarına karşı sistem korunmalı!
 # /tmp, RAM disk (tmpfs) üzerinde olmalıdır. Boyutu sınırlandırılmalı sistem korunmalıdır! örneğin size=2G
 
-  /dev/sda1     /dev/sda2          /dev/sda3 (PV)               <-------- PV_EXTEND -------->
+/dev/sda1       /dev/sda2          /dev/sda3 (PV)               <-------- PV_EXTEND -------->
 -------------+-------------+----------------------------------+------------------------------+
-  /boot/efi  |  /boot      |  PV → VG: vg_data → LV: lv_*     |  (Genişletilebilir alan)     |
+/boot/efi    |  /boot      |  PV → VG: vg_data → LV: lv_*     |  (Genişletilebilir alan)     |
              |             |  lv_root, lv_data, lv_logs, ...  |                              |
              |             |  mount: /, /data, /tmp, /var     |                              |
 -------------+-------------+----------------------------------+------------------------------+              
