@@ -15,7 +15,8 @@ Mantıksal Birim Yöneticisi (LVM), Linux sistemlerinde depolama yönetiminde es
 # Structure: /boot ve /boot/efi ayrı, veri alanları LVM içinde yönetilir.
 # Swap: swap alanı gerekirse, /lv_data altında "swapfile" oluşturulabilir.
 # /var, Mümkünse ayrı bir partition üzerinde tutulmalı. Log patlamalarına ve devasa veri artışlarına karşı sistem korunmalı!
-# /tmp, RAM disk (tmpfs) üzerinde olmalıdır. Boyutu sınırlandırılmalı sistem korunmalıdır! örneğin size=2G
+# /tmp, RAM disk (tmpfs) üzerinde olmalıdır. fstab üzerinde Boyutu sınırlandırılmalı sistem korunmalıdır! örneğin size=5G
+ ⤷ tmpfs /tmp tmpfs defaults,noexec,nosuid,nodev,size=5G 0 0
 
 /dev/sda1       /dev/sda2          /dev/sda3 (PV)               <-------- PV_EXTEND -------->
 -------------+-------------+----------------------------------+------------------------------+
