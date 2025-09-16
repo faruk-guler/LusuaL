@@ -30,7 +30,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
  /boot/efi    |  /boot      |   /         |   /home      |   /var     |   /data       |         boş alan            |
 --------------+-------------+-------------+-------------------------------------------+-----------------------------+
   512MB–1GB      500MB          75-100GB      30-50GB+     50-100GB+      500-700GB+
-    FAT32         ext4       ext4/xfs/btrfs   ----------   ----------      ----------
+    FAT32         ext4       ext4/xfs/btrfs  xfs/ext4        ext4          xfs/ext4
 ```
 
 ```sh
