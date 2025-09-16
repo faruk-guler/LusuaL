@@ -23,7 +23,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # ESP: UEFI sistem kullanılıyorsa EFI System Partition (ESP) alanı zorunludur.
 # /home alanında kullanıcıya özel kota ayarlanması önerilir.
 # /var dizini, log patlamalarına karşı korunmalıdır. çünkü sistemin default logları burada tutulur.
-# /tmp dizini güvenlik sebebiyle sınırlandırılmalıdır.
+# /tmp dizini, herkesin yazma yetkisi olduğu için yüklü veri yazmaya karşı korunmalıdır.
 
  /dev/sda1       /dev/sda2      /dev/sda3     /dev/sda4      /dev/sd5     /dev/sda6      <-- Genişletilebilir -->
 --------------+-------------+-------------+-------------------------------------------+-----------------------------+
