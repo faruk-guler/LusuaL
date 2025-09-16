@@ -22,8 +22,8 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # Swap: swap alanı gerekirse, /var altında "swapfile" oluşturulabilir. "swapfile" xfs dosya sisteminde desteklenmez.
 # ESP: UEFI sistem kullanılıyorsa EFI System Partition (ESP) alanı zorunludur.
 # /home alanında kullanıcıya özel kota ayarlanması önerilir.
-# /var dizini, log patlamalarına ve veri artışlarına karşı korunmalıdır.
-# /tmp dizini, ram üzerine alınarak boyutu sınırlandırılmaldır. yazma izinler
+# /var dizini, log patlamalarına ve devasa veri artışlarına karşı korunması gerekir.
+# /tmp dizini, ram üzerine alınarak boyutu sınırlandırılmaldır.! devasa veri artışlarına karşı korunması gerekir. /tmp genelde 1777 izniyle çalışır: 
 
  /dev/sda1       /dev/sda2      /dev/sda3     /dev/sda4      /dev/sd5     /dev/sda6      <-- Genişletilebilir -->
 --------------+-------------+-------------+-------------------------------------------+-----------------------------+
