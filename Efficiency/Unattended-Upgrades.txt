@@ -5,7 +5,7 @@ is a tool used to automatically download and install security and software updat
 On RedHat/CentOS systems, By default, automatic updates are turned off. Unattended-Upgrades "dnf-automatic" or "yum-cron" is used as an alternative.
 
 # Features:
--Only performs automatic security updates.
+-Only performs automatic security updates..
 -Automatically reboots if the kernel is updated.
 -Adjustable reboot time.
 -Automatic upgrades of specific packages can be blocked.
