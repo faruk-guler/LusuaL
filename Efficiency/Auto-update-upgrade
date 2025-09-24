@@ -28,6 +28,7 @@ sudo systemctl disable unattended-upgrades
 sudo systemctl start unattended-upgrades
 sudo systemctl stop unattended-upgrades
 sudo systemctl status unattended-upgrades
+sudo unattended-upgrade -d --dry-run
 
 # Congfiguration:
 sudo cat /etc/apt/apt.conf.d/50unattended-upgrades
