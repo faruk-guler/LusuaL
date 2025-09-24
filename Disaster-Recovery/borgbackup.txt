@@ -1,1 +1,58 @@
-#
+## Borg Backup
+
+Borg Backup, deduplikasyon (yinelenen veri kaldırma), sıkıştırma ve şifreleme özelliklerine sahip modern bir yedekleme aracıdır.
+Aynı dosyaların farklı sürümlerini veya benzer dosyaları tek depolayarak disk alanından %70'e varan tasarruf sağlar.
+
+# Ubuntu/Debian
+sudo apt update
+sudo apt install borgbackup
+
+# CentOS/RHEL
+sudo yum install epel-release
+sudo yum install borgbackup
+
+# İlk Depo Oluşturma:
+
+# Yerel depo:
+borg init --encryption=repokey /path/to/backup-repo
+
+# Uzak depo (SSH üzerinden)
+borg init --encryption=repokey user@backup-server:/backup/repo
+
+# Basit Yedekleme:
+# Dosya ve dizin yedekleme
+borg create --stats --progress /path/to/repo::backup-{now} ~/documents ~/photos
+
+# Çıktı örneği:
+# Archive name: backup-2024-01-15T10:30:00
+# Archive fingerprint: abc123...
+# Time (start): Mon, 2024-01-15 10:30:00
+# Time (end):   Mon, 2024-01-15 10:35:00
+# Duration: 5 minutes
+# Number of files: 15,432
+# Original size: 15.4 GB
+# Deduplicated size: 4.2 GB  #  73% tasarruf!
+
+# Listeleme ve Keşif:
+
+# Depodaki arşivleri listele
+borg list /path/to/repo
+
+# Arşiv içeriğini görüntüle
+borg list /path/to/repo::backup-2024-01-15
+
+# Dosya arama
+borg list /path/to/repo::backup-2024-01-15 | grep "important-file"
+
+# Geri Yükleme:
+
+# Tam geri yükleme
+borg extract /backup/repo::backup-2024-01-15
+
+# Belirli dosyalar
+borg extract /backup/repo::latest ~/documents/important.pdf
+
+# Farklı dizine
+borg extract /backup/repo::backup-2024-01-15 --destination /tmp/restore
+
+
