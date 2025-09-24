@@ -3,9 +3,19 @@ basit ve hafif bir SMTP (Simple Mail Transfer Protocol) istemcisidir.
 Temel amacı, yerel sistemden e-posta göndermek için bir SMTP sunucusuna bağlanmaktır.
 Genellikle sunucularda veya betiklerde otomatik e-posta gönderimi için kullanılır.
 
+-SMTP istemcisi: E-posta göndermek için bir SMTP sunucusuna bağlanır (örneğin Gmail, Outlook, şirket içi posta sunucusu).
+-MTA (Mail Transfer Agent) değil: Postfix veya Sendmail gibi tam teşekküllü bir posta sunucusu değildir. Sadece dışarıya e-posta gönderir.
+-Hafif ve bağımlılıksız: Az kaynak tüketir, yapılandırması kolaydır.
+-Komut satırı tabanlı: Betiklerde (cron işleri, sistem bildirimleri vb.) kolayca kullanılabilir.
+
 #Debian / Ubuntu
-sudo apt-get install msmtp msmtp-mta mailutils bsd-mailx
+sudo apt-get install msmtp msmtp-mta mailutils
 
 # RHEL / CentOS / AlmaLinux
 #sudo dnf install epel-release
 sudo dnf install msmtp
+
+#Test:
+echo "Merhaba" | mail -s "Test" user@example.com
+
+https://marlam.de/msmtp/download/
