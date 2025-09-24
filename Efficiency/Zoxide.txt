@@ -1,0 +1,50 @@
+## Zoxide
+
+Zoxide (z), cd komutunun akıllı bir alternatifidir. Frekan tabanlı öğrenme ile sık kullandığınız dizinlere hızla erişmenizi sağlar.
+"Jump" komutu gibi çalışır ve zamanla kullanım alışkanlıklarınızı öğrenir.
+
+# Install Zoxide:
+
+sudo apt install zoxide   # Ubuntu/Debian
+sudo dnf install zoxide   # Fedora
+sudo pacman -S zoxide     # Arch Linux
+brew install zoxide       # macOS (Homebrew)
+cargo install zoxide      # Cargo (Rust paket yöneticisi)
+
+# Kabuk Yapılandırması:
+# ~/.bashrc veya ~/.zshrc dosyasına ekle
+eval "$(zoxide init bash)"  # Bash için
+eval "$(zoxide init zsh)"   # Zsh için
+eval "$(zoxide init fish)"  # Fish için
+
+# Dizin Değiştirme:
+
+z proje        # "proje" içeren en sık kullanılan dizin
+z /tmp/test    # Tam yol da kullanılabilir
+z ..           # Bir üst dizine çıkma (cd .. gibi)
+z -            # Önceki dizine dönme (cd - gibi)
+
+
+# Favori dizinleri listeleme:
+zoxide query --list
+
+# Belirli bir dizini veritabanından silme:
+zoxide remove ~/old-folder
+
+# Özel Sorgular:
+# En yüksek skorlu dizin
+zx
+
+# En son erişilen dizin
+zx -t
+
+# En sık kullanılan dizin
+zx -r
+
+# En yüksek skor ve en son kullanım kombinasyonu
+zx -s
+
+-----------------
+
+
+
