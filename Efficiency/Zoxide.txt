@@ -24,7 +24,6 @@ z /tmp/test    # Tam yol da kullanılabilir
 z ..           # Bir üst dizine çıkma (cd .. gibi)
 z -            # Önceki dizine dönme (cd - gibi)
 
-
 # Favori dizinleri listeleme:
 zoxide query --list
 
@@ -45,6 +44,3 @@ zx -r
 zx -s
 
 -----------------
-
-
-
