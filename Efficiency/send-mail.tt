@@ -1,1 +1,2 @@
-#
+# Install msmtp
+sudo apt-get install msmtp msmtp-mta mailutils
