@@ -8,14 +8,14 @@ Genellikle sunucularda veya betiklerde otomatik e-posta gönderimi için kullan�
 -Hafif ve bağımlılıksız: Az kaynak tüketir, yapılandırması kolaydır.
 -Komut satırı tabanlı: Betiklerde (cron işleri, sistem bildirimleri vb.) kolayca kullanılabilir.
 
-#Debian / Ubuntu
+# Debian / Ubuntu
 sudo apt-get install msmtp msmtp-mta mailutils
 
 # RHEL / CentOS / AlmaLinux
 #sudo dnf install epel-release
 sudo dnf install msmtp
 
-#Test:
+# Test:
 echo "Merhaba" | mail -s "Test" user@example.com
 
 https://marlam.de/msmtp/download/
