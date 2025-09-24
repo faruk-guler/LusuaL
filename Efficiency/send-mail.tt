@@ -1,7 +1,11 @@
-# Install msmtp
+# msmtp
+basit ve hafif bir SMTP (Simple Mail Transfer Protocol) istemcisidir.
+Temel amacı, yerel sistemden e-posta göndermek için bir SMTP sunucusuna bağlanmaktır.
+Genellikle sunucularda veya betiklerde otomatik e-posta gönderimi için kullanılır.
 
 #Debian / Ubuntu
 sudo apt-get install msmtp msmtp-mta mailutils bsd-mailx
 
 # RHEL / CentOS / AlmaLinux
+#sudo dnf install epel-release
 sudo dnf install msmtp
