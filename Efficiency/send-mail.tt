@@ -1,2 +1,7 @@
 # Install msmtp
-sudo apt-get install msmtp msmtp-mta mailutils
+
+#Debian / Ubuntu
+sudo apt-get install msmtp msmtp-mta mailutils bsd-mailx
+
+# RHEL / CentOS / AlmaLinux
+sudo dnf install msmtp
