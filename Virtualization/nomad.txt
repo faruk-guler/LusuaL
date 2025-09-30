@@ -1,2 +1,2 @@
-#Nomad
+# Nomad
 (HashiCorp) → Lighter than Kubernetes, can run both container and non-container workloads (binary, VM, etc.). Integrates well with Consul and Vault.
