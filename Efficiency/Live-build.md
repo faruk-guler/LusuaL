@@ -102,7 +102,7 @@ lb clean
 
 ## Verify:
 ```bash
-mv live-image-amd64.hybrid.iso mybuild.iso
+mv live-image-amd64.hybrid.iso Debian-13-Trixie.iso
 sha256sum mybuild.iso > mybuild.sha256
 sha256sum -c mybuild.sha256
 ```
