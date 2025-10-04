@@ -4,7 +4,7 @@ apt-get update
 apt-get upgrade
 apt-get install live-build
 ```
-## Directoty:
+## Create work directoty:
 ```bash
 mkdir debian-minimal-iso
 cd debian-minimal-iso
