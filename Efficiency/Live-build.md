@@ -42,7 +42,6 @@ lb config noauto \
   --debootstrap-options "--variant=minbase" \
   --bootstrap-flavour minimal \
   --binary-images iso-hybrid \
-  --apt-indices false \
   --iso-application "My-Guler-IMAGE"
 ```
 
