@@ -75,7 +75,7 @@ EOF
 cp splash.png config/bootloaders/isolinux/splash.png (640x480 PNG)
 mkdir -p config/includes.binary/boot/grub
 mkdir -p config/includes.binary/isolinux
-cat > config/includes.binary/isolinux/stdmenu.cfg <<'EOF'
+cat > config/includes.binary/boot/grub/grub.cfg <<'EOF'
 MENU TITLE Minimal Debian Installer -farukguler.com
 TIMEOUT 50
 EOF
