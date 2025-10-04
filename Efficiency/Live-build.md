@@ -26,7 +26,7 @@ sudo lb config noauto \
 ```bash
 echo "nano openssh-server" > config/package-lists/package.list.chroot
 echo "grub-pc grub-efi-amd64-bin grub-efi-amd64-signed shim-signed" > config/package-lists/bootloader.chroot
-echo "systemd-sysv" > config/package-lists/live.list.chroot
+echo "live-boot live-config live-config-systemd systemd-sysv" > config/package-lists/live.list.chroot
 ```
 
 ## Builder:
