@@ -1,8 +1,8 @@
 ## Install:
 ```bash
-apt-get update
-apt-get upgrade
-apt-get install live-build
+apt update
+apt upgrade
+apt install live-build
 ```
 
 ## Create work directory:
