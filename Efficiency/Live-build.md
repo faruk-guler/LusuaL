@@ -7,6 +7,8 @@ apt-get install live-build
 ```bash
 mkdir debian-minimal-iso
 cd debian-minimal-iso
+lb config
+lb build
 lb clean
 lb clean --purge
 ```
