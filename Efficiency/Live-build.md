@@ -67,7 +67,6 @@ cat >> /etc/ssh/sshd_config << 'SSHEOF'
 
 # Özel ayarlar
 PermitRootLogin yes
-PasswordAuthentication yes
 SSHEOF
 EOF
 ```
