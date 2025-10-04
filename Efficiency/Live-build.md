@@ -20,6 +20,7 @@ sudo lb config noauto \
   --debian-installer-gui false
   --archive-areas "main" \
   --debootstrap-options "--variant=minbase"
+  --binary-images iso-hybrid
 ```
 
 ## Package List:
