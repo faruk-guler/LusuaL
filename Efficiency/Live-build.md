@@ -21,6 +21,12 @@ sudo lb config noauto \
   --archive-areas "main" \
   --debootstrap-options "--variant=minbase"
 ```
+
+## Package List:
+```bash
+echo "nano openssh-server" > config/package-lists/pkgs.list.chroot
+```
+
 ## Builder:
 ```bash
 lb build
