@@ -30,6 +30,7 @@ echo "nano openssh-server" > config/package-lists/pkgs.list.chroot
 ## Builder:
 ```bash
 lb build
+lb build 2>&1 | tee build-log.txt
 ```
 
 ## Reconfigure:
