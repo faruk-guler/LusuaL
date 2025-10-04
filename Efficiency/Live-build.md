@@ -61,6 +61,7 @@ cat > config/hooks/live/02-configure-ssh.hook.chroot << 'EOF'
 #!/bin/sh
 # SSH servisini etkinleştir
 systemctl enable ssh
+sudo systemctl restart ssh
 
 # SSH yapılandırması
 cat >> /etc/ssh/sshd_config << 'SSHEOF'
