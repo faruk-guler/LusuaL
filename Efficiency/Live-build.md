@@ -40,6 +40,7 @@ echo "live-boot live-config live-config-systemd systemd-sysv" > config/package-l
 
 ## Customize the Installer content: [image and text]
 ```bash
+logo: config/bootloaders/isolinux/splash.png (640x480 PNG)
 mkdir -p config/includes.binary/boot/grub
 mkdir -p config/includes.binary/isolinux
 cat > config/includes.binary/isolinux/stdmenu.cfg <<'EOF'
