@@ -45,3 +45,6 @@ mv live-image-amd64.hybrid.iso mybuild.iso
 md5sum mybuild.iso > mybuild.md5
 md5sum -c mybuild.md5
 ```
+
+## links:
+https://manpages.debian.org/unstable/live-build/lb_config.1.en.html
