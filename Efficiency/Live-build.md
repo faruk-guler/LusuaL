@@ -27,9 +27,14 @@ sudo lb config noauto \
   --debian-installer-gui false \
   --debian-installer true \
   --archive-areas "main" \
+  --bootappend-live "boot=live components quiet splash" \
+  --bootloader grub-efi \
+  --checksums sha256 \
   --compression gzip \
+  --memtest none \
   --debian-installer-distribution trixie \
   --firmware-chroot false \
+  --firmware-binary false \
   --debootstrap-options "--variant=minbase" \
   --bootstrap-flavour minimal \
   --bootappend-live "boot=live quiet splash" \
@@ -43,6 +48,24 @@ sudo lb config noauto \
 echo "nano openssh-server" > config/package-lists/package.list.chroot
 echo "grub-pc grub-efi-amd64-bin grub-efi-amd64-signed shim-signed" > config/package-lists/bootloader.chroot
 echo "live-boot live-config live-config-systemd systemd-sysv" > config/package-lists/live.list.chroot
+```
+
+# SSH Configuration:
+```bash
+mkdir -p config/hooks/live
+cat > config/hooks/live/02-configure-ssh.hook.chroot << 'EOF'
+#!/bin/sh
+# SSH servisini etkinleştir
+systemctl enable ssh
+
+# SSH yapılandırması
+cat >> /etc/ssh/sshd_config << 'SSHEOF'
+
+# Özel ayarlar
+PermitRootLogin yes
+PasswordAuthentication yes
+SSHEOF
+EOF
 ```
 
 ## Customize the Installer content: [image and text]
