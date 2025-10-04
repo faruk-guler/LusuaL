@@ -103,8 +103,8 @@ lb clean
 ## Verify:
 ```bash
 mv live-image-amd64.hybrid.iso mybuild.iso
-md5sum mybuild.iso > mybuild.md5
-md5sum -c mybuild.md5
+sha256sum mybuild.iso > mybuild.sha256
+sha256sum -c mybuild.sha256
 ```
 
 ## links:
