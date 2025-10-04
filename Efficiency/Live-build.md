@@ -41,7 +41,6 @@ lb config noauto \
   --firmware-binary false \
   --debootstrap-options "--variant=minbase" \
   --bootstrap-flavour minimal \
-  --bootappend-live "boot=live quiet splash" \
   --binary-images iso-hybrid \
   --apt-indices false \
   --iso-application "My-Guler-IMAGE"
