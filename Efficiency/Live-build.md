@@ -57,6 +57,7 @@ echo "live-boot live-config live-config-systemd systemd-sysv busybox syslinux gr
 # SSH Configuration:
 ```bash
 mkdir -p config/hooks/live
+chmod +x config/hooks/live/02-configure-ssh.hook.chroot
 cat > config/hooks/live/02-configure-ssh.hook.chroot << 'EOF'
 #!/bin/sh
 # SSH servisini etkinleştir
@@ -74,7 +75,7 @@ EOF
 
 ## Customize the Installer content: [image and text]
 ```bash
-logo: cp splash.png config/bootloaders/isolinux/splash.png (640x480 PNG)
+cp splash.png config/bootloaders/isolinux/splash.png (640x480 PNG)
 mkdir -p config/includes.binary/boot/grub
 mkdir -p config/includes.binary/isolinux
 cat > config/includes.binary/isolinux/stdmenu.cfg <<'EOF'
