@@ -29,6 +29,15 @@ echo "grub-pc grub-efi-amd64-bin grub-efi-amd64-signed shim-signed" > config/pac
 echo "live-boot live-config live-config-systemd systemd-sysv" > config/package-lists/live.list.chroot
 ```
 
+## Customize the Installer content:
+```bash
+mkdir -p config/includes.binary/isolinux
+cat > config/includes.binary/isolinux/stdmenu.cfg <<'EOF'
+MENU TITLE Minimal Debian Installer -farukguler.com
+TIMEOUT 50
+EOF
+```
+
 ## Builder:
 ```bash
 lb build
