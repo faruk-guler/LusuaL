@@ -22,10 +22,12 @@ sudo lb config noauto \
   --debian-installer live \
   --debian-installer-gui false
   --archive-areas "main" \
-  --debootstrap-options "--variant=minbase"
-  --bootstrap-flavour minimal
-  --binary-images iso-hybrid
-  --apt-indices false
+  --firmware-chroot false \
+  --debootstrap-options "--variant=minbase" \
+  --bootstrap-flavour minimal \
+  --bootappend-live "boot=live quiet splash" \
+  --binary-images iso-hybrid \
+  --apt-indices false \
   --iso-application "My-Guler-IMAGE"
 ```
 
