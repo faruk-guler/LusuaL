@@ -18,7 +18,7 @@ cd debian-minimal-iso
 
 ## Config:
 ```bash
-sudo lb config noauto \
+lb config noauto \
   --distribution stable \
   --architectures amd64 \
   --debian-installer live \
@@ -61,7 +61,7 @@ cat > config/hooks/live/02-configure-ssh.hook.chroot << 'EOF'
 #!/bin/sh
 # SSH servisini etkinleştir
 systemctl enable ssh
-sudo systemctl restart ssh
+systemctl restart ssh
 
 # SSH yapılandırması
 cat >> /etc/ssh/sshd_config << 'SSHEOF'
