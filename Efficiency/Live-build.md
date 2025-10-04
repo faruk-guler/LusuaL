@@ -49,6 +49,13 @@ TIMEOUT 50
 EOF
 ```
 
+## Customize the Installer content: [/etc/issue and /etc/motd]
+```bash
+mkdir -p config/includes.chroot/etc
+echo "Welcome to My Secure Server Live Environment" > config/includes.chroot/etc/issue
+echo "Unauthorized access prohibited." > config/includes.chroot/etc/motd
+```
+
 ## Builder:
 ```bash
 lb build
