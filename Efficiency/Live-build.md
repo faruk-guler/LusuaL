@@ -1,20 +1,15 @@
+## Install:
 ```bash
 apt-get update
 apt-get upgrade
 apt-get install live-build
 ```
-
+## Directoty:
 ```bash
 mkdir debian-minimal-iso
 cd debian-minimal-iso
 ```
-
-```bash
-lb clean
-# lb clean --purge [clear config dir.]
-```
-
-## config
+## Config:
 ```bash
 sudo lb config noauto \
   --distribution stable \
@@ -24,11 +19,18 @@ sudo lb config noauto \
   --archive-areas "main" \
   --debootstrap-options "--variant=minbase"
 ```
-
+## Builder:
 ```bash
 lb build
 ```
 
+## Reconfigure:
+```bash
+lb clean
+# lb clean --purge [clear config dir.]
+```
+
+## Verify:
 ```bash
 mv live-image-amd64.hybrid.iso mybuild.iso
 md5sum mybuild.iso > mybuild.md5
