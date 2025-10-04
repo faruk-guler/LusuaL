@@ -22,6 +22,8 @@ sudo lb config noauto \
   --architectures amd64 \
   --debian-installer live \
   --bootloader syslinux \
+  --apt-indices false \
+  --apt-recommends false \
   --debian-installer-gui false \
   --debian-installer true \
   --archive-areas "main" \
