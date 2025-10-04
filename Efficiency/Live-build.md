@@ -21,6 +21,7 @@ sudo lb config noauto \
   --archive-areas "main" \
   --debootstrap-options "--variant=minbase"
   --binary-images iso-hybrid
+  --apt-indices false
 ```
 
 ## Package List:
