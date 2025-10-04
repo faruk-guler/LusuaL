@@ -20,8 +20,12 @@ sudo lb config noauto \
   --distribution stable \
   --architectures amd64 \
   --debian-installer live \
-  --debian-installer-gui false
+  --bootloader syslinux \
+  --debian-installer-gui false \
+  --debian-installer true \
   --archive-areas "main" \
+  --compression gzip \
+  --debian-installer-distribution trixie \
   --firmware-chroot false \
   --debootstrap-options "--variant=minbase" \
   --bootstrap-flavour minimal \
