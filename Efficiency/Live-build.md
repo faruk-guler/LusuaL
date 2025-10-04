@@ -9,5 +9,9 @@ mkdir debian-minimal-iso
 cd debian-minimal-iso
 lb clean
 ```
-
+```bash
+mv live-image-amd64.hybrid.iso mybuild.iso
+md5sum mybuild.iso > mybuild.md5
+md5sum -c mybuild.md5
+```
 
