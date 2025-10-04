@@ -12,6 +12,7 @@ apt install live-build
 ```bash
 mkdir debian-minimal-iso
 cd debian-minimal-iso
+git clone git://git.debian.org/git/debian-live/live-build.git
 ```
 
 ## Config:
