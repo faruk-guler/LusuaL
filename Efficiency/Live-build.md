@@ -8,6 +8,7 @@ apt-get install live-build
 mkdir debian-minimal-iso
 cd debian-minimal-iso
 lb clean
+lb clean --purge
 ```
 ```bash
 mv live-image-amd64.hybrid.iso mybuild.iso
