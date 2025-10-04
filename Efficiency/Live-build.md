@@ -23,7 +23,7 @@ lb config noauto \
   --architectures amd64 \
   --debian-installer live \
   --bootloader syslinux \
-  --linux-packages "none" \
+  --linux-packages "linux-image-amd64" \
   --initramfs live-boot \
   --bootloader grub \
   --apt-indices false \
