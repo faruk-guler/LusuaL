@@ -1,3 +1,6 @@
+What is Debian Live-Build?
+live-build is a set of scripts used to create Debian-based live system images (ISO, USB, netboot, etc.) and is one of the core tools of the Debian Live Project.
+
 ## Install:
 ```bash
 apt update
@@ -22,6 +25,7 @@ sudo lb config noauto \
   --debootstrap-options "--variant=minbase"
   --binary-images iso-hybrid
   --apt-indices false
+  --iso-application "My-Guler-IMAGE"
 ```
 
 ## Package List:
