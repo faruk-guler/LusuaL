@@ -14,7 +14,7 @@ lb clean
 # lb clean --purge [clear config dir.]
 ```
 
-
+## config
 ```bash
 sudo lb config noauto \
   --distribution stable \
