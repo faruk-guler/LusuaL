@@ -26,7 +26,7 @@ lb config noauto \
   --apt-recommends false \
   --linux-packages "linux-image" \
   --debian-installer-gui false \
-  --archive-areas "main" \
+  --archive-areas "main contrib non-free non-free-firmware" \
   --mirror-bootstrap http://deb.debian.org/debian \
   --bootappend-live "boot=live components quiet splash" \
   --bootloaders "grub-efi-amd64"
