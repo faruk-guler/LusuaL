@@ -32,6 +32,7 @@ lb config noauto \
   --mirror-bootstrap http://deb.debian.org/debian \
   --bootappend-live "boot=live components quiet splash" \
   --bootloaders "grub-efi syslinux"
+  --uefi-secure-boot enable \
   --uefi-secure-boot \
   --checksums sha256 \
   --compression gzip \
@@ -71,9 +72,7 @@ chmod +x config/hooks/live/02-configure-ssh.hook.chroot
 
 ## Customize the Installer content: [image and text]
 ```bash
-# splash.png should be 640x480 PNG
 mkdir -p config/includes.binary/boot/grub
-cp splash.png config/includes.binary/boot/grub/splash.png
 cat > config/includes.binary/boot/grub/grub.cfg <<'EOF'
 MENU TITLE Minimal Debian Installer -farukguler.com
 TIMEOUT 50
