@@ -44,7 +44,7 @@ lb config noauto \
 
 ## Package List:
 ```bash
-echo "nano openssh-server network-manager ifupdown" > config/package-lists/package.list.chroot
+echo "nano openssh-server iproute2 net-tools ifupdown" > config/package-lists/package.list.chroot
 echo "grub-efi-amd64-bin grub-efi-amd64-signed shim-signed" > config/package-lists/bootloader.chroot
 echo "live-boot live-config live-config-systemd systemd-sysv grub-common" > config/package-lists/live.list.chroot
 ```
