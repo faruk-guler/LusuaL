@@ -71,9 +71,8 @@ chmod +x config/hooks/live/02-configure-ssh.hook.chroot
 ## Customize the Installer content: [image and text]
 ```bash
 # splash.png should be 640x480 PNG
-cp splash.png config/bootloaders/isolinux/splash.png
 mkdir -p config/includes.binary/boot/grub
-mkdir -p config/includes.binary/isolinux
+cp splash.png config/includes.binary/boot/grub/splash.png
 cat > config/includes.binary/boot/grub/grub.cfg <<'EOF'
 MENU TITLE Minimal Debian Installer -farukguler.com
 TIMEOUT 50
