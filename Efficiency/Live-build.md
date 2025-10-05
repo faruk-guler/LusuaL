@@ -6,6 +6,8 @@ live-build is a set of scripts used to create Debian-based live system images (I
 ```bash
 apt update
 apt install live-build debootstrap xorriso squashfs-tools syslinux isolinux grub-pc-bin grub-efi-amd64-bin
+apt install live-build debootstrap xorriso squashfs-tools grub-efi-amd64-bin
+
 lb --version
 ```
 
