@@ -29,7 +29,7 @@ lb config noauto \
   --archive-areas "main" \
   --mirror-bootstrap http://deb.debian.org/debian \
   --bootappend-live "boot=live components quiet splash" \
-  --bootloader grub-efi \
+  --bootloaders grub-efi \
   --uefi-secure-boot \
   --checksums sha256 \
   --compression gzip \
