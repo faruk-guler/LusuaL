@@ -19,7 +19,7 @@ cd debian-minimal-iso
 ```bash
 lb config noauto \
   --distribution stable \
-  --architectures amd64 \
+  --architecture amd64 \
   --debian-installer live \
   --initramfs live-boot \
   --apt-indices false \
