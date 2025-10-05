@@ -55,7 +55,6 @@ echo "live-boot live-config live-config-systemd systemd-sysv busybox syslinux gr
 # SSH Configuration:
 ```bash
 mkdir -p config/hooks/live
-chmod +x config/hooks/live/02-configure-ssh.hook.chroot
 cat > config/hooks/live/02-configure-ssh.hook.chroot << 'EOF'
 #!/bin/sh
 # SSH servisini etkinleştir
@@ -68,6 +67,7 @@ cat >> /etc/ssh/sshd_config << 'SSHEOF'
 PermitRootLogin yes
 SSHEOF
 EOF
+chmod +x config/hooks/live/02-configure-ssh.hook.chroot
 ```
 
 ## Customize the Installer content: [image and text]
