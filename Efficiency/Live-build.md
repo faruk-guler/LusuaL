@@ -88,7 +88,7 @@ echo "Unauthorized access prohibited." > config/includes.chroot/etc/motd
 
 ## Builder:
 ```bash
-lb build
+sudo lb build
 sudo lb build 2>&1 | tee build-log.txt
 ```
 
