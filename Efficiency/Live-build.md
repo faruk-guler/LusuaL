@@ -27,6 +27,7 @@ lb config noauto \
   --linux-flavours amd64 \
   --linux-packages "linux-image"
   --debian-installer-gui false \
+  --uefi-secure-boot auto \
   --archive-areas "main" \
   --mirror-bootstrap http://deb.debian.org/debian \
   --bootappend-live "boot=live components quiet splash" \
