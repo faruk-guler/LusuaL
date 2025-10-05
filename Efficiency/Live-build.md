@@ -36,6 +36,7 @@ lb config noauto \
   --memtest none \
   --debian-installer-distribution trixie \
   --firmware-chroot false \
+  --bootstrap-flavour minimal \
   --firmware-binary false \
   --debootstrap-options "--variant=minbase" \
   --binary-images iso-hybrid \
