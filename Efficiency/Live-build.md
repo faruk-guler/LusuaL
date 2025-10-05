@@ -69,7 +69,8 @@ chmod +x config/hooks/live/02-configure-ssh.hook.chroot
 
 ## Customize the Installer content: [image and text]
 ```bash
-cp splash.png config/bootloaders/isolinux/splash.png (640x480 PNG)
+# splash.png should be 640x480 PNG
+cp splash.png config/bootloaders/isolinux/splash.png
 mkdir -p config/includes.binary/boot/grub
 mkdir -p config/includes.binary/isolinux
 cat > config/includes.binary/boot/grub/grub.cfg <<'EOF'
