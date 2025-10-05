@@ -38,7 +38,6 @@ lb config noauto \
   --firmware-chroot false \
   --firmware-binary false \
   --debootstrap-options "--variant=minbase" \
-  --bootstrap-flavour minimal \
   --binary-images iso-hybrid \
   --iso-application "My-Guler-IMAGE"
 ```
