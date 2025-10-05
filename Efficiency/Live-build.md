@@ -35,7 +35,6 @@ lb config noauto \
   --compression gzip \
   --memtest none \
   --firmware-chroot false \
-  --bootstrap-flavour minimal \
   --firmware-binary false \
   --debootstrap-options "--variant=minbase" \
   --binary-images iso-hybrid \
