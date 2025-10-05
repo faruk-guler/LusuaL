@@ -21,10 +21,11 @@ lb config noauto \
   --distribution stable \
   --architectures amd64 \
   --debian-installer live \
-  --linux-packages "linux-image-amd64" \
   --initramfs live-boot \
   --apt-indices false \
   --apt-recommends false \
+  --linux-flavours amd64 \
+  --linux-packages "linux-image"
   --debian-installer-gui false \
   --archive-areas "main" \
   --mirror-bootstrap http://deb.debian.org/debian \
