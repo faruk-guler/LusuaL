@@ -5,7 +5,6 @@ live-build is a set of scripts used to create Debian-based live system images (I
 ## Install:
 ```bash
 apt update
-apt upgrade
 apt install live-build
 lb --version
 ```
