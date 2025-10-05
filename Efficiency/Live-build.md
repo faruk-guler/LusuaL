@@ -34,7 +34,6 @@ lb config noauto \
   --checksums sha256 \
   --compression gzip \
   --memtest none \
-  --debian-installer-distribution trixie \
   --firmware-chroot false \
   --bootstrap-flavour minimal \
   --firmware-binary false \
