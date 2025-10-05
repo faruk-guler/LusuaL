@@ -24,13 +24,12 @@ lb config noauto \
   --initramfs live-boot \
   --apt-indices false \
   --apt-recommends false \
-  --linux-flavours amd64 \
   --linux-packages "linux-image" \
   --debian-installer-gui false \
   --archive-areas "main" \
   --mirror-bootstrap http://deb.debian.org/debian \
   --bootappend-live "boot=live components quiet splash" \
-  --bootloaders "grub-efi"
+  --bootloaders "grub-efi-amd64"
   --uefi-secure-boot enable \
   --checksums sha256 \
   --compression gzip \
