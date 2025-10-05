@@ -26,7 +26,6 @@ lb config noauto \
   --apt-indices false \
   --apt-recommends false \
   --debian-installer-gui false \
-  --debian-installer true \
   --archive-areas "main" \
   --mirror-bootstrap http://deb.debian.org/debian \
   --bootappend-live "boot=live components quiet splash" \
