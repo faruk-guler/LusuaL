@@ -25,13 +25,13 @@ lb config noauto \
   --apt-indices false \
   --apt-recommends false \
   --linux-flavours amd64 \
-  --linux-packages "linux-image"
+  --linux-packages "linux-image" \
   --debian-installer-gui false \
   --uefi-secure-boot auto \
   --archive-areas "main" \
   --mirror-bootstrap http://deb.debian.org/debian \
   --bootappend-live "boot=live components quiet splash" \
-  --bootloaders "grub-efi syslinux"
+  --bootloaders "grub-efi syslinux" \
   --uefi-secure-boot enable \
   --uefi-secure-boot \
   --checksums sha256 \
