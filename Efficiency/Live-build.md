@@ -62,6 +62,7 @@ cat >> /etc/ssh/sshd_config << 'SSHEOF'
 
 # Özel ayarlar
 PermitRootLogin yes
+PasswordAuthentication yes
 SSHEOF
 EOF
 chmod +x config/hooks/live/02-configure-ssh.hook.chroot
