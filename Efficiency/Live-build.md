@@ -96,6 +96,7 @@ sudo lb build 2>&1 | tee build-log.txt
 ```bash
 lb clean
 # lb clean --purge [clear config dir.]
+# rm -rf config/
 ```
 
 ## Verify:
