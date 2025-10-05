@@ -5,9 +5,7 @@ live-build is a set of scripts used to create Debian-based live system images (I
 ## Install:
 ```bash
 apt update
-apt install live-build debootstrap xorriso squashfs-tools syslinux isolinux grub-pc-bin grub-efi-amd64-bin
 apt install live-build debootstrap xorriso squashfs-tools grub-efi-amd64-bin
-
 lb --version
 ```
 
@@ -48,6 +46,7 @@ lb config noauto \
 echo "nano openssh-server iproute2 net-tools ifupdown" > config/package-lists/package.list.chroot
 echo "grub-efi-amd64-bin grub-efi-amd64-signed shim-signed" > config/package-lists/bootloader.chroot
 echo "live-boot live-config live-config-systemd systemd-sysv grub-common" > config/package-lists/live.list.chroot
+echo "firmware-linux firmware-linux-nonfree" > config/package-lists/firmware.list.chroot
 ```
 
 # SSH Configuration:
