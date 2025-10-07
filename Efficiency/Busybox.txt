@@ -1,5 +1,5 @@
 🚀 BusyBox Nedir? Linux'ta Nasıl Kullanılır?
-BusyBox, bir dizi sadeleştirilmiş Unix aracını tek bir yürütülebilir dosyada sunan bir yazılım paketidir.
+BusyBox, bir dizi sadeleştirilmiş Unix aracını tek bir yürütülebilir dosyada sunan bir yazılım paketidir. Yaklaşık 400 komutu kapsar.
 Küçük ve verimli olmasıyla bilinen BusyBox, gömülü sistemler ve kaynak kısıtlı ortamlar için çok uygundur. BusyBox, çeşitli yaygın Linux komutlarını ve araçlarını tek bir ikili dosyada birleştirerek birçok standart Unix aracının işlevlerini gerçekleştirmektedir.
 
 🔧 Nasıl Kullanılır?
@@ -24,6 +24,10 @@ Kullanım:
 BusyBox'ın kullanımı için genel sözdizimi: `busybox [komut] [seçenekler]`.
 Örneğin, ls komutunun BusyBox sürümünü kullanmak için: 
 `busybox ls [seçenekler]`.
+
+# Shell ortamına komut vermek için:
+busybox sh
+
 
 Komut Örnekleri:
 BusyBox komutlarını kullanmanın birkaç örneği:busybox ls -l: Dosya ve dizinleri uzun formatta listeler.
