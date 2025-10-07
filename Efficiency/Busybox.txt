@@ -1,6 +1,7 @@
 🚀 BusyBox Nedir ?
-BusyBox, Linux sistemleri için geliştirilmiş, çok sayıda standart Unix aracını tek bir küçük çalıştırılabilir dosya içinde toplayan bir yazılımdır. Yaklaşık 400 komutu kapsar.
-"Swiss Army Knife of Embedded Linux" (Gömülü Linux'un İsviçre Çakısı) olarak da bilinen BusyBox, Bruce Perens tarafından 1996 yılında geliştirilmeye başlanmış ve günümüzde Denys Vlasenko liderliğinde aktif olarak sürdürülmektedir. 
+BusyBox, Linux sistemleri için geliştirilmiş, çok sayıda standart Unix aracını tek bir küçük çalıştırılabilir dosya içinde toplayan bir yazılımdır. 
+Yaklaşık 400 komutu kapsar. "Swiss Army Knife of Embedded Linux" (Gömülü Linux'un İsviçre Çakısı) olarak da bilinen BusyBox, Bruce Perens tarafından 1996 yılında geliştirilmeye başlanmış ve günümüzde Denys Vlasenko liderliğinde aktif olarak sürdürülmektedir.
+
 🔧 Kurulum:
 BusyBox, genellikle birçok Linux dağıtımında varsayılan olarak gelir. Eğer yüklü değilse, genellikle paket yöneticiniz aracılığıyla kurabilirsiniz.
 
