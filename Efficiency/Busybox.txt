@@ -37,4 +37,7 @@ BusyBox, derleme zamanında belirli applet'ları içerecek veya hariç tutacak �
 
 # Yardım:
 Kullanılabilir applet'ların bir listesini ve her biri hakkında kısa bir açıklamayı almak için `busybox --help` komutunu kullanabilirsiniz.
-BusyBox, genellikle kaynak kullanımını en aza indirmek önemli olduğu yerlerde, gömülü sistemlerde, yönlendiricilerde ve benzeri ortamlarda kullanılır. Kullanımı, belirli bir sistemde kullanılan BusyBox sürümüne ve yapılandırmaya bağlı olarak biraz değişebilir.
+BusyBox, genellikle kaynak kullanımını en aza indirmek önemli olduğu yerlerde, gömülü sistemlerde, yönlendiricilerde ve benzeri ortamlarda kullanılır.
+Kullanımı, belirli bir sistemde kullanılan BusyBox sürümüne ve yapılandırmaya bağlı olarak biraz değişebilir.
+
+
