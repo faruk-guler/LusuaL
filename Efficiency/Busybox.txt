@@ -1,1 +1,43 @@
-#
+🚀 BusyBox Nedir? Linux'ta Nasıl Kullanılır?
+BusyBox, bir dizi sadeleştirilmiş Unix aracını tek bir yürütülebilir dosyada sunan bir yazılım paketidir.
+Küçük ve verimli olmasıyla bilinen BusyBox, gömülü sistemler ve kaynak kısıtlı ortamlar için çok uygundur. BusyBox, çeşitli yaygın Linux komutlarını ve araçlarını tek bir ikili dosyada birleştirerek birçok standart Unix aracının işlevlerini gerçekleştirmektedir.
+
+🔧 Nasıl Kullanılır?
+Kurulum:
+BusyBox, genellikle birçok Linux dağıtımında varsayılan olarak gelir. Eğer yüklü değilse, genellikle paket yöneticiniz aracılığıyla kurabilirsiniz.
+
+-- Debian 
+root@clx-openprj:~# sudo apt-get update
+root@clx-openprj:~# sudo apt-get install busybox
+
+-- Redhat/Fedora
+root@clx-openprj:~# sudo yum install busybox
+
+-- Arch Linux
+root@clx-openprj:~# sudo pacman -S busybox
+
+-- Alpine Linux
+root@clx-openprj:~# apk add busybox
+
+
+Kullanım:
+BusyBox'ın kullanımı için genel sözdizimi: `busybox [komut] [seçenekler]`.
+Örneğin, ls komutunun BusyBox sürümünü kullanmak için: 
+`busybox ls [seçenekler]`.
+
+Komut Örnekleri:
+BusyBox komutlarını kullanmanın birkaç örneği:busybox ls -l: Dosya ve dizinleri uzun formatta listeler.
+- `busybox cp dosya1 dosya2`  Bir dosyayı kopyalar.
+- `busybox mv eskidosya yenidosya`  Bir dosyanın adını değiştirir veya taşır.
+- `busybox cat dosya`  Bir dosyanın içeriğini görüntüler.
+- `busybox echo "Merhaba, BusyBox!"` Bir mesajı konsola yazdırır.
+
+Applet'lar:
+BusyBox, bireysel komut veya işlevleri ifade etmek için "applet" kavramını kullanır. Her applet, belirli bir görevi gerçekleştiren özelliği taşıyan bir yürütülebilir dosyadır.
+
+Yapılandırma:
+BusyBox, derleme zamanında belirli applet'ları içerecek veya hariç tutacak şekilde yapılandırılabilir, böylece ihtiyacınıza göre özelleştirebilirsiniz.
+
+Yardım:
+Kullanılabilir applet'ların bir listesini ve her biri hakkında kısa bir açıklamayı almak için `busybox --help` komutunu kullanabilirsiniz.
+BusyBox, genellikle kaynak kullanımını en aza indirmek önemli olduğu yerlerde, gömülü sistemlerde, yönlendiricilerde ve benzeri ortamlarda kullanılır. Kullanımı, belirli bir sistemde kullanılan BusyBox sürümüne ve yapılandırmaya bağlı olarak biraz değişebilir.
