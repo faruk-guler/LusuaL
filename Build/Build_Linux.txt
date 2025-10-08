@@ -33,7 +33,7 @@ gcc --version
 g++ --version
 make --version
 
-# Go Calendar App Example:
+# Calendar App Example:
 // go.c begin
 #include <stdio.h>
 int main() {
