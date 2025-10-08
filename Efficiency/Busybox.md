@@ -111,6 +111,15 @@ veya doğrudan:
 /bin/busybox ash
 ```
 
+### Chroot Ortamında Kullanım
+Minimal bir chroot ortamı oluştururken BusyBox'ı kullanabilirsiniz:
+```bash
+mkdir /chroot
+cp /bin/busybox /chroot/
+cd /chroot
+./busybox --install -s
+chroot .
+
 ---
 
 ## 🔍 Applet Kavramı
