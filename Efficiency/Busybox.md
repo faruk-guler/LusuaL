@@ -122,9 +122,9 @@ chroot .
 
 ---
 
----
-## 🔍 Applet Kavramı
 
+## 🔍 Applet Kavramı
+---
 BusyBox'ta **applet**, tek bir işlevi gerçekleştiren bağımsız bir komut/araç anlamına gelir. Her applet, BusyBox binary dosyası içinde gömülü olarak bulunur ve sembolik linkler veya doğrudan çağrı ile erişilir.
 
 ### Applet Örnekleri
