@@ -13,7 +13,7 @@
 * Venom Linux: `scratch install fastfetch`
 
 ```bash
-root@alma-guler fmpeg.d]# fastfetch
+root@alma-guler archive-load.d]# fastfetch
          'c:.                               root@alma-guler
         lkkkx, ..       ..   ,cc,           ---------------
         okkkk:ckkx'  .lxkkx.okkkkd          OS: AlmaLinux 10.0 (Purple Lion) x86_64
