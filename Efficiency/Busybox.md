@@ -46,6 +46,12 @@ Alpine'ın tüm sistemi BusyBox tabanlıdır.
 apk add busybox  # Güncelleme için
 ```
 
+### Docker ile kurulum
+```bash
+docker pull busybox:latest
+docker run -it busybox
+```
+
 ### Kaynak Koddan Derleme
 ```bash
 # Kaynak kodu indirin
