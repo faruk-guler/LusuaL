@@ -120,8 +120,7 @@ cd /chroot
 ./busybox --install -s
 chroot .
 
----
-
+```
 
 ## 🔍 Applet Kavramı
 ---
