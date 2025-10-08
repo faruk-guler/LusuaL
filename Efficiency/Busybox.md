@@ -29,7 +29,7 @@ sudo apt install busybox
 sudo yum install busybox
 ```
 
-### Fedora
+### Fedora/Alma/Rocky
 ```bash
 sudo dnf install busybox
 ```
