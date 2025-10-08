@@ -37,4 +37,7 @@
 [root@alma-guler yum.repos.d]#
 ```
 
-
+# Login Login Message: (fastfetch)
+```bash
+echo fastfetch >> ~/.bash_profile
+```
