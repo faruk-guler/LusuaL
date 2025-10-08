@@ -152,6 +152,7 @@ Bu komut, Linux kernel yapılandırmasına benzer bir arayüz açar ve şunları
 Bağımlılıksız, taşınabilir bir binary oluşturmak için:
 ```bash
 make LDFLAGS=-static
+sudo make install
 ```
 
 ---
