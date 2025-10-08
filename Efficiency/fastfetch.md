@@ -14,4 +14,18 @@
 
 ```bash
 fastfetch
+
+OS: AlmaLinux 9.3 x86_64
+Kernel: 5.14.0-284.el9.x86_64
+Uptime: 2h 15m
+Packages: 450 (dnf)
+Shell: bash 5.2.15
+Resolution: 1920x1080
+DE: GNOME 44.2
+CPU: Intel Core i7-10750H (12) @ 2.60GHz
+GPU: NVIDIA GeForce GTX 1650
+Memory: 5632MiB / 16384MiB
+
 ```
+
+
