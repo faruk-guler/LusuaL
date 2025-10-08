@@ -13,19 +13,27 @@
 * Venom Linux: `scratch install fastfetch`
 
 ```bash
-fastfetch
-
-OS: AlmaLinux 9.3 x86_64
-Kernel: 5.14.0-284.el9.x86_64
-Uptime: 2h 15m
-Packages: 450 (dnf)
-Shell: bash 5.2.15
-Resolution: 1920x1080
-DE: GNOME 44.2
-CPU: Intel Core i7-10750H (12) @ 2.60GHz
-GPU: NVIDIA GeForce GTX 1650
-Memory: 5632MiB / 16384MiB
-
+root@alma-guler fmpeg.d]# fastfetch
+         'c:.                               root@alma-guler
+        lkkkx, ..       ..   ,cc,           ---------------
+        okkkk:ckkx'  .lxkkx.okkkkd          OS: AlmaLinux 10.0 (Purple Lion) x86_64
+        .:llcokkx'  :kkkxkko:xkkd,          Host: VMware Virtual Platform
+      .xkkkkdood:  ;kx,  .lkxlll;           Kernel: Linux 6.12.0-55.37.1.el10_0.x86_64
+       xkkx.       xk'     xkkkkk:          Uptime: 2 hours, 28 mins
+       'xkx.       xd      .....,.          Packages: 330 (rpm)
+      .. :xkl'     :c      ..''..           Shell: bash 5.2.26
+    .dkx'  .:ldl:'. '  ':lollldkkxo;        Display (Virtual-1): 1280x800
+  .''lkkko'                     ckkkx.      Terminal: /dev/pts/0
+'xkkkd:kkd.       ..  ;'        :kkxo.      CPU: 2 x Intel(R) Core(TM) i7-9750H (2) @ 2.59 GHz
+,xkkkd;kk'      ,d;    ld.   ':dkd::cc,     GPU: VMware SVGA II Adapter
+ .,,.;xkko'.';lxo.      dx,  :kkk'xkkkkc    Memory: 436.38 MiB / 1.63 GiB (26%)
+     'dkkkkkxo:.        ;kx  .kkk:;xkkd.    Swap: 0 B / 2.00 GiB (0%)
+       .....   .;dk:.   lkk.  :;,           Disk (/): 1.32 GiB / 16.93 GiB (8%) - xfs
+             :kkkkkkkdoxkkx                 Local IP (ens160): 192.168.47.13/24
+              ,c,,;;;:xkkd.                 Locale: C.UTF-8
+                ;kkkkl...
+                ;kkkkl
+                 ,od;
 ```
 
 
