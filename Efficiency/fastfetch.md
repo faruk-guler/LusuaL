@@ -12,4 +12,6 @@
 * Void Linux: `xbps-install fastfetch`
 * Venom Linux: `scratch install fastfetch`
 
-* fastfetch
+```bash
+fastfetch
+```
