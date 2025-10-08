@@ -69,7 +69,7 @@ sudo make install
 
 ## 📚 Temel Kullanım
 
-### Komut Listeleme ve version
+### Komut Listeleme ve Version
 BusyBox içindeki tüm mevcut applet'ları (komutları) listeler:
 ```bash
 busybox | head -1
