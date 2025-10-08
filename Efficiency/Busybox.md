@@ -41,6 +41,7 @@ sudo pacman -S busybox
 
 ### Alpine Linux
 Alpine Linux'ta BusyBox varsayılan olarak yüklüdür ve temel sistem komutlarının çoğu BusyBox üzerinden sağlanır.
+Alpine'ın tüm sistemi BusyBox tabanlıdır.
 ```bash
 apk add busybox  # Güncelleme için
 ```
@@ -68,9 +69,10 @@ sudo make install
 
 ## 📚 Temel Kullanım
 
-### Komut Listeleme
+### Komut Listeleme ve version
 BusyBox içindeki tüm mevcut applet'ları (komutları) listeler:
 ```bash
+busybox | head -1
 busybox --list
 ```
 
