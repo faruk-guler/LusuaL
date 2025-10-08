@@ -43,7 +43,7 @@ sudo pacman -S busybox
 Alpine Linux'ta BusyBox varsayılan olarak yüklüdür ve temel sistem komutlarının çoğu BusyBox üzerinden sağlanır.
 Alpine'ın tüm sistemi BusyBox tabanlıdır.
 ```bash
-apk add busybox  # Güncelleme için
+apk upgrade busybox # Güncelleme için
 ```
 
 ### Docker ile kurulum
@@ -55,7 +55,7 @@ docker run -it busybox
 ### Kaynak Koddan Derleme
 ```bash
 # Kaynak kodu indirin
-wget https://busybox.net/downloads/busybox-1.36.1.tar.bz2
+wget https://busybox.net/downloads/busybox-1.37.0.tar.bz2
 tar xjf busybox-1.36.1.tar.bz2
 cd busybox-1.36.1
 
