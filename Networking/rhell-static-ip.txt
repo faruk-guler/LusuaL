@@ -1,4 +1,5 @@
-sudo nmcli device
+# RHELL 10 static ip configuration:
+sudo nmcli device status
 sudo nmtui
 
 # Conf.
@@ -8,6 +9,9 @@ nano ens160.nmconnection
 
 # Restart Network Service: 
 systemctl restart NetworkManager
+systemctl status NetworkManager
 
 # Show:
 ip a
+ip route
+nmcli device show ens160
