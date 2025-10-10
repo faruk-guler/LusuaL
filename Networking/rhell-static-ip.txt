@@ -13,5 +13,6 @@ systemctl status NetworkManager
 
 # Show:
 ip a
+nmcli connection show
 ip route
 nmcli device show ens160
