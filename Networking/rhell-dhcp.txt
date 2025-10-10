@@ -1,6 +1,9 @@
 # RHELL 10 DHCP IP Configuration:
-# >> cd /etc/NetworkManager/system-connections/
-# nano ens160.nmconnection
+# Edit Conf. file:
+cd /etc/NetworkManager/system-connections/
+nano ens160.nmconnection
+
+# >>>>>>>>>>>>>>>>>>>>>>>>>
 
 [connection]
 id=ens160
