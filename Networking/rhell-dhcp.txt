@@ -1,4 +1,5 @@
->> cd /etc/NetworkManager/system-connections/
+# RHELL 10 static dhpc ip configuration:
+# >> cd /etc/NetworkManager/system-connections/
 # nano ens160.nmconnection
 
 [connection]
