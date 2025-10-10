@@ -1,3 +1,6 @@
+>> cd /etc/NetworkManager/system-connections/
+# nano ens160.nmconnection
+
 [connection]
 id=ens160
 uuid=0332601f-95db-3473-956a-c98055dedcb7
