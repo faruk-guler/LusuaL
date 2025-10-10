@@ -1,4 +1,4 @@
-# RHELL 10 static ip configuration:
+# RHELL 10 Static IP Configuration:
 sudo nmcli device status
 sudo nmtui
 
