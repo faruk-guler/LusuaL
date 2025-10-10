@@ -1,4 +1,4 @@
-# >> /etc/network/interfaces
+# >> /etc/network/interfaces.
 
 # 2 static multi interfaces [Debian 12 Bookworm]
 # This file describes the network interfaces available on your system
@@ -26,5 +26,6 @@ iface enp2s5 inet static
     netmask 255.255.255.0
     # dns-nameservers 192.168.26.2 1.1.1.1 8.8.4.4
     # NO GATEWAY - only local network
+
 
 
