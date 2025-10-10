@@ -6,9 +6,10 @@ sudo nmtui
 cd /etc/NetworkManager/system-connections/
 nano ens160.nmconnection
 
-# Restart Network Service: 
-systemctl restart NetworkManager
-systemctl status NetworkManager
+# Restart Network Service:
+sudo nmcli connection reload
+sudo systemctl restart NetworkManager
+sudo systemctl status NetworkManager
 
 # Show:
 ip a
