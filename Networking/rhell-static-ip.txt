@@ -1,1 +1,13 @@
-#
+sudo nmcli device
+sudo nmtui
+
+# Conf.
+cd /etc/NetworkManager/system-connections/
+nano ens160.nmconnection
+
+
+# Restart Network Service: 
+systemctl restart NetworkManager
+
+# Show:
+ip a
