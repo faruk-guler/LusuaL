@@ -1,8 +1,8 @@
--------------------------------------
-General Hardening by faruk-guler
-https://www.tecmint.com/linux-server-hardening-security-tips/
-.etc
--------------------------------------
+################################################################################
+# General Hardening by faruk-guler
+# https://www.tecmint.com/linux-server-hardening-security-tips/
+# .etc
+################################################################################
 
 # Strong Password Manager:
 >> Setting password policies for users "libpam-pwquality" package
