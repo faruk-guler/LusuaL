@@ -23,7 +23,7 @@ Linux’ta disk bölümleri çeşitli araçlarla oluşturulur, düzenlenir ve y�
 # ESP: Eğer UEFI sistem kullanılıyorsa EFI System Partition (ESP) alanı zorunludur.
 # /home alanında kullanıcıya özel kota ayarlanması önerilir.
 # /var, Mümkünse ayrı bir partition üzerinde tutulmalı. Log patlamalarına ve devasa veri artışlarına karşı sistem korunmalı!
-# /tmp, RAM disk (tmpfs) üzerinde olmalıdır. Mümkünse ayrı bir partition üzerinde tutulmalı. boyutu sınırlandırılmalı ve yetkiler kısıtlandırılmalıdır!
+# "/tmp, RAM disk (tmpfs) üzerinde olmalıdır [VEYA] Mümkünse ayrı bir partition üzerinde tutulmalıdır." Her iki durumdada boyut sınırlandırılıp ve yetki kısıtlandırılmalıdır!
  ⤷ tmpfs /tmp tmpfs defaults,noexec,nosuid,nodev,size=5G 0 0
 
  /dev/sda1       /dev/sda2      /dev/sda3     /dev/sda4      /dev/sd5     /dev/sda6      <-- Genişletilebilir -->
