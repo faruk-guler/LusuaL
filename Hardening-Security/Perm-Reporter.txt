@@ -72,6 +72,10 @@ find /home -name .bash_history -perm /o=r -ls
 # Not: Sudo yetkisine sahip kullanıcı sayısını ve yetki tanımlarını inceler.
 grep -E 'ALL=(ALL)' /etc/sudoers /etc/sudoers.d/*
 
+# 6.1. Boş Parola Kısıtlamasını Kontrol Et
+# Not: Boş parolayla giriş yapılmasını engelleyen kritik PAM (Pluggable Authentication Modules) ayarını kontrol eder.
+grep 'nullok' /etc/pam.d/*
+
 # 5.1. Değişmez (Immutable) Niteliğe Sahip Dosyaları Bul (chattr)
 # Not: chattr +i ile değiştirilemez hale getirilmiş kritik dosyaları listeler. Bu iyi bir uygulamadır, ancak kötü amaçlı yazılımlar da kullanabilir.
 lsattr -R /etc 2>/dev/null | grep 'i'
