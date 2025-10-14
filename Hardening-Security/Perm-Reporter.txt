@@ -88,4 +88,12 @@ lsmod
 # Not: Sistem genelindeki ağ ve bellek güvenliği ayarlarını kontrol eder (Örn: IP spoofing, execshield).
 sysctl -a | grep -E 'net.ipv4.conf.all.rp_filter|kernel.exec-shield|kernel.randomize_va_space'
 
+# 6.4. Kullanıcıların Ev Dizinlerinin İzinlerini Kontrol Et
+# Not: Ev dizinlerinin, kullanıcının kendisi dışında diğer kullanıcılara yazma izni verip vermediğini denetler. (rwx------ veya rwxr-xr-x olmalı, w herkes için olmamalı)
+find /home -maxdepth 1 -type d -perm /o=w -exec ls -ld {} \;
+
+# 6.5. Servis Dosyalarının İzinlerini Kontrol Et
+# Not: Systemd hizmetlerinin (servislerin) yetkisiz kişilerce değiştirilmediğini kontrol eder.
+ls -l /etc/systemd/system/*.service /lib/systemd/system/*.service 2>/dev/null
+
 ################################################################################
