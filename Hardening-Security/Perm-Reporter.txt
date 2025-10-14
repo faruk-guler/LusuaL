@@ -1,16 +1,46 @@
-Find komutu kullanılarak sistemdeki SUID/SGID bitli dosyalar tespit
-edilmeli ve gereksiz olanlar kaldırılmalıdır.
-# find / -type f \( -perm -04000 -o -perm -02000 \)
+################################################################################
+# Linux Güvenlik Denetimi Komutları Listesi
+#
+# Amaç: Sistemdeki potansiyel yetki yükseltme ve erişim zafiyetlerini tespit etmek.
+################################################################################
 
-Herkesin yazmasına açık dosyaları tespit etmek için:
-# find / -perm -2 ! -type l -ls
+# 1.1. SUID/SGID Bitli Dosyaları Tespit Et (Yetki Yükseltme Riski)
+# Not: Bu dosyaların incelenmesi ve gereksiz olanların yetkisinin kaldırılması gerekir.
+find / -type f \( -perm -04000 -o -perm -02000 \)
 
-Tespit edilmesi gereken güvenlik açığı ortaya çıkartabilecek diğer bir
-dosya grubu ise sahibi olmayan dosyalardır.
-# find / \( -nouser -o -nogroup \) –print
+# 1.2. Herkesin Yazmasına Açık Dosyaları Tespit Et (Bütünlük Riski)
+# Not: Bu dosyaların izinleri (o-w) ile kısıtlanmalıdır.
+find / -perm -2 ! -type l -ls
 
-Uzaktan sunuculara giriş sağlayan .rhosts dosyaları da tespit
-edilmelidir:
-# find /home -name .rhosts -print
+# 1.3. Sahibi Olmayan (Orphan) Dosyaları Tespit Et (Temizlik ve Güvenilirlik)
+# Not: Bu dosyalar ya silinmeli ya da mevcut bir kullanıcıya atanmalıdır (chown).
+find / \( -nouser -o -nogroup \) -print
 
+# 1.4. .rhosts Dosyalarını Tespit Et (Eski Uzaktan Erişim Riski)
+# Not: Bu dosyalar, SSH anahtarları kullanılmıyorsa, derhal silinmelidir.
+find /home -name .rhosts -print
+
+# 2.1. Dosya Yeteneklerini (Capabilities) Kontrol Et
+# Not: SUID/SGID'nin modern alternatifi olan ayrıcalıkları bulur.
+getcap -r / 2>/dev/null
+
+# 2.2. ACL (Erişim Kontrol Listesi) Ayarlı Dosyaları Bul
+# Not: Geleneksel izinleri aşan özel kuralları olan dosyaları bulur.
+find / -acl -print
+
+# 2.3. Kritik Dosyaların İzinlerini Kontrol Et (Örnek: /etc/shadow)
+# Not: /etc/shadow sadece 'root' tarafından okunabilir olmalıdır (0000 veya 400).
+ls -l /etc/passwd /etc/shadow
+
+# 2.4. Yazılabilir PATH Dizinlerini Kontrol Et (Yetki Yükseltme Riski)
+# Not: PATH'teki dizinlere normal kullanıcı yazabiliyorsa ciddi risktir.
+find $(echo $PATH | tr ':' ' ') -writable 2>/dev/null
+
+# 3.1. Hangi Kullanıcının Hangi Portu Dinlediğini Bul (Süreç Yetkisi)
+# Not: root tarafından dinlenen gereksiz portlar risk oluşturur.
+ss -tulpn | grep LISTEN
+
+# 3.2. Root Olarak Çalışan Tüm Süreçleri Görüntüle
+# Not: Gereksiz veya bilinmeyen bir servisin root olarak çalışıp çalışmadığını kontrol eder.
+ps aux | grep root
 
