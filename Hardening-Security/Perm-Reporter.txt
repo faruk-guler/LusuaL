@@ -1,5 +1,5 @@
 ################################################################################
-# Linux Güvenlik Denetimi
+# İsim: Linux Güvenlik Denetimi
 # Amaç: Sistemdeki potansiyel yetki yükseltme ve erişim zafiyetleri tespiti
 #
 ################################################################################
