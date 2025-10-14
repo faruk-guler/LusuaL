@@ -1,0 +1,14 @@
+Find komutu kullanılarak sistemdeki SUID/SGID bitli dosyalar tespit
+edilmeli ve gereksiz olanlar kaldırılmalıdır.
+# find / -type f \( -perm -04000 -o -perm -02000 \)
+
+Herkesin yazmasına açık dosyaları tespit etmek için:
+# find / -perm -2 ! -type l -ls
+
+Tespit edilmesi gereken güvenlik açığı ortaya çıkartabilecek diğer bir
+dosya grubu ise sahibi olmayan dosyalardır.
+# find / \( -nouser -o -nogroup \) –print
+
+Uzaktan sunuculara giriş sağlayan .rhosts dosyaları da tespit
+edilmelidir:
+# find /home -name .rhosts -print
