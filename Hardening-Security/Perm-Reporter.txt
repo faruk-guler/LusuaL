@@ -44,3 +44,14 @@ ss -tulpn | grep LISTEN
 # Not: Gereksiz veya bilinmeyen bir servisin root olarak çalışıp çalışmadığını kontrol eder.
 ps aux | grep root
 
+# 4.5. Yapışkan Biti Olmayan Herkese Açık Dizinleri Kontrol Et
+# Not: Herkesin yazabildiği ancak başkasının dosyasını silmesini engelleyen (yapışkan bit) kuralının olmadığı dizinleri arar. /tmp haricinde bu durum zafiyet yaratabilir.
+find / -type d -perm -2 -a ! -perm -1000 -ls
+
+# 5.5. Root'un Ev Dizini İzinlerini Kontrol Et
+# Not: Root'un ev dizini ve SSH anahtarlarının sadece 'root' tarafından erişilebilir olduğunu doğrular.
+ls -ld /root; ls -l /root/.ssh/authorized_keys
+
+# 6.3. Sadece Root'un Sahibi Olduğu Cron İşlerini Görüntüle
+# Not: Sistem genelindeki zamanlanmış görev dosyalarının yetkisiz kişilerce değiştirilmediğini kontrol eder.
+ls -l /etc/cron.d /etc/crontab /etc/anacrontab
