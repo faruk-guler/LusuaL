@@ -12,3 +12,5 @@ dosya grubu ise sahibi olmayan dosyalardır.
 Uzaktan sunuculara giriş sağlayan .rhosts dosyaları da tespit
 edilmelidir:
 # find /home -name .rhosts -print
+
+
