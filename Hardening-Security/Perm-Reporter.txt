@@ -55,3 +55,21 @@ ls -ld /root; ls -l /root/.ssh/authorized_keys
 # 6.3. Sadece Root'un Sahibi Olduğu Cron İşlerini Görüntüle
 # Not: Sistem genelindeki zamanlanmış görev dosyalarının yetkisiz kişilerce değiştirilmediğini kontrol eder.
 ls -l /etc/cron.d /etc/crontab /etc/anacrontab
+
+# 4.1. Boş Parolalı Kullanıcıları Kontrol Et
+# Not: Parolası boş olan, sisteme kolayca giriş yapılabilecek kullanıcıları listeler (ikinci alan '!' veya 'x' değilse).
+awk -F: '($2 == "") {print}' /etc/shadow
+
+# 4.2. UID 0 (Root Yetkisi) Olan Kullanıcıları Kontrol Et
+# Not: Sadece 'root' kullanıcısının UID'si 0 olmalıdır. Birden fazla UID 0 kullanıcısı yetki yükseltme riskidir.
+awk -F: '($3 == "0") {print}' /etc/passwd
+
+# 4.3. Herkesin Okuyabileceği Kabuk Geçmişi Dosyalarını Bul
+# Not: Başka kullanıcıların komut geçmişini okuyabilme zafiyetini arar.
+find /home -name .bash_history -perm /o=r -ls
+
+# 4.4. Sudo Yetkisine Sahip Kullanıcıları Kontrol Et
+# Not: Sudo yetkisine sahip kullanıcı sayısını ve yetki tanımlarını inceler.
+grep -E 'ALL=(ALL)' /etc/sudoers /etc/sudoers.d/*
+
+################################################################################
