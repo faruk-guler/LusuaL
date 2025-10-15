@@ -71,7 +71,7 @@ passwd root
 passwd faruk  # Root and other users
 
 # -- Update or Edit Kernel Files:
-apt get-update
+apt-get update
 apt-get install --reinstall linux-image-$(uname -r)
 
 # -- Repair Systemd Services:
