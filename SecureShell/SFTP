@@ -1,4 +1,0 @@
-sftp -oPort=<port> <user>@<ipaddress/domain>
-sftp -oPort=<port> -oIdentityFile=<path to key> <user>@<ipaddress/domain>
-sftp -o KexAlgorithms=<keyExchangeAlgo> -o HostKeyAlgorithms=<HostKeyAlgoName> -oIdentityFile=<path to key> -oPort=<port> <user>@<domain/ipaddress>
-sftp -oPort=<port> -o KexAlgorithms=diffie-hellman-group14-sha1 -o HostKeyAlgorithms=+ssh-dss -oIdentityfile=<path to key> <user>@<domain/ipaddress>
