@@ -1,9 +1,9 @@
-##Chroot Jail (Change Root)
+## Chroot Jail (Change Root)
 Chroot is a Unix/Linux system call that changes the file system root directory of a process and its child processes.
 It allows you to run a program or user in an "isolated" environment of a specific directory.
 This isolated environment is often called a chroot jail.
 
-#Keep it:
+# Requirements:
 -LiveCD/USB and SystemRescueCD or iso files
 -Shell
 -Root permission privilege
@@ -18,14 +18,14 @@ sda
 └─sda3    (Swap)
 ----------------------------
 
-#Mount Required Partitions (Optional):
+# Mount Required Partitions (Optional):
 sudo mount /dev/sda2 /mnt          # kök dosya sisteminiz /dev/sda2 üzerindeyse
 sudo mount /dev/sda1 /mnt/boot     # Ayrı bir /boot Bölümünüz Varsa
 sudo mount /dev/sda1 /mnt/boot/efi # EFI sistem kullanıyorsanız
 sudo mount /dev/sdXZ /mnt/boot     # /boot için
 sudo mount /dev/sdXA /mnt/home     # /home için
 
-#Mount System Directories (Bind Mounts):
+# Mount System Directories (Bind Mounts):
 sudo mount --bind /dev /mnt/dev
 sudo mount --bind /proc /mnt/proc
 sudo mount --bind /sys /mnt/sys
@@ -37,55 +37,55 @@ sudo chroot /mnt /bin/sh   # farklı bir shell ile
 sudo chroot /mnt/sysimage  # farklı bir dizine geçin
 exit
 
-#-- Repair /boot Directory:
+# -- Repair /boot Directory:
 mkdir -p /boot      #Eğer /boot Dizini Silindiyse/Eksikse
 mkdir -p /boot/efi  # EFI sistem kullanıyorsanız
 
-#-- Repairing Corrupted Bootloader (GRUB):
+# -- Repairing Corrupted Bootloader (GRUB):
 grub-install /dev/sda   # Örnek: grub-install /dev/sda
 grub-install --recheck /dev/sda
 update-grub             # GRUB yapılandırmasını güncelle
 
-#-- Recreates the GRUB configuration file (grub.cfg)
+# -- Recreates the GRUB configuration file (grub.cfg)
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-#-- Fstab Repair:
+# -- Fstab Repair:
 nano /etc/fstab
 
-#-- Repairing Packages:
+# -- Repairing Packages:
 apt update
 apt install --reinstall paket-adı  # Bozuk bir paketi yeniden yükle
 apt upgrade                        # Sistem güncellemesi
 
-#-- Fix Broken Packages:
+# -- Fix Broken Packages:
 sudo dpkg --configure -a
 sudo apt-get install -f
 
-#-- Copying Missing Files from Live Environment:
+# -- Copying Missing Files from Live Environment:
 sudo ldd /bin/bash         # Eksik  dosyaları espit et:
 cp -L /bin/bash /mnt/bin/  # /bin/bash Silinmişse
 cp -r /etc/apt /mnt/etc/   # apt dizini silinmişse
 
-#-- Password Reset:
+# -- Password Reset:
 passwd root
 passwd faruk  # Root and other users
 
-#-- Update or Edit Kernel Files:
+# -- Update or Edit Kernel Files:
 apt get-update
 apt-get install --reinstall linux-image-$(uname -r)
 
-#-- Repair Systemd Services:
+# -- Repair Systemd Services:
 apt install --reinstall systemd   # Debian/Ubuntu
 dnf reinstall systemd             # CentOS/RHEL
 systemctl daemon-reexec           # Sistemd'yi yeniden başlatın:
 
-#-- Synchronize the clock:
+# -- Synchronize the clock:
 hwclock --systohc
 
-#-- Set time zone:
+# -- Set time zone:
 ln -sf /usr/share/zoneinfo/Europe/Istanbul /etc/localtime
 
-#-- Establishing a Network Connection:
+# -- Establishing a Network Connection:
 cp /etc/resolv.conf /mnt/etc/resolv.conf # Chroot içinde ağ gerekiyorsa
 
 # >>> Exit Chroot and Unmount:
@@ -97,7 +97,7 @@ sudo umount /mnt/sys
 sudo umount /mnt/run     # Eğer bağladıysanız
 reboot
 
-#Extras:
+# Extras:
 https://dev.to/aciklab/linux-sistemlerde-chroot-kullanarak-imaj-dosyalarina-baglanma-2npc
 
 ------------------------------------------------------------------
