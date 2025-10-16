@@ -1,4 +1,4 @@
-# Linux Dağıtımları Bağlantıları
+# İndirilebilir Linux Dağıtımları Bağlantıları
 
 ## Debian Tabanlı Dağıtımlar
 - **[Debian Resmi](https://www.debian.org/distrib/)**
