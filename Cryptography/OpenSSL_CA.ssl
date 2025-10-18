@@ -1,1 +1,74 @@
-#
+
+# 1. Gerekli Dizin Yapısını Oluşturun:
+mkdir -p myCA/{certs,crl,newcerts,private}
+chmod 700 myCA/private
+touch myCA/index.txt
+echo 1000 > myCA/serial
+
+# 2. OpenSSL Yapılandırma Dosyası (openssl.cnf):
+[ ca ]
+default_ca = CA_default
+
+[ CA_default ]
+dir             = ./myCA
+certs           = $dir/certs
+crl_dir         = $dir/crl
+new_certs_dir   = $dir/newcerts
+database        = $dir/index.txt
+serial          = $dir/serial
+RANDFILE        = $dir/private/.rand
+
+private_key     = $dir/private/ca.key.pem
+certificate     = $dir/certs/ca.cert.pem
+
+default_days    = 375
+default_crl_days= 30
+default_md      = sha256
+preserve        = no
+email_in_dn     = no
+nameopt         = default_ca
+certopt         = default_ca
+policy          = policy_strict
+
+[ policy_strict ]
+countryName             = match
+stateOrProvinceName     = match
+organizationName        = match
+organizationalUnitName  = optional
+commonName              = supplied
+emailAddress            = optional
+
+[ req ]
+default_bits        = 4096
+distinguished_name  = req_distinguished_name
+string_mask         = utf8only
+default_md          = sha256
+x509_extensions     = v3_ca
+
+[ req_distinguished_name ]
+countryName                     = Ülke Kodu (örn. TR)
+stateOrProvinceName             = İl (örn. Istanbul)
+localityName                    = İlçe (örn. Kadikoy)
+organizationName                = Kurum Adı (örn. MyCompany)
+organizationalUnitName          = Birim (örn. IT)
+commonName                      = CA Adı (örn. MyRootCA)
+
+[ v3_ca ]
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always,issuer
+basicConstraints = critical, CA:true
+keyUsage = critical, digitalSignature, cRLSign, keyCertSign
+
+# 3. Kök CA Özel Anahtarını Oluşturun:
+openssl genrsa -aes256 -out myCA/private/ca.key.pem 4096
+chmod 400 myCA/private/ca.key.pem
+
+# 4. Kök CA Sertifikasını Oluşturun:
+openssl req -config myCA/openssl.cnf \
+      -key myCA/private/ca.key.pem \
+      -new -x509 -days 7300 -sha256 \
+      -extensions v3_ca \
+      -out myCA/certs/ca.cert.pem
+
+✅ Artık CA Hazır!
+Bu CA ile artık diğer sertifikaları (sunucu, istemci vb.) imzalayabilirsiniz.
