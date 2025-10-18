@@ -1,4 +1,11 @@
 
+## OpenSSL ile CA (Certificate Authority)
+
+OpenSSL, açık kaynaklı bir kriptografi kütüphanesi ve araç setidir.
+Kendi kendinize bir kök CA (Root CA) veya ara CA (Intermediate CA) oluşturmanıza olanak tanır.
+Bu genellikle test ortamları, iç ağlar (intranet), geliştirme amaçlı TLS/SSL sertifikaları veya
+kendi altyapınızda güvenilen özel sertifikalar oluşturmak için kullanılır.
+
 # 1. Gerekli Dizin Yapısını Oluşturun:
 mkdir -p myCA/{certs,crl,newcerts,private}
 chmod 700 myCA/private
