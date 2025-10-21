@@ -185,10 +185,10 @@ sudo timedatectl set-timezone Turkey
 <strong>#Configure to Firewall</strong>
 sudo ufw allow from any to any port 123 proto udp
 
-<strong>#Check to Firewall</strong>
+<strong>#Check to Firewall Port</strong>
 netstat -nu | grep 123
-nc -zuv <NTP_Sunucu_IP_veya_Alan_Adı> 123
-ntpdate -q <NTP_Sunucu_IP_veya_Alan_Adı>
+nc -zuv <NTP_Sunucu_IP_veya_Alan_Adi> 123
+ntpdate -q <NTP_Sunucu_IP_veya_Alan_Adi>
 
 <strong>#systemd-timesyncd servisini yeniden başlat:</strong>
 sudo systemctl restart systemd-timesyncd
