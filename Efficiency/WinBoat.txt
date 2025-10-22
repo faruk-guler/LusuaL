@@ -1,1 +1,9 @@
+# WinBoat
+
+WinBoat is an Electron app which allows you to run Windows apps on Linux using a containerized approach.
+Windows runs as a VM inside a Docker container, we communicate with it using the WinBoat Guest Server to retrieve data we need from Windows.
+For compositing applications as native OS-level windows, we use FreeRDP together with Windows's RemoteApp protocol.
+
+
 https://github.com/TibixDev/winboat
+
