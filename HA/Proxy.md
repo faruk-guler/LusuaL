@@ -6,7 +6,7 @@ Türkçedeki "vekil" kelimesi aslında tam olarak ne yaptığını açıklar: Si
 
 Elbette, proxy türlerini temel kategorilere ayırarak, her biri için özet cümlelerle listeliyorum:
 
-# 1. Yönüne Göre (En Temel Ayrım)
+# Yönüne Göre (En Temel Ayrım)
 ### Forward Proxy (İleri Yönlü Proxy): Sizin (istemcinin) internete çıkmak için kullandığı ve kimliğinizi gizleyen vekil sunucudur.
 
 ### Reverse Proxy (Ters Yönlü Proxy): Web sitesinin (sunucunun) önünde duran, gelen istekleri karşılayan ve sunucuyu koruyan vekil sunucudur.
