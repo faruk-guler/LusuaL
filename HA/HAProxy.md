@@ -25,8 +25,25 @@ sudo systemctl restart haproxy
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
 nano /etc/haproxy/haproxy.cfg
 ```
+# Load Balancing Algorithims:
+```sh
+# Round Robin (varsayılan)
+balance roundrobin
 
-## Conf. File:
+# Least Connection (en az bağlantı sayısı olan sunucuya)
+balance leastconn
+
+# Source IP Hash (aynı IP'den gelen istekler aynı sunucuya)
+balance source
+
+# URI Hash (aynı URL'ler aynı sunucuya)
+balance uri
+
+# Header Hash (belirli bir HTTP header'a göre)
+balance hdr(User-Agent)
+```
+
+## Conf. File: [URI Hash]
 ```sh
 global
     log /dev/log local0
