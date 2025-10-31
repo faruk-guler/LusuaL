@@ -45,42 +45,36 @@ balance hdr(User-Agent)
 
 ## Conf. File: [balance roundrobin]
 ```sh
-global
-    log /dev/log local0
-    log /dev/log local1 notice
-    daemon
-    maxconn 2000
-    user haproxy
-    group haproxy
-    tune.ssl.default-dh-param 2048
-
-defaults
-    log     global
-    mode    http
-    option  httplog
-    option  dontlognull
-    timeout connect 5s
-    timeout client  30s
-    timeout server  30s
-    retries 3
-
 frontend http_front
     bind *:80
-    default_backend web_backend
+    mode http
 
-backend web_backend
+    # Domain bazlı ACL
+    acl is_haliyikama hdr(host) -i haliyikama.com
+    acl is_guler      hdr(host) -i guler.com
+
+    use_backend haliyikama_backend if is_haliyikama
+    use_backend guler_backend      if is_guler
+
+    # Varsayılan (hiçbiri eşleşmezse)
+    default_backend guler_backend
+
+backend haliyikama_backend
     balance roundrobin
     option httpchk GET /
-    server web1 192.168.1.101:80 check
-    server web2 192.168.1.102:80 check
+    server h1 192.168.1.11:80 check
+    server h2 192.168.1.12:80 check
+    server h3 192.168.1.13:80 check
 
-listen stats
-    bind *:8080
-    mode http
-    stats enable
-    stats uri /stats
-    stats refresh 10s
-    stats auth admin:1234
+backend guler_backend
+    balance roundrobin
+    option httpchk GET /
+    server g1 192.168.1.21:80 check
+    server g2 192.168.1.22:80 check
+    server g3 192.168.1.23:80 check
+    server g4 192.168.1.24:80 check
+    server g5 192.168.1.25:80 check
+
 ```
 
 ## SSL Termination:
