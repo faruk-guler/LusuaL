@@ -117,9 +117,11 @@ sudo systemctl status haproxy
 ```sh
 # Conf. File: /etc/rsyslog.d/49-haproxy.conf
 > local0.* /var/log/haproxy.log
+sudo systemctl enable --now rsyslog
 sudo systemctl restart rsyslog
 sudo systemctl status rsyslog
-sudo systemctl enable --now rsyslog
+tail -f /var/log/haproxy.log
+grep "503" /var/log/haproxy.log
 ```
 
 - https://www.haproxy.org/
