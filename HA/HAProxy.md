@@ -126,7 +126,7 @@ sudo ufw reload
 ```
 
 # Syslog:
-# Conf. File: /etc/rsyslog.d/49-haproxy.conf
+## Conf. File: /etc/rsyslog.d/49-haproxy.conf
 > local0.* /var/log/haproxy.log
 sudo systemctl enable --now rsyslog
 sudo systemctl restart rsyslog
