@@ -66,7 +66,7 @@ listen stats
     stats auth admin:1234
 ```
 
-## SSL Activated:
+## SSL Termination:
 ```sh
 #
 frontend https_front
@@ -74,18 +74,20 @@ frontend https_front
     default_backend http_back
 #
 
-# Convert:
+# Convert & Perm:
 cat your_cert.crt your_key.key > /etc/ssl/private/haproxy.pem
+chmod 600 /etc/ssl/private/example.com.pem
 ```
 
-## HAProxy Statics GUI: [http://server_ip:8080/stats]
+## HAProxy Statics GUI: [http://server_ip:8480/stats]
 ```sh
 listen stats
-    bind *:8080
+    bind *:8404
     stats enable
-    stats uri /stats
+    stats uri /
     stats refresh 10s
-    stats auth admin:admin123
+    stats admin if TRUE
+    stats auth admin:parola123
 ```
 
 ## Conf. Validation:
