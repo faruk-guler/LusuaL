@@ -6,14 +6,14 @@ Türkçedeki "vekil" kelimesi aslında tam olarak ne yaptığını açıklar: Si
 
 Elbette, proxy türlerini temel kategorilere ayırarak, her biri için özet cümlelerle listeliyorum:
 
-# Yönüne Göre (En Temel Ayrım)
+## Yönüne Göre (En Temel Ayrım)
 ### Forward Proxy (İleri Yönlü Proxy):
 Sizin (istemcinin) internete çıkmak için kullandığı ve kimliğinizi gizleyen vekil sunucudur.
 
 ### Reverse Proxy (Ters Yönlü Proxy):
 Web sitesinin (sunucunun) önünde duran, gelen istekleri karşılayan ve sunucuyu koruyan vekil sunucudur.
 
-# 2. Gizlilik Seviyesine Göre (Anonimlik)
+## 2. Gizlilik Seviyesine Göre (Anonimlik)
 ### Transparent Proxy (Şeffaf Proxy):
 Kimliğinizi (IP adresinizi) gizlemez, proxy olduğunu belli eder; genellikle filtreleme veya önbellekleme (caching) için kullanılır.
 
@@ -23,7 +23,7 @@ Kimliğinizi gizler, ancak hedef sunucuya "ben bir proxy'yim" bilgisini gönderi
 ### High Anonymity (Elite) Proxy (Yüksek Gizlilikli Proxy):
 Hem kimliğinizi (IP) gizler hem de proxy olduğunu belli etmez; en güvenli gizlilik seviyesini sunar.
 
-# 3. Protokole Göre (Teknik Ayrım)
+## 3. Protokole Göre (Teknik Ayrım)
 ### HTTP Proxy:
 Sadece web trafiğini (HTTP ve HTTPS protokolleri) yönlendirmek için tasarlanmıştır.
 
@@ -33,7 +33,7 @@ Protokolden bağımsızdır; web, oyun, e-posta, torrent gibi her türlü intern
 ### SSL Proxy (HTTPS Proxy):
 Şifreli SSL/TLS trafiğini çözebilen, inceleyebilen ve yeniden şifreleyebilen (genellikle güvenlik duvarlarında kullanılan) gelişmiş bir proxy'dir.
 
-# 4. IP Kaynağına ve Kullanım Amacına Göre
+## 4. IP Kaynağına ve Kullanım Amacına Göre
 ### Datacenter Proxy (Veri Merkezi Proxy):
 Bir veri merkezindeki sunuculardan alınan, çok hızlı ancak kolayca "proxy" olarak tanınabilen IP adresleridir.
 
