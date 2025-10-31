@@ -1,6 +1,5 @@
 # HAProxy:
-HAProxy, açılımı High Availability Proxy olan, açık kaynaklı bir yük dengeleyici (load balancer) ve ters proxy (reverse proxy) yazılımıdır.
-Özellikle web sunucuları, API servisleri ve mikroservis mimarilerinde yüksek performans, güvenilirlik ve ölçeklenebilirlik sağlamak için kullanılır.
+HAProxy, short for High Availability Proxy, is an open-source load balancer and reverse proxy software. It is used primarily to provide high performance, reliability, and scalability in web servers, API services, and microservices architectures.
 
 ## Install:
 ```sh
