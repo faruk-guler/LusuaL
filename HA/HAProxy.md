@@ -51,13 +51,13 @@ frontend http_front
 
     # Domain bazlı ACL
     acl is_haliyikama hdr(host) -i haliyikama.com
-    acl is_guler      hdr(host) -i guler.com
+    acl is_farukguler hdr(host) -i farukguler.com
 
     use_backend haliyikama_backend if is_haliyikama
-    use_backend guler_backend      if is_guler
+    use_backend farukguler_backend if is_farukguler
 
     # Varsayılan (hiçbiri eşleşmezse)
-    default_backend guler_backend
+    default_backend farukguler_backend
 
 backend haliyikama_backend
     balance roundrobin
@@ -66,7 +66,7 @@ backend haliyikama_backend
     server h2 192.168.1.12:80 check
     server h3 192.168.1.13:80 check
 
-backend guler_backend
+backend farukguler_backend
     balance roundrobin
     option httpchk GET /
     server g1 192.168.1.21:80 check
