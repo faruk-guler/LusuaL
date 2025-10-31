@@ -1,7 +1,7 @@
 # Proxy 
 
 ### Proxy Server
-#### Device/Service which acts as intermediate gateway by which one device can interact with other ones is called as a Proxy
+Proxy (vekil sunucu), istemci ile hedef sunucu arasında aracı görevi gören bir sunucudur. İstemcinin isteklerini alır, kendi adına hedef sunucuya iletir ve gelen yanıtı istemciye geri döndürür.
 
 - Proxy server provides anonymity to both the sender and receiver
 - Used to hide IP address
