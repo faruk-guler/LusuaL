@@ -86,7 +86,7 @@ frontend https_front
 #<
 
 # Convert & Perm:
-cat your_cert.crt your_key.key > /etc/ssl/private/haproxy.pem
+cat your_cert.crt your_key.key > /etc/ssl/private/example.com.pem
 chmod 600 /etc/ssl/private/example.com.pem
 ```
 
