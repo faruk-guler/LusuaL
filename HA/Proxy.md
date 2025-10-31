@@ -9,6 +9,7 @@ Sizin (istemcinin) internete çıkmak için kullandığı ve kimliğinizi gizley
 
 ##### Reverse Proxy (Ters Yönlü Proxy):
 Web sitesinin (sunucunun) önünde duran, gelen istekleri karşılayan, sunucuyu koruyan kimliğini gizleyen vekil sunucudur.
+İleri ve geri proxy arasındaki fark ince ama önemlidir. Basitçe özetlemek gerekirse, ileri proxy bir istemcinin önünde bulunur ve hiçbir kaynak sunucunun o istemciyle doğrudan iletişim kurmamasını sağlar. Ters proxy ise kaynak sunucunun önünde bulunur ve hiçbir istemcinin o kaynak sunucuyla doğrudan iletişim kurmamasını sağlar.
 
 >##### Transparent Proxy (Şeffaf Proxy):
 Kimliğinizi (IP adresinizi) gizlemez, proxy olduğunu belli eder; genellikle filtreleme veya önbellekleme (caching) için kullanılır.
