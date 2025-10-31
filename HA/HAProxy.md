@@ -7,7 +7,7 @@ sudo apt update
 sudo apt upgrade -y
 apt show haproxy
 sudo apt install haproxy
-sudo apt install haproxy=3.2.*
+sudo apt install haproxy=3.2.\*
 haproxy -v
 sudo journalctl -u haproxy -f
 ```
