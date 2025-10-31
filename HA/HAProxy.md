@@ -82,7 +82,7 @@ backend farukguler_backend
 #>
 frontend https_front
     bind *:443 ssl crt /etc/ssl/private/haproxy.pem
-    default_backend http_back
+    default_backend http_back*********
 #<
 
 # Convert & Perm:
@@ -90,12 +90,12 @@ cat your_cert.crt your_key.key > /etc/ssl/private/haproxy.pem
 chmod 600 /etc/ssl/private/example.com.pem
 ```
 
-## HAProxy Statics GUI: [http://server_ip:8480/stats]
+## HAProxy Statics GUI: [http://server_ip:8404/stats]
 ```sh
 listen stats
     bind *:8404
     stats enable
-    stats uri /
+    stats uri /stats
     stats refresh 10s
     stats admin if TRUE
     stats auth admin:parola123
