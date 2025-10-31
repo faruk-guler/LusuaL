@@ -8,7 +8,7 @@ Elbette, proxy türlerini temel kategorilere ayırarak, her biri için özet cü
 Sizin (istemcinin) internete çıkmak için kullandığı ve kimliğinizi gizleyen vekil sunucudur.
 
 ##### Reverse Proxy (Ters Yönlü Proxy):
-Web sitesinin (sunucunun) önünde duran, gelen istekleri karşılayan, sunucuyu koruyan kimliği gizleyen vekil sunucudur.
+Web sitesinin (sunucunun) önünde duran, gelen istekleri karşılayan, sunucuyu koruyan kimliğini gizleyen vekil sunucudur.
 
 >##### Transparent Proxy (Şeffaf Proxy):
 Kimliğinizi (IP adresinizi) gizlemez, proxy olduğunu belli eder; genellikle filtreleme veya önbellekleme (caching) için kullanılır.
