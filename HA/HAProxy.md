@@ -113,8 +113,19 @@ sudo haproxy -c -f /etc/haproxy/haproxy.cfg
 sudo systemctl status haproxy
 ```
 
-# Syslog:
+## Firewall:
 ```sh
+sudo firewall-cmd --permanent --add-port=80/tcp
+sudo firewall-cmd --permanent --add-port=8404/tcp
+sudo firewall-cmd --reload
+
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 8080/tcp
+sudo ufw reload
+```
+
+# Syslog:
 # Conf. File: /etc/rsyslog.d/49-haproxy.conf
 > local0.* /var/log/haproxy.log
 sudo systemctl enable --now rsyslog
@@ -123,6 +134,10 @@ sudo systemctl status rsyslog
 tail -f /var/log/haproxy.log
 grep "503" /var/log/haproxy.log
 ```
+        +-----------------+
+Client →|   HAProxy LB    |→ Server 1 (192.168.1.101)
+        | (Frontend:80)   |→ Server 2 (192.168.1.102)
+        +-----------------+
 
 - https://www.haproxy.org/
 - https://haproxy.debian.net/
