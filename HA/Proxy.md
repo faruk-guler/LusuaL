@@ -31,14 +31,14 @@ Protokolden bağımsızdır; web, oyun, e-posta, torrent gibi her türlü intern
 >##### Datacenter Proxy (Veri Merkezi Proxy):
 Bir veri merkezindeki sunuculardan alınan, çok hızlı ancak kolayca "proxy" olarak tanınabilen IP adresleridir.
 
-> ##### Residential Proxy (Konut Proxy):
+>##### Residential Proxy (Konut Proxy):
 Gerçek ev interneti (ISS) kullanıcılarına ait IP adreslerini kullandırarak hedef siteler tarafından engellenmeyi zorlaştırır.
 
-> ##### Mobile Proxy (Mobil Proxy):
+>##### Mobile Proxy (Mobil Proxy):
 Sizi gerçek bir mobil (4G/5G) operatör ağından bağlanıyormuş gibi gösteren IP adresleri kullanır.
 
-> ##### Caching Proxy (Önbellekleyici Proxy):
+>##### Caching Proxy (Önbellekleyici Proxy):
 Sık erişilen web içeriğini (resimler, siteler) hafızasında tutarak internet erişimini hızlandıran ve bant genişliğini azaltan bir proxy'dir.
 
-> ##### Web Proxy (Site Üzerinden Proxy):
+>##### Web Proxy (Site Üzerinden Proxy):
 Tarayıcınıza veya programınıza ayar yapmadan, sadece bir web sitesi üzerinden (genellikle bir form aracılığıyla) çalışan basit proxy hizmet
