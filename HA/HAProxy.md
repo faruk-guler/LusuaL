@@ -42,7 +42,7 @@ balance uri
 balance hdr(User-Agent)
 ```
 
-## Conf. File: [roundrobin]
+## Conf. File: [balance roundrobin]
 ```sh
 global
     log /dev/log local0
