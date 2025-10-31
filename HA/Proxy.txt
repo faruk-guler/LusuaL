@@ -1,1 +1,6 @@
 
+
+Forward Proxy (İleri Vekil Sunucu)
+
+
+Reverse Proxy (Ters Vekil Sunucu)
