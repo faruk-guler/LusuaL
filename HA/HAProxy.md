@@ -1,4 +1,4 @@
-# HAProxy:
+# HAProxy Full:
 HAProxy, short for High Availability Proxy, is an open-source load balancer and reverse proxy software. It is used primarily to provide high performance, reliability, and scalability in web servers, API services, and microservices architectures.
 
 ## Install:
