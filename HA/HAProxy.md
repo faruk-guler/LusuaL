@@ -127,6 +127,7 @@ sudo ufw reload
 
 # Syslog:
 ## Conf. File: /etc/rsyslog.d/49-haproxy.conf
+```sh
 > local0.* /var/log/haproxy.log
 sudo systemctl enable --now rsyslog
 sudo systemctl restart rsyslog
@@ -134,10 +135,12 @@ sudo systemctl status rsyslog
 tail -f /var/log/haproxy.log
 grep "503" /var/log/haproxy.log
 ```
+```sh
         +-----------------+
 Client →|   HAProxy LB    |→ Server 1 (192.168.1.101)
         | (Frontend:80)   |→ Server 2 (192.168.1.102)
         +-----------------+
+```
 
 - https://www.haproxy.org/
 - https://haproxy.debian.net/
