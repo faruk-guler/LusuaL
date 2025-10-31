@@ -85,11 +85,11 @@ listen stats
 
 ## SSL Termination:
 ```sh
-#
+#>
 frontend https_front
     bind *:443 ssl crt /etc/ssl/private/haproxy.pem
     default_backend http_back
-#
+#<
 
 # Convert & Perm:
 cat your_cert.crt your_key.key > /etc/ssl/private/haproxy.pem
