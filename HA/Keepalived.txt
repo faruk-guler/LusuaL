@@ -17,3 +17,7 @@ Keepalived Kurulumu:
 sudo apt install keepalived
 keepalived --version
 
+
+Keepalived Conf.: [ Master and Backup Servers)
+sudo nano /etc/keepalived/keepalived.conf 
+
