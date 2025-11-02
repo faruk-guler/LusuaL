@@ -242,7 +242,7 @@ listen stats
 
 The HAProxy configuration file is a versatile and powerful way to control HAProxy’s behavior, enabling detailed management of load balancing, proxying, and health checking. By understanding and properly configuring sections such as `global`, `defaults`, `frontend`, `backend`, and `listen`, administrators can build robust, scalable, and secure HAProxy deployments that meet the needs of diverse network environments.
 
-## Son Bölüm : HAProxy için Yüksek Erişilebilirlik (HA) Mimarisi (Keepalived vs. ile) yapılması gerekmektedir gerekmektedir.
+## Uyarı : Bu doküman single nod içindir. HAProxy için Yüksek Erişilebilirlik (HA) Mimarisi (Keepalived vb. ile) yapılması gerekmektedir.
 
 - https://www.haproxy.org/
 - https://haproxy.debian.net/
