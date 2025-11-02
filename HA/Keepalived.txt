@@ -11,3 +11,9 @@ Server and IP Plane:
 - HAProxy-2 (BACKUP):  192.168.1.11
 - Virtual IP (VIP):    192.168.1.100
 - Backend Servers:     192.168.1.101-105
+
+
+Keepalived Kurulumu:
+sudo apt install keepalived
+keepalived --version
+
