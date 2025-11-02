@@ -4,3 +4,10 @@ yüksek erişilebilirlik (high availability) ve yük dengeleme (load balancing) 
 yüksek erişilebilirlik sağlayan sanal IP (VIP) adreslerinin otomatik olarak bir sunucudan diğerine devretmesini (failover) sağlar.
 
 
+
+Server and IP Plane:
+
+- HAProxy-1 (MASTER):  192.168.1.10
+- HAProxy-2 (BACKUP):  192.168.1.11
+- Virtual IP (VIP):    192.168.1.100
+- Backend Servers:     192.168.1.101-105
