@@ -17,7 +17,21 @@ Keepalived Kurulumu:
 sudo apt install keepalived
 keepalived --version
 
+Services:
+sudo systemctl enable keepalived
+sudo systemctl start keepalived
+sudo systemctl stop keepalived
+sudo systemctl status haproxy
+sudo journalctl -u keepalived -f
 
 Keepalived Conf.: [ Master and Backup Servers)
 sudo nano /etc/keepalived/keepalived.conf 
+
+
+Keepalived Logs:
+sudo journalctl -u keepalived -f
+sudo journalctl -u keepalived -n 100
+tail -f /var/log/keepalived-state.log
+
+Keepalived vs:
 
