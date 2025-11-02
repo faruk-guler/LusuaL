@@ -5,7 +5,7 @@ The `nmtui` and `nmcli` commands are used for managing network connections in Li
 
 
 ## **Installation**  
-On **RHEL/CentOS/Fedora**:  xx
+On **RHEL/CentOS/Fedora**:  
 ```bash
 yum install NetworkManager-tui -y
 ```
