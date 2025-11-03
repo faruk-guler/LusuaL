@@ -80,6 +80,7 @@ quorum {
 
 ## Test Failover:
 ```sh
+systemctl stop httpd
 systemctl stop corosync
 pcs status
 ```
@@ -118,6 +119,7 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.log
 ```
+
 
 
 
