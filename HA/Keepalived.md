@@ -3,7 +3,7 @@ Yüksek erişilebilirlik (high availability) ve yük dengeleme (load balancing) 
 Özellikle Linux sistemlerinde yaygın olarak kullanılır ve VRRP (Virtual Router Redundancy Protocol) protokolünü uygulayarak,
 yüksek erişilebilirlik sağlayan sanal IP (VIP) adreslerinin otomatik olarak bir sunucudan diğerine devretmesini (failover) sağlar.
 
-Server and IP Plane:
+## Server and IP Plane:
 ```sh
 - HAProxy-1 (MASTER):  192.168.1.10
 - HAProxy-2 (BACKUP):  192.168.1.11
@@ -90,5 +90,6 @@ sudo journalctl -u keepalived -f
 sudo journalctl -u keepalived -n 100
 tail -f /var/log/keepalived-state.log
 ```
+
 
 
