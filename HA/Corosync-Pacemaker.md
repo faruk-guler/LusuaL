@@ -24,10 +24,24 @@ sudo passwd hacluster
 
 # Create Cluster:
 ```sh
+pcs host auth Node1 Node2 -u hacluster -p <yourpasss>
 pcs cluster setup --name ha_cluster node1 node
 pcs cluster start --all
 pcs cluster enable --all
-pcs status
 ```
+
+## Status:
+```sh
+pcs status
+pcs resource status
+```
+
+# Firewall:
+```sh
+firewall-cmd --permanent --add-service=high-availability
+firewall-cmd –reload
+```
+
+
 
 
