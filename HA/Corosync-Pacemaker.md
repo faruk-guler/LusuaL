@@ -20,6 +20,7 @@ Birlikte çalışarak sistemdeki servislerin veya uygulamaların otomatik olarak
 # /etc/hosts (all nodes)
 192.168.1.11 node1
 192.168.1.12 node2
+192.168.1.100 vip
 ```
 
 ## Install:
@@ -98,6 +99,7 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.log
 ```
+
 
 
 
