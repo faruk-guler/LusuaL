@@ -55,9 +55,27 @@ pcs cluster enable --all
 ## Corosync Conf:
 File: /etc/corosync/corosync.conf
 ```sh
-------
----
------
+totem {
+    version: 2
+    secauth: off
+    cluster_name: ha_cluster
+    transport: udpu
+}
+
+nodelist {
+    node {
+        ring0_addr: node1
+        nodeid: 1
+    }
+    node {
+        ring0_addr: node2
+        nodeid: 2
+    }
+}
+
+quorum {
+    provider: corosync_votequorum
+}
 ```
 
 ## Test Failover:
@@ -99,6 +117,7 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.log
 ```
+
 
 
 
