@@ -103,6 +103,7 @@ sudo ufw allow 5405/udp   # Corosync
 sudo ufw allow 2224/tcp   # pcsd
 sudo ufw allow 3121/tcp   # Web UI
 sudo ufw allow 80/tcp     # Apache
+sudo ufw allow 443/tcp     # Apache
 ```
 
 ## Logs:
@@ -117,6 +118,7 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.log
 ```
+
 
 
 
