@@ -59,6 +59,11 @@ File: /etc/corosync/corosync.conf
 -----
 ```
 
+## Test Failover:
+```sh
+systemctl stop corosync
+```
+
 
 ## Status:
 ```sh
@@ -67,6 +72,8 @@ pcs resource status
 pcs resource show
 pcs status nodes
 pcs status cluster
+pcs property list
+pcs constraint list
 ```
 
 ## Firewall:
@@ -86,3 +93,4 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.lo
 ```
+
