@@ -3,8 +3,8 @@ Yüksek performanslı, açık kaynaklı bir web sunucusu olmasının yanı sıra
 
 Server and IP Plane:
 ```sh
-- http://192.168.88.135:8080
-- http://192.168.88.136:8081
+http://192.168.88.135:8080 ➝ http://project1.cali.web
+http://192.168.88.136:8081 ➝ http://project2.cali.web
 ```
 
 ## Install:
