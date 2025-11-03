@@ -22,14 +22,15 @@ sudo systemctl enable pcsd
 sudo systemctl start pcsd
 ```
 
-# Create User:
+# Create User and Auth:
 ```sh
 sudo passwd hacluster
+pcs host auth Node1 Node2 -u hacluster -p <yourpasss>
+pcs cluster auth node1 node2 -u hacluster -p şifre
 ```
 
 # Create Cluster:
 ```sh
-pcs host auth Node1 Node2 -u hacluster -p <yourpasss>
 pcs cluster setup --name ha_cluster node1 node
 pcs cluster start --all
 pcs cluster enable --all
@@ -60,6 +61,7 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.lo
 ```
+
 
 
 
