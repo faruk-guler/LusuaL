@@ -15,6 +15,13 @@ Birlikte çalışarak sistemdeki servislerin veya uygulamaların otomatik olarak
 - Service: Apache web sunucusu
 ```
 
+## /etc/hosts
+```sh
+# /etc/hosts (all nodes)
+192.168.1.11 node1
+192.168.1.12 node2
+```
+
 ## Install:
 ```sh
 # CentOS/RHEL
@@ -79,6 +86,7 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.lo
 ```
+
 
 
 
