@@ -76,10 +76,19 @@ vrrp_instance VI_1 {
 sudo ufw allow 112
 ```
 
+## Notification Scripts:
+File: /etc/keepalived/scripts/notify_master.sh
+```sh
+-------------
+-------------
+-------------
+```
+
 ## Logs:
 ```sh
 sudo journalctl -u keepalived -f
 sudo journalctl -u keepalived -n 100
 tail -f /var/log/keepalived-state.log
 ```
+
 
