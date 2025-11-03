@@ -37,7 +37,7 @@ sudo systemctl enable pcsd
 sudo systemctl start pcsd
 ```
 
-# Create User and Auth:
+## Create User and Auth:
 ```sh
 sudo passwd hacluster
 pcs host auth Node1 Node2 -u hacluster -p <yourpasss>
@@ -69,13 +69,13 @@ pcs status nodes
 pcs status cluster
 ```
 
-# Firewall:
+## Firewall:
 ```sh
 sudo ufw allow from 192.168.1.0/24 to any port 5404,5405 proto udp
 sudo ufw allow from 192.168.1.0/24 to any port 3121,21064 proto tcp
 ```
 
-# Logs:
+## Logs:
 ```sh
 # Corosync
 sudo journalctl -u corosync -f
@@ -86,14 +86,3 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.lo
 ```
-
-
-
-
-
-
-
-
-
-
-
