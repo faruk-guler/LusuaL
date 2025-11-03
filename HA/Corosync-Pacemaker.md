@@ -37,12 +37,21 @@ pcs host auth Node1 Node2 -u hacluster -p <yourpasss>
 pcs cluster auth node1 node2 -u hacluster -p şifre
 ```
 
-# Create Cluster:
+## Create Cluster:
 ```sh
 pcs cluster setup --name ha_cluster node1 node
 pcs cluster start --all
 pcs cluster enable --all
 ```
+
+## Corosync Conf:
+File: /etc/corosync/corosync.conf
+```sh
+------
+---
+-----
+```
+
 
 ## Status:
 ```sh
@@ -70,6 +79,7 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.lo
 ```
+
 
 
 
