@@ -15,9 +15,14 @@ Server and IP Plane:
 
 ## Install:
 ```sh
+-Debian / Ubuntu:
 sudo apt update
 sudo apt install keepalived
 sudo keepalived --version
+
+-RHEL:
+sudo dnf install epel-release -y
+sudo dnf install keepalived -y
 ```
 
 ## Services:
@@ -68,7 +73,7 @@ vrrp_instance VI_1 {
 
 ## Firewall:
 ```sh
-sudo ufw allow proto vrrp
+sudo ufw allow 112
 ```
 
 ## Logs:
