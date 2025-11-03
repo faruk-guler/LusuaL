@@ -2,6 +2,7 @@
 
 Corosync: Düğümler arasında iletişimi sağlar.
 Pacemaker: Kaynakların durumunu izler ve gerektiğinde failover işlemini gerçekleştirir.
+Pcs: Pacemaker ve Corosync kümelerini kolayca kurmak, yapılandırmak ve yönetmek için kullanılan bir yönetim aracı. (CLI + Web UI).
 
 ## Install:
 ```sh
@@ -24,4 +25,6 @@ sudo passwd hacluster
 pcs cluster setup --name ha_cluster node1 node
 pcs cluster start --all
 pcs cluster enable --all
+pcs status
 ```
+
