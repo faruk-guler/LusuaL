@@ -22,6 +22,11 @@ File: /etc/nginx/conf.d/
 ```sh
 ```
 
+## Firewall:
+```sh
+sudo ufw allow 'Nginx Full' # 80 and 443
+```
+
 ## Logs:
 ```sh
 sudo tail -f /var/log/nginx/error.log
