@@ -9,7 +9,11 @@ Birlikte çalışarak sistemdeki servislerin veya uygulamaların otomatik olarak
 
 ## Install:
 ```sh
-sudo apt install corosync pacemaker pcs -y
+# CentOS/RHEL
+yum install pacemaker corosync pcs -y
+
+# Debian/Ubuntu
+apt-get install pacemaker corosync pcs -y
 ```
 
 ## Services:
@@ -56,6 +60,7 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.lo
 ```
+
 
 
 
