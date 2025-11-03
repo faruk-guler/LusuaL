@@ -89,6 +89,7 @@ pcs status
 ## Status:
 ```sh
 pcs status
+pcs status --full
 pcs resource status
 pcs resource show
 pcs status nodes
@@ -96,6 +97,7 @@ pcs status cluster
 pcs property list
 pcs constraint list
 crm_mon -A -1
+crm_mon -f
 ```
 
 ## Firewall:
@@ -119,6 +121,7 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.log
 ```
+
 
 
 
