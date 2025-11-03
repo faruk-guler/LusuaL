@@ -7,7 +7,13 @@ Birlikte çalışarak sistemdeki servislerin veya uygulamaların otomatik olarak
 - Pcs: Pacemaker ve Corosync kümelerini kolayca kurmak, yapılandırmak ve yönetmek için kullanılan bir yönetim aracı. (CLI + Web UI).
 - Birlikte Çalışma: Corosync kümeyi "yapar", Pacemaker ise bu küme üzerinde servisleri yönetir. Standart bir HA kümesi için ikisi zorunludur.
 
-
+## Server and IP Plane:
+```sh
+- Node 1: node1 (192.168.1.11)
+- Node 2: node2 (192.168.1.12)
+- Virtual IP (VIP): 192.168.1.100
+- Service: Apache web sunucusu
+```
 
 ## Install:
 ```sh
@@ -64,6 +70,7 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.lo
 ```
+
 
 
 
