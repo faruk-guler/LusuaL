@@ -96,8 +96,9 @@ sudo journalctl -u corosync -f
 sudo journalctl -u pacemaker -f
 
 # PCS
-sudo tail -f /var/log/pacemaker/pacemaker.lo
+sudo tail -f /var/log/pacemaker/pacemaker.log
 ```
+
 
 
 
