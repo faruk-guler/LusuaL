@@ -17,3 +17,12 @@ nginx -t    # Verify
 ```
 
 ## Conf:
+sudo nano /etc/nginx/sites-available/app.farukguler.com
+```sh
+```
+
+## Logs:
+```sh
+sudo tail -f /var/log/nginx/error.log
+sudo tail -f /var/log/nginx/access.log
+```
