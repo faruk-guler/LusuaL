@@ -1,6 +1,12 @@
 # NGINX Reverse Proxy:
 Yüksek performanslı, açık kaynaklı bir web sunucusu olmasının yanı sıra, özellikle kurumsal ortamlarda çok tercih edilen güçlü ve esnek bir Reverse Proxy (Ters Vekil) sunucusudur. Olay tabanlı (event-driven), asenkron mimarisi sayesinde yüksek eşzamanlı bağlantıları düşük kaynak tüketimiyle yönetebilir.
 
+Server and IP Plane:
+```sh
+- http://192.168.88.135:8080
+- http://192.168.88.136:8081
+```
+
 ## Install:
 ```sh
 sudo apt update
