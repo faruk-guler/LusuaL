@@ -62,6 +62,7 @@ File: /etc/corosync/corosync.conf
 ## Test Failover:
 ```sh
 systemctl stop corosync
+pcs status
 ```
 
 
@@ -78,11 +79,14 @@ pcs constraint list
 
 ## Firewall:
 ```sh
-sudo ufw allow from 192.168.1.0/24 to any port 5404,5405 proto udp
-sudo ufw allow from 192.168.1.0/24 to any port 3121,21064 proto tcp
+sudo ufw allow 5405/udp
+sudo ufw allow 2224/tcp
+sudo ufw allow 3121/tcp
+sudo ufw allow 80/tcp
 ```
 
 ## Logs:
+/var/log/*
 ```sh
 # Corosync
 sudo journalctl -u corosync -f
@@ -93,4 +97,5 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.lo
 ```
+
 
