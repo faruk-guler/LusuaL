@@ -28,7 +28,7 @@ sudo systemctl status keepalived
 sudo journalctl -u keepalived -f
 ```
 ## Conf: [Master]
-sudo nano /etc/keepalived/keepalived.conf
+file: /etc/keepalived/keepalived.conf
 ```sh
 vrrp_instance VI_1 {
     state MASTER
@@ -47,7 +47,7 @@ vrrp_instance VI_1 {
 ```
 
 ## Conf: [Backup]
-sudo nano /etc/keepalived/keepalived.conf
+file: /etc/keepalived/keepalived.conf
 ```sh
 vrrp_instance VI_1 {
     state BACKUP
@@ -71,3 +71,4 @@ sudo journalctl -u keepalived -f
 sudo journalctl -u keepalived -n 100
 tail -f /var/log/keepalived-state.log
 ```
+
