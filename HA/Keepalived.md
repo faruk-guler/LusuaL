@@ -24,12 +24,45 @@ keepalived --version
 sudo systemctl enable keepalived
 sudo systemctl start keepalived
 sudo systemctl stop keepalived
-sudo systemctl status haproxy
+sudo systemctl status keepalived
 sudo journalctl -u keepalived -f
 ```
-## Conf: [Master and Backup Servers]
+## Conf: [Master]
+sudo nano /etc/keepalived/keepalived.conf
 ```sh
-sudo nano /etc/keepalived/keepalived.conf 
+vrrp_instance VI_1 {
+    state MASTER
+    interface eth0
+    virtual_router_id 51
+    priority 100
+    advert_int 1
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+        192.168.1.100/24
+    }
+}
+```
+
+## Conf: [Backup]
+sudo nano /etc/keepalived/keepalived.conf
+```sh
+vrrp_instance VI_1 {
+    state BACKUP
+    interface eth0
+    virtual_router_id 51
+    priority 90
+    advert_int 1
+    authentication {
+        auth_type PASS
+        auth_pass 1111
+    }
+    virtual_ipaddress {
+        192.168.1.100/24
+    }
+}
 ```
 
 ## Logs:
@@ -38,4 +71,3 @@ sudo journalctl -u keepalived -f
 sudo journalctl -u keepalived -n 100
 tail -f /var/log/keepalived-state.log
 ```
-
