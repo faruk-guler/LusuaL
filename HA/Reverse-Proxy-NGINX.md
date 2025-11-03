@@ -5,6 +5,7 @@ Yüksek performanslı, açık kaynaklı bir web sunucusu olmasının yanı sıra
 ```sh
 sudo apt update
 sudo apt install nginx -y
+nginx -v  # Version
 ```
 
 ## Services:
