@@ -15,8 +15,9 @@ Server and IP Plane:
 
 ## Install:
 ```sh
+sudo apt update
 sudo apt install keepalived
-keepalived --version
+sudo keepalived --version
 ```
 
 ## Services:
@@ -63,6 +64,11 @@ vrrp_instance VI_1 {
         192.168.1.100/24
     }
 }
+```
+
+## Firewall:
+```sh
+sudo ufw allow proto vrrp
 ```
 
 ## Logs:
