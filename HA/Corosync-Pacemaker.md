@@ -5,6 +5,7 @@ Birlikte çalışarak sistemdeki servislerin veya uygulamaların otomatik olarak
 - Corosync: Düğümler arasında iletişimi sağlar.
 - Pacemaker: Kaynakların durumunu izler ve gerektiğinde failover işlemini gerçekleştirir.
 - Pcs: Pacemaker ve Corosync kümelerini kolayca kurmak, yapılandırmak ve yönetmek için kullanılan bir yönetim aracı. (CLI + Web UI).
+- Birlikte Çalışma: Corosync kümeyi "yapar", Pacemaker ise bu küme üzerinde servisleri yönetir. Standart bir HA kümesi için ikisi zorunludur.
 
 ## Install:
 ```sh
@@ -41,6 +42,7 @@ pcs resource status
 firewall-cmd --permanent --add-service=high-availability
 firewall-cmd –reload
 ```
+
 
 
 
