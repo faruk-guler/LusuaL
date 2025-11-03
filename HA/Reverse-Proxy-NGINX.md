@@ -17,7 +17,8 @@ nginx -t    # Verify
 ```
 
 ## Conf:
-sudo nano /etc/nginx/sites-available/app.farukguler.com
+File: nano /etc/nginx/sites-available/app.farukguler.com
+File: /etc/nginx/conf.d/
 ```sh
 ```
 
