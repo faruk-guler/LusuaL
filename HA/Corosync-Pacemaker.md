@@ -75,14 +75,15 @@ pcs status nodes
 pcs status cluster
 pcs property list
 pcs constraint list
+crm_mon -A -1
 ```
 
 ## Firewall:
 ```sh
-sudo ufw allow 5405/udp
-sudo ufw allow 2224/tcp
-sudo ufw allow 3121/tcp
-sudo ufw allow 80/tcp
+sudo ufw allow 5405/udp   # Corosync
+sudo ufw allow 2224/tcp   # pcsd
+sudo ufw allow 3121/tcp   # Web UI
+sudo ufw allow 80/tcp     # Apache
 ```
 
 ## Logs:
@@ -97,5 +98,6 @@ sudo journalctl -u pacemaker -f
 # PCS
 sudo tail -f /var/log/pacemaker/pacemaker.lo
 ```
+
 
 
