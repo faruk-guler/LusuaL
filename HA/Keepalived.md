@@ -9,8 +9,8 @@ Server and IP Plane:
 - HAProxy-2 (BACKUP):  192.168.1.11
 - Virtual IP (VIP):    192.168.1.100
 - Backend Servers1:    192.168.1.101
-- Backend Servers1:    192.168.1.102
-- Backend Servers1:    192.168.1.103
+- Backend Servers2:    192.168.1.102
+- Backend Servers3:    192.168.1.103
 ```
 
 ## Install:
@@ -38,3 +38,4 @@ sudo journalctl -u keepalived -f
 sudo journalctl -u keepalived -n 100
 tail -f /var/log/keepalived-state.log
 ```
+
