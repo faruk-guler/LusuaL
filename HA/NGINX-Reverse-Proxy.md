@@ -58,13 +58,19 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
+## SELinux RHELL (optional)
+```sh
+sudo setsebool -P httpd_can_network_connect 1
+sudo semanage port -a -t http_port_t -p tcp 3000  # For Backend port
+```
+
 ## Firewall:
 ```sh
 # UFW:
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 
-# firewalld:
+# Firewalld:
 sudo firewall-cmd --permanent --add-service=http
 sudo firewall-cmd --permanent --add-service=https
 sudo firewall-cmd --reload
