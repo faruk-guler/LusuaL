@@ -27,9 +27,9 @@ nginx -t  # Verify
 ```
 
 ## Conf:
-| File: /etc/nginx/sites-available/farukguler.com.conf # Debian/Ubuntu
+| File: /etc/nginx/sites-available/farukguler.com.conf
 
-| File: /etc/nginx/conf.d/*.conf # RHELL
+| File: /etc/nginx/conf.d/farukguler.com.conf
 
 ```sh
 server {
