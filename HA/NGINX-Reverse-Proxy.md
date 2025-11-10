@@ -29,7 +29,7 @@ nginx -t  # Verify
 ## Conf:
 Debian/Ubuntu | File: /etc/nginx/sites-available/farukguler.com.conf
 
-RHEL | File: /etc/nginx/conf.d/farukguler.com.conf
+RHEL | File: /etc/nginx/conf.d/farukguler.com.conf (symlink gerekmez)
 
 ```sh
 server {
