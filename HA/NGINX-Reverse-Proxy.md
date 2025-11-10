@@ -72,6 +72,10 @@ sudo firewall-cmd --reload
 
 ## Manual SSL/TLS Import:
 ```sh
+sudo mkdir -p /etc/ssl/private
+sudo chmod 700 /etc/ssl/private
+```
+```sh
 server {
     listen 443 ssl http2; # HTTP/2 desteği
     server_name farukguler.com www.farukguler.com;
