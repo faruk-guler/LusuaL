@@ -21,7 +21,7 @@ sudo dnf install nginx
 ```sh
 sudo systemctl start nginx
 sudo systemctl enable nginx
-systemctl status nginx
+sudo systemctl status nginx
 nginx -v  # Version
 nginx -t  # Verify
 ```
