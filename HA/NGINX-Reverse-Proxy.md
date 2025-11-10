@@ -3,8 +3,8 @@ Yüksek performanslı, açık kaynaklı bir web sunucusu olmasının yanı sıra
 
 Server and IP Plane:
 ```sh
-http://192.168.90.145:8080 ➝ http://project1.app.gov
-http://192.168.90.146:8081 ➝ http://project2.app.gov
+https://project1.app.gov  → NGINX (public IP) → http://192.168.90.145:8080
+https://project2.app.gov  → NGINX (public IP) → http://192.168.90.146:8081
 ```
 
 ## Install:
