@@ -101,7 +101,7 @@ server {
 
 ## Test:
 ```sh
-curl -I http://example.com
+curl -I http://farukguler.com
 sudo ss -tulpn | grep nginx
 ps aux | grep nginx
 ```
