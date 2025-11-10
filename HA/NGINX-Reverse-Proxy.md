@@ -12,7 +12,7 @@ http://192.168.90.146:8081 ➝ http://project2.app.gov
 # Debian/Ubuntu
 sudo apt install nginx
 
-# RHELL
+# RHEL
 sudo dnf install epel-release -y
 sudo dnf install nginx
 ```
