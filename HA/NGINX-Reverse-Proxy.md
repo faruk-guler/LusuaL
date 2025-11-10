@@ -9,9 +9,11 @@ http://192.168.88.136:8081 ➝ http://project2.cali.web
 
 ## Install:
 ```sh
-sudo apt update
-sudo apt install nginx -y
-nginx -v  # Version
+# Debian/Ubuntu
+sudo apt install nginx
+
+# RHELL
+sudo dnf install nginx
 ```
 
 ## Services:
@@ -19,7 +21,8 @@ nginx -v  # Version
 sudo systemctl enable nginx
 sudo systemctl start nginx
 systemctl status nginx
-nginx -t    # Verify
+nginx -v  # Version
+nginx -t  # Verify
 ```
 
 ## Conf:
@@ -50,6 +53,14 @@ server {
         proxy_read_timeout 30s;
     }
 }
+
+```
+
+## Enabled:
+```sh
+sudo ln -s /etc/nginx/sites-available/farukguler.com.conf /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
 
 ```
 
