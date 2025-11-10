@@ -77,8 +77,8 @@ server {
     listen 443 ssl http2;
     server_name example.com;
     
-    ssl_certificate /etc/ssl/certs/example.com.crt;
-    ssl_certificate_key /etc/ssl/private/example.com.key;
+    ssl_certificate /etc/ssl/certs/farukguler.com.crt;
+    ssl_certificate_key /etc/ssl/private/farukguler.com.key;
     
     ssl_protocols TLSv1.2 TLSv1.3;
     ssl_ciphers ECDHE-RSA-AES256-GCM-SHA512:DHE-RSA-AES256-GCM-SHA512;
