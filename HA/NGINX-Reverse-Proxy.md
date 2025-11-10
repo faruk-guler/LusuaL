@@ -51,6 +51,7 @@ server {
 
 ## Enabled:
 ```sh
+# sudo rm /etc/nginx/sites-enabled/default [Delete Default Site]
 sudo ln -s /etc/nginx/sites-available/farukguler.com.conf /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
