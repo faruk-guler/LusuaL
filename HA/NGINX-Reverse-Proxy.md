@@ -73,14 +73,16 @@ sudo firewall-cmd --reload
 ## Manual SSL/TLS Import:
 ```sh
 server {
-    listen 443 ssl http2;
-    server_name example.com;
+    listen 443 ssl http2; # HTTP/2 desteği
+    server_name farukguler.com www.farukguler.com;
     
+    # Sertifika ve özel anahtar yolları
     ssl_certificate /etc/ssl/certs/farukguler.com.crt;
     ssl_certificate_key /etc/ssl/private/farukguler.com.key;
     
+    # Modern ve güvenli SSL ayarları
     ssl_protocols TLSv1.2 TLSv1.3;
-    ssl_ciphers ECDHE-RSA-AES256-GCM-SHA512:DHE-RSA-AES256-GCM-SHA512;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384;
     ssl_prefer_server_ciphers off;
     
     location / {
@@ -94,7 +96,7 @@ server {
 # HTTP'den HTTPS'e yönlendirme
 server {
     listen 80;
-    server_name farukguler.com;
+    server_name farukguler.com www.farukguler.com;
     return 301 https://$server_name$request_uri;
 }
 ```
