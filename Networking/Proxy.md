@@ -2,8 +2,6 @@
 Proxy (vekil sunucu), istemci ile hedef sunucu arasında aracı görevi gören bir sunucudur. İstemcinin isteklerini alır, kendi adına hedef sunucuya iletir ve gelen yanıtı istemciye geri döndürür. Proxy, internette sizinle (istemci) ulaşmak istediğiniz hedef (sunucu/web sitesi) arasında duran bir aracıdır (middleman).
 Türkçedeki "vekil" kelimesi aslında tam olarak ne yaptığını açıklar: Sizin adınıza vekâleten hareket eder.
 
-Elbette, proxy türlerini temel kategorilere ayırarak, her biri için özet cümlelerle listeliyorum:
-
 >##### Forward Proxy (İleri Yönlü Proxy):
 Sizin (istemcinin) internete çıkmak için kullandığı ve kimliğinizi gizleyen vekil sunucudur.
 
