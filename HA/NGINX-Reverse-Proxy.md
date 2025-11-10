@@ -95,7 +95,7 @@ server {
 # HTTP'den HTTPS'e yönlendirme
 server {
     listen 80;
-    server_name example.com;
+    server_name farukguler.com;
     return 301 https://$server_name$request_uri;
 }
 ```
