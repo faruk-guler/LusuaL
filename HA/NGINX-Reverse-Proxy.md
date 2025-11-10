@@ -71,7 +71,7 @@ sudo firewall-cmd --permanent --add-service=https
 sudo firewall-cmd --reload
 ```
 
-## Manual SSL/TLS:
+## Manual SSL/TLS Import:
 ```sh
 server {
     listen 443 ssl http2;
