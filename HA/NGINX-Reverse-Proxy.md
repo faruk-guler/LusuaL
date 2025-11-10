@@ -103,7 +103,7 @@ server {
 ## Test:
 ```sh
 curl -I http://example.com
-sudo netstat -tulpn | grep nginx
+sudo ss -tulpn | grep nginx
 ps aux | grep nginx
 ```
 
