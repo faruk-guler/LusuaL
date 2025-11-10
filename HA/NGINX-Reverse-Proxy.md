@@ -61,7 +61,6 @@ sudo systemctl reload nginx
 ## Firewall:
 ```sh
 # UFW:
-sudo ufw allow 'Nginx Full'
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 
