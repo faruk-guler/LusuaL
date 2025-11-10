@@ -5,7 +5,7 @@ Türkçedeki "vekil" kelimesi aslında tam olarak ne yaptığını açıklar: Si
 >##### Forward Proxy (İleri Yönlü Proxy):
 Sizin (istemcinin) internete çıkmak için kullandığı ve kimliğinizi gizleyen vekil sunucudur.
 
-##### Reverse Proxy (Ters Yönlü Proxy):
+>##### Reverse Proxy (Ters Yönlü Proxy):
 Web sitesinin (sunucunun) önünde duran, gelen istekleri karşılayan, sunucuyu koruyan kimliğini gizleyen vekil sunucudur.
 İleri ve geri proxy arasındaki fark ince ama önemlidir. Basitçe özetlemek gerekirse, ileri proxy bir istemcinin önünde bulunur ve hiçbir kaynak sunucunun o istemciyle doğrudan iletişim kurmamasını sağlar. Ters proxy ise kaynak sunucunun önünde bulunur ve hiçbir istemcinin o kaynak sunucuyla doğrudan iletişim kurmamasını sağlar.
 
