@@ -1,7 +1,7 @@
 # General Commands:
-| Commands | Function |  Info |
+| Commands | Function |   Info  |
 | --- | --- | --- |
-|  A  |  A  |  *  |
+|  A  |  A  | --- |
 | apropos  | Search Help manual pages (man -k)  |
 | apt-get  | Search for and install software packages (Debian)  |
 | aptitude  | Search for and install software packages (Debian)  |
@@ -52,7 +52,7 @@
 | dirname  | Convert a full pathname to just a path  |
 | dirs  | Display list of remembered directories  |
 | dmesg  | Print kernel &amp; driver messages  |
-| du  | Estimate file space usage  | disk usage
+| du  | Estimate file space usage  |
 
 
 
@@ -90,8 +90,8 @@ for  Expand words, and execute commands
 format  Format disks or tapes 
 
 
-| free  | Display memory usage  | * |
-| --- | --- | --- |
+| free  | Display memory usage  |
+| --- | --- |
 | fsck  | File system consistency check and repair  |
 | ftp  | File Transfer Protocol  |
 | function  | Define Function Macros  |
@@ -143,10 +143,10 @@ format  Format disks or tapes
 | lprm  | Remove jobs from the print queue  |
 | ls  | List information about files  |
 | lsof  | List open files  |
-|  M  |  M  | * |
+|  M  |  M  |
 | make  | Recompile a group of programs  |
 | man  | Help manual  |
-| mkdir  | Create new folders  | make directory
+| mkdir  | Create new folders  |
 | mkfifo  | Make FIFOs (named pipes)  |
 | mkisofs  | Create an hybrid ISO9660/JOLIET/HFS filesystem  |
 | mknod  | Make block or character special files  |
@@ -154,7 +154,7 @@ format  Format disks or tapes
 | mount  | Mount a file system  |
 | mtools  | Manipulate MS-DOS files  |
 | mtr  | Network diagnostics (traceroute/ping)  |
-| mv  | Move or rename files or directories  | move
+| mv  | Move or rename files or directories  |
 | mmv  | Mass Move and rename files  |
 |  N  |  N  |
 | netstat  | Networking information  |
@@ -199,7 +199,7 @@ format  Format disks or tapes
 | rm  | Remove files  |
 | rmdir  | Remove folders  |
 | rsync  | Remote file copy (Synchronize file trees)  |
-| S  | S  | * |
+| S  | S  |
 | screen  | Multiplex terminal, run remote shells via ssh  |
 | scp  | Secure copy (remote file copy)  |
 | sdiff  | Merge two files interactively  |
@@ -219,7 +219,7 @@ format  Format disks or tapes
 | ssh  | Secure Shell client (remote login program)  |
 | strace  | Trace system calls and signals  |
 | su  | Substitute user identity  |
-| sudo  | Execute a command as another user  | super user do
+| sudo  | Execute a command as another user  |
 | sum  | Print a checksum for a file  |
 | suspend  | Suspend execution of this shell  |
 | symlink  | Make a new name for a file  |
@@ -283,5 +283,6 @@ format  Format disks or tapes
 | xdg-open  | Open a file or URL in the user’s preferred application  |
 |  Y  |  Y  |
 | yes  | Print a string until interrupted  |
+| .etc | others |
 
 
