@@ -3,6 +3,7 @@ Yüksek performanslı, açık kaynaklı bir web sunucusu olmasının yanı sıra
 
 Server and IP Plane:
 ```sh
+[Clients] -> [Nginx Reverse Proxy] -> [Backend App]
 https://project1.app.gov  → NGINX (public IP) → http://192.168.90.145:8080
 https://project2.app.gov  → NGINX (public IP) → http://192.168.90.146:8081
 ```
