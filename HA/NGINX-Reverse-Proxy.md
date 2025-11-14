@@ -1,6 +1,12 @@
 # NGINX Reverse Proxy:
 Yüksek performanslı, açık kaynaklı bir web sunucusu olmasının yanı sıra, özellikle kurumsal ortamlarda çok tercih edilen güçlü ve esnek bir Reverse Proxy (Ters Vekil) sunucusudur. Olay tabanlı (event-driven), asenkron mimarisi sayesinde yüksek eşzamanlı bağlantıları düşük kaynak tüketimiyle yönetebilir.
 
+# Why is it used?
+- Serving applications on different ports under a single domain.
+- Centralizing SSL/TLS management.
+- Load balancing across multiple servers.
+- Providing security by hiding backend servers from the internet.
+
 Server and IP Plane:
 ```sh
 [Clients] -> [Nginx Reverse Proxy] -> [Backend App]
