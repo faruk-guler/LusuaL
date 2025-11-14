@@ -120,7 +120,7 @@ server {
 
 ## Test:
 ```sh
-curl -I http://farukguler.com
+curl -v http://farukguler.com
 sudo ss -tulpn | grep nginx
 ps aux | grep nginx
 ```
