@@ -10,6 +10,7 @@ Nginx is a high-performance, open-source web server, as well as a powerful and f
 Server and IP Plane:
 ```sh
 [Clients] -> [Nginx Reverse Proxy] -> [Backend App]
+
 https://project1.app.gov  → NGINX (public IP) → http://192.168.90.145:8080
 https://project2.app.gov  → NGINX (public IP) → http://192.168.90.146:8081
 ```
