@@ -46,6 +46,7 @@ KbdInteractiveAuthentication yes
 PasswordAuthentication yes
 UsePAM yes                                           # Use PAM
 ```
+> Note: If you only log in with an SSH key (public/private key), 2FA will not be activated. Two-factor authentication only works with password-based logins.
 
 # Sudo for MFA (Optional)
 >File: sudo nano /etc/pam.d/sudo
