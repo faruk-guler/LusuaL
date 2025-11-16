@@ -7,9 +7,10 @@ sudo apt update
 sudo apt install libpam-google-authenticator
 sudo apt install qrencode
 ```
-# User MFA Conf.:
+# User MFA Conf. and View:
 ```bash
 google-authenticator
+google-authenticator -t -d -f -r 3 -R 30 -W
 ```
 ```bash
 1: "Do you want authentication tokens to be time-based?" (y)
