@@ -54,6 +54,7 @@ auth required pam_google_authenticator.so
 ```
 
 # SSH Service:
+> DON'T EXCLUDE YOURSELF! "Do not close your current SSH session without first verifying that MFA works in another terminal, or you will lose access."
 ```bash
 sudo systemctl enable ssh
 sudo systemctl start ssh
