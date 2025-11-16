@@ -7,7 +7,7 @@ sudo apt update
 sudo apt install libpam-google-authenticator
 sudo apt install qrencode
 ```
-# User MFA Conf. and View:
+# Users MFA Conf. and View:
 ```bash
 google-authenticator
 google-authenticator -t -d -f -r 3 -R 30 -W
@@ -20,6 +20,7 @@ google-authenticator -t -d -f -r 3 -R 30 -W
 5: "By default, tokens are good for 30 seconds..." (n)
 6: "Do you want to enable rate-limiting?" (y)
 ```
+> These steps are done for All users.
 # SSH için PAM Yapılandırması:
 >File: sudo nano /etc/pam.d/sshd
 ```bash
