@@ -26,7 +26,7 @@ qrencode -t ansiutf8 < ~/.google_authenticator
 5: "By default, tokens are good for 30 seconds..." (n)
 6: "Do you want to enable rate-limiting?" (y)
 ```
-> These steps are done for All users.
+> These steps are done for all users.
 # Configure PAM to Use Google Authenticator:
 >File: sudo nano /etc/pam.d/sshd
 ```bash
