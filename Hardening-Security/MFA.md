@@ -24,7 +24,7 @@ google-authenticator -t -d -f -r 3 -R 30 -W
 >File: sudo nano /etc/pam.d/sshd
 ```bash
 auth required pam_google_authenticator.so nullok # nullok: Allows login without MFA to users who have not yet set up TOTP.
-auth required pam_google_authenticator.so # "This line should be above the @include common-auth line"
+auth required pam_google_authenticator.so        # "This line should be above the @include common-auth line"
 @include common-auth
 ```
 
@@ -34,6 +34,7 @@ auth required pam_google_authenticator.so # "This line should be above the @incl
 AuthenticationMethods publickey,keyboard-interactive # SSH Key + MFA
 ChallengeResponseAuthentication yes
 AuthenticationMethods keyboard-interactive # Password + MFA
+KbdInteractiveAuthentication yes
 PasswordAuthentication yes
 UsePAM yes # Use PAM
 ```
