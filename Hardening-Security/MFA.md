@@ -40,7 +40,7 @@ auth required pam_google_authenticator.so        # "This line should be above th
 ```bash
 	
 AuthenticationMethods publickey,keyboard-interactive # SSH Key + MFA
-ChallengeResponseAuthentication yes
+ChallengeResponseAuthentication yes                   # 
 AuthenticationMethods keyboard-interactive           # Password + MFA
 AuthenticationMethods publickey,password publickey,keyboard-interactive
 KbdInteractiveAuthentication yes
@@ -64,6 +64,8 @@ sudo systemctl restart ssh
 > For those who prefer not to use their phone, there are also solutions:
 - KeePassXC (desktop-based TOTP generator)
 - Linux Authenticator App
+- Authy
+- FreeOTP
 - Firefox Authenticator plugin
 > This allows you to generate verification codes without a mobile device."
 
