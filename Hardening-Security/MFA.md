@@ -18,13 +18,37 @@ google-authenticator
 5: "By default, tokens are good for 30 seconds..." (n)
 6: "Do you want to enable rate-limiting?" (y)
 ```
+# SSH için PAM Yapılandırması:
+>File: sudo nano /etc/pam.d/sshd
+```bash
+sudo nano /etc/pam.d/sshd
+```
 
+Dosyanın **en üstüne** şu satırı ekleyin:
+```
+auth required pam_google_authenticator.so
+```
 
+Ayrıca, yalnızca şifre ile girişi engellemek için şu satırı bulup yorum satırı yapın (başına # ekleyin):
+```
+# @include common-auth
+```
 
+# SSH Daemon Yapılandırması:
 >File: sudo nano /etc/ssh/sshd_config
 ```bash
 AuthenticationMethods publickey,keyboard-interactive
 AuthenticationMethods publickey,keyboard-interactive:pam
 AuthenticationMethods publickey,keyboard-interactive
 ```
+# Sudo için MFA (Opsiyonel)
+```bash
+auth required pam_google_authenticator.so
+```
 
+# SSH Service:
+```bash
+sudo systemctl restart ssh
+sudo systemctl restart sshd
+```
+# 
