@@ -33,7 +33,7 @@ auth required pam_google_authenticator.so # "This line should be above the @incl
 AuthenticationMethods publickey,keyboard-interactive
 AuthenticationMethods publickey,keyboard-interactive:pam
 ChallengeResponseAuthentication yes
-AuthenticationMethods keyboard-interactive
+AuthenticationMethods keyboard-interactive # Password + MFA
 PasswordAuthentication yes
 UsePAM yes # Use PAM
 ```
