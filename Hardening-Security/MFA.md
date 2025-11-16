@@ -32,7 +32,7 @@ qrencode -t ansiutf8 < ~/.google_authenticator
 ```bash
 auth required pam_google_authenticator.so nullok # nullok: Allows login without MFA to users who have not yet set up TOTP.
 auth required pam_google_authenticator.so        # "This line should be above the @include common-auth line"
-@include common-auth                             # Traditional password authentication
+# @include common-auth                           # Traditional password authentication
 ```
 
 # Configure SSH for MFA:
