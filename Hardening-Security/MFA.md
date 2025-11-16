@@ -56,3 +56,8 @@ sudo systemctl restart sshd
 ```bash
 cp ~/.google_authenticator ~/.google_authenticator.backup
 ```
+# Rollback and recovery:
+```bash
+- Temporarily renaming the google_authenticator file will disable MFA for that user.
+- Remove TOTP line from /etc/pam.d/sshd or add nullok, set ChallengeResponseAuthentication to no in sshd_config
+```
