@@ -23,7 +23,7 @@ qrencode -t ansiutf8 < ~/.google_authenticator
 6: "Do you want to enable rate-limiting?" (y)
 ```
 > These steps are done for All users.
-# SSH için PAM Yapılandırması:
+# Configure SSH for PAM:
 >File: sudo nano /etc/pam.d/sshd
 ```bash
 auth required pam_google_authenticator.so nullok # nullok: Allows login without MFA to users who have not yet set up TOTP.
@@ -31,7 +31,7 @@ auth required pam_google_authenticator.so        # "This line should be above th
 @include common-auth
 ```
 
-# SSH Daemon Yapılandırması:
+# Configure SSH for MFA:
 >File: sudo nano /etc/ssh/sshd_config
 ```bash
 AuthenticationMethods publickey,keyboard-interactive # SSH Key + MFA
