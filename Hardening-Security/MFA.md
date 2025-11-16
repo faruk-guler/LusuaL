@@ -34,6 +34,7 @@ AuthenticationMethods publickey,keyboard-interactive
 AuthenticationMethods publickey,keyboard-interactive:pam
 ChallengeResponseAuthentication yes
 AuthenticationMethods keyboard-interactive
+PasswordAuthentication yes
 UsePAM yes # Use PAM
 ```
 
