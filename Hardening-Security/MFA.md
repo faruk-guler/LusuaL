@@ -31,7 +31,13 @@ auth required pam_google_authenticator.so
 AuthenticationMethods publickey,keyboard-interactive
 AuthenticationMethods publickey,keyboard-interactive:pam
 AuthenticationMethods publickey,keyboard-interactive
+ChallengeResponseAuthentication yes
+UsePAM yes
+AuthenticationMethods publickey,keyboard-interactive
+AuthenticationMethods keyboard-interactive
+AuthenticationMethods publickey,keyboard-interactive
 ```
+
 # Sudo için MFA (Opsiyonel)
 >File: sudo nano /etc/pam.d/sudo
 ```bash
