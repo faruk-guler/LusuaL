@@ -38,6 +38,8 @@ auth required pam_google_authenticator.so        # "This line should be above th
 # Configure SSH for MFA:
 >File: sudo nano /etc/ssh/sshd_config
 ```bash
+	
+AuthenticationMethods publickey,keyboard-interactive # SSH Key + MFA
 ChallengeResponseAuthentication yes
 AuthenticationMethods keyboard-interactive           # Password + MFA
 AuthenticationMethods publickey,password publickey,keyboard-interactive
@@ -45,8 +47,6 @@ KbdInteractiveAuthentication yes
 PasswordAuthentication yes
 UsePAM yes                                           # Use PAM
 ```
-> Note: If you only log in with an SSH key (public/private key), 2FA will not be activated. Two-factor authentication only works with password-based logins.
-
 # Sudo for MFA (Optional)
 > File: sudo nano /etc/pam.d/sudo
 ```bash
