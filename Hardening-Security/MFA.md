@@ -36,10 +36,10 @@ auth required pam_google_authenticator.so        # "This line should be above th
 ```bash
 AuthenticationMethods publickey,keyboard-interactive # SSH Key + MFA
 ChallengeResponseAuthentication yes
-AuthenticationMethods keyboard-interactive # Password + MFA
+AuthenticationMethods keyboard-interactive           # Password + MFA
 KbdInteractiveAuthentication yes
 PasswordAuthentication yes
-UsePAM yes # Use PAM
+UsePAM yes                                           # Use PAM
 ```
 
 # Sudo için MFA (Opsiyonel)
