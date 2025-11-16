@@ -51,6 +51,8 @@ auth required pam_google_authenticator.so
 
 # SSH Service:
 ```bash
+sudo systemctl enable ssh
+sudo systemctl start ssh
 sudo systemctl restart ssh
 sudo systemctl restart sshd
 ```
