@@ -21,17 +21,8 @@ google-authenticator
 # SSH için PAM Yapılandırması:
 >File: sudo nano /etc/pam.d/sshd
 ```bash
-sudo nano /etc/pam.d/sshd
-```
-
-Dosyanın **en üstüne** şu satırı ekleyin:
-```
 auth required pam_google_authenticator.so
-```
-
-Ayrıca, yalnızca şifre ile girişi engellemek için şu satırı bulup yorum satırı yapın (başına # ekleyin):
-```
-# @include common-auth
+@include common-auth
 ```
 
 # SSH Daemon Yapılandırması:
