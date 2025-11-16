@@ -37,6 +37,7 @@ auth required pam_google_authenticator.so        # "This line should be above th
 AuthenticationMethods publickey,keyboard-interactive # SSH Key + MFA
 ChallengeResponseAuthentication yes
 AuthenticationMethods keyboard-interactive           # Password + MFA
+AuthenticationMethods publickey,password publickey,keyboard-interactive
 KbdInteractiveAuthentication yes
 PasswordAuthentication yes
 UsePAM yes                                           # Use PAM
