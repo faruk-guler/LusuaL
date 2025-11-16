@@ -57,6 +57,7 @@ auth required pam_google_authenticator.so
 ```bash
 sudo systemctl enable ssh
 sudo systemctl start ssh
+# sudo systemctl stop ssh
 sudo systemctl restart ssh
 ```
 # Alternative Verification Methods:
