@@ -23,7 +23,7 @@ qrencode -t ansiutf8 < ~/.google_authenticator
 6: "Do you want to enable rate-limiting?" (y)
 ```
 > These steps are done for All users.
-# Configure SSH for PAM:
+# Configure PAM to Use Google Authenticator:
 >File: sudo nano /etc/pam.d/sshd
 ```bash
 auth required pam_google_authenticator.so nullok # nullok: Allows login without MFA to users who have not yet set up TOTP.
