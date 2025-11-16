@@ -49,7 +49,7 @@ UsePAM yes                                           # Use PAM
 > Note: If you only log in with an SSH key (public/private key), 2FA will not be activated. Two-factor authentication only works with password-based logins.
 
 # Sudo for MFA (Optional)
->File: sudo nano /etc/pam.d/sudo
+> File: sudo nano /etc/pam.d/sudo
 ```bash
 auth required pam_google_authenticator.so
 ```
@@ -71,7 +71,7 @@ sudo systemctl restart sshd
 # Backup:
 > You'll be provided with backup codes when setting up Google Authenticator. Keep these in a safe place.
 
-> All usuer ~/.google_authenticator file backup
+> all usuer ~/.google_authenticator file backup
 ```bash
 cp ~/.google_authenticator ~/.google_authenticator.backup
 ```
