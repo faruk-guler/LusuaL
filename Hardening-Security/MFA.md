@@ -73,6 +73,7 @@ sudo systemctl restart ssh
 > all user ~/.google_authenticator file backup
 ```bash
 cp ~/.google_authenticator ~/.google_authenticator.backup
+chmod 600 ~/.google_authenticator.backup
 ```
 # Rollback and Recovery:
 ```bash
