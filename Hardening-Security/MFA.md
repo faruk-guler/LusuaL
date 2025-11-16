@@ -2,7 +2,7 @@
 
 
 
->File:> sudo nano /etc/ssh/sshd_config
+>File: sudo nano /etc/ssh/sshd_config
 ```bash
 AuthenticationMethods publickey,keyboard-interactive
 AuthenticationMethods publickey,keyboard-interactive:pam
