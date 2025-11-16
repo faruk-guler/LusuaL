@@ -14,8 +14,6 @@ sudo dnf install google-authenticator qrencode
 # Users MFA Conf. and View:
 ```bash
 google-authenticator
-
-google-authenticator -t -d -f -r 3 -R 30 -W
 qrencode -t ansiutf8 < ~/.google_authenticator
 ```
 ```bash
