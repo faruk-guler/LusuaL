@@ -1,10 +1,11 @@
 # Multi-Factor Authentication MFA Google
 Setting up and using multi-factor authentication (MFA) on your Linux servers is a highly effective security measure, especially for protecting SSH access. The most common and reliable method for setting up multi-factor authentication (MFA) is to use the Google Authenticator PAM module.
 
-# Google Authenticator PAM Kurulumu:
+# Install Google Authenticator PAM:
 ```bash
 sudo apt update
-sudo apt install libpam-google-authenticator -y
+sudo apt install libpam-google-authenticator
+sudo apt install qrencode
 ```
 # Kullanıcı İçin MFA Yapılandırması:
 ```bash
