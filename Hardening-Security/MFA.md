@@ -39,13 +39,13 @@ auth required pam_google_authenticator.so        # "This line should be above th
 >File: sudo nano /etc/ssh/sshd_config
 ```bash
 	
-AuthenticationMethods publickey,keyboard-interactive # SSH Key + MFA
+AuthenticationMethods publickey,keyboard-interactive  # SSH Key + MFA
 ChallengeResponseAuthentication yes                   # 
-AuthenticationMethods keyboard-interactive           # Password + MFA
+AuthenticationMethods keyboard-interactive            # Password + MFA
 AuthenticationMethods publickey,password publickey,keyboard-interactive
 KbdInteractiveAuthentication yes
 PasswordAuthentication yes
-UsePAM yes                                           # Use PAM
+UsePAM yes                                            # Use PAM
 ```
 # Sudo for MFA (Optional)
 > File: sudo nano /etc/pam.d/sudo
