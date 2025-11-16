@@ -43,7 +43,7 @@ PasswordAuthentication yes
 UsePAM yes                                           # Use PAM
 ```
 
-# Sudo için MFA (Opsiyonel)
+# Sudo for MFA (Optional)
 >File: sudo nano /etc/pam.d/sudo
 ```bash
 auth required pam_google_authenticator.so
@@ -63,7 +63,7 @@ sudo systemctl restart sshd
 ```bash
 cp ~/.google_authenticator ~/.google_authenticator.backup
 ```
-# Rollback and recovery:
+# Rollback and Recovery:
 ```bash
 - Temporarily renaming the google_authenticator file will disable MFA for that user.
 - Remove TOTP line from /etc/pam.d/sshd or add nullok, set ChallengeResponseAuthentication to no in sshd_config
