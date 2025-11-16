@@ -9,7 +9,7 @@ sudo apt install qrencode
 
 # RHEL:
 sudo dnf install epel-release
-sudo dnf install google-authenticator qrencode-libs
+sudo dnf install google-authenticator qrencode
 ```
 # Users MFA Conf. and View:
 ```bash
