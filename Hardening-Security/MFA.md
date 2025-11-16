@@ -51,4 +51,8 @@ auth required pam_google_authenticator.so
 sudo systemctl restart ssh
 sudo systemctl restart sshd
 ```
-# 
+# Backup:
+> All suer ~/.google_authenticator file backup
+```bash
+cp ~/.google_authenticator ~/.google_authenticator.backup
+```bash
