@@ -61,6 +61,13 @@ sudo systemctl start ssh
 sudo systemctl restart ssh
 sudo systemctl restart sshd
 ```
+# Alternative Verification Methods:
+> For those who prefer not to use their phone, there are also solutions:
+- KeePassXC (desktop-based TOTP generator)
+- Linux Authenticator App
+- Firefox Authenticator plugin
+> This allows you to generate verification codes without a mobile device."
+
 # Backup:
 > You'll be provided with backup codes when setting up Google Authenticator. Keep these in a safe place.
 
@@ -73,4 +80,4 @@ cp ~/.google_authenticator ~/.google_authenticator.backup
 - Temporarily renaming the google_authenticator file will disable MFA for that user.
 - Remove TOTP line from /etc/pam.d/sshd or add nullok, set ChallengeResponseAuthentication to no in sshd_config
 ```
-faruk-guler www.farukguler.com
+Author: faruk-guler www.farukguler.com
