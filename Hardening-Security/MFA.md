@@ -71,7 +71,7 @@ sudo systemctl restart sshd
 # Backup:
 > You'll be provided with backup codes when setting up Google Authenticator. Keep these in a safe place.
 
-> all usuer ~/.google_authenticator file backup
+> all user ~/.google_authenticator file backup
 ```bash
 cp ~/.google_authenticator ~/.google_authenticator.backup
 ```
