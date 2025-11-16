@@ -7,7 +7,7 @@ sudo apt update
 sudo apt install libpam-google-authenticator
 sudo apt install qrencode
 ```
-# Kullanıcı İçin MFA Yapılandırması:
+# User MFA Conf.:
 ```bash
 google-authenticator
 ```
