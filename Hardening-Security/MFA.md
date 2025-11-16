@@ -14,7 +14,7 @@ google-authenticator -t -d -f -r 3 -R 30 -W
 ```
 ```bash
 1: "Do you want authentication tokens to be time-based?" (y)
-2: QR Code
+2: "QR Code"
 3: "Do you want me to update your ~/.google_authenticator file?" (y)
 4: "Do you want to disallow multiple uses of the same authentication token?" (y)
 5: "By default, tokens are good for 30 seconds..." (n)
