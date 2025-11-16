@@ -3,9 +3,13 @@ Setting up and using multi-factor authentication (MFA) on your Linux servers is 
 
 # Install Google Authenticator PAM:
 ```bash
-sudo apt update
+# Debian:
 sudo apt install libpam-google-authenticator
 sudo apt install qrencode
+
+# RHEL:
+sudo dnf install epel-release
+sudo dnf install google-authenticator qrencode-libs
 ```
 # Users MFA Conf. and View:
 ```bash
