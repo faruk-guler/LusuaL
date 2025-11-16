@@ -30,8 +30,7 @@ auth required pam_google_authenticator.so # "This line should be above the @incl
 # SSH Daemon Yapılandırması:
 >File: sudo nano /etc/ssh/sshd_config
 ```bash
-AuthenticationMethods publickey,keyboard-interactive
-AuthenticationMethods publickey,keyboard-interactive:pam
+AuthenticationMethods publickey,keyboard-interactive # SSH Key + MFA
 ChallengeResponseAuthentication yes
 AuthenticationMethods keyboard-interactive # Password + MFA
 PasswordAuthentication yes
