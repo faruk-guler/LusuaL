@@ -55,4 +55,4 @@ sudo systemctl restart sshd
 > All suer ~/.google_authenticator file backup
 ```bash
 cp ~/.google_authenticator ~/.google_authenticator.backup
-```bash
+```
