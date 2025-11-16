@@ -56,7 +56,6 @@ auth required pam_google_authenticator.so
 sudo systemctl enable ssh
 sudo systemctl start ssh
 sudo systemctl restart ssh
-sudo systemctl restart sshd
 ```
 # Alternative Verification Methods:
 > For those who prefer not to use their phone, there are also solutions:
