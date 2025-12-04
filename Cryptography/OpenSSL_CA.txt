@@ -82,3 +82,4 @@ Bu CA ile artık diğer sertifikaları (sunucu, istemci vb.) imzalayabilirsiniz.
 
 # Links:
 https://fatihsoysal.com/blog/ubuntu-20-04-uzerinde-bir-sertifika-otoritesi-ca-kurulumu-ve-yapilandirmasi/
+https://jamielinux.com/docs/openssl-certificate-authority/index.html
