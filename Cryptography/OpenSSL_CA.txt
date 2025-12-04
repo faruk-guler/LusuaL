@@ -79,3 +79,6 @@ openssl req -config myCA/openssl.cnf \
 
 ✅ Artık CA Hazır!
 Bu CA ile artık diğer sertifikaları (sunucu, istemci vb.) imzalayabilirsiniz.
+
+# Links:
+https://fatihsoysal.com/blog/ubuntu-20-04-uzerinde-bir-sertifika-otoritesi-ca-kurulumu-ve-yapilandirmasi/
